@@ -5,6 +5,12 @@ node_modules/
 .next/
 out/
 
+# TypeScript
+*.tsbuildinfo
+
+# Vercel
+.vercel/
+
 # Environment
 .env.local
 .env
