@@ -1,0 +1,22 @@
+/* PENREC 2.1b — individual art direction for gallery thumbnails */
+.editorial-gallery__item--fit-contain {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(213, 179, 106, .09), transparent 58%),
+    #0c0c0c;
+}
+
+.editorial-gallery__item--fit-contain img {
+  object-fit: contain;
+  transform: scale(.965);
+}
+
+.editorial-gallery__item--fit-contain:hover img,
+.editorial-gallery__item--fit-contain:focus-visible img {
+  transform: scale(.985);
+}
+
+@media (max-width: 600px) {
+  .editorial-gallery__item--fit-contain {
+    aspect-ratio: 4 / 5 !important;
+  }
+}

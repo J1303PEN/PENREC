@@ -1,0 +1,2 @@
+import Link from "next/link";import { requireAdmin } from "@/lib/auth";import { ArtistForm } from "@/components/catalogue17/artist-form";import { saveArtist } from "@/app/admin/catalogue/manager-actions";
+export default async function NewArtist(){await requireAdmin();return <main className="admin-page shell inside catalogue-editor"><header className="account-hero"><div><p className="eyebrow">PENREC17 / Artist Manager</p><h1>New artist</h1></div><Link className="button button--outline" href="/admin/catalogue">Back</Link></header><ArtistForm action={saveArtist}/></main>}

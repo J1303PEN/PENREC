@@ -1,0 +1,1 @@
+export default function Page(){return <main className="inside shell"><p>Contact PENREC</p></main>}

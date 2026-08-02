@@ -1,0 +1,43 @@
+/* PENREC 2.1d — dedicated navigation and editorial hero framing */
+.site-header{
+  position:sticky;
+  top:0;
+  inset:auto;
+  z-index:90;
+  background:#080808;
+  border-bottom:1px solid rgba(201,169,106,.42);
+  box-shadow:0 10px 30px rgba(0,0,0,.24);
+}
+.site-header__inner{height:104px}
+.site-header__logo img{mix-blend-mode:normal}
+
+/* Heroes now begin below the navigation instead of sitting underneath it. */
+.hero{
+  height:calc(100svh - 104px);
+  min-height:720px;
+}
+.hero__content{padding-top:0}
+.artist-hero{
+  height:calc(92svh - 104px);
+  min-height:650px;
+  overflow:hidden;
+}
+.artist-hero>img{object-fit:cover}
+.release-page{padding-top:0}
+.inside{padding-top:86px}
+
+/* Profile portraits retain their intended focal point. */
+.roster-row img{object-fit:cover}
+
+@media(max-width:760px){
+  .site-header__inner{height:82px}
+  .site-header{position:sticky}
+  .nav{top:82px;border-bottom:1px solid rgba(201,169,106,.32)}
+  .hero{height:calc(100svh - 82px);min-height:700px}
+  .artist-hero{height:calc(88svh - 82px);min-height:610px}
+  .inside{padding-top:64px}
+}
+
+@media(max-width:600px){
+  .artist-hero{height:calc(82svh - 82px);min-height:560px}
+}
