@@ -77,6 +77,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/khadijah-brown-grace.jpg",
     descriptor: "Contemporary soul · gospel warmth · quiet strength",
   },
+  {
+    name: "Harper Lane",
+    slug: "harper-lane",
+    album: "Wide Open",
+    cover: "/images/covers/harper-lane-wide-open.jpg",
+    descriptor: "Contemporary country · heartfelt pop · honest storytelling",
+  },
 ];
 
 export const featuredReleases = launchArtists;

@@ -194,6 +194,25 @@ export const artists: Artist[] = [
     quote: "Some voices demand attention. Khadijah Brown’s earns something deeper: belief.", year: "2026", catalogue: "PNR010",
     preview: "/audio/khadijah-brown-love-dont-wait-forever.mp3",
     tracks: albumTracks([["Love Don't Wait Forever","3:35"],["Easy Like the Morning Breeze","3:44"],["I'm Not Carrying Your Worry","3:26"],["There's No Place Like Coming Home","3:47"],["Dance With Me Till Morning Light","3:48"],["Right Here on This Little Street","3:43"],["Some Hearts Change with the Seasons","4:23"],["Mama Said Love Will Find You","3:43"],["I Let the Hurt Drift Away","4:24"],["Every Sunrise Tells Me Something","3:59"],["Take Your Time","3:24"],["I Found My Smile Again","4:02"],["Friends Like You Are Hard to Find","4:13"],["Counting Every Blessing","3:59"],["Walk Into Tomorrow Smiling","3:55"]], "/audio/khadijah-brown-love-dont-wait-forever.mp3", "khadijah-brown")
+  },
+  {
+    name: "Harper Lane", slug: "harper-lane", album: "Wide Open", cover: "/images/covers/harper-lane-wide-open.jpg",
+    hero: "/images/artists/harper-lane/harper-lane-hero.jpg", profile: "/images/artists/harper-lane/harper-lane-profile.jpg",
+    heroPosition: "50% 30%", profilePosition: "50% 24%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/harper-lane/harper-lane-gallery-${n}.jpg`),
+    descriptor: "Contemporary country · heartfelt pop · honest storytelling", location: "United Kingdom",
+    bio: [
+      "Some artists chase the spotlight. Harper Lane simply tells the truth.",
+      "Blending contemporary country with heartfelt pop, Harper Lane has built her sound around the moments that shape everyday lives—first loves, second chances, small-town dreams, family ties and the courage to begin again. Her songs are warm, honest and deeply personal, delivered with a voice that balances vulnerability with quiet strength.",
+      "Raised in Britain but inspired by the storytelling traditions of Nashville, Harper combines modern country production with acoustic guitars, soaring melodies and lyrics that feel like conversations between old friends. Her music captures the beauty found in ordinary moments, proving that the biggest stories are often the ones lived away from the headlines.",
+      "Her debut album, Wide Open, introduces an artist unafraid to wear her heart on her sleeve. Across the collection, Harper explores hope, resilience, love and self-discovery, creating songs that invite listeners to find pieces of their own lives within every chorus. Whether celebrating new beginnings or reflecting on roads already travelled, each track is written with authenticity and emotional honesty.",
+      "On stage, Harper brings a natural warmth that makes every performance feel intimate, whether she's accompanied by a full band or simply an acoustic guitar. Her relaxed presence, effortless vocals and genuine connection with audiences have quickly earned her a reputation as an artist whose performances are as sincere as her songwriting.",
+      "Influenced by the modern country sound while remaining unmistakably herself, Harper Lane represents a fresh voice for a new generation of country music lovers—one that embraces contemporary production without ever losing sight of the storytelling at the heart of the genre.",
+      "With Wide Open, Harper Lane invites listeners to take the journey with her—one song, one memory and one new beginning at a time."
+    ],
+    quote: "Some artists chase the spotlight. Harper Lane simply tells the truth.", year: "2026", catalogue: "PNR011",
+    preview: "/audio/harper-lane-wide-open.mp3",
+    tracks: albumTracks([["Wide Open","3:47"],["When You Look At Me","4:10"],["Say You'll Stay","3:48"],["If I Don't Tell You Now","3:45"],["My Heart Knows Better","3:58"],["Good Kind of Gone","4:40"],["Right Here, Right Now","3:55"],["Find Me Again","3:58"],["Better With You","4:13"],["Whatever Comes Next","3:41"],["This Is The Life","4:13"],["You Don't Know Me Yet","3:28"],["Five More Minutes","3:59"],["You Change The Weather","4:00"],["Nothing Changed","3:45"],["That's More Like It","4:00"]], "/audio/harper-lane-wide-open.mp3", "harper-lane")
   }
 ];
 
