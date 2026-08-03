@@ -26,15 +26,15 @@ export function HomepageContent() {
   const visible = (id: HomepageConfig["sections"][number]) => !config.hiddenSections.includes(id);
 
   const sections: Record<string, React.ReactNode> = {
-    artists: <section className="section shell" id="artists"><header className="section-title"><div><p className="eyebrow">Launch roster</p><h2>Five artists.<br /><em>One creative home.</em></h2></div><p>Our launch collection introduces five distinctive voices, each with a world of their own.</p></header><div className="artist-grid">{artists.map((artist, index) => <ArtistCard key={artist.slug} artist={artist} index={index} />)}</div></section>,
+    artists: <section className="section shell" id="artists"><header className="section-title"><div><p className="eyebrow">PENREC roster</p><h2>Distinctive artists.<br /><em>One creative home.</em></h2></div><p>Explore the artists shaping PENREC, each with a world of their own.</p></header><div className="artist-grid">{artists.map((artist, index) => <ArtistCard key={artist.slug} artist={artist} index={index} />)}</div></section>,
     statement: <section className="statement-panel"><div className="shell statement-panel__inner"><p className="eyebrow">Independent. Artist first.</p><blockquote>Extraordinary music deserves space, care and a lasting presence.</blockquote></div></section>,
-    releases: <section className="section shell" id="releases"><header className="section-title section-title--releases"><div><p className="eyebrow">The first five albums</p><h2>Featured releases</h2></div><Link className="text-link" href="/releases">Explore all music ↗</Link></header><div className="release-grid">{artists.map((release) => <ReleaseCard key={release.slug} release={release} />)}</div></section>,
+    releases: <section className="section shell" id="releases"><header className="section-title section-title--releases"><div><p className="eyebrow">The album collection</p><h2>Featured releases</h2></div><Link className="text-link" href="/releases">Explore all music ↗</Link></header><div className="release-grid">{artists.map((release) => <ReleaseCard key={release.slug} release={release} />)}</div></section>,
     news: <LatestNews />,
     player: <section className="player-preview" id="listen">
       <div className="shell">
         <header className="section-title section-title--listening">
-          <div><p className="eyebrow">Listen now</p><h2>The launch<br /><em>collection.</em></h2></div>
-          <p>Hear a complete lead track from each of PENREC’s first five albums. Your music keeps playing while you explore the artists and their releases.</p>
+          <div><p className="eyebrow">Listen now</p><h2>The PENREC<br /><em>collection.</em></h2></div>
+          <p>Hear every track from PENREC’s launch albums. Your music keeps playing while you explore the artists and their releases.</p>
         </header>
         <div className="launch-listening-grid">
           {artists.map((artist) => <AudioPlayer key={artist.slug} artist={artist} compact />)}

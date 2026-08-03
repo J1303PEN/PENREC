@@ -38,7 +38,7 @@ export function CatalogueSearch() {
       </div>
 
       {!normalized ? (
-        <p className="catalogue-search__hint">The catalogue currently contains five artists, five albums and {artists.reduce((sum, artist) => sum + artist.tracks.length, 0)} tracks.</p>
+        <p className="catalogue-search__hint">The catalogue currently contains {artists.length} artists, {artists.length} albums and {artists.reduce((sum, artist) => sum + artist.tracks.length, 0)} tracks.</p>
       ) : results.length === 0 ? (
         <div className="catalogue-search__empty"><h2>No catalogue matches</h2><p>Try an artist, release title, track name or PENREC catalogue number.</p></div>
       ) : (
