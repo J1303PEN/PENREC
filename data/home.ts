@@ -56,6 +56,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/elias-rowan-the-lives-we-passed.jpg",
     descriptor: "British singer-songwriter · timeless storytelling · cinematic warmth",
   },
+  {
+    name: "Shelley Dante",
+    slug: "shelley-dante",
+    album: "Night Dancing",
+    cover: "/images/covers/shelley-dante-night-dancing.svg",
+    descriptor: "Dance-pop · disco glamour · emotional power",
+  },
 ];
 
 export const featuredReleases = launchArtists;
