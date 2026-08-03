@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { ReleaseCard } from "@/components/release-card";
 import { artists } from "@/data/catalog";
 
-const filters = ["All", "United Kingdom", "Italy", "Germany", "International"] as const;
+const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 
 export function CatalogueBrowser() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");

@@ -1,0 +1,30 @@
+/* Balanced layouts as the PENREC artist and release catalogue grows. */
+@media (min-width: 1051px) {
+  .artist-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .artist-grid > .artist-card {
+    grid-column: auto;
+  }
+
+  .release-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .artist-grid > .artist-card:last-child:nth-child(even) {
+    grid-column: span 6;
+  }
+
+  .release-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .release-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -34,7 +34,7 @@ export function HomepageContent() {
       <div className="shell">
         <header className="section-title section-title--listening">
           <div><p className="eyebrow">Listen now</p><h2>The PENREC<br /><em>collection.</em></h2></div>
-          <p>Hear every track from PENREC’s launch albums. Your music keeps playing while you explore the artists and their releases.</p>
+          <p>Hear every track from PENREC’s album collection. Your music keeps playing while you explore the artists and their releases.</p>
         </header>
         <div className="launch-listening-grid">
           {artists.map((artist) => <AudioPlayer key={artist.slug} artist={artist} compact />)}

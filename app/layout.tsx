@@ -8,6 +8,7 @@ import "./player-2-2b.css";
 import "./catalogue-2-3.css";
 import "./studio-2-5a.css";
 import "./accounts-3-1.css";
+import "./catalogue-expansion.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { GlobalPlayer } from "@/components/global-player";
@@ -15,7 +16,7 @@ import { PlayerProvider } from "@/components/player-context";
 
 export const metadata: Metadata = {
   title: "PENREC Music Group",
-  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords and Vierklang.",
+  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords, Vierklang and Sophie Beaulieu.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -42,6 +42,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/vierklang-das-leben-wartet.jpg",
     descriptor: "German pop · optimism · rich vocal colour",
   },
+  {
+    name: "Sophie Beaulieu",
+    slug: "sophie-beaulieu",
+    album: "Choisir La Vie",
+    cover: "/images/covers/sophie-beaulieu-choisir-la-vie.jpg",
+    descriptor: "Classical crossover · cinematic storytelling · symphonic pop",
+  },
 ];
 
 export const featuredReleases = launchArtists;
