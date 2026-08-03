@@ -97,6 +97,25 @@ export const artists: Artist[] = [
     quote: "Life is waiting — not somewhere else, but in the next step.", year: "2026", catalogue: "PNR005",
     preview: "/audio/vierklang-heute-fangt-das-leben-an.mp3",
     tracks: albumTracks([["Heute fängt das Leben an","3:30"],["Manchmal reicht ein Augenblick","3:25"],["Mit dir wird alles leicht","3:19"],["Hier schlägt mein Herz noch immer","3:38"],["Irgendwann warst du mein Zuhause","3:37"],["Diese Nacht gehört uns zwei","3:25"],["Ohne dich fehlt einfach etwas","3:14"],["Danke, dass du da gewesen bist","4:19"],["Trau dich einfach loszugehen","3:37"],["Es ist nie zu spät für morgen","4:20"],["Das Glück war immer hier","3:30"],["Du hast an mich geglaubt","3:48"],["Solang wir zusammen geh'n","3:25"],["Mit jedem Jahr ein bisschen mehr","3:23"],["Auf uns und jeden neuen Morgen","3:32"]], "/audio/vierklang-heute-fangt-das-leben-an.mp3", "vierklang")
+  },
+  {
+    name: "Sophie Beaulieu", slug: "sophie-beaulieu", album: "Choisir La Vie", cover: "/images/covers/sophie-beaulieu-choisir-la-vie.jpg",
+    hero: "/images/artists/sophie-beaulieu/sophie-beaulieu-hero.jpg", profile: "/images/artists/sophie-beaulieu/sophie-beaulieu-profile.jpg",
+    heroPosition: "50% 28%", profilePosition: "50% 30%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-${n}.jpg`),
+    descriptor: "Classical crossover · cinematic storytelling · symphonic pop", location: "Canada",
+    bio: [
+      "Some voices fill a room. Others stop time.",
+      "Sophie Beaulieu belongs to the rare group of artists whose performances are built as much on emotion as technical brilliance. With a rich, expressive soprano capable of moving effortlessly from intimate piano ballads to soaring orchestral anthems, she has become known for recordings that combine classical elegance with contemporary cinematic storytelling.",
+      "Born in Quebec, Canada, Sophie discovered music at an early age, studying classical voice before developing a style that refused to be confined to a single genre. Drawing inspiration from many great French-speaking Canadian artists, classical crossover, film scores and symphonic pop, she created a signature sound that is both timeless and unmistakably modern.",
+      "On stage, Sophie is renowned for her striking visual presence. Whether performing beneath a single spotlight in an intimate theatre or accompanied by a full symphony orchestra in grand concert halls, every appearance is carefully crafted as a theatrical experience. Her performances balance vulnerability with quiet strength, allowing every lyric to feel personal while every crescendo carries cinematic scale.",
+      "Her debut album, Choisir La Vie (Choose Life), introduced audiences to an artist unafraid of exploring hope, resilience, love and self-discovery. Rather than relying on dramatic spectacle alone, the album established Sophie's reputation for heartfelt interpretation and beautifully orchestrated arrangements.",
+      "Away from the stage, Sophie remains deeply committed to the craft of songwriting and musical interpretation, believing that every performance should leave an audience feeling something long after the final note has faded. This philosophy has earned her a loyal international following who appreciate music that values substance as much as spectacle.",
+      "Graceful, sophisticated and emotionally captivating, Sophie Beaulieu continues to redefine modern classical crossover—proving that true elegance never goes out of style."
+    ],
+    quote: "True elegance never goes out of style.", year: "2026", catalogue: "PNR006",
+    preview: "/audio/sophie-beaulieu-je-choisis-la-vie.mp3",
+    tracks: albumTracks([["Je choisis la vie","3:38"],["Plus Haut Que La Peur","3:31"],["Si Tu Me Voyais","3:48"],["Plus Jamais À Genoux","3:12"],["Jusqu'Au Dernier Souffle","3:57"],["Quand Tout S'Éteint","3:35"],["Je N'Attends Plus Demain","3:05"],["Ce Que Je Laisse Derrière","3:39"],["Tu Es Arrivé Sans Bruit","3:22"],["J'Apprends À Y Croire","3:42"],["Je Tiendrai La Lumière","3:05"],["Je N'Ai Plus Peur D'Aimer","4:19"],["Merci À Celle Que J'Étais","3:50"],["Si Mon Histoire Peut T'Aider","3:15"],["Tout Commence Ici","3:44"]], "/audio/sophie-beaulieu-je-choisis-la-vie.mp3", "sophie-beaulieu")
   }
 ];
 

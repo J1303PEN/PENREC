@@ -45,7 +45,7 @@ export const defaultAnnouncement: Announcement = { enabled: false, label: "New",
 export const starterBulletins: Bulletin[] = [{
   id: "welcome-to-penrec", headline: "Welcome to PENREC Music Group",
   summary: "A new independent home for distinctive artists, complete albums and music without boundaries.",
-  body: "PENREC Music Group brings five launch artists together under one creative home. Explore the catalogue, discover each artist's world and listen continuously through the PENREC player.",
+  body: "PENREC Music Group brings distinctive artists together under one creative home. Explore the catalogue, discover each artist's world and listen continuously through the PENREC player.",
   image: "/images/covers/midnight-avenue-the-night-is-ours.jpg", category: "Label News",
   publishDate: "2026-07-25", publishTime: "12:00", status: "published",
   createdAt: "2026-07-25T12:00:00.000Z", updatedAt: "2026-07-25T12:00:00.000Z",
