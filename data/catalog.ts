@@ -136,6 +136,24 @@ export const artists: Artist[] = [
     quote: "Some voices don't need to shout to be heard.", year: "2026", catalogue: "PNR007",
     preview: "/audio/elias-rowan-the-book-i-never-came-for.mp3",
     tracks: albumTracks([["The Book I Never Came For","3:49"],["The Road I've Never Travelled","3:56"],["I Should Have Told You Long Ago","3:30"],["Every Tuesday","5:20"],["Love Learns New Voices","3:38"],["Before Closing Time","5:23"],["The Last Projectionist","4:44"],["Seven Minutes Fast","4:20"],["The Empty Place Beside Him","5:21"],["The Christmas Lantern","4:54"],["The Wednesday Club","4:03"],["The Piano Nobody Wanted","4:21"],["Every Thursday","4:49"],["The Glove Maker","4:49"],["The Boy Who Always Waved","5:09"],["The Table by the Window","4:50"]], "/audio/elias-rowan-the-book-i-never-came-for.mp3", "elias-rowan")
+  },
+  {
+    name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.svg",
+    hero: "/images/artists/shelley-dante/shelley-dante-hero.png", profile: "/images/artists/shelley-dante/shelley-dante-profile.png",
+    heroPosition: "24% 36%", profilePosition: "24% 28%",
+    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.png`),
+    descriptor: "Dance-pop · disco glamour · emotional power", location: "International",
+    bio: [
+      "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.",
+      "Shelley Dante is a contemporary pop artist whose music combines the energy of the dancefloor with the emotion of a great pop song. With a powerful, commanding voice and an instinct for unforgettable melodies, she creates music filled with infectious hooks, sophisticated production and an unmistakable sense of confidence.",
+      "Drawing inspiration from classic disco, modern dance-pop and the drama of the great power ballads, Shelley’s sound moves effortlessly between euphoric club anthems and more intimate stories of love, disappointment and personal strength. Beneath the polished rhythms and sweeping choruses lies a genuine emotional honesty that gives every song its heart.",
+      "Her songs explore the choices people make when the lights go down: the excitement of new attraction, the courage to walk away, the mistakes that continue to haunt us and the freedom that comes from finally knowing your own worth. Tracks such as Night Dancing, Love in the Shadows, Make a Move and Tomorrow Comes reveal an artist capable of bringing both attitude and vulnerability to the same performance.",
+      "Shelley’s visual world is every bit as distinctive as her music. Glamorous, confident and effortlessly theatrical, she brings the colour and excitement of nightlife to the stage without allowing the spectacle to overshadow the song. Whether commanding a packed dancefloor or standing alone beneath a single spotlight, she performs with the presence of an artist completely in control of her moment.",
+      "For Shelley, music is more than entertainment—it is escape, release and the freedom to become whoever you want to be. Bold, powerful and impossible to ignore, Shelley Dante is the sound of the night coming alive."
+    ],
+    quote: "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.", year: "2026", catalogue: "PNR008",
+    preview: "/audio/shelley-dante-night-dancing.mp3",
+    tracks: albumTracks([["Night Dancing","3:30"],["Love in the Shadows","3:43"],["Brick by Brick","3:50"],["On the Train","3:48"],["My Biggest Mistake","3:10"],["Macho Man","3:28"],["One Man Only","4:26"],["Something New","2:30"],["You Were Made to Break My Heart","3:55"],["Your Picture Next to Mine","3:40"],["The Penman Express","3:33"],["Make a Move","2:53"],["Next Door Heartbreak","3:17"],["Tomorrow Comes","4:29"],["Fool No More","3:45"]], "/audio/shelley-dante-night-dancing.mp3", "shelley-dante")
   }
 ];
 
