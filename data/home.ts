@@ -49,6 +49,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/sophie-beaulieu-choisir-la-vie.jpg",
     descriptor: "Classical crossover · cinematic storytelling · symphonic pop",
   },
+  {
+    name: "Elias Rowan",
+    slug: "elias-rowan",
+    album: "The Lives We Passed",
+    cover: "/images/covers/elias-rowan-the-lives-we-passed.jpg",
+    descriptor: "British singer-songwriter · timeless storytelling · cinematic warmth",
+  },
 ];
 
 export const featuredReleases = launchArtists;

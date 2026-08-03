@@ -116,6 +116,26 @@ export const artists: Artist[] = [
     quote: "True elegance never goes out of style.", year: "2026", catalogue: "PNR006",
     preview: "/audio/sophie-beaulieu-je-choisis-la-vie.mp3",
     tracks: albumTracks([["Je choisis la vie","3:38"],["Plus Haut Que La Peur","3:31"],["Si Tu Me Voyais","3:48"],["Plus Jamais À Genoux","3:12"],["Jusqu'Au Dernier Souffle","3:57"],["Quand Tout S'Éteint","3:35"],["Je N'Attends Plus Demain","3:05"],["Ce Que Je Laisse Derrière","3:39"],["Tu Es Arrivé Sans Bruit","3:22"],["J'Apprends À Y Croire","3:42"],["Je Tiendrai La Lumière","3:05"],["Je N'Ai Plus Peur D'Aimer","4:19"],["Merci À Celle Que J'Étais","3:50"],["Si Mon Histoire Peut T'Aider","3:15"],["Tout Commence Ici","3:44"]], "/audio/sophie-beaulieu-je-choisis-la-vie.mp3", "sophie-beaulieu")
+  },
+  {
+    name: "Elias Rowan", slug: "elias-rowan", album: "The Lives We Passed", cover: "/images/covers/elias-rowan-the-lives-we-passed.jpg",
+    hero: "/images/artists/elias-rowan/elias-rowan-hero.jpg", profile: "/images/artists/elias-rowan/elias-rowan-profile.jpg",
+    heroPosition: "50% 42%", profilePosition: "50% 32%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/elias-rowan/elias-rowan-gallery-${n}.jpg`),
+    descriptor: "British singer-songwriter · timeless storytelling · cinematic warmth", location: "United Kingdom",
+    bio: [
+      "Some voices don't need to shout to be heard.",
+      "Elias Rowan is a British singer-songwriter whose music is built on honesty, craftsmanship and timeless storytelling. With a rich, expressive voice and songs that linger long after the final note, he writes about life's turning points—the people we meet, the roads we choose and the memories that quietly shape who we become.",
+      "Drawing inspiration from Britain's rich tradition of singer-songwriters while embracing a contemporary, cinematic sound, Elias blends acoustic guitars, piano, warm strings and understated production into songs that feel both classic and modern. His performances are thoughtful rather than theatrical, allowing every lyric to take centre stage.",
+      "His debut album, The Lives We Passed, is a collection of beautifully observed stories about chance encounters, lost opportunities, enduring love and the unexpected moments that change everything. Rather than dwelling on regret, the album celebrates the idea that every experience—whether fleeting or lifelong—leaves its mark and helps define the person we become.",
+      "Away from the studio, Elias is known for his understated style and unmistakably British character. Equally at home in a city loft, a quiet coastal town or a countryside pub, he finds inspiration in everyday conversations and overlooked moments, believing that the best songs are hidden within ordinary lives.",
+      "What sets Elias apart is his ability to make deeply personal stories feel universal. His lyrics are filled with vivid detail, emotional warmth and quiet optimism, inviting listeners to see their own memories reflected in every verse. His music doesn't rely on grand gestures—it earns its place through authenticity, melody and emotional truth.",
+      "Whether performing with a full band or stripped back with an acoustic guitar, Elias creates an atmosphere where every audience member feels part of the story. His concerts are intimate, heartfelt experiences that celebrate connection, reflection and hope.",
+      "With The Lives We Passed, Elias Rowan introduces himself as one of Britain's most compelling contemporary singer-songwriters—an artist whose music reminds us that life isn't measured only by the paths we take, but also by the people, places and moments that quietly pass through it and stay with us forever."
+    ],
+    quote: "Some voices don't need to shout to be heard.", year: "2026", catalogue: "PNR007",
+    preview: "/audio/elias-rowan-the-book-i-never-came-for.mp3",
+    tracks: albumTracks([["The Book I Never Came For","3:49"],["The Road I've Never Travelled","3:56"],["I Should Have Told You Long Ago","3:30"],["Every Tuesday","5:20"],["Love Learns New Voices","3:38"],["Before Closing Time","5:23"],["The Last Projectionist","4:44"],["Seven Minutes Fast","4:20"],["The Empty Place Beside Him","5:21"],["The Christmas Lantern","4:54"],["The Wednesday Club","4:03"],["The Piano Nobody Wanted","4:21"],["Every Thursday","4:49"],["The Glove Maker","4:49"],["The Boy Who Always Waved","5:09"],["The Table by the Window","4:50"]], "/audio/elias-rowan-the-book-i-never-came-for.mp3", "elias-rowan")
   }
 ];
 
