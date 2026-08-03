@@ -70,6 +70,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/luca-moretti-donde-empieza-todo.jpg",
     descriptor: "Spanish pop · Mediterranean passion · romantic storytelling",
   },
+  {
+    name: "Khadijah Brown",
+    slug: "khadijah-brown",
+    album: "Grace",
+    cover: "/images/covers/khadijah-brown-grace.jpg",
+    descriptor: "Contemporary soul · gospel warmth · quiet strength",
+  },
 ];
 
 export const featuredReleases = launchArtists;

@@ -174,6 +174,26 @@ export const artists: Artist[] = [
     quote: "Some voices capture a moment. Luca Moretti makes it impossible to forget.", year: "2026", catalogue: "PNR009",
     preview: "/audio/luca-moretti-desde-que-llegaste.mp3",
     tracks: albumTracks([["Desde Que Llegaste","3:17"],["Antes De Verte","3:14"],["Cuando Callas Tú","3:35"],["Tus Pequeñas Costumbres","3:09"],["No Somos Iguales","2:57"],["Aquella Fotografía","3:18"],["Se Nos Hizo Tarde","3:10"],["Donde Empieza La Calma","3:22"],["Como Soy","3:02"],["Sin Darte Cuenta","3:09"],["Una Silla Más","4:20"],["Las Cosas Nuestras","2:54"],["Termino Tus Historias","3:10"],["Solo Con Mirarte","3:07"],["Lo Mejor No Ha Pasado","2:42"],["La Última Luz","3:23"]], "/audio/luca-moretti-desde-que-llegaste.mp3", "luca-moretti")
+  },
+  {
+    name: "Khadijah Brown", slug: "khadijah-brown", album: "Grace", cover: "/images/covers/khadijah-brown-grace.jpg",
+    hero: "/images/artists/khadijah-brown/khadijah-brown-hero.jpg", profile: "/images/artists/khadijah-brown/khadijah-brown-profile.jpg",
+    heroPosition: "50% 18%", profilePosition: "45% 22%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/khadijah-brown/khadijah-brown-gallery-${n}.jpg`),
+    descriptor: "Contemporary soul · gospel warmth · quiet strength", location: "International",
+    bio: [
+      "Some voices demand attention. Khadijah Brown’s earns something deeper: belief.",
+      "Khadijah Brown is a contemporary soul artist whose music combines emotional honesty, quiet strength and the timeless power of an extraordinary voice. Rich, warm and deeply expressive, her performances move effortlessly from moments of intimate reflection to soaring declarations of hope, resilience and self-worth.",
+      "Drawing inspiration from classic soul, gospel, sophisticated R&B and cinematic pop, Khadijah creates music that feels both familiar and entirely her own. Piano, strings, subtle rhythms and beautifully layered harmonies provide the setting for a voice capable of conveying tremendous power without ever sacrificing tenderness.",
+      "Her album Grace explores the experiences that shape us: love and loss, forgiveness, faith, disappointment and the courage required to begin again. Its songs do not pretend that life is without difficulty. Instead, they celebrate the strength found in surviving those moments and the freedom that comes from accepting the person you have become.",
+      "For Khadijah, grace is more than a spiritual idea. It is the patience we learn to offer ourselves, the dignity we retain when life tests us and the light that remains even during our darkest nights. That message runs throughout her music, giving each song a sense of purpose beyond its melody.",
+      "On stage, Khadijah possesses a commanding yet deeply personal presence. She does not rely on spectacle to create an unforgettable moment. Whether standing beneath a single spotlight or performing with a full band and choir, her voice remains at the centre—powerful, controlled and filled with genuine feeling.",
+      "Away from the stage, Khadijah approaches her music with thoughtfulness and care. She believes a song should leave the listener with something: a memory, a feeling or perhaps the courage to see their own life differently. Every lyric and arrangement is shaped around that belief, allowing the emotion of the performance to remain honest and unforced.",
+      "With her unmistakable voice, natural elegance and ability to transform personal experience into universal truth, Khadijah Brown is an artist of remarkable depth. Her music reminds us that strength does not always need to shout—and that sometimes the most powerful thing we can do is face the world with grace."
+    ],
+    quote: "Some voices demand attention. Khadijah Brown’s earns something deeper: belief.", year: "2026", catalogue: "PNR010",
+    preview: "/audio/khadijah-brown-love-dont-wait-forever.mp3",
+    tracks: albumTracks([["Love Don't Wait Forever","3:35"],["Easy Like the Morning Breeze","3:44"],["I'm Not Carrying Your Worry","3:26"],["There's No Place Like Coming Home","3:47"],["Dance With Me Till Morning Light","3:48"],["Right Here on This Little Street","3:43"],["Some Hearts Change with the Seasons","4:23"],["Mama Said Love Will Find You","3:43"],["I Let the Hurt Drift Away","4:24"],["Every Sunrise Tells Me Something","3:59"],["Take Your Time","3:24"],["I Found My Smile Again","4:02"],["Friends Like You Are Hard to Find","4:13"],["Counting Every Blessing","3:59"],["Walk Into Tomorrow Smiling","3:55"]], "/audio/khadijah-brown-love-dont-wait-forever.mp3", "khadijah-brown")
   }
 ];
 
