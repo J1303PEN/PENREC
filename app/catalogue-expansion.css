@@ -60,3 +60,17 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+@media (min-width: 1051px) {
+  .artist-grid:has(> .artist-card:nth-child(8):last-child),
+  .release-grid:has(> .release-card:nth-child(8):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  .release-grid:has(> .release-card:nth-child(8):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
