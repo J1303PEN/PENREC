@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { ArtistCard } from "@/components/artist-card";
 import { ReleaseCard } from "@/components/release-card";
 import { LatestNews } from "@/components/latest-news";
+import { AudioPlayer } from "@/components/audio-player";
 import { artists } from "@/data/catalog";
 import { ANNOUNCEMENT_KEY, Announcement, defaultAnnouncement, defaultHomepage, HOMEPAGE_KEY, HomepageConfig, readStored } from "@/data/studio";
 
@@ -29,7 +30,17 @@ export function HomepageContent() {
     statement: <section className="statement-panel"><div className="shell statement-panel__inner"><p className="eyebrow">Independent. Artist first.</p><blockquote>Extraordinary music deserves space, care and a lasting presence.</blockquote></div></section>,
     releases: <section className="section shell" id="releases"><header className="section-title section-title--releases"><div><p className="eyebrow">The first five albums</p><h2>Featured releases</h2></div><Link className="text-link" href="/releases">Explore all music ↗</Link></header><div className="release-grid">{artists.map((release) => <ReleaseCard key={release.slug} release={release} />)}</div></section>,
     news: <LatestNews />,
-    player: <section className="player-preview"><div className="shell player-preview__grid"><Image src={featured.cover} alt={`${featured.album} cover`} width={420} height={420} /><div className="player-preview__content"><p className="eyebrow">Featured listening</p><h2>{featured.name}</h2><p className="player-preview__track">{featured.album}</p><div className="progress"><span /></div><div className="controls"><button aria-label="Previous">◀</button><button className="play" aria-label="Play">▶</button><button aria-label="Next">▶</button></div></div></div></section>,
+    player: <section className="player-preview" id="listen">
+      <div className="shell">
+        <header className="section-title section-title--listening">
+          <div><p className="eyebrow">Listen now</p><h2>The launch<br /><em>collection.</em></h2></div>
+          <p>Hear a complete lead track from each of PENREC’s first five albums. Your music keeps playing while you explore the artists and their releases.</p>
+        </header>
+        <div className="launch-listening-grid">
+          {artists.map((artist) => <AudioPlayer key={artist.slug} artist={artist} compact />)}
+        </div>
+      </div>
+    </section>,
   };
 
   return <main id="content">
