@@ -1,0 +1,31 @@
+name: Publish PNR008 binary assets
+
+on:
+  push:
+    paths:
+      - ".github/workflows/pnr008-publish.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Attach Shelley Dante audio and artwork
+        env:
+          GH_TOKEN: ${{ github.token }}
+          API: https://api.github.com/repos/${{ github.repository }}
+          PARENT: ${{ github.sha }}
+          TREE_ENTRIES_B64: "W3sicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLW5pZ2h0LWRhbmNpbmcubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMTAwZDIwY2VjZDIwMjI1NjZkNGNkYTg2Yzg2MTdjNzJjYmQ5NWRlNSJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLWxvdmUtaW4tdGhlLXNoYWRvd3MubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMTcxNjg4YzY3ZjhkNGE3OWUyZWViNTg0YWJmM2YwMDhiZDZkMDY4YSJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLWJyaWNrLWJ5LWJyaWNrLm1wMyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6ImFhYjYzNjkzNWFjZjVmNmJlNjJlNzU4YTgxZjVhNDQzOTBiOGE5MzgifSx7InBhdGgiOiJwdWJsaWMvYXVkaW8vc2hlbGxleS1kYW50ZS1vbi10aGUtdHJhaW4ubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMWZlM2U0M2Q0ZWVkYjZiNWZhYTRlZmVjZjhlYWViZmY5OWMyMzc2MiJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLW15LWJpZ2dlc3QtbWlzdGFrZS5tcDMiLCJtb2RlIjoiMTAwNjQ0IiwidHlwZSI6ImJsb2IiLCJzaGEiOiI1MzE3Yjg3NTY2YTJmZWQ1MDA1NWIwMTM0NGE1YzhlZDAzMTRiYzYwIn0seyJwYXRoIjoicHVibGljL2F1ZGlvL3NoZWxsZXktZGFudGUtbWFjaG8tbWFuLm1wMyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6IjQ1NTc1MmNmOWRjNTE2OTFjNWQ0NTZhMWZmZGRiYTU0MTc2MTYyYWEifSx7InBhdGgiOiJwdWJsaWMvYXVkaW8vc2hlbGxleS1kYW50ZS1vbmUtbWFuLW9ubHkubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMWU0NDllMmU4OTNlMmRmMDhlODM3ODI1ZWNmZDlmMGIyYzU5ZDUzNSJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLXNvbWV0aGluZy1uZXcubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiNzlmZjVmNDgwZWNmZjhhNDdlYjhjNTZjZGIyZThmZDgzYzYzNWJkNyJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLXlvdS13ZXJlLW1hZGUtdG8tYnJlYWstbXktaGVhcnQubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMmQzZTdlM2IxZTlhNGI5ZGEzOGJlZjllZGVlNTJkNjc3ZDQ0MzFiNyJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLXlvdXItcGljdHVyZS1uZXh0LXRvLW1pbmUubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiYTg0YzZlMTgyZjJhMzVmMDFhYzY1NjIzM2ZjYWE4NzNkZDU3YTIxZiJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLXRoZS1wZW5tYW4tZXhwcmVzcy5tcDMiLCJtb2RlIjoiMTAwNjQ0IiwidHlwZSI6ImJsb2IiLCJzaGEiOiI3MzdmODk4MjBlYWZiMzA5YjY4NjlmZTBjOTJjNTEwNTljNjU2ZjEyIn0seyJwYXRoIjoicHVibGljL2F1ZGlvL3NoZWxsZXktZGFudGUtbWFrZS1hLW1vdmUubXAzIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMTE3YWZlOWMxNThhNjM4NjE4NGQ4ODU0MWE4OTNiODVjNzAyZDNkNyJ9LHsicGF0aCI6InB1YmxpYy9hdWRpby9zaGVsbGV5LWRhbnRlLW5leHQtZG9vci1oZWFydGJyZWFrLm1wMyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6IjAzY2E3NmM5YzIxZmViNGM5MjQyNmFkYzliMmQ0ODQ3MzA5NzY2ZmIifSx7InBhdGgiOiJwdWJsaWMvYXVkaW8vc2hlbGxleS1kYW50ZS10b21vcnJvdy1jb21lcy5tcDMiLCJtb2RlIjoiMTAwNjQ0IiwidHlwZSI6ImJsb2IiLCJzaGEiOiJmYzM1OGQ0ODYwYzRlNzM3MDg4YzAyZThkNTE4NWI0NjMwYTA1YjVjIn0seyJwYXRoIjoicHVibGljL2F1ZGlvL3NoZWxsZXktZGFudGUtZm9vbC1uby1tb3JlLm1wMyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6ImYxMzQ4NTRhNjRiNGVkMGU2YWI4NTdkMTk3NTljMWY5ZGMwMDIxZTYifSx7InBhdGgiOiJwdWJsaWMvaW1hZ2VzL2NvdmVycy9zaGVsbGV5LWRhbnRlLW5pZ2h0LWRhbmNpbmctc291cmNlLnBuZyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6IjdiNWQ3NjIxZmNmNzIxYmY0YTI4ZDI5Yjc0ZDM5NWI4MTVhNGNiZjQifSx7InBhdGgiOiJwdWJsaWMvaW1hZ2VzL2FydGlzdHMvc2hlbGxleS1kYW50ZS9zaGVsbGV5LWRhbnRlLWhlcm8ucG5nIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiMjgxNWZmNmNiN2UwMmJiZTBhMWViZTNjN2I0MTk1ZGRiYTQ3Nzc2YSJ9LHsicGF0aCI6InB1YmxpYy9pbWFnZXMvYXJ0aXN0cy9zaGVsbGV5LWRhbnRlL3NoZWxsZXktZGFudGUtcHJvZmlsZS5wbmciLCJtb2RlIjoiMTAwNjQ0IiwidHlwZSI6ImJsb2IiLCJzaGEiOiJmNTdjOTMxYjY5MmIzZmNjYmU2OTJlZmQyNmEwMmI4NTZmZTNiNjkxIn0seyJwYXRoIjoicHVibGljL2ltYWdlcy9hcnRpc3RzL3NoZWxsZXktZGFudGUvc2hlbGxleS1kYW50ZS1nYWxsZXJ5LTEucG5nIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiN2I1ZDc2MjFmY2Y3MjFiZjRhMjhkMjliNzRkMzk1YjgxNWE0Y2JmNCJ9LHsicGF0aCI6InB1YmxpYy9pbWFnZXMvYXJ0aXN0cy9zaGVsbGV5LWRhbnRlL3NoZWxsZXktZGFudGUtZ2FsbGVyeS0yLnBuZyIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6Ijk4MzIxNmRlMGI2ZTJhODY5OTQzMDAzNmZjMjg3ZjFkM2IzZDZmZGEifSx7InBhdGgiOiJwdWJsaWMvaW1hZ2VzL2FydGlzdHMvc2hlbGxleS1kYW50ZS9zaGVsbGV5LWRhbnRlLWdhbGxlcnktMy5wbmciLCJtb2RlIjoiMTAwNjQ0IiwidHlwZSI6ImJsb2IiLCJzaGEiOiIyODE1ZmY2Y2I3ZTAyYmJlMGExZWJlM2M3YjQxOTVkZGJhNDc3NzZhIn0seyJwYXRoIjoicHVibGljL2ltYWdlcy9hcnRpc3RzL3NoZWxsZXktZGFudGUvc2hlbGxleS1kYW50ZS1nYWxsZXJ5LTQucG5nIiwibW9kZSI6IjEwMDY0NCIsInR5cGUiOiJibG9iIiwic2hhIjoiZjU3YzkzMWI2OTJiM2ZjY2JlNjkyZWZkMjZhMDJiODU2ZmUzYjY5MSJ9LHsicGF0aCI6Ii5naXRodWIvd29ya2Zsb3dzL3BucjAwOC1wdWJsaXNoLnltbCIsIm1vZGUiOiIxMDA2NDQiLCJ0eXBlIjoiYmxvYiIsInNoYSI6bnVsbH1d"
+        run: |
+          set -euo pipefail
+          headers=(-H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28")
+          base_tree=$(curl -fsSL "${headers[@]}" "$API/git/commits/$PARENT" | jq -er '.tree.sha')
+          tree_entries=$(printf '%s' "$TREE_ENTRIES_B64" | base64 --decode)
+          tree_payload=$(jq -n --arg base "$base_tree" --argjson tree "$tree_entries" '{base_tree:$base,tree:$tree}')
+          new_tree=$(curl -fsSL -X POST "${headers[@]}" "$API/git/trees" -d "$tree_payload" | jq -er '.sha')
+          commit_payload=$(jq -n --arg message "Publish Shelley Dante as PNR008" --arg tree "$new_tree" --arg parent "$PARENT" '{message:$message,tree:$tree,parents:[$parent]}')
+          new_commit=$(curl -fsSL -X POST "${headers[@]}" "$API/git/commits" -d "$commit_payload" | jq -er '.sha')
+          ref_payload=$(jq -n --arg sha "$new_commit" '{sha:$sha,force:false}')
+          curl -fsSL -X PATCH "${headers[@]}" "$API/git/refs/heads/main" -d "$ref_payload" | jq -er '.object.sha'
