@@ -11,6 +11,30 @@
   .release-grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+
+  .artist-grid:has(> .artist-card:nth-child(7):last-child) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .artist-grid:has(> .artist-card:nth-child(7):last-child) > .artist-card {
+    grid-column: span 4;
+  }
+
+  .artist-grid:has(> .artist-card:nth-child(7):last-child) > .artist-card:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+
+  .release-grid:has(> .release-card:nth-child(7):last-child) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .release-grid:has(> .release-card:nth-child(7):last-child) > .release-card {
+    grid-column: span 3;
+  }
+
+  .release-grid:has(> .release-card:nth-child(7):last-child) > .release-card:nth-child(n + 5) {
+    grid-column: span 4;
+  }
 }
 
 @media (min-width: 761px) and (max-width: 1050px) {
@@ -20,6 +44,14 @@
 
   .release-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .artist-grid:has(> .artist-card:nth-child(7):last-child) > .artist-card:last-child {
+    grid-column: 4 / span 6;
+  }
+
+  .release-grid:has(> .release-card:nth-child(7):last-child) > .release-card:last-child {
+    grid-column: 2;
   }
 }
 
