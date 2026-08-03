@@ -62,7 +62,7 @@ export const launchArtists: LaunchArtist[] = [
     album: "Night Dancing",
     cover: "/images/covers/shelley-dante-night-dancing-v2.svg",
     descriptor: "Dance-pop · disco glamour · emotional power",
-  },,
+  },
   {
     name: "Luca Moretti",
     slug: "luca-moretti",
