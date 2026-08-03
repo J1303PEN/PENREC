@@ -20,7 +20,7 @@ export function TrackList({ artist }: { artist: Artist }) {
               <button type="button" onClick={() => playTrack(artist, track, index)} aria-label={`Play ${track.title}`}>
                 {isCurrent && playing ? "Ⅱ" : "▶"}
               </button>
-            ) : <small>Coming soon</small>}
+            ) : <small>Album track</small>}
           </li>
         );
       })}
