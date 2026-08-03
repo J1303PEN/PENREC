@@ -154,6 +154,26 @@ export const artists: Artist[] = [
     quote: "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.", year: "2026", catalogue: "PNR008",
     preview: "/audio/shelley-dante-night-dancing.mp3",
     tracks: albumTracks([["Night Dancing","3:30"],["Love in the Shadows","3:43"],["Brick by Brick","3:50"],["On the Train","3:48"],["My Biggest Mistake","3:10"],["Macho Man","3:28"],["One Man Only","4:26"],["Something New","2:30"],["You Were Made to Break My Heart","3:55"],["Your Picture Next to Mine","3:40"],["The Penman Express","3:33"],["Make a Move","2:53"],["Next Door Heartbreak","3:17"],["Tomorrow Comes","4:29"],["Fool No More","3:45"]], "/audio/shelley-dante-night-dancing.mp3", "shelley-dante")
+  },
+  {
+    name: "Luca Moretti", slug: "luca-moretti", album: "Donde Empieza Todo", cover: "/images/covers/luca-moretti-donde-empieza-todo.jpg",
+    hero: "/images/artists/luca-moretti/luca-moretti-hero.jpg", profile: "/images/artists/luca-moretti/luca-moretti-profile.jpg",
+    heroPosition: "58% 22%", profilePosition: "50% 18%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/luca-moretti/luca-moretti-gallery-${n}.jpg`),
+    descriptor: "Spanish pop · Mediterranean passion · romantic storytelling", location: "Spain",
+    bio: [
+      "Some voices capture a moment. Luca Moretti makes it impossible to forget.",
+      "Luca Moretti is a contemporary Spanish singer whose music combines Mediterranean passion, sophisticated pop production and the emotional power of a great romantic song. With a warm, expressive voice and an instinct for memorable melodies, he creates music that feels both deeply personal and effortlessly universal.",
+      "Drawing inspiration from modern Spanish pop, classic European songwriting and the rhythms of the Mediterranean, Luca’s sound moves naturally between intimate ballads and uplifting, rhythm-driven anthems. Acoustic guitars, piano, sweeping strings and subtle Latin influences sit alongside polished contemporary production, giving his recordings a distinctive style that is elegant, passionate and unmistakably his own.",
+      "At the heart of Luca’s music are stories of love, desire and the choices that change our lives. His songs explore the excitement of a new attraction, the uncertainty of relationships, the pain of saying goodbye and the courage it takes to begin again. Rather than presenting love as something perfect, Luca writes about it as it is—unpredictable, complicated and capable of transforming everything.",
+      "There is a strong sense of place within his music. Sunlit coastlines, late-night streets, crowded bars and quiet city squares form the emotional landscape of his songs. These images give his recordings a cinematic quality, creating the feeling of memories unfolding beneath the Spanish sun or long after midnight.",
+      "On stage, Luca is a confident and charismatic performer. Whether accompanied by a single acoustic guitar or a full live band, he brings intensity and sincerity to every performance. His understated style and natural connection with an audience allow even the largest songs to feel intimate, as though each lyric is being shared with one person alone.",
+      "Away from the spotlight, Luca approaches his music with care and discipline. He believes that every recording must begin with a genuine emotion and a melody strong enough to remain with the listener. Each vocal, arrangement and instrumental detail is shaped around the story, resulting in music that feels polished without ever losing its honesty.",
+      "With his distinctive voice, contemporary Spanish identity and gift for emotionally powerful songwriting, Luca Moretti represents a new generation of European pop artists—romantic without being predictable, stylish without losing sincerity and confident enough to let the music speak for itself."
+    ],
+    quote: "Some voices capture a moment. Luca Moretti makes it impossible to forget.", year: "2026", catalogue: "PNR009",
+    preview: "/audio/luca-moretti-desde-que-llegaste.mp3",
+    tracks: albumTracks([["Desde Que Llegaste","3:17"],["Antes De Verte","3:14"],["Cuando Callas Tú","3:35"],["Tus Pequeñas Costumbres","3:09"],["No Somos Iguales","2:57"],["Aquella Fotografía","3:18"],["Se Nos Hizo Tarde","3:10"],["Donde Empieza La Calma","3:22"],["Como Soy","3:02"],["Sin Darte Cuenta","3:09"],["Una Silla Más","4:20"],["Las Cosas Nuestras","2:54"],["Termino Tus Historias","3:10"],["Solo Con Mirarte","3:07"],["Lo Mejor No Ha Pasado","2:42"],["La Última Luz","3:23"]], "/audio/luca-moretti-desde-que-llegaste.mp3", "luca-moretti")
   }
 ];
 

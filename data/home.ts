@@ -60,8 +60,15 @@ export const launchArtists: LaunchArtist[] = [
     name: "Shelley Dante",
     slug: "shelley-dante",
     album: "Night Dancing",
-    cover: "/images/covers/shelley-dante-night-dancing.svg",
+    cover: "/images/covers/shelley-dante-night-dancing-v2.svg",
     descriptor: "Dance-pop · disco glamour · emotional power",
+  },,
+  {
+    name: "Luca Moretti",
+    slug: "luca-moretti",
+    album: "Donde Empieza Todo",
+    cover: "/images/covers/luca-moretti-donde-empieza-todo.jpg",
+    descriptor: "Spanish pop · Mediterranean passion · romantic storytelling",
   },
 ];
 
