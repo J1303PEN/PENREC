@@ -213,6 +213,24 @@ export const artists: Artist[] = [
     quote: "Some artists chase the spotlight. Harper Lane simply tells the truth.", year: "2026", catalogue: "PNR011",
     preview: "/audio/harper-lane-wide-open.mp3",
     tracks: albumTracks([["Wide Open","3:47"],["When You Look At Me","4:10"],["Say You'll Stay","3:48"],["If I Don't Tell You Now","3:45"],["My Heart Knows Better","3:58"],["Good Kind of Gone","4:40"],["Right Here, Right Now","3:55"],["Find Me Again","3:58"],["Better With You","4:13"],["Whatever Comes Next","3:41"],["This Is The Life","4:13"],["You Don't Know Me Yet","3:28"],["Five More Minutes","3:59"],["You Change The Weather","4:00"],["Nothing Changed","3:45"],["That's More Like It","4:00"]], "/audio/harper-lane-wide-open.mp3", "harper-lane")
+  },
+  {
+    name: "Ethan Blake", slug: "ethan-blake", album: "I'd Choose You Again", cover: "/images/covers/ethan-blake-id-choose-you-again.jpg",
+    hero: "/images/artists/ethan-blake/ethan-blake-hero.jpg", profile: "/images/artists/ethan-blake/ethan-blake-profile.jpg",
+    heroPosition: "50% 35%", profilePosition: "50% 24%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/ethan-blake/ethan-blake-gallery-${n}.jpg`),
+    descriptor: "British rock-pop · raw emotion · timeless songwriting", location: "United Kingdom",
+    bio: [
+      "Some artists sing about heartbreak. Ethan Blake sounds as though he has lived through every word.",
+      "With a powerful, emotionally charged voice and a natural ability to turn personal experience into unforgettable songs, Ethan Blake is a contemporary singer-songwriter unafraid to wear his heart on his sleeve. His music blends the raw honesty of rock, the storytelling tradition of country and the melodic strength of modern pop, creating a sound that feels both immediate and timeless.",
+      "At just 21, Ethan possesses a voice far beyond his years—gritty and commanding when a song demands power, yet capable of remarkable tenderness in its quieter moments. Whether accompanied by a full band, sitting alone at a grand piano or singing over the warmth of an acoustic guitar, he performs with an intensity that makes every lyric feel personal.",
+      "His debut album, I’d Choose You Again, explores love in all its complicated forms: the promises people struggle to keep, the mistakes they would undo, the relationships worth fighting for and the memories that remain long after someone has gone.",
+      "Rather than presenting love as something perfect, Ethan writes about it as something real—messy, vulnerable, painful and occasionally strong enough to survive everything placed in its way.",
+      "Beneath the album’s soaring choruses and powerful instrumentation lies a quieter question: if you could return to the beginning knowing everything that would happen, would you still make the same choice? For Ethan, the answer is found in every song. Even through disappointment, regret and heartbreak, some people remain worth choosing all over again."
+    ],
+    quote: "Some artists sing about heartbreak. Ethan Blake sounds as though he has lived through every word.", year: "2026", catalogue: "PNR012",
+    preview: "/audio/ethan-blake-until-you-find-your-feet.mp3",
+    tracks: albumTracks([["Until You Find Your Feet","3:38"],["Lean on Me Tonight","4:02"],["No Matter Where You Are","3:58"],["I'll Wait as Long as It Takes","4:15"],["If You Turn Around","4:23"],["Still My First Call","3:59"],["One More Minute","3:30"],["You Were Already There","3:59"],["You Said, \"Trust Me\"","3:50"],["I Never Said It Enough","3:58"],["It's Been Too Long","4:11"],["I Knew Right Then","4:13"],["I'd Choose You Again","4:17"],["We Didn't Even Notice","3:33"],["Before You Ask","3:40"],["It Was Always You","4:43"]], "/audio/ethan-blake-until-you-find-your-feet.mp3", "ethan-blake")
   }
 ];
 

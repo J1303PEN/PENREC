@@ -84,6 +84,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/harper-lane-wide-open.jpg",
     descriptor: "Contemporary country · heartfelt pop · honest storytelling",
   },
+  {
+    name: "Ethan Blake",
+    slug: "ethan-blake",
+    album: "I'd Choose You Again",
+    cover: "/images/covers/ethan-blake-id-choose-you-again.jpg",
+    descriptor: "British rock-pop · raw emotion · timeless songwriting",
+  },
 ];
 
 export const featuredReleases = launchArtists;
