@@ -105,6 +105,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/gabriel-laurent-lessentiel.jpg",
     descriptor: "French pop · elegant chanson · cinematic orchestration",
   },
+  {
+    name: "UP4IT!",
+    slug: "up4it",
+    album: "Together as 1",
+    cover: "/images/covers/up4it-together-as-1.jpg",
+    descriptor: "Dance-pop · harmony pop · high-energy performance",
+  },
 ];
 
 export const featuredReleases = launchArtists;

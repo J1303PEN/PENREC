@@ -270,6 +270,25 @@ export const artists: Artist[] = [
     quote: "Some artists chase perfection. Gabriel Laurent chases feeling.", year: "2026", catalogue: "PNR014",
     preview: "/audio/gabriel-laurent-tout-commence-ici.mp3",
     tracks: albumTracks([["Tout commence ici","3:18"],["On ne revient pas","3:24"],["Le monde attend","2:45"],["Prends le temps","3:35"],["Tout nous appelle","3:38"],["Les choses simples","3:14"],["Allons plus loin","3:35"],["Rien ne s'efface","4:32"],["Aujourd'hui suffit","3:48"],["À notre façon","3:05"],["Un peu plus loin","3:28"],["Je garde tout","3:02"],["Encore un jour","3:47"],["Ceux qui restent","3:30"],["C'est aujourd'hui","3:34"],["Je n'oublie rien","2:52"],["Tout était là","3:05"]], "/audio/gabriel-laurent-tout-commence-ici.mp3", "gabriel-laurent")
+  },
+  {
+    name: "UP4IT!", slug: "up4it", album: "Together as 1", cover: "/images/covers/up4it-together-as-1.jpg",
+    hero: "/images/artists/up4it/up4it-hero.jpg", profile: "/images/artists/up4it/up4it-profile.jpg",
+    heroPosition: "50% 32%", profilePosition: "50% 25%",
+    gallery: [1,2,3,4,5,6].map(n=>`/images/artists/up4it/up4it-gallery-${n}.jpg`),
+    descriptor: "Dance-pop · harmony pop · high-energy performance", location: "International",
+    bio: [
+      "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.",
+      "Made up of four charismatic performers with a shared passion for music, dance and entertainment, UP4IT! have one goal every time they step on stage—to make every audience leave smiling.",
+      "Blending infectious pop melodies with irresistible dance beats, the quartet delivers a modern sound inspired by the golden age of boy bands while embracing today's high-energy production and street-pop style. With slick vocals, razor-sharp harmonies and explosive choreography, UP4IT! are as visually exciting as they are musically compelling.",
+      "Every performance is packed with precision dance routines, powerhouse vocals and the kind of chemistry that only comes from countless hours rehearsing together. Whether they're performing an emotional anthem or an all-out dance-floor banger, the energy never drops.",
+      "Their music fuses contemporary pop, dance, R&B and electronic influences into a catalogue filled with unforgettable hooks, uplifting choruses and feel-good moments. From late-night club tracks to songs about friendship, love and chasing dreams, UP4IT! make music designed to bring people together.",
+      "Their album, Together as 1, captures that spirit across eleven songs. Echoes of My Past, Forever, Time to Believe and Hometown Dreams balance reflection and optimism, while the title of the collection expresses the friendship and shared ambition at the heart of the group.",
+      "Confident, energetic and united by a genuine bond, UP4IT! prove that four individual personalities can become something even stronger when they perform together as one."
+    ],
+    quote: "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.", year: "2026", catalogue: "PNR015",
+    preview: "/audio/up4it-echoes-of-my-past.mp3",
+    tracks: albumTracks([["Echoes of My Past","2:59"],["Forever","4:09"],["Turn the Page","3:18"],["If Time Could Heal a Broken Heart","3:07"],["Never Let Go","3:25"],["Bridge to Your Heart","3:36"],["Love","3:18"],["Time to Believe","3:42"],["Hometown Dreams","2:40"],["I Miss You","3:23"],["Wish You Were Here","3:27"]], "/audio/up4it-echoes-of-my-past.mp3", "up4it")
   }
 ];
 
