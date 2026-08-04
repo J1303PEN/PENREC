@@ -19,11 +19,15 @@ export function GlobalPlayer() {
     currentTime,
     duration,
     progress,
+    volume,
+    muted,
     queueOpen,
     toggle,
     previous,
     next,
     seek,
+    setVolume,
+    toggleMute,
     jumpTo,
     removeFromQueue,
     clearUpcoming,
@@ -79,6 +83,10 @@ export function GlobalPlayer() {
             <input type="range" min="0" max="100" step="0.1" value={progress} onChange={(event) => seek(Number(event.currentTarget.value))} aria-label="Seek through track" />
             <time>{formatTime(duration)}</time>
           </div>
+        </div>
+        <div className="global-player__volume">
+          <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"}>{muted ? "Muted" : "Volume"}</button>
+          <input type="range" min="0" max="1" step="0.01" value={muted ? 0 : volume} onChange={(event) => setVolume(Number(event.currentTarget.value))} aria-label="Volume" aria-valuetext={`${Math.round((muted ? 0 : volume) * 100)} percent`} />
         </div>
         <button className="global-player__queue" type="button" onClick={toggleQueue} aria-expanded={queueOpen} aria-controls="penrec-queue">Queue <span>{upcomingCount}</span></button>
       </aside>

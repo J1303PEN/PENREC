@@ -33,6 +33,8 @@ type PlayerContextValue = {
   currentTime: number;
   duration: number;
   progress: number;
+  volume: number;
+  muted: boolean;
   queueOpen: boolean;
   playableTracksFor: (artist: Artist) => QueueItem[];
   playArtist: (artist: Artist) => void;
@@ -43,6 +45,8 @@ type PlayerContextValue = {
   next: () => void;
   previous: () => void;
   seek: (percent: number) => void;
+  setVolume: (value: number) => void;
+  toggleMute: () => void;
   jumpTo: (index: number) => void;
   removeFromQueue: (index: number) => void;
   clearUpcoming: () => void;
@@ -77,6 +81,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [volume, setVolumeState] = useState(0.8);
+  const [muted, setMuted] = useState(false);
   const [queueOpen, setQueueOpen] = useState(false);
 
   const currentItem = queue[currentIndex] ?? launchQueue[0];
@@ -169,6 +175,26 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     setCurrentTime(audio.currentTime);
   }, []);
 
+  const setVolume = useCallback((value: number) => {
+    const safeVolume = Math.min(1, Math.max(0, value));
+    setVolumeState(safeVolume);
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = safeVolume;
+      if (safeVolume > 0) audio.muted = false;
+    }
+    if (safeVolume > 0) setMuted(false);
+    window.localStorage.setItem("penrec_player_volume", String(safeVolume));
+  }, []);
+
+  const toggleMute = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const nextMuted = !audio.muted;
+    audio.muted = nextMuted;
+    setMuted(nextMuted);
+  }, []);
+
   const jumpTo = useCallback((index: number) => selectIndex(index, true), [selectIndex]);
 
   const removeFromQueue = useCallback((index: number) => {
@@ -183,6 +209,14 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const clearUpcoming = useCallback(() => {
     setQueue((existing) => existing.slice(0, currentIndex + 1));
   }, [currentIndex]);
+
+  useEffect(() => {
+    const storedValue = window.localStorage.getItem("penrec_player_volume");
+    const storedVolume = storedValue === null ? Number.NaN : Number(storedValue);
+    const initialVolume = Number.isFinite(storedVolume) && storedVolume >= 0 && storedVolume <= 1 ? storedVolume : 0.8;
+    setVolumeState(initialVolume);
+    if (audioRef.current) audioRef.current.volume = initialVolume;
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -205,6 +239,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     currentTime,
     duration,
     progress: duration > 0 ? (currentTime / duration) * 100 : 0,
+    volume,
+    muted,
     queueOpen,
     playableTracksFor,
     playArtist,
@@ -215,12 +251,14 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     next,
     previous,
     seek,
+    setVolume,
+    toggleMute,
     jumpTo,
     removeFromQueue,
     clearUpcoming,
     toggleQueue: () => setQueueOpen((open) => !open),
     closeQueue: () => setQueueOpen(false),
-  }), [currentItem, queue, currentIndex, playing, currentTime, duration, queueOpen, playableTracksFor, playArtist, playAlbum, queueAlbum, playTrack, toggle, next, previous, seek, jumpTo, removeFromQueue, clearUpcoming]);
+  }), [currentItem, queue, currentIndex, playing, currentTime, duration, volume, muted, queueOpen, playableTracksFor, playArtist, playAlbum, queueAlbum, playTrack, toggle, next, previous, seek, setVolume, toggleMute, jumpTo, removeFromQueue, clearUpcoming]);
 
   return (
     <PlayerContext.Provider value={value}>

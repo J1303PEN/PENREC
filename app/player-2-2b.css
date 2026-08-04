@@ -1,8 +1,11 @@
 /* PENREC 2.2b — catalogue and queue */
-.global-player{grid-template-columns:52px minmax(170px,1fr) minmax(330px,42vw) auto}
+.global-player{grid-template-columns:52px minmax(170px,1fr) minmax(300px,38vw) minmax(115px,165px) auto}
 .global-player button:disabled{opacity:.28;cursor:not-allowed}
 .global-player__queue{border:1px solid rgba(199,157,76,.45);background:transparent;color:#eee;padding:9px 12px;text-transform:uppercase;letter-spacing:.12em;font-size:9px;white-space:nowrap}
 .global-player__queue span{display:inline-grid;place-items:center;margin-left:7px;min-width:19px;height:19px;border-radius:50%;background:var(--gold);color:#080808;font-weight:800}
+.global-player__volume{display:grid;grid-template-columns:auto minmax(60px,1fr);align-items:center;gap:7px}
+.global-player__volume button{width:auto!important;height:auto!important;padding:0!important;color:#999!important;font-size:8px!important;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.global-player__volume input{width:100%;height:3px;accent-color:var(--gold);cursor:pointer}
 .queue-scrim{position:fixed;inset:0;z-index:88;border:0;background:rgba(0,0,0,.52);backdrop-filter:blur(3px)}
 .queue-panel{position:fixed;right:20px;bottom:92px;z-index:89;width:min(520px,calc(100vw - 40px));max-height:min(650px,calc(100vh - 130px));display:flex;flex-direction:column;background:#0b0b0b;border:1px solid rgba(199,157,76,.5);box-shadow:0 28px 80px rgba(0,0,0,.58);transform:translateY(24px);opacity:0;pointer-events:none;transition:transform .24s ease,opacity .24s ease}
 .queue-panel--open{transform:translateY(0);opacity:1;pointer-events:auto}
@@ -32,8 +35,8 @@
 .track-list--interactive small{justify-self:end;color:#666;font-size:8px;text-transform:uppercase;letter-spacing:.1em}
 .track-list__current{background:linear-gradient(90deg,rgba(199,157,76,.12),transparent)}
 .track-list__current b{color:var(--gold)}
-@media(max-width:920px){.global-player{grid-template-columns:52px minmax(110px,1fr) auto auto}.global-player__timeline{display:none}.global-player__transport{display:block}.audio-player{grid-template-columns:78px 1fr}.audio-player__actions{grid-column:1/-1;margin:0}.track-list--interactive li{grid-template-columns:40px minmax(0,1fr) 52px 82px}}
-@media(max-width:600px){.global-player{grid-template-columns:46px minmax(0,1fr) auto}.global-player__queue{grid-column:3;grid-row:1}.global-player__transport{display:none}.queue-panel{right:0;bottom:68px;width:100vw;max-height:72vh;border-left:0;border-right:0}.queue-list__select{grid-template-columns:48px 1fr auto;padding:10px 12px}.queue-list__select img{width:48px;height:48px}.audio-player__actions{flex-wrap:wrap}.audio-player__actions button{flex:1}.track-list--interactive li{grid-template-columns:32px minmax(0,1fr) 45px}.track-list--interactive button,.track-list--interactive small{grid-column:3}.track-list--interactive time{display:none}}
+@media(max-width:920px){.global-player{grid-template-columns:52px minmax(110px,1fr) auto minmax(105px,145px) auto}.global-player__timeline{display:none}.global-player__transport{display:block}.audio-player{grid-template-columns:78px 1fr}.audio-player__actions{grid-column:1/-1;margin:0}.track-list--interactive li{grid-template-columns:40px minmax(0,1fr) 52px 82px}}
+@media(max-width:600px){.global-player{grid-template-columns:46px minmax(0,1fr) auto}.global-player__queue{grid-column:3;grid-row:1}.global-player__transport,.global-player__volume{display:none}.queue-panel{right:0;bottom:68px;width:100vw;max-height:72vh;border-left:0;border-right:0}.queue-list__select{grid-template-columns:48px 1fr auto;padding:10px 12px}.queue-list__select img{width:48px;height:48px}.audio-player__actions{flex-wrap:wrap}.audio-player__actions button{flex:1}.track-list--interactive li{grid-template-columns:32px minmax(0,1fr) 45px}.track-list--interactive button,.track-list--interactive small{grid-column:3}.track-list--interactive time{display:none}}
 
 
 /* PENREC complete album listening */

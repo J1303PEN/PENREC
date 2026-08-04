@@ -13,13 +13,17 @@ import { ANNOUNCEMENT_KEY, Announcement, defaultAnnouncement, defaultHomepage, H
 export function HomepageContent() {
   const [config, setConfig] = useState<HomepageConfig>(defaultHomepage);
   const [announcement, setAnnouncement] = useState<Announcement>(defaultAnnouncement);
+  const [randomFeaturedSlug, setRandomFeaturedSlug] = useState("");
   useEffect(() => {
     const load = () => { setConfig(readStored(HOMEPAGE_KEY, defaultHomepage)); setAnnouncement(readStored(ANNOUNCEMENT_KEY, defaultAnnouncement)); };
-    load(); window.addEventListener("storage", load); window.addEventListener("penrec-studio-update", load as EventListener);
+    load();
+    const randomArtist = artists[Math.floor(Math.random() * artists.length)];
+    setRandomFeaturedSlug(randomArtist?.slug || defaultHomepage.featuredRelease);
+    window.addEventListener("storage", load); window.addEventListener("penrec-studio-update", load as EventListener);
     return () => { window.removeEventListener("storage", load); window.removeEventListener("penrec-studio-update", load as EventListener); };
   }, []);
 
-  const featured = useMemo(() => artists.find((a) => a.slug === config.featuredRelease) || artists[0], [config.featuredRelease]);
+  const featured = useMemo(() => artists.find((a) => a.slug === (randomFeaturedSlug || config.featuredRelease)) || artists[0], [config.featuredRelease, randomFeaturedSlug]);
   const heroImage = config.heroMode === "release" ? featured.cover : config.heroImage;
   const heroTitle = config.heroMode === "release" ? featured.album : config.heroHeadline;
   const heroArtist = config.heroMode === "release" ? featured.name : config.heroEyebrow;

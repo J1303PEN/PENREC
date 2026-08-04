@@ -11,6 +11,7 @@ const links = [
   ["News", "/news"],
   ["Store", "/store"],
   ["About", "/about"],
+  ["Contact", "/contact"],
   ["Studio", "/studio"],
 ];
 

@@ -28,6 +28,7 @@ export default async function RegisterPage({
         <label>Email address<input name="email" type="email" autoComplete="email" required /></label>
         <label>Password<input name="password" type="password" autoComplete="new-password" minLength={8} required /></label>
         <p className="form-help">Use at least 8 characters.</p>
+        <p className="form-help">By creating an account, you agree to the <Link href="/terms">Terms of Use</Link> and acknowledge the <Link href="/privacy">Privacy Policy</Link>.</p>
         <button className="button button--gold" type="submit">Create account</button>
       </form>
     </AuthCard>

@@ -1,0 +1,33 @@
+.page{padding:190px 0 140px;background:radial-gradient(circle at 88% 8%,rgba(201,169,106,.12),transparent 28%),var(--black)}
+.hero{padding-bottom:95px;border-bottom:1px solid var(--line)}
+.hero h1{max-width:1000px;margin:0;font:400 clamp(76px,11vw,160px)/.82 "Playfair Display",Georgia,serif;letter-spacing:-.06em}
+.hero h1 em{color:var(--gold);font-weight:400}
+.intro{max-width:690px;margin:36px 0 0;color:#aaa;font:400 21px/1.7 "Playfair Display",Georgia,serif}
+.contactGrid{display:grid;grid-template-columns:minmax(280px,.78fr) minmax(520px,1.35fr);gap:100px;padding-top:100px}
+.details{padding-top:16px}
+.details h2,.formPanel h2{margin:0;font:400 clamp(42px,5vw,70px)/.96 "Playfair Display",Georgia,serif;letter-spacing:-.04em}
+.details>p:not(:first-child){max-width:500px;margin:28px 0 50px;color:#999;line-height:1.85}
+.details dl{margin:0;border-top:1px solid var(--line)}
+.details dl div{padding:23px 0;border-bottom:1px solid var(--line)}
+.details dt{color:var(--gold);font:400 21px "Playfair Display",Georgia,serif}
+.details dd{margin:8px 0 0;color:#777;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.formPanel{padding:52px;background:#111;border:1px solid var(--line);box-shadow:0 35px 100px rgba(0,0,0,.28)}
+.formPanel h2{font-size:clamp(42px,4vw,64px)}
+.form{display:grid;gap:22px;margin-top:40px}
+.fieldRow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form label{display:grid;gap:10px;color:#ddd;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.form input,.form select,.form textarea{width:100%;border:1px solid rgba(255,255,255,.2);border-radius:0;background:#090909;color:var(--white);padding:15px;font:400 14px Montserrat,Arial,sans-serif;outline:none;text-transform:none;letter-spacing:0}
+.form input,.form select{height:54px}
+.form textarea{resize:vertical;line-height:1.6}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.submitRow{display:flex;align-items:center;gap:24px;margin-top:4px}
+.submitRow button{flex:0 0 auto;cursor:pointer}
+.submitRow p{max-width:280px;margin:0;color:#777;font-size:10px;line-height:1.6}
+.submitRow p a{color:var(--gold);border-bottom:1px solid rgba(201,169,106,.45)}
+.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.alert{display:grid;gap:5px;margin-top:30px;padding:16px 18px;border:1px solid;font-size:12px;line-height:1.5}
+.alert span{color:#aaa}
+.success{border-color:#668b70;background:rgba(102,139,112,.12)}
+.error{border-color:#9f5555;background:rgba(159,85,85,.12)}
+@media(max-width:900px){.contactGrid{grid-template-columns:1fr;gap:65px}.details{max-width:650px}}
+@media(max-width:620px){.page{padding:135px 0 90px}.hero{padding-bottom:65px}.hero h1{font-size:68px}.intro{font-size:18px}.contactGrid{padding-top:65px}.formPanel{padding:32px 22px}.fieldRow{grid-template-columns:1fr}.submitRow{align-items:stretch;flex-direction:column}.submitRow button{justify-content:center}}

@@ -10,7 +10,7 @@ export function Footer() {
       </div>
       <div className="shell footer__bottom">
         <nav aria-label="Footer navigation">
-          <Link href="/artists">Artists</Link><Link href="/releases">Music</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link>
+          <Link href="/artists">Artists</Link><Link href="/releases">Music</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/cookies">Cookies</Link>
         </nav>
         <span>© {new Date().getFullYear()} PENREC Music Group</span>
       </div>
