@@ -251,6 +251,25 @@ export const artists: Artist[] = [
     quote: "Some groups are formed through auditions. Others come together by chance. FEVER5 were family long before they ever stepped onto a stage.", year: "2026", catalogue: "PNR013",
     preview: "/audio/fever5-fever-five.mp3",
     tracks: albumTracks([["Fever Five","2:43"],["Dance Floor Train","3:13"],["Bridge to Your Heart","3:33"],["Christopher Street","4:01"],["Making Out on a Saturday Night","3:13"],["All About You","3:45"],["Never Too Late","4:04"],["Love It Loud","4:03"],["Wink Wink","3:13"],["Camp It Up It's Friday","3:06"],["Running on Empty","3:16"],["Touch Me Like That","2:53"]], "/audio/fever5-fever-five.mp3", "fever5")
+  },
+  {
+    name: "Gabriel Laurent", slug: "gabriel-laurent", album: "L'essentiel", cover: "/images/covers/gabriel-laurent-lessentiel.jpg",
+    hero: "/images/artists/gabriel-laurent/gabriel-laurent-hero.jpg", profile: "/images/artists/gabriel-laurent/gabriel-laurent-profile.jpg",
+    heroPosition: "50% 30%", profilePosition: "50% 24%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/gabriel-laurent/gabriel-laurent-gallery-${n}.jpg`),
+    descriptor: "French pop · elegant chanson · cinematic orchestration", location: "France",
+    bio: [
+      "Some artists chase perfection. Gabriel Laurent chases feeling.",
+      "Born and raised in France, Gabriel Laurent is a contemporary French singer whose music blends sophisticated pop, elegant chanson and cinematic orchestration into a sound that feels timeless yet unmistakably modern. With a rich, expressive voice and an effortless sense of style, he creates songs that celebrate life's greatest emotions—love, hope, gratitude and the beauty found in everyday moments.",
+      "Influenced by the romance of Paris, the warmth of the Mediterranean and the great tradition of French songwriting, Gabriel combines sweeping melodies with intimate storytelling. His music moves naturally between uplifting anthems, heartfelt ballads and polished contemporary productions, always placing emotion at the centre of every performance.",
+      "His debut collection, L'essentiel, is a celebration of the moments that truly matter. Across seventeen beautifully crafted songs, Gabriel reflects on family, friendship, enduring love, new beginnings and the simple joys that often define a life well lived. Rather than searching for extravagance, the album finds its meaning in the people and memories that remain with us.",
+      "On stage, Gabriel brings the same warmth and sincerity that define his recordings. Whether performing with a full orchestra, a contemporary band or simply a piano, his natural charisma and emotional delivery create an immediate connection with an audience.",
+      "For Gabriel, success is not measured by spectacle but by the ability of a song to become part of someone's life. His music is written for celebrations, quiet reflections, long journeys and all the ordinary days that eventually become our most treasured memories.",
+      "With L'essentiel, Gabriel Laurent introduces a distinctive new voice in contemporary French pop—romantic without sentimentality, sophisticated without distance and always guided by feeling."
+    ],
+    quote: "Some artists chase perfection. Gabriel Laurent chases feeling.", year: "2026", catalogue: "PNR014",
+    preview: "/audio/gabriel-laurent-tout-commence-ici.mp3",
+    tracks: albumTracks([["Tout commence ici","3:18"],["On ne revient pas","3:24"],["Le monde attend","2:45"],["Prends le temps","3:35"],["Tout nous appelle","3:38"],["Les choses simples","3:14"],["Allons plus loin","3:35"],["Rien ne s'efface","4:32"],["Aujourd'hui suffit","3:48"],["À notre façon","3:05"],["Un peu plus loin","3:28"],["Je garde tout","3:02"],["Encore un jour","3:47"],["Ceux qui restent","3:30"],["C'est aujourd'hui","3:34"],["Je n'oublie rien","2:52"],["Tout était là","3:05"]], "/audio/gabriel-laurent-tout-commence-ici.mp3", "gabriel-laurent")
   }
 ];
 

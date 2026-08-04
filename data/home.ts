@@ -98,6 +98,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/fever5-bridge-to-your-heart.jpg",
     descriptor: "Hi-NRG dance-pop · five-part harmony · pure pop happiness",
   },
+  {
+    name: "Gabriel Laurent",
+    slug: "gabriel-laurent",
+    album: "L'essentiel",
+    cover: "/images/covers/gabriel-laurent-lessentiel.jpg",
+    descriptor: "French pop · elegant chanson · cinematic orchestration",
+  },
 ];
 
 export const featuredReleases = launchArtists;
