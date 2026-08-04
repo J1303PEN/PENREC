@@ -231,6 +231,26 @@ export const artists: Artist[] = [
     quote: "Some artists sing about heartbreak. Ethan Blake sounds as though he has lived through every word.", year: "2026", catalogue: "PNR012",
     preview: "/audio/ethan-blake-until-you-find-your-feet.mp3",
     tracks: albumTracks([["Until You Find Your Feet","3:38"],["Lean on Me Tonight","4:02"],["No Matter Where You Are","3:58"],["I'll Wait as Long as It Takes","4:15"],["If You Turn Around","4:23"],["Still My First Call","3:59"],["One More Minute","3:30"],["You Were Already There","3:59"],["You Said, \"Trust Me\"","3:50"],["I Never Said It Enough","3:58"],["It's Been Too Long","4:11"],["I Knew Right Then","4:13"],["I'd Choose You Again","4:17"],["We Didn't Even Notice","3:33"],["Before You Ask","3:40"],["It Was Always You","4:43"]], "/audio/ethan-blake-until-you-find-your-feet.mp3", "ethan-blake")
+  },
+  {
+    name: "FEVER5", slug: "fever5", album: "Bridge to Your Heart", cover: "/images/covers/fever5-bridge-to-your-heart.jpg",
+    hero: "/images/artists/fever5/fever5-hero.jpg", profile: "/images/artists/fever5/fever5-profile.jpg",
+    heroPosition: "50% 35%", profilePosition: "50% 30%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/fever5/fever5-gallery-${n}.jpg`),
+    descriptor: "Hi-NRG dance-pop · five-part harmony · pure pop happiness", location: "United Kingdom",
+    bio: [
+      "Some groups are formed through auditions. Others come together by chance. FEVER5 were family long before they ever stepped onto a stage.",
+      "Raised on the same block, the five-piece is made up of two close-knit families whose lives have always been intertwined. Triplets Perry, Louis and Lachlan grew up just a few doors away from identical twins Gray and Marco, spending their childhoods making up dance routines in the street, borrowing cassette tapes, and dreaming of performing together one day.",
+      "That lifelong friendship has become the band’s greatest strength. Years of growing up side by side have created an instinctive connection that can’t be manufactured. Every harmony locks effortlessly into place, every dance move lands with military precision, and every performance radiates the chemistry of five people who have known each other their entire lives.",
+      "Musically, FEVER5 deliver a dazzling blend of Hi-NRG dance-pop, combining pulsating electronic production, soaring five-part harmonies, infectious hooks and unapologetically feel-good energy. Inspired by the golden era of dance music while embracing a modern pop sound, their songs are built for packed dance floors, festival crowds and anyone who believes pop should be joyful.",
+      "On stage, FEVER5 are impossible to ignore. Their trademark is a spectacular live show featuring tightly choreographed routines, flawless vocal harmonies, dazzling costume changes and an infectious sense of fun. Every performance is designed as a celebration—bold, colourful, theatrical and proudly camp—where the audience becomes part of the party from the opening beat to the final encore.",
+      "Behind the glitter, however, is a band built on genuine loyalty, family values and friendship. Their shared upbringing gives them an authenticity that shines through every lyric, every rehearsal and every performance.",
+      "Whether they’re delivering euphoric club anthems, emotional pop ballads or irresistible dance-floor fillers, FEVER5 have one simple mission: to bring people together through music, movement and pure, unashamed pop happiness.",
+      "With their unstoppable chemistry, precision choreography and larger-than-life personalities, FEVER5 prove that when family and friendship come together, the result is something truly electric."
+    ],
+    quote: "Some groups are formed through auditions. Others come together by chance. FEVER5 were family long before they ever stepped onto a stage.", year: "2026", catalogue: "PNR013",
+    preview: "/audio/fever5-fever-five.mp3",
+    tracks: albumTracks([["Fever Five","2:43"],["Dance Floor Train","3:13"],["Bridge to Your Heart","3:33"],["Christopher Street","4:01"],["Making Out on a Saturday Night","3:13"],["All About You","3:45"],["Never Too Late","4:04"],["Love It Loud","4:03"],["Wink Wink","3:13"],["Camp It Up It's Friday","3:06"],["Running on Empty","3:16"],["Touch Me Like That","2:53"]], "/audio/fever5-fever-five.mp3", "fever5")
   }
 ];
 

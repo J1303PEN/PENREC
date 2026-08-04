@@ -91,6 +91,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/ethan-blake-id-choose-you-again.jpg",
     descriptor: "British rock-pop · raw emotion · timeless songwriting",
   },
+  {
+    name: "FEVER5",
+    slug: "fever5",
+    album: "Bridge to Your Heart",
+    cover: "/images/covers/fever5-bridge-to-your-heart.jpg",
+    descriptor: "Hi-NRG dance-pop · five-part harmony · pure pop happiness",
+  },
 ];
 
 export const featuredReleases = launchArtists;
