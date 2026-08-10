@@ -289,6 +289,28 @@ export const artists: Artist[] = [
     quote: "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.", year: "2026", catalogue: "PNR015",
     preview: "/audio/up4it-echoes-of-my-past.mp3",
     tracks: albumTracks([["Echoes of My Past","2:59"],["Forever","4:09"],["Turn the Page","3:18"],["If Time Could Heal a Broken Heart","3:07"],["Never Let Go","3:25"],["Bridge to Your Heart","3:36"],["Love","3:18"],["Time to Believe","3:42"],["Hometown Dreams","2:40"],["I Miss You","3:23"],["Wish You Were Here","3:27"]], "/audio/up4it-echoes-of-my-past.mp3", "up4it")
+  },
+  {
+    name: "Fifth & Main", slug: "fifth-and-main", album: "Here We Are", cover: "/images/covers/fifth-and-main-here-we-are.png",
+    hero: "/images/artists/fifth-and-main/fifth-and-main-hero.png", profile: "/images/artists/fifth-and-main/fifth-and-main-profile.png",
+    heroPosition: "50% 32%", profilePosition: "50% 38%",
+    gallery: [1,2,3,4].map(n=>`/images/artists/fifth-and-main/fifth-and-main-gallery-${n}.png`),
+    descriptor: "Five-part harmony · contemporary pop · Scandinavian polish", location: "International",
+    bio: [
+      "Five voices. Five personalities. One unmistakable sound.",
+      "Fifth & Main are a five-piece male vocal group bringing the craft of the great vocal bands into contemporary pop. Built around genuine five-part harmony, strong individual voices and songs designed to be sung rather than simply produced, the group combine classic pop songwriting with the precision and polish associated with Scandinavian pop at its best.",
+      "At the heart of Fifth & Main is the voice. Each member has his own vocal character and the ability to take the lead, allowing songs to move naturally between different singers rather than relying on a single frontman. A high tenor, two complementary tenors, baritone and deep baritone give the group an unusually broad vocal range, but it is when all five voices come together that their identity becomes clearest. Their harmonies aren't simply decoration around a lead vocal; they are fundamental to the songs themselves.",
+      "Musically, Fifth & Main occupy the space between timeless vocal pop and modern production. Their sound draws on the melodic confidence of late-1990s and early-2000s pop, when vocal groups could move convincingly between energetic pop records, R&B-influenced grooves and big romantic ballads. Rather than recreating that period, Fifth & Main take its emphasis on melody, harmony and carefully constructed choruses and place it within a contemporary production style.",
+      "That versatility defines their debut album, Here We Are.",
+      "Across the record, beat-driven pop sits alongside warmer guitar-led songs, sophisticated synth textures, romantic mid-tempo tracks and carefully placed ballads. The production changes, but the identity doesn't: memorable melodies, masculine vocals and five voices working as one.",
+      "Lyrically, Fifth & Main deal in recognisable experiences rather than grand statements. Relationships that work, relationships that don't, attraction, change, confidence, uncertainty and those ordinary moments that unexpectedly become important all have a place in their songs. The aim is simple: if five grown men are going to sing something, it has to sound like something they might actually mean.",
+      "The name reflects that balance. Fifth represents the five voices at the centre of the group; Main suggests the place where different people, influences and stories meet.",
+      "Together, they create something bigger than any one voice.",
+      "Fifth & Main aren't trying to reinvent the vocal group. They're reminding people why five voices singing a great song together worked in the first place—and showing where that sound can go next."
+    ],
+    quote: "Five voices. Five personalities. One unmistakable sound.", year: "2026", catalogue: "PNR016",
+    preview: "/audio/fifth-and-main-you-give-it-away.mp3",
+    tracks: albumTracks([["You Give It Away","3:57"],["Easy To Love","4:42"],["She Knows","3:43"],["Closer Every Time","4:23"],["More Than This","3:48"],["My Side of Goodbye","5:00"],["Right Back Here","4:13"],["Too Late To Stop","3:30"],["If You Want Me","4:02"],["Nothing Wrong with Good","4:01"],["Where I Want To Be","5:38"],["Made Up My Mind","4:02"],["Good With Me","3:39"],["Don't Make Me Wait","3:30"],["Easy With You","3:50"],["Your Move","3:49"],["Couldn't Be Better","3:40"]], "/audio/fifth-and-main-you-give-it-away.mp3", "fifth-and-main")
   }
 ];
 

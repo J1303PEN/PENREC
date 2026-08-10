@@ -112,6 +112,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/up4it-together-as-1.jpg",
     descriptor: "Dance-pop · harmony pop · high-energy performance",
   },
+  {
+    name: "Fifth & Main",
+    slug: "fifth-and-main",
+    album: "Here We Are",
+    cover: "/images/covers/fifth-and-main-here-we-are.png",
+    descriptor: "Five-part harmony · contemporary pop · Scandinavian polish",
+  },
 ];
 
 export const featuredReleases = launchArtists;

@@ -169,3 +169,15 @@
     grid-column: auto;
   }
 }
+
+@media (min-width: 1051px) {
+  .artist-grid:has(> .artist-card:nth-child(16):last-child),
+  .release-grid:has(> .release-card:nth-child(16):last-child) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .artist-grid:has(> .artist-card:nth-child(16):last-child) > .artist-card,
+  .release-grid:has(> .release-card:nth-child(16):last-child) > .release-card {
+    grid-column: auto;
+  }
+}

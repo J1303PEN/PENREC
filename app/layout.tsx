@@ -16,7 +16,7 @@ import { PlayerProvider } from "@/components/player-context";
 
 export const metadata: Metadata = {
   title: "PENREC Music Group",
-  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords, Vierklang, Sophie Beaulieu, Elias Rowan, Shelley Dante, Luca Moretti, Khadijah Brown, Harper Lane, Ethan Blake, FEVER5, Gabriel Laurent and UP4IT!.",
+  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords, Vierklang, Sophie Beaulieu, Elias Rowan, Shelley Dante, Luca Moretti, Khadijah Brown, Harper Lane, Ethan Blake, FEVER5, Gabriel Laurent, UP4IT! and Fifth & Main.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
