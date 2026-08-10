@@ -133,6 +133,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/northbound-the-things-we-keep.png",
     descriptor: "Alternative rock · big guitars · honest songwriting",
   },
+  {
+    name: "Nikos Andros",
+    slug: "nikos-andros",
+    album: "Νέες Αρχές (New Beginnings)",
+    cover: "/images/covers/nikos-andros-new-beginnings.png",
+    descriptor: "Greek pop · laïko · Mediterranean warmth",
+  },
 ];
 
 export const featuredReleases = launchArtists;

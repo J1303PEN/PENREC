@@ -372,6 +372,32 @@ export const artists: Artist[] = [
     quote: "Some bands chase the destination. Northbound were always more interested in the journey.", year: "2026", catalogue: "PNR019",
     preview: "/audio/northbound-you-dont-have-to-save-the-world.mp3",
     tracks: albumTracks([["You Don't Have to Save the World","3:30"],["You'll Never Know What You Gave Us","4:01"],["My Life, My Moment","4:05"],["You Believed Before I Did","3:58"],["The Things We Keep","3:59"],["I Should've Called","3:40"],["Who We Were","3:35"],["Everything You Never Said","3:49"],["Say It Out Loud","3:37"],["Not the Plan","4:03"],["You Stayed","3:34"],["The Second Time","3:45"],["More Than You Knew","3:58"],["That's the Kind of Man You Are","3:33"],["The Man I Never Knew","3:34"]], "/audio/northbound-you-dont-have-to-save-the-world.mp3", "northbound")
+  },
+  {
+    name: "Nikos Andros", slug: "nikos-andros", album: "Νέες Αρχές (New Beginnings)", cover: "/images/covers/nikos-andros-new-beginnings.png",
+    hero: "/images/artists/nikos-andros/nikos-andros-hero.png", profile: "/images/artists/nikos-andros/nikos-andros-profile.png",
+    heroPosition: "50% 38%", profilePosition: "50% 34%",
+    gallery: [1,2,3,4].map(n=>`/images/artists/nikos-andros/nikos-andros-gallery-${n}.png`),
+    descriptor: "Greek pop · laïko · Mediterranean warmth", location: "Greece",
+    bio: [
+      "Some songs are about where you've been. Nikos Andros makes music about where you're going next.",
+      "Nikos Andros is a Greek pop artist whose music combines the warmth and romance of the Mediterranean with timeless melodies, contemporary production and the irresistible spirit of Greek popular music.",
+      "With a rich, expressive voice and an easy charisma, Nikos makes songs that feel equally at home drifting from a seaside taverna on a summer evening or filling a dance floor long after midnight. His music is uplifting without losing its emotional depth: big melodies, passionate vocals, acoustic instrumentation and rhythms that carry an unmistakably Greek heartbeat.",
+      "Drawing inspiration from the tradition of Greek laïko and modern entechno-pop, alongside the accessibility of European schlager and contemporary Mediterranean pop, Nikos creates music that celebrates life rather than simply observing it. Bouzouki, guitar, piano, strings and traditional colours sit comfortably alongside modern drums and polished pop production.",
+      "At the centre of his music are stories.",
+      "Love found unexpectedly. Relationships that ended before they should have. Long summer nights with friends. The places we leave behind. The courage required to begin again. Nikos approaches these experiences with optimism, warmth and a little Mediterranean philosophy: life rarely follows the route we planned, but sometimes the unexpected journey is the one worth taking.",
+      "His album Νέες Αρχές (New Beginnings) captures that philosophy.",
+      "Across the record, Nikos explores those moments when one chapter closes and another begins. There are songs made for dancing, romantic songs filled with longing and quieter moments that look back at the past without becoming trapped by it. Together they create an album that moves from reflection towards celebration.",
+      "There is also a strong sense of place throughout Nikos's world. Whitewashed villages, bustling kafeneia, crowded tavernas, mountain roads, harbour lights and the Aegean at sunset aren't simply a backdrop; they are part of the atmosphere of the music itself.",
+      "Yet Nikos Andros isn't intended as nostalgia for an imagined Greece. His sound belongs firmly in the present. Traditional influences provide its character, while contemporary songwriting and production give it a broader European appeal.",
+      "That balance defines Nikos: romantic but not sentimental, traditional without being old-fashioned, confident without taking himself too seriously.",
+      "Because ultimately Νέες Αρχές isn't an album about endings.",
+      "It's about everything that can happen afterwards.",
+      "Nikos Andros. A new chapter. A new beginning."
+    ],
+    quote: "Some songs are about where you've been. Nikos Andros makes music about where you're going next.", year: "2026", catalogue: "PNR020",
+    preview: "/audio/nikos-andros-stay-here.mp3",
+    tracks: albumTracks([["Μείνε Εδώ (Stay Here)","3:28"],["Γυρίζω Σπίτι (I'm Coming Home)","3:02"],["Στο Καφενείον (At KafeNeon)","3:23"],["Ο Πατέρας Μου (My Father)","3:18"],["Μια Καινούργια Μέρα (A Brand New Day)","3:19"],["Ήρθες Την Κατάλληλη Στιγμή (You Came at the Right Time)","3:54"],["Ηρεμία (Peace)","3:32"],["Οι Ίδιοι Φίλοι (The Same Friends)","3:56"],["Ας Μείνει Η Νύχτα (Let the Night Stay)","3:14"],["Σήμερα Είναι Δικό Μας (Today Belongs to Us)","3:27"],["Σε Διαλέγω Ξανά (I Choose You Again)","3:21"],["Το Κυριακάτικο Τραπέζι (The Sunday Table)","3:34"],["Όσα Έχουμε (What We Have)","3:11"],["Ο Χρόνος Ξέρει (Time Knows)","3:20"],["Αύριο Θα Γελάμε (Tomorrow We Smile)","3:29"],["Δεν Θα Άλλαζα Τίποτα (I Wouldn't Change a Thing)","3:47"],["Ό,τι Μας Ένωσε (Everything That Brought Us Together)","3:28"],["Η Ζωή Συνεχίζεται (Life Goes On)","3:30"]], "/audio/nikos-andros-stay-here.mp3", "nikos-andros")
   }
 ];
 
