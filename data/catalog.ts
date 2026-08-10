@@ -138,10 +138,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["The Book I Never Came For","3:49"],["The Road I've Never Travelled","3:56"],["I Should Have Told You Long Ago","3:30"],["Every Tuesday","5:20"],["Love Learns New Voices","3:38"],["Before Closing Time","5:23"],["The Last Projectionist","4:44"],["Seven Minutes Fast","4:20"],["The Empty Place Beside Him","5:21"],["The Christmas Lantern","4:54"],["The Wednesday Club","4:03"],["The Piano Nobody Wanted","4:21"],["Every Thursday","4:49"],["The Glove Maker","4:49"],["The Boy Who Always Waved","5:09"],["The Table by the Window","4:50"]], "/audio/elias-rowan-the-book-i-never-came-for.mp3", "elias-rowan")
   },
   {
-    name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing-v2.svg",
-    hero: "/images/artists/shelley-dante/shelley-dante-hero.png", profile: "/images/artists/shelley-dante/shelley-dante-profile.png",
+    name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.jpg",
+    hero: "/images/artists/shelley-dante/shelley-dante-hero.jpg", profile: "/images/artists/shelley-dante/shelley-dante-profile.jpg",
     heroPosition: "24% 36%", profilePosition: "24% 28%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.png`),
+    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.jpg`),
     descriptor: "Dance-pop · disco glamour · emotional power", location: "International",
     bio: [
       "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.",
