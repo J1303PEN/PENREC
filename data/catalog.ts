@@ -311,6 +311,23 @@ export const artists: Artist[] = [
     quote: "Five voices. Five personalities. One unmistakable sound.", year: "2026", catalogue: "PNR016",
     preview: "/audio/fifth-and-main-you-give-it-away.mp3",
     tracks: albumTracks([["You Give It Away","3:57"],["Easy To Love","4:42"],["She Knows","3:43"],["Closer Every Time","4:23"],["More Than This","3:48"],["My Side of Goodbye","5:00"],["Right Back Here","4:13"],["Too Late To Stop","3:30"],["If You Want Me","4:02"],["Nothing Wrong with Good","4:01"],["Where I Want To Be","5:38"],["Made Up My Mind","4:02"],["Good With Me","3:39"],["Don't Make Me Wait","3:30"],["Easy With You","3:50"],["Your Move","3:49"],["Couldn't Be Better","3:40"]], "/audio/fifth-and-main-you-give-it-away.mp3", "fifth-and-main")
+  },
+  {
+    name: "Callia", slug: "callia", album: "Amor Eterno", cover: "/images/covers/callia-amor-eterno.jpg",
+    hero: "/images/artists/callia/callia-hero.jpg", profile: "/images/artists/callia/callia-profile.jpg",
+    heroPosition: "50% 38%", profilePosition: "50% 35%",
+    gallery: [1,2,3].map(n=>`/images/artists/callia/callia-gallery-${n}.jpg`),
+    descriptor: "Spanish pop · Mediterranean romance · cinematic warmth", location: "Spain",
+    bio: [
+      "Some love stories fade. Others become eternal.",
+      "Callia is a Spanish pop artist whose music captures the warmth, passion and romance of the Mediterranean. Combining contemporary pop production with touches of Latin rhythm, acoustic guitar and sweeping orchestration, she creates songs that feel intimate, cinematic and timeless.",
+      "At the heart of Callia’s music is her voice: warm, expressive and naturally emotive. She can move effortlessly from quiet vulnerability to soaring choruses, bringing sincerity to every lyric. Her songs explore love in all its forms—the excitement of a new beginning, the ache of separation, the memories that refuse to disappear and the hope that true love can survive anything.",
+      "Her album Amor Eterno introduces an artist inspired by the colours, landscapes and atmosphere of Spain. From sunlit village streets and lively café terraces to quiet courtyards after dark, each song evokes a vivid sense of place while telling a deeply personal story. Spanish influences run throughout the album without defining its boundaries, giving Callia a sound that is both distinctive and accessible.",
+      "Elegant but never distant, romantic without losing emotional honesty, Callia brings classic storytelling into a modern pop setting. Amor Eterno is a celebration of passion, memory and enduring connection—and the beginning of an artist whose music is designed to remain long after the final note."
+    ],
+    quote: "Some love stories fade. Others become eternal.", year: "2026", catalogue: "PNR017",
+    preview: "/audio/callia-llevame-de-vuelta-a-malaga.mp3",
+    tracks: albumTracks([["Llevame de Vuelta a Malaga","3:09"],["Pico El Cielo","3:16"],["Amor Eterno","3:06"],["En Estepona","2:30"],["En las arenas doradas","3:40"],["Ramos, Ramos, mi único amor","3:05"],["Te quiero al como eres","3:04"],["En nombre del amor","3:38"],["Promesas eternas","3:28"],["Amar es como un helado","4:13"],["Cierra la puerta tras de ti","3:21"],["Fiesta","3:20"],["Entre dos amores","3:29"],["Sin ti en mi vida, no hay mas","2:47"]], "/audio/callia-llevame-de-vuelta-a-malaga.mp3", "callia")
   }
 ];
 
