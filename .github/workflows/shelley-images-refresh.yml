@@ -1,0 +1,30 @@
+name: Refresh Shelley Dante imagery
+
+on:
+  push:
+    paths:
+      - ".github/workflows/shelley-images-refresh.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Replace Shelley Dante website images
+        env:
+          GH_TOKEN: ${{ github.token }}
+          API: https://api.github.com/repos/${{ github.repository }}
+          PARENT: ${{ github.sha }}
+          TREE_ENTRIES_JSON: '[{"path":"public/images/artists/shelley-dante/shelley-dante-gallery-1.png","mode":"100644","type":"blob","sha":"3d376aa162956d5ef6185f4b07f0f919f849f8ec"},{"path":"public/images/artists/shelley-dante/shelley-dante-gallery-2.png","mode":"100644","type":"blob","sha":"0383159e1eac740ef05fe2b3565196f967567ad7"},{"path":"public/images/artists/shelley-dante/shelley-dante-gallery-3.png","mode":"100644","type":"blob","sha":"ee517918b961bc4b358986766ba540265c071320"},{"path":"public/images/artists/shelley-dante/shelley-dante-gallery-4.png","mode":"100644","type":"blob","sha":"7171d140cdfeeeb2ffe156211c63999954df7331"},{"path":"public/images/artists/shelley-dante/shelley-dante-hero.png","mode":"100644","type":"blob","sha":"5c4c7ddf63c437b7e28e4b3cfb5643f267c54516"},{"path":"public/images/artists/shelley-dante/shelley-dante-profile.png","mode":"100644","type":"blob","sha":"199566f6f28873039ed42d5dea591bbb24c5d69d"},{"path":".github/workflows/shelley-images-refresh.yml","mode":"100644","type":"blob","sha":null}]'
+        run: |
+          set -euo pipefail
+          headers=(-H "Accept: application/vnd.github+json" -H "Authorization: Bearer $GH_TOKEN" -H "X-GitHub-Api-Version: 2022-11-28")
+          base_tree=$(curl -fsSL "${headers[@]}" "$API/git/commits/$PARENT" | jq -er '.tree.sha')
+          tree_payload=$(jq -n --arg base "$base_tree" --argjson tree "$TREE_ENTRIES_JSON" '{base_tree:$base,tree:$tree}')
+          new_tree=$(curl -fsSL -X POST "${headers[@]}" "$API/git/trees" -d "$tree_payload" | jq -er '.sha')
+          commit_payload=$(jq -n --arg message "Refresh Shelley Dante website photography" --arg tree "$new_tree" --arg parent "$PARENT" '{message:$message,tree:$tree,parents:[$parent]}')
+          new_commit=$(curl -fsSL -X POST "${headers[@]}" "$API/git/commits" -d "$commit_payload" | jq -er '.sha')
+          ref_payload=$(jq -n --arg sha "$new_commit" '{sha:$sha,force:false}')
+          curl -fsSL -X PATCH "${headers[@]}" "$API/git/refs/heads/main" -d "$ref_payload" | jq -er '.object.sha'
