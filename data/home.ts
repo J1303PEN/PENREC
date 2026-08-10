@@ -126,6 +126,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/the-glamour-katz-living-for-the-weekend.png",
     descriptor: "Disco house · funk · dance-floor glamour",
   },
+  {
+    name: "Northbound",
+    slug: "northbound",
+    album: "The Things We Keep",
+    cover: "/images/covers/northbound-the-things-we-keep.png",
+    descriptor: "Alternative rock · big guitars · honest songwriting",
+  },
 ];
 
 export const featuredReleases = launchArtists;

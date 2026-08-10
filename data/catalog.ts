@@ -349,6 +349,29 @@ export const artists: Artist[] = [
     quote: "Turn it up. Have fun. And dance.", year: "2026", catalogue: "PNR018",
     preview: "/audio/the-glamour-katz-living-for-the-weekend.mp3",
     tracks: albumTracks([["Living for the Weekend","3:42"],["Ghosts of My Past","3:53"],["Road to Loneliness","4:08"],["Scars, Hurt, Emotion","3:58"],["My Heart Is on Fire","3:25"],["My Lady Obsession","3:30"],["One Time Lover","4:00"],["Promised Land","4:03"],["Reason Is You","3:32"],["Dangerous Liaisons","2:12"],["Fight for You","3:51"],["How Did We Get Here","3:49"],["Love Lines","3:42"],["Broken and Empty","3:57"],["When the Heart Leads You Home","4:11"],["When You Brought the Angels to My Door","3:14"],["Not Now, Not Ever","3:43"],["The Crossroads of Life","4:15"],["Where Do I Run To","3:20"]], "/audio/the-glamour-katz-living-for-the-weekend.mp3", "the-glamour-katz")
+  },
+  {
+    name: "Northbound", slug: "northbound", album: "The Things We Keep", cover: "/images/covers/northbound-the-things-we-keep.png",
+    hero: "/images/artists/northbound/northbound-hero.png", profile: "/images/artists/northbound/northbound-profile.png",
+    heroPosition: "50% 42%", profilePosition: "50% 38%",
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/northbound/northbound-gallery-${n}.png`),
+    descriptor: "Alternative rock · big guitars · honest songwriting", location: "United Kingdom",
+    bio: [
+      "Some bands chase the destination. Northbound were always more interested in the journey.",
+      "Northbound are a four-piece alternative rock band built around friendship, big guitars and songs that mean something. Combining the raw energy of modern rock with huge melodic choruses, their music is loud when it needs to be, vulnerable when it matters and always driven by the chemistry of four musicians who sound like they genuinely belong in the same room.",
+      "At the heart of Northbound is a love of guitar music with purpose. Their sound moves between driving rock anthems, muscular riffs and quieter, more reflective moments before exploding into choruses designed to be sung back by a crowd. There is grit in the production, but melody is never sacrificed for noise.",
+      "Influenced by the spirit of bands such as Foo Fighters, Northbound take inspiration from an era when alternative rock could be powerful, accessible and emotionally direct. Rather than recreating the sound of their influences, they carry that philosophy forward: real instruments, dynamic performances, memorable songwriting and the feeling that a band should sound even better when four people are playing together.",
+      "Their album The Things We Keep explores everything people carry with them as life moves forward: friendships that survive distance, relationships that don't, mistakes we learn to live with, people we still think about and those seemingly insignificant moments that become more important with time.",
+      "That emotional honesty gives Northbound's music its identity. These aren't four musicians pretending everything is complicated. Sometimes a song is about wanting someone back. Sometimes it's about getting out, starting again or admitting you got something wrong. And sometimes it's simply about your best mates being beside you when everything else has fallen apart.",
+      "That friendship is fundamental to Northbound.",
+      "Away from the stage, they have the easy familiarity of four mates who have spent far too many hours together—taking the piss out of one another, arguing about records, travelling in overcrowded vehicles and accumulating stories that inevitably find their way into songs. Put instruments in their hands, however, and that familiarity becomes instinctive musical chemistry.",
+      "On stage, Northbound are where they make the most sense: guitars turned up, drums hitting hard and four personalities becoming one band. There is no elaborate mythology and no need for one.",
+      "Just four best mates, a collection of songs and somewhere ahead of them still worth heading towards.",
+      "This is Northbound."
+    ],
+    quote: "Some bands chase the destination. Northbound were always more interested in the journey.", year: "2026", catalogue: "PNR019",
+    preview: "/audio/northbound-you-dont-have-to-save-the-world.mp3",
+    tracks: albumTracks([["You Don't Have to Save the World","3:30"],["You'll Never Know What You Gave Us","4:01"],["My Life, My Moment","4:05"],["You Believed Before I Did","3:58"],["The Things We Keep","3:59"],["I Should've Called","3:40"],["Who We Were","3:35"],["Everything You Never Said","3:49"],["Say It Out Loud","3:37"],["Not the Plan","4:03"],["You Stayed","3:34"],["The Second Time","3:45"],["More Than You Knew","3:58"],["That's the Kind of Man You Are","3:33"],["The Man I Never Knew","3:34"]], "/audio/northbound-you-dont-have-to-save-the-world.mp3", "northbound")
   }
 ];
 
