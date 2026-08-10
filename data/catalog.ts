@@ -328,6 +328,27 @@ export const artists: Artist[] = [
     quote: "Some love stories fade. Others become eternal.", year: "2026", catalogue: "PNR017",
     preview: "/audio/callia-llevame-de-vuelta-a-malaga.mp3",
     tracks: albumTracks([["Llevame de Vuelta a Malaga","3:09"],["Pico El Cielo","3:16"],["Amor Eterno","3:06"],["En Estepona","2:30"],["En las arenas doradas","3:40"],["Ramos, Ramos, mi único amor","3:05"],["Te quiero al como eres","3:04"],["En nombre del amor","3:38"],["Promesas eternas","3:28"],["Amar es como un helado","4:13"],["Cierra la puerta tras de ti","3:21"],["Fiesta","3:20"],["Entre dos amores","3:29"],["Sin ti en mi vida, no hay mas","2:47"]], "/audio/callia-llevame-de-vuelta-a-malaga.mp3", "callia")
+  },
+  {
+    name: "The Glamour Katz", slug: "the-glamour-katz", album: "Living for the Weekend", cover: "/images/covers/the-glamour-katz-living-for-the-weekend.png",
+    hero: "/images/artists/the-glamour-katz/the-glamour-katz-hero.png", profile: "/images/artists/the-glamour-katz/the-glamour-katz-profile.png",
+    heroPosition: "50% 50%", profilePosition: "50% 45%",
+    gallery: [1,2,3,4].map(n=>`/images/artists/the-glamour-katz/the-glamour-katz-gallery-${n}.png`),
+    descriptor: "Disco house · funk · dance-floor glamour", location: "United Kingdom",
+    bio: [
+      "Some dance records capture a moment. The Glamour Katz were made for the dance floor.",
+      "Formed in 2005, The Glamour Katz began as a collaboration between Darren Penman and Robert de Fresnes, two producers with connections to some of the era’s biggest dance records. Their shared love of club music brought together house production, disco influences and unapologetically infectious pop hooks, creating a project built around one simple idea: records should make people want to dance.",
+      "The first real breakthrough came with “Electric Love”, a collaboration with powerhouse vocalist Amanda Wilson, whose unmistakable voice became synonymous with a string of major dance records, including her celebrated work with the Freemasons. “Electric Love” connected immediately with DJs and club audiences, climbing to the top of the club charts and establishing The Glamour Katz as a name firmly at home on the dance floor.",
+      "But The Glamour Katz were never about taking themselves too seriously. Glamorous, colourful and deliberately playful, the project combines the sophistication of classic disco with the energy of house music. Behind the name is a love of big choruses, irresistible basslines, strings, piano, funky guitars and the kind of uplifting production designed for the point in the night when everybody is dancing.",
+      "Now, more than two decades after The Glamour Katz first appeared, Darren Penman is bringing the project back for a new chapter.",
+      "Re-emerging in 2026, The Glamour Katz take inspiration from the music that originally made dance floors feel exciting: disco, funk, house and joyous vocal dance music, reimagined with contemporary production. Rather than simply recreating the past, the new material carries its spirit forward—real melodies, bold arrangements, memorable vocals and records with personality.",
+      "Tracks including “Living for the Weekend” and “Make Him Mine” introduce this new era: glamorous, energetic Disco House made with one destination firmly in mind—the dance floor.",
+      "Twenty-one years after it began, the philosophy behind The Glamour Katz remains remarkably simple.",
+      "Turn it up. Have fun. And dance."
+    ],
+    quote: "Turn it up. Have fun. And dance.", year: "2026", catalogue: "PNR018",
+    preview: "/audio/the-glamour-katz-living-for-the-weekend.mp3",
+    tracks: albumTracks([["Living for the Weekend","3:42"],["Ghosts of My Past","3:53"],["Road to Loneliness","4:08"],["Scars, Hurt, Emotion","3:58"],["My Heart Is on Fire","3:25"],["My Lady Obsession","3:30"],["One Time Lover","4:00"],["Promised Land","4:03"],["Reason Is You","3:32"],["Dangerous Liaisons","2:12"],["Fight for You","3:51"],["How Did We Get Here","3:49"],["Love Lines","3:42"],["Broken and Empty","3:57"],["When the Heart Leads You Home","4:11"],["When You Brought the Angels to My Door","3:14"],["Not Now, Not Ever","3:43"],["The Crossroads of Life","4:15"],["Where Do I Run To","3:20"]], "/audio/the-glamour-katz-living-for-the-weekend.mp3", "the-glamour-katz")
   }
 ];
 

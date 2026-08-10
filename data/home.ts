@@ -119,6 +119,13 @@ export const launchArtists: LaunchArtist[] = [
     cover: "/images/covers/fifth-and-main-here-we-are.png",
     descriptor: "Five-part harmony · contemporary pop · Scandinavian polish",
   },
+  {
+    name: "The Glamour Katz",
+    slug: "the-glamour-katz",
+    album: "Living for the Weekend",
+    cover: "/images/covers/the-glamour-katz-living-for-the-weekend.png",
+    descriptor: "Disco house · funk · dance-floor glamour",
+  },
 ];
 
 export const featuredReleases = launchArtists;
