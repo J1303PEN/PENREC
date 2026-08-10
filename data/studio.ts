@@ -53,4 +53,21 @@ export const starterBulletins: Bulletin[] = [{
 export function bulletinPublishDate(item: Bulletin) { return new Date(`${item.publishDate}T${item.publishTime || "00:00"}:00`); }
 export function isBulletinLive(item: Bulletin, now = new Date()) { return item.status === "published" || (item.status === "scheduled" && bulletinPublishDate(item).getTime() <= now.getTime()); }
 export function readStored<T>(key: string, fallback: T): T { if (typeof window === "undefined") return fallback; try { const value = window.localStorage.getItem(key); return value ? JSON.parse(value) as T : fallback; } catch { return fallback; } }
+export function readHomepageConfig(): HomepageConfig {
+  const stored = readStored<Partial<HomepageConfig>>(HOMEPAGE_KEY, {});
+  const savedSections = Array.isArray(stored.sections)
+    ? stored.sections.filter((section): section is HomepageSection => defaultHomepage.sections.includes(section as HomepageSection))
+    : [];
+  const legacyLayoutMissingPlayer = !savedSections.includes("player");
+  const sections = [
+    ...savedSections,
+    ...defaultHomepage.sections.filter((section) => !savedSections.includes(section)),
+  ];
+  const hiddenSections = Array.isArray(stored.hiddenSections)
+    ? stored.hiddenSections.filter((section): section is HomepageSection =>
+        defaultHomepage.sections.includes(section as HomepageSection) && !(legacyLayoutMissingPlayer && section === "player"))
+    : [];
+
+  return { ...defaultHomepage, ...stored, sections, hiddenSections };
+}
 export function writeStored<T>(key: string, value: T) { window.localStorage.setItem(key, JSON.stringify(value)); window.dispatchEvent(new CustomEvent("penrec-studio-update", { detail: { key } })); }

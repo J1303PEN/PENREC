@@ -8,14 +8,14 @@ import { ReleaseCard } from "@/components/release-card";
 import { LatestNews } from "@/components/latest-news";
 import { AudioPlayer } from "@/components/audio-player";
 import { artists } from "@/data/catalog";
-import { ANNOUNCEMENT_KEY, Announcement, defaultAnnouncement, defaultHomepage, HOMEPAGE_KEY, HomepageConfig, readStored } from "@/data/studio";
+import { ANNOUNCEMENT_KEY, Announcement, defaultAnnouncement, defaultHomepage, HomepageConfig, readHomepageConfig, readStored } from "@/data/studio";
 
 export function HomepageContent() {
   const [config, setConfig] = useState<HomepageConfig>(defaultHomepage);
   const [announcement, setAnnouncement] = useState<Announcement>(defaultAnnouncement);
   const [randomFeaturedSlug, setRandomFeaturedSlug] = useState("");
   useEffect(() => {
-    const load = () => { setConfig(readStored(HOMEPAGE_KEY, defaultHomepage)); setAnnouncement(readStored(ANNOUNCEMENT_KEY, defaultAnnouncement)); };
+    const load = () => { setConfig(readHomepageConfig()); setAnnouncement(readStored(ANNOUNCEMENT_KEY, defaultAnnouncement)); };
     load();
     const randomArtist = artists[Math.floor(Math.random() * artists.length)];
     setRandomFeaturedSlug(randomArtist?.slug || defaultHomepage.featuredRelease);

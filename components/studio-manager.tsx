@@ -6,7 +6,7 @@ import { artists } from "@/data/catalog";
 import {
   ANNOUNCEMENT_KEY, Announcement, BULLETINS_KEY, Bulletin, defaultAnnouncement, defaultHomepage,
   HOMEPAGE_KEY, HomepageConfig, HomepageSection, MEDIA_KEY, MediaItem, MediaKind, ManagedRelease,
-  ManagedTrack, RELEASES_KEY, readStored, starterBulletins, writeStored,
+  ManagedTrack, RELEASES_KEY, readHomepageConfig, readStored, starterBulletins, writeStored,
 } from "@/data/studio";
 
 type View = "dashboard" | "releases" | "journal" | "publishing" | "media" | "import";
@@ -42,7 +42,7 @@ export function StudioManager() {
     const oldMedia = readStored<any[]>("penrec-studio-media-v1", []);
     const m = readStored<MediaItem[]>(MEDIA_KEY, oldMedia.map(x => ({ ...x, tags: x.tags || [], folder: x.folder || "General", updatedAt: x.updatedAt || x.createdAt })));
     const r = readStored(RELEASES_KEY, seedReleases());
-    const h = readStored(HOMEPAGE_KEY, defaultHomepage);
+    const h = readHomepageConfig();
     const a = readStored(ANNOUNCEMENT_KEY, defaultAnnouncement);
     setBulletins(b); setMedia(m); setReleases(r); setHomepage(h); setAnnouncement(a);
     if (!localStorage.getItem(BULLETINS_KEY)) writeStored(BULLETINS_KEY, b);
