@@ -24,7 +24,7 @@ export function HomepageContent() {
   }, []);
 
   const featured = useMemo(() => artists.find((a) => a.slug === (randomFeaturedSlug || config.featuredRelease)) || artists[0], [config.featuredRelease, randomFeaturedSlug]);
-  const newestReleases = useMemo(() => artists.slice(-5).reverse(), []);
+  const newestReleases = useMemo(() => artists.slice(-6).reverse(), []);
   const heroImage = config.heroMode === "release" ? featured.cover : config.heroImage;
   const heroTitle = config.heroMode === "release" ? featured.album : config.heroHeadline;
   const heroArtist = config.heroMode === "release" ? featured.name : config.heroEyebrow;
