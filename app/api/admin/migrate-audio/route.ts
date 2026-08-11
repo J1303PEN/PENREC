@@ -1,4 +1,4 @@
-import { createHmac, createHash } from "node:crypto";
+import { createHmac, createHash, timingSafeEqual } from "node:crypto";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -50,8 +50,11 @@ async function putR2(key: string, body: Buffer, contentType: string) {
 
 export async function POST(request: Request) {
   try {
-    const expected = process.env.MIGRATION_SECRET;
-    if (expected && request.headers.get("authorization") !== `Bearer ${expected}`) {
+    const expected = required("MIGRATION_SECRET");
+    const supplied = request.headers.get("authorization")?.replace(/^Bearer\s+/i, "") || "";
+    const expectedBuffer = Buffer.from(expected);
+    const suppliedBuffer = Buffer.from(supplied);
+    if (expectedBuffer.length !== suppliedBuffer.length || !timingSafeEqual(expectedBuffer, suppliedBuffer)) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
