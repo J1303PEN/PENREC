@@ -34,6 +34,7 @@ async function putR2(key: string, body: Buffer, contentType: string) {
   const kSigning = hmac(kService, "aws4_request");
   const signature = createHmac("sha256", kSigning).update(stringToSign).digest("hex");
   const authorization = `AWS4-HMAC-SHA256 Credential=${accessKey}/${scope}, SignedHeaders=${signedHeaders}, Signature=${signature}`;
+  const uploadBody = new Uint8Array(body);
   const res = await fetch(url, {
     method: "PUT",
     headers: {
@@ -42,7 +43,7 @@ async function putR2(key: string, body: Buffer, contentType: string) {
       "x-amz-date": amzDate,
       authorization,
     },
-    body,
+    body: uploadBody,
   });
   if (!res.ok) throw new Error(`R2 upload failed ${res.status}: ${await res.text()}`);
 }
