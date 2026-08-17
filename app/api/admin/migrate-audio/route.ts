@@ -66,12 +66,26 @@ export async function POST(request: Request) {
     const files = (await listing.json()) as Array<{ name: string; download_url: string | null; type: string; size: number }>;
     const audio = files.filter((f) => f.type === "file" && f.download_url && /\.(mp3|m4a|wav|ogg)$/i.test(f.name));
 
-    const requested = Number(new URL(request.url).searchParams.get("limit") || "5");
-    const limit = Math.max(1, Math.min(requested, 20));
-    const offset = Math.max(0, Number(new URL(request.url).searchParams.get("offset") || "0"));
-    const batch = audio.slice(offset, offset + limit);
-    const migrated: Array<{ name: string; size: number; publicUrl: string }> = [];
+    const url = new URL(request.url);
+    const namesParam = url.searchParams.get("names");
+    let batch: typeof audio;
+    let offset = 0;
 
+    if (namesParam) {
+      const names = namesParam.split(",").map((name) => name.trim()).filter(Boolean);
+      if (names.length > 20) return NextResponse.json({ error: "Maximum 20 filenames per request" }, { status: 400 });
+      const byName = new Map(audio.map((file) => [file.name, file]));
+      const missing = names.filter((name) => !byName.has(name));
+      if (missing.length) return NextResponse.json({ error: "Requested files not found", missing }, { status: 404 });
+      batch = names.map((name) => byName.get(name)!);
+    } else {
+      const requested = Number(url.searchParams.get("limit") || "5");
+      const limit = Math.max(1, Math.min(requested, 20));
+      offset = Math.max(0, Number(url.searchParams.get("offset") || "0"));
+      batch = audio.slice(offset, offset + limit);
+    }
+
+    const migrated: Array<{ name: string; size: number; publicUrl: string }> = [];
     for (const file of batch) {
       const source = await fetch(file.download_url!, { cache: "no-store" });
       if (!source.ok) throw new Error(`Download failed for ${file.name}: ${source.status}`);
@@ -84,7 +98,14 @@ export async function POST(request: Request) {
       });
     }
 
-    return NextResponse.json({ total: audio.length, offset, migrated: migrated.length, nextOffset: offset + migrated.length, files: migrated });
+    return NextResponse.json({
+      total: audio.length,
+      mode: namesParam ? "names" : "offset",
+      offset: namesParam ? undefined : offset,
+      migrated: migrated.length,
+      nextOffset: namesParam ? undefined : offset + migrated.length,
+      files: migrated,
+    });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Migration failed" }, { status: 500 });
   }
