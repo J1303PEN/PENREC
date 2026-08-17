@@ -13,6 +13,35 @@ export type ReleaseData = {
 // existing catalogue remains backwards compatible while artists gain a true
 // discography. New second/third releases are added here.
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
+  "the-glamour-katz": [
+    {
+      album: "Make Him Mine",
+      cover: "/images/covers/the-glamour-katz-make-him-mine.jpg",
+      year: "2026",
+      catalogue: "PNR023",
+      preview: "https://audio.penrec.co.uk/01_make_him_mine.mp3",
+      tracks: [
+        { title: "Make Him Mine", duration: "4:08", audio: "https://audio.penrec.co.uk/01_make_him_mine.mp3" },
+        { title: "Safe in the Arms of Love", duration: "3:52", audio: "https://audio.penrec.co.uk/02_safe_in_the_arms_of_love.mp3" },
+        { title: "Dancing with my Baby", duration: "4:19", audio: "https://audio.penrec.co.uk/03_dancing_with_my_baby.mp3" },
+        { title: "Name of Love", duration: "3:19", audio: "https://audio.penrec.co.uk/04_name_of_love.mp3" },
+        { title: "Not Now, Maybe Later", duration: "3:30", audio: "https://audio.penrec.co.uk/05_not_now_maybe_later.mp3" },
+        { title: "One True Lover", duration: "4:18", audio: "https://audio.penrec.co.uk/06_one_true_lover.mp3" },
+        { title: "Ladies Put Your Hands Up", duration: "4:00", audio: "https://audio.penrec.co.uk/07_ladies_put_your_hands_up.mp3" },
+        { title: "Claws Out", duration: "3:55", audio: "https://audio.penrec.co.uk/08_claws_out.mp3" },
+        { title: "Moonlight Shadows", duration: "3:55", audio: "https://audio.penrec.co.uk/09_moonlight_shadows.mp3" },
+        { title: "Why Did You Do", duration: "3:45", audio: "https://audio.penrec.co.uk/10_why_did_you_do.mp3" },
+        { title: "My Body My Soul", duration: "4:01", audio: "https://audio.penrec.co.uk/11_my_body_my_soul.mp3" },
+        { title: "On The Line", duration: "3:57", audio: "https://audio.penrec.co.uk/12_on_the_line.mp3" },
+        { title: "Walking on Broken Glass", duration: "3:53", audio: "https://audio.penrec.co.uk/13_walking_on_broken_glass.mp3" },
+        { title: "Take Me As I Am", duration: "3:10", audio: "https://audio.penrec.co.uk/14_take_me_as_i_am.mp3" },
+        { title: "Starting Over Again", duration: "3:49", audio: "https://audio.penrec.co.uk/15_starting_over_again.mp3" },
+        { title: "Ring on my Finger", duration: "3:48", audio: "https://audio.penrec.co.uk/16_ring_on_my_finger.mp3" },
+        { title: "Walk Away From Happiness", duration: "3:10", audio: "https://audio.penrec.co.uk/17_walk_away_from_happiness.mp3" },
+        { title: "Gotta get away from You", duration: "3:41", audio: "https://audio.penrec.co.uk/18_gotta_get_away_from_you.mp3" },
+      ],
+    },
+  ],
   "fifth-and-main": [
     {
       album: "Christmas",
