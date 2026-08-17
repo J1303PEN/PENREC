@@ -4,11 +4,12 @@ import { useMemo, useState } from "react";
 import { ReleaseCard } from "@/components/release-card";
 import { artists } from "@/data/catalog";
 import { saturdayBest } from "@/data/saturday-best";
+import { getCatalogueReleaseArtists } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 const catalogueArtists = [
-  ...artists.map(artist => artist.slug === "nikos-andros" ? {...artist, catalogue:"PNR021"} : artist),
-  saturdayBest,
+  ...getCatalogueReleaseArtists(artists),
+  {...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}`},
 ];
 
 export function CatalogueBrowser() {
@@ -22,5 +23,5 @@ export function CatalogueBrowser() {
       return a.catalogue.localeCompare(b.catalogue);
     });
   }, [filter, sort]);
-  return <><div className="catalogue-toolbar"><div className="catalogue-filters" aria-label="Filter catalogue by territory">{filters.map((item) => <button className={filter === item ? "is-active" : undefined} type="button" key={item} onClick={() => setFilter(item)}>{item}</button>)}</div><label>Sort <select value={sort} onChange={(event) => setSort(event.target.value as typeof sort)}><option value="catalogue">Catalogue number</option><option value="artist">Artist</option><option value="title">Release title</option></select></label></div><p className="catalogue-count">Showing {releases.length} of {catalogueArtists.length} PENREC releases</p><div className="release-grid release-grid--catalogue">{releases.map((release) => <ReleaseCard key={release.slug} release={release} />)}</div></>;
+  return <><div className="catalogue-toolbar"><div className="catalogue-filters" aria-label="Filter catalogue by territory">{filters.map((item) => <button className={filter === item ? "is-active" : undefined} type="button" key={item} onClick={() => setFilter(item)}>{item}</button>)}</div><label>Sort <select value={sort} onChange={(event) => setSort(event.target.value as typeof sort)}><option value="catalogue">Catalogue number</option><option value="artist">Artist</option><option value="title">Release title</option></select></label></div><p className="catalogue-count">Showing {releases.length} of {catalogueArtists.length} PENREC releases</p><div className="release-grid release-grid--catalogue">{releases.map((release) => <ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release} />)}</div></>;
 }
