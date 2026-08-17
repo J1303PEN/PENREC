@@ -19,7 +19,7 @@ export const saturdayBest: Artist = {
   quote: "Meet me at the Palais — in your Saturday Best.",
   year: "2026",
   catalogue: "PNR020",
-  preview: "https://audio.penrec.co.uk/saturday_best/01_meet_me_at_the_palais.mp3",
+  preview: "https://audio.penrec.co.uk/01_meet_me_at_the_palais.mp3",
   tracks: [
     ["Meet Me At The Palais","3:48","01_meet_me_at_the_palais.mp3"],
     ["The Boy in the Borrowed Suit","3:58","02_the_boy_in_the_borrowed_suit.mp3"],
@@ -37,5 +37,5 @@ export const saturdayBest: Artist = {
     ["Saturday Best","4:04","14_saturday_best.mp3"],
     ["Next Saturday","3:54","15_next_saturday.mp3"],
     ["This Is Saturday Best","6:04","16_this_is_saturday_best.mp3"]
-  ].map(([title,duration,file])=>({title,duration,audio:`https://audio.penrec.co.uk/saturday_best/${file}`}))
+  ].map(([title,duration,file])=>({title,duration,audio:`https://audio.penrec.co.uk/${file}`}))
 };
