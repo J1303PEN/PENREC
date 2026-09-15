@@ -1,15 +1,17 @@
 import type { Artist } from "@/data/catalog";
 
+const imageBase = "https://audio.penrec.co.uk/verelles";
+
 export const theVerelles: Artist = {
   name: "The Verelles",
   slug: "the-verelles",
   album: "No Halfway Love",
-  cover: "/images/covers/the-verelles-no-halfway-love.jpg",
-  hero: "/images/artists/the-verelles/the-verelles-hero.jpg",
-  profile: "/images/artists/the-verelles/the-verelles-profile.jpg",
+  cover: `${imageBase}/cover.jpg`,
+  hero: `${imageBase}/hero.jpg`,
+  profile: `${imageBase}/profile.jpg`,
   heroPosition: "50% 35%",
   profilePosition: "50% 30%",
-  gallery: [1, 2, 3, 4, 5].map((n) => `/images/artists/the-verelles/the-verelles-gallery-${n}.jpg`),
+  gallery: ["001", "002", "003", "004", "005"].map((n) => `${imageBase}/gallery-${n}.jpg`),
   descriptor: "Vocal soul · timeless glamour · contemporary production",
   location: "International",
   bio: [
