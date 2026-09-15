@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Artist } from "@/data/catalog";
 
-export function ReleaseCard({ release }: { release: Artist & { releaseHref?: string } }) {
+export function ReleaseCard({ release }: { release: Artist & { releaseHref?: string; releaseCredit?: string } }) {
   const href = release.releaseHref ?? `/releases/${release.slug}`;
   const credit = release.releaseCredit ?? release.name;
   return (
