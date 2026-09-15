@@ -4,12 +4,13 @@ import { useMemo, useState } from "react";
 import { ReleaseCard } from "@/components/release-card";
 import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
+import { theParkers } from "@/data/parkers";
 import { saturdayBest } from "@/data/saturday-best";
 import { getCatalogueReleaseArtists } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 const catalogueArtists = [
-  ...getCatalogueReleaseArtists([...artists, theVerelles]),
+  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers]),
   {...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}`},
 ];
 
