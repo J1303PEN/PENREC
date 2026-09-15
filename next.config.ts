@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "audio.penrec.co.uk",
-        pathname: "/verelles/**",
+        pathname: "/**",
       },
     ],
   },
