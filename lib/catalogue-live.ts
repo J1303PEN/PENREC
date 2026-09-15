@@ -1,5 +1,6 @@
 import { getAccessToken, restRequest, restSelect } from "@/lib/penrec-auth";
 import { getArtist, type Artist } from "@/data/catalog";
+import { theVerelles } from "@/data/verelles";
 
 type CatalogueOverride = {
   slug: string;
@@ -61,8 +62,12 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
   };
 }
 
+function baseArtist(slug: string) {
+  return getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined);
+}
+
 export async function getResolvedArtist(slug: string) {
-  const base = getArtist(slug);
+  const base = baseArtist(slug);
   if (!base) return undefined;
   const rows = await publicOverrides(slug);
   return merge(base, rows[0]);
@@ -80,7 +85,7 @@ export async function getAdminCatalogueOverride(slug: string) {
 }
 
 export async function getAdminResolvedArtist(slug: string) {
-  const base = getArtist(slug);
+  const base = baseArtist(slug);
   if (!base) return undefined;
   return { artist: merge(base, await getAdminCatalogueOverride(slug)), override: await getAdminCatalogueOverride(slug) };
 }
