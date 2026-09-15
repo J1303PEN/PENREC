@@ -10,9 +10,8 @@ export type ReleaseData = {
   releaseCredit?: string;
 };
 
-// Additional releases are kept separately from the legacy artist record so the
-// existing catalogue remains backwards compatible while artists gain a true
-// discography. New second/third releases are added here.
+export type ReleaseArtist = Artist & { releaseCredit?: string };
+
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   "the-glamour-katz": [
     {
@@ -71,6 +70,7 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
 };
 
 function legacyRelease(artist: Artist): ReleaseData {
+  const creditedArtist = artist as ReleaseArtist;
   return {
     album: artist.album,
     cover: artist.cover,
@@ -78,7 +78,7 @@ function legacyRelease(artist: Artist): ReleaseData {
     catalogue: artist.slug === "nikos-andros" ? "PNR021" : artist.catalogue,
     preview: artist.preview,
     tracks: artist.tracks,
-    releaseCredit: artist.releaseCredit,
+    releaseCredit: creditedArtist.releaseCredit,
   };
 }
 
@@ -86,7 +86,7 @@ export function getArtistReleases(artist: Artist): ReleaseData[] {
   return [legacyRelease(artist), ...(additionalReleases[artist.slug] ?? [])];
 }
 
-export function asReleaseArtist(artist: Artist, release: ReleaseData): Artist {
+export function asReleaseArtist(artist: Artist, release: ReleaseData): ReleaseArtist {
   return {
     ...artist,
     album: release.album,
@@ -99,7 +99,7 @@ export function asReleaseArtist(artist: Artist, release: ReleaseData): Artist {
   };
 }
 
-export function getReleaseArtist(artist: Artist, catalogue?: string): Artist {
+export function getReleaseArtist(artist: Artist, catalogue?: string): ReleaseArtist {
   const releases = getArtistReleases(artist);
   const selected = catalogue
     ? releases.find((release) => release.catalogue.toLowerCase() === catalogue.toLowerCase())
@@ -114,7 +114,7 @@ export function getReleaseHref(artist: Artist, release: ReleaseData): string {
     : `/releases/${artist.slug}?release=${encodeURIComponent(release.catalogue)}`;
 }
 
-export type CatalogueRelease = Artist & { releaseHref: string };
+export type CatalogueRelease = ReleaseArtist & { releaseHref: string };
 
 export function getCatalogueReleaseArtists(artists: Artist[]): CatalogueRelease[] {
   return artists.flatMap((artist) =>
