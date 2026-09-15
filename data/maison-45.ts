@@ -2,19 +2,14 @@ import type { Artist } from "@/data/catalog";
 
 const imageBase = "https://audio.penrec.co.uk/maison-45";
 const audioBase = "https://audio.penrec.co.uk";
+type ArtistWithReleaseCredit = Artist & { releaseCredit?: string };
 
-export const maison45: Artist = {
-  name: "Maison 45",
-  slug: "maison-45",
-  album: "Out Tonight",
-  cover: `${imageBase}/out-tonight-cover.jpg`,
-  hero: `${imageBase}/hero.jpg`,
-  profile: `${imageBase}/hero.jpg`,
-  heroPosition: "50% 50%",
-  profilePosition: "50% 50%",
+export const maison45: ArtistWithReleaseCredit = {
+  name: "Maison 45", slug: "maison-45", album: "Out Tonight",
+  cover: `${imageBase}/out-tonight-cover.jpg`, hero: `${imageBase}/hero.jpg`, profile: `${imageBase}/hero.jpg`,
+  heroPosition: "50% 50%", profilePosition: "50% 50%",
   gallery: [`${imageBase}/lorna-may-001.jpg`, `${imageBase}/lorna-may-002.jpg`],
-  descriptor: "European pop · French chanson · cinematic arrangements",
-  location: "United Kingdom",
+  descriptor: "European pop · French chanson · cinematic arrangements", location: "United Kingdom",
   bio: [
     "Maison 45 is the musical alter ego of British music producer, songwriter and creative Darren Penman — a project built around his love of sophisticated European pop, French chanson, cinematic arrangements and songs driven by melody and emotion.",
     "The name provides Penman with a distinct musical space in which to explore a more continental sound. Maison 45 draws inspiration from the drama and storytelling of classic French music, particularly the chanson tradition and artists such as Édith Piaf, while deliberately avoiding simple nostalgia or imitation.",
@@ -24,14 +19,10 @@ export const maison45: Artist = {
     "That philosophy reflects Penman’s wider career in music. Having worked across pop, dance and production, Maison 45 allows him to step away from the expectations attached to any particular genre and follow a more instinctive approach to record-making. French and wider European influences can coexist with British pop songwriting, cinematic scoring and contemporary production without any one of them defining the project completely.",
     "The visual world is equally important. Maison 45 suggests Paris after dark, grand theatres, pavement cafés, old cinemas, intimate performance rooms and the understated glamour of European nightlife. Yet, like the music, the imagery is viewed through a contemporary lens rather than treated as a recreation of another era.",
     "Maison 45 ultimately represents another side of Darren Penman as a producer: more cinematic, more European and occasionally more theatrical, but still centred on the element that has always mattered most to him — the song.",
-    "Classic influences. Modern production. European soul.",
-    "Maison 45."
+    "Classic influences. Modern production. European soul.", "Maison 45."
   ],
-  quote: "Classic influences. Modern production. European soul.",
-  year: "2026",
-  catalogue: "PNR026",
-  releaseCredit: "Lorna May vs Maison 45",
-  preview: `${audioBase}/01_some_nerve.mp3`,
+  quote: "Classic influences. Modern production. European soul.", year: "2026", catalogue: "PNR026",
+  releaseCredit: "Lorna May vs Maison 45", preview: `${audioBase}/01_some_nerve.mp3`,
   tracks: [
     { title: "Some Nerve", duration: "4:47", audio: `${audioBase}/01_some_nerve.mp3` },
     { title: "Says Who", duration: "3:22", audio: `${audioBase}/02_says_who.mp3` },
