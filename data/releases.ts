@@ -95,6 +95,33 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
       ],
     },
   ],
+  "shelley-dante": [
+    {
+      album: "I'm Glad You Called",
+      cover: "https://audio.penrec.co.uk/shelley-dante/im-glad-you-called.jpg",
+      year: "2026",
+      catalogue: "PNR028",
+      preview: "https://audio.penrec.co.uk/01_im_glad_you_called.mp3",
+      tracks: [
+        { title: "I'm Glad You Called", duration: "4:00", audio: "https://audio.penrec.co.uk/01_im_glad_you_called.mp3" },
+        { title: "Don't Make Me Ask Again", duration: "4:09", audio: "https://audio.penrec.co.uk/02_dont_make_me_ask_again.mp3" },
+        { title: "Stop Making Me Laugh", duration: "3:42", audio: "https://audio.penrec.co.uk/03_stop_making_me_laugh.mp3" },
+        { title: "I Made Other Plans", duration: "4:14", audio: "https://audio.penrec.co.uk/04_i_made_other_plans.mp3" },
+        { title: "Come Over Here", duration: "4:24", audio: "https://audio.penrec.co.uk/05_come_over_here.mp3" },
+        { title: "Why Didn't We Do This Before?", duration: "4:17", audio: "https://audio.penrec.co.uk/06_why_didnt_we_do_this_before.mp3" },
+        { title: "You Could've Told Me", duration: "3:43", audio: "https://audio.penrec.co.uk/07_you_couldve_told_me.mp3" },
+        { title: "Call Somebody Else", duration: "3:23", audio: "https://audio.penrec.co.uk/08_call_somebody_else.mp3" },
+        { title: "That's Not What You Said", duration: "4:12", audio: "https://audio.penrec.co.uk/09_thats_not_what_you_said.mp3" },
+        { title: "I Could Get Used to You", duration: "3:49", audio: "https://audio.penrec.co.uk/10_i_could_get_used_to_you.mp3" },
+        { title: "Don't Start", duration: "3:26", audio: "https://audio.penrec.co.uk/11_dont_start.mp3" },
+        { title: "I Like You Best Like This", duration: "4:03", audio: "https://audio.penrec.co.uk/12_i_like_you_best_like_this.mp3" },
+        { title: "Keep Me Company", duration: "4:03", audio: "https://audio.penrec.co.uk/13_keep_me_company.mp3" },
+        { title: "Now You're Talking", duration: "4:14", audio: "https://audio.penrec.co.uk/14_now_youre_talking.mp3" },
+        { title: "No Particular Reason", duration: "3:32", audio: "https://audio.penrec.co.uk/15_no_particular_reason.mp3" },
+        { title: "I Needed This", duration: "3:38", audio: "https://audio.penrec.co.uk/16_i_needed_this.mp3" },
+      ],
+    },
+  ],
 };
 
 function legacyRelease(artist: Artist): ReleaseData {
