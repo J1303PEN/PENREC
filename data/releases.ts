@@ -7,6 +7,7 @@ export type ReleaseData = {
   catalogue: string;
   preview: string;
   tracks: Track[];
+  releaseCredit?: string;
 };
 
 // Additional releases are kept separately from the legacy artist record so the
@@ -77,6 +78,7 @@ function legacyRelease(artist: Artist): ReleaseData {
     catalogue: artist.slug === "nikos-andros" ? "PNR021" : artist.catalogue,
     preview: artist.preview,
     tracks: artist.tracks,
+    releaseCredit: artist.releaseCredit,
   };
 }
 
@@ -93,6 +95,7 @@ export function asReleaseArtist(artist: Artist, release: ReleaseData): Artist {
     catalogue: release.catalogue,
     preview: release.preview,
     tracks: release.tracks,
+    releaseCredit: release.releaseCredit,
   };
 }
 
