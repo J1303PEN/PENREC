@@ -67,6 +67,34 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
       ],
     },
   ],
+  "vierklang": [
+    {
+      album: "Zwischen den Jahren",
+      cover: "https://audio.penrec.co.uk/vierklang/zwischen-den-jahren.jpg",
+      year: "2026",
+      catalogue: "PNR027",
+      preview: "https://audio.penrec.co.uk/01_heiligabend_halb_neun.mp3",
+      tracks: [
+        { title: "Heiligabend, halb neun", duration: "3:53", audio: "https://audio.penrec.co.uk/01_heiligabend_halb_neun.mp3" },
+        { title: "Drei Tage, zwei Familien", duration: "4:02", audio: "https://audio.penrec.co.uk/02_drei_tage_zwei_familien.mp3" },
+        { title: "Später an Heiligabend", duration: "3:35", audio: "https://audio.penrec.co.uk/03_spater_an_heiligabend.mp3" },
+        { title: "Noch eine Schicht bis Weihnachten", duration: "3:35", audio: "https://audio.penrec.co.uk/04_noch_eine_schicht_bis_weihnachten.mp3" },
+        { title: "Dieses Jahr bei uns", duration: "3:35", audio: "https://audio.penrec.co.uk/05_dieses_jahr_bei_uns.mp3" },
+        { title: "Nur noch zwei Tage bis Weihnachten", duration: "3:34", audio: "https://audio.penrec.co.uk/06_nur_noch_zwei_tage_bis_weihnachten.mp3" },
+        { title: "Bis zum letzten Lied", duration: "4:03", audio: "https://audio.penrec.co.uk/07_bis_zum_letzten_lied.mp3" },
+        { title: "Heute wird nicht früh gegangen", duration: "3:34", audio: "https://audio.penrec.co.uk/08_heute_wird_nicht_fruh_gegangen.mp3" },
+        { title: "Wir kommen doch", duration: "3:33", audio: "https://audio.penrec.co.uk/09_wir_kommen_doch.mp3" },
+        { title: "Letzter Samstag im Advent", duration: "3:35", audio: "https://audio.penrec.co.uk/10_letzter_samstag_im_advent.mp3" },
+        { title: "Am zweiten Feiertag", duration: "3:36", audio: "https://audio.penrec.co.uk/11_am_zweiten_feiertag.mp3" },
+        { title: "Vor der Bescherung", duration: "3:36", audio: "https://audio.penrec.co.uk/12_vor_der_bescherung.mp3" },
+        { title: "Wenn der Weihnachtsmarkt schließt", duration: "3:36", audio: "https://audio.penrec.co.uk/13_wenn_der_weihnachtsmarkt_schliesst.mp3" },
+        { title: "Nach der Christvesper", duration: "3:36", audio: "https://audio.penrec.co.uk/14_nach_der_christvesper.mp3" },
+        { title: "Der Abend vor dem Abend", duration: "3:36", audio: "https://audio.penrec.co.uk/15_der_abend_vor_dem_abend.mp3" },
+        { title: "Zwischen den Jahren", duration: "4:03", audio: "https://audio.penrec.co.uk/16_zwischen_den_jahren.mp3" },
+        { title: "Am Morgen des Vierundzwanzigsten", duration: "4:00", audio: "https://audio.penrec.co.uk/17_am_morgen_des_vierundzwanzigsten.mp3" },
+      ],
+    },
+  ],
 };
 
 function legacyRelease(artist: Artist): ReleaseData {
