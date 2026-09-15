@@ -6,12 +6,13 @@ import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
 import { theParkers } from "@/data/parkers";
 import { maison45 } from "@/data/maison-45";
+import { localArrangement } from "@/data/local-arrangement";
 import { saturdayBest } from "@/data/saturday-best";
 import { getCatalogueReleaseArtists } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 const catalogueArtists = [
-  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45]),
+  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45, localArrangement]),
   {...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}`},
 ];
 
