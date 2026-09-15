@@ -7,13 +7,14 @@ import { theParkers } from "@/data/parkers";
 import { maison45 } from "@/data/maison-45";
 import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
+import { christieWalker } from "@/data/christie-walker";
 import { saturdayBest } from "@/data/saturday-best";
 import { getCatalogueReleaseArtists } from "@/data/releases";
 
 const catalogueNumber = (catalogue: string) => Number(catalogue.replace(/\D/g, "")) || 0;
 
 export default async function ReleasesPage() {
-  const catalogueArtists = [...artists, theVerelles, theParkers, maison45, localArrangement, directMotion];
+  const catalogueArtists = [...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker];
   const catalogueReleases = [
     ...getCatalogueReleaseArtists(catalogueArtists),
     { ...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}` },
