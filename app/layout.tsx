@@ -15,12 +15,29 @@ import { GlobalPlayer } from "@/components/global-player";
 import { PlayerProvider } from "@/components/player-context";
 
 export const metadata: Metadata = {
-  title: "PENREC Music Group",
-  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords, Vierklang, Sophie Beaulieu, Elias Rowan, Shelley Dante, Luca Moretti, Khadijah Brown, Harper Lane, Ethan Blake, FEVER5, Gabriel Laurent, UP4IT!, Fifth & Main, Callia, The Glamour Katz, Northbound and Nikos Andros.",
+  metadataBase: new URL("https://penrec.co.uk"),
+  title: { default: "PENREC Music Group", template: "%s | PENREC Music Group" },
+  description: "PENREC Music Group — independent music, artists and releases from Darren Penman's record label and creative studio.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "https://penrec.co.uk",
+    siteName: "PENREC Music Group",
+    title: "PENREC Music Group",
+    description: "Independent music, artists and releases from PENREC Music Group.",
+  },
+  twitter: { card: "summary_large_image", title: "PENREC Music Group", description: "Independent music, artists and releases from PENREC Music Group." },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organisation = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "PENREC Music Group",
+    alternateName: "PENREC Records",
+    url: "https://penrec.co.uk",
+  };
   return (
-    <html lang="en"><body><PlayerProvider><a className="skip-link" href="#content">Skip to content</a><Header />{children}<Footer /><GlobalPlayer /></PlayerProvider></body></html>
+    <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(organisation)}}/><PlayerProvider><a className="skip-link" href="#content">Skip to content</a><Header />{children}<Footer /><GlobalPlayer /></PlayerProvider></body></html>
   );
 }
