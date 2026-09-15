@@ -5,12 +5,13 @@ import { ReleaseCard } from "@/components/release-card";
 import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
 import { theParkers } from "@/data/parkers";
+import { maison45 } from "@/data/maison-45";
 import { saturdayBest } from "@/data/saturday-best";
 import { getCatalogueReleaseArtists } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 const catalogueArtists = [
-  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers]),
+  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45]),
   {...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}`},
 ];
 
@@ -20,7 +21,7 @@ export function CatalogueBrowser() {
   const releases = useMemo(() => {
     const selected = filter === "All" ? catalogueArtists : catalogueArtists.filter((artist) => artist.location === filter);
     return [...selected].sort((a, b) => {
-      if (sort === "artist") return a.name.localeCompare(b.name);
+      if (sort === "artist") return (a.releaseCredit ?? a.name).localeCompare(b.releaseCredit ?? b.name);
       if (sort === "title") return a.album.localeCompare(b.album);
       return a.catalogue.localeCompare(b.catalogue);
     });
