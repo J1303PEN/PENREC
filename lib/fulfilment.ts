@@ -1,6 +1,12 @@
 import "server-only";
 
-import type { CommerceProduct, FulfilmentProvider } from "@/lib/commerce";
+import type { FulfilmentProvider } from "@/lib/commerce";
+
+type FulfilmentProduct = {
+  provider_product_id: string | null;
+  digital_file: string | null;
+  image?: string | null;
+};
 
 export type Address = {
   name?: string | null;
@@ -17,7 +23,7 @@ export type Address = {
 export type FulfilmentItem = {
   id: string;
   quantity: number;
-  product: CommerceProduct;
+  product: FulfilmentProduct;
 };
 
 export type FulfilmentResult = {
@@ -109,8 +115,8 @@ export async function createGelatoOrder(orderId: string, address: Address, items
       items: items.map((item) => ({
         itemReferenceId: item.id,
         productUid: item.product.provider_product_id,
-        files: item.product.digital_file || item.product.image
-          ? [{ type: "default", url: item.product.digital_file || item.product.image }]
+        files: item.product.digital_file
+          ? [{ type: "default", url: item.product.digital_file }]
           : undefined,
         quantity: item.quantity,
       })),
