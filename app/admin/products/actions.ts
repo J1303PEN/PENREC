@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
-import { createProduct, deleteProduct, updateProduct, type FulfilmentProvider, type ProductStatus } from "@/lib/commerce";
+import { createProduct, deleteProduct, getAdminProduct, updateProduct, type FulfilmentProvider, type ProductStatus } from "@/lib/commerce";
 
 const text = (data: FormData, name: string) => String(data.get(name) || "").trim();
 const validStatuses: ProductStatus[] = ["draft", "published", "archived"];
@@ -33,7 +33,7 @@ function optionalDate(data: FormData, name: string) {
   return value.toISOString();
 }
 
-function payload(data: FormData) {
+function payload(data: FormData, providerMetadata: Record<string, unknown> = {}) {
   const price = Number.parseFloat(text(data, "price"));
   const status = text(data, "status") as ProductStatus;
   const provider = text(data, "provider") as FulfilmentProvider;
@@ -77,7 +77,7 @@ function payload(data: FormData) {
     provider_variant_id: providerVariantId,
     artwork_file: artworkFile,
     supplier_cost_pence: supplierCostPence,
-    provider_metadata: {},
+    provider_metadata: providerMetadata,
     sku: text(data, "sku") || null,
     barcode: text(data, "barcode") || null,
     stock_quantity: optionalInteger(data, "stock_quantity"),
@@ -107,7 +107,9 @@ export async function updateCommerceProduct(data: FormData) {
   const id = text(data, "id");
   if (!id) redirect("/admin/products?error=Missing+product+ID");
   try {
-    await updateProduct(id, payload(data));
+    const current = await getAdminProduct(id);
+    if (!current) throw new Error("Product could not be found.");
+    await updateProduct(id, payload(data, current.provider_metadata || {}));
   } catch (error) {
     redirect(`/admin/products/${id}?error=${encodeURIComponent(error instanceof Error ? error.message : "Unable to update product.")}`);
   }
