@@ -15,6 +15,7 @@ export default async function AdminPage() {
     ["Catalogue", `${artists.length} artists · ${trackCount} tracks`, "/admin/catalogue"],
     ["Media", "Artwork, photography and audio inventory", "/admin/media"],
     ["Products", "Music formats, merchandise and fulfilment routing", "/admin/products"],
+    ["Integrations", "Stripe, R2, Gelato and Printful connections", "/admin/integrations"],
     ["Studio Workspace", "Publishing, releases, journal and imports", "/studio"],
     ["Orders", `${pending} order${pending === 1 ? "" : "s"} need attention`, "/admin/orders"],
     ["Customers", `${profiles.length} registered account${profiles.length === 1 ? "" : "s"}`, "/admin/users"],
