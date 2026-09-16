@@ -18,6 +18,8 @@ type OrderItem = {
   quantity: number;
   provider: FulfilmentProvider;
   provider_product_id: string | null;
+  provider_variant_id: string | null;
+  artwork_file: string | null;
   digital_file: string | null;
   product_type: string;
 };
@@ -44,7 +46,7 @@ export async function fulfilPhysicalOrder(orderId: string) {
 
   const rows = await adminRest<OrderItem[]>(
     "order_items",
-    `select=id,quantity,provider,provider_product_id,digital_file,product_type&order_id=eq.${encodeURIComponent(orderId)}`
+    `select=id,quantity,provider,provider_product_id,provider_variant_id,artwork_file,digital_file,product_type&order_id=eq.${encodeURIComponent(orderId)}`
   );
 
   const physical = rows.filter((item) => isPhysical(item));
@@ -72,13 +74,18 @@ export async function fulfilPhysicalOrder(orderId: string) {
   });
 
   for (const [provider, group] of groups) {
-    if (!group.every((item) => item.provider_product_id)) {
+    const missingMapping = group.some((item) =>
+      !item.provider_product_id ||
+      !item.artwork_file ||
+      (provider === "printful" && !item.provider_variant_id)
+    );
+    if (missingMapping) {
       failed = true;
       await adminRest("orders", `id=eq.${encodeURIComponent(orderId)}`, {
         method: "PATCH",
         body: JSON.stringify({ fulfilment_status: "failed", updated_at: new Date().toISOString() }),
       });
-      throw new Error(`${provider} products are missing provider product IDs.`);
+      throw new Error(`${provider} products are missing exact provider mapping or print artwork.`);
     }
 
     const existing = await adminRest<FulfilmentRecord[]>(
@@ -112,7 +119,8 @@ export async function fulfilPhysicalOrder(orderId: string) {
         quantity: item.quantity,
         product: {
           provider_product_id: item.provider_product_id,
-          digital_file: item.digital_file,
+          provider_variant_id: item.provider_variant_id,
+          artwork_file: item.artwork_file,
         },
       }));
 
