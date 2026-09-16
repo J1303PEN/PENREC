@@ -32,15 +32,18 @@ function ProviderSection({ result }: { result: ProviderCatalogueResult }) {
               <h3>{item.title}</h3>
               <p>{item.detail || "Supplier product available for PENREC mapping."}</p>
               <p><small>Provider ID: {item.id}</small></p>
-              <form action={selectSupplierProduct} style={{ marginTop: "1rem" }}>
-                <input type="hidden" name="provider" value={item.provider} />
-                <input type="hidden" name="provider_product_id" value={item.id} />
-                <input type="hidden" name="title" value={item.title} />
-                <input type="hidden" name="category" value={item.category} />
-                <input type="hidden" name="image" value={item.image || ""} />
-                <input type="hidden" name="detail" value={item.detail || ""} />
-                <button className="button button--gold" type="submit">Select for PENREC</button>
-              </form>
+              <div style={{ display: "flex", gap: ".75rem", flexWrap: "wrap", marginTop: "1rem" }}>
+                <Link className="button button--outline" href={`/admin/merchandise/configure?provider=${encodeURIComponent(item.provider)}&id=${encodeURIComponent(item.id)}`}>Inspect exact variants</Link>
+                <form action={selectSupplierProduct}>
+                  <input type="hidden" name="provider" value={item.provider} />
+                  <input type="hidden" name="provider_product_id" value={item.id} />
+                  <input type="hidden" name="title" value={item.title} />
+                  <input type="hidden" name="category" value={item.category} />
+                  <input type="hidden" name="image" value={item.image || ""} />
+                  <input type="hidden" name="detail" value={item.detail || ""} />
+                  <button className="button button--gold" type="submit">Select for PENREC</button>
+                </form>
+              </div>
             </article>
           ))}
         </div>
@@ -59,7 +62,7 @@ export default async function MerchandisePage({ searchParams }: { searchParams: 
         <div>
           <p className="eyebrow">PENREC Studio</p>
           <h1>Merchandise suppliers</h1>
-          <p>Real supplier products from Printful and Gelato. Select a product here to create a safe draft in PENREC before artwork, variants and pricing are mapped.</p>
+          <p>Real supplier products from Printful and Gelato. Inspect exact variants before selecting a product into PENREC.</p>
         </div>
         <Link className="button button--outline" href="/admin">Back to Studio</Link>
       </header>
@@ -78,8 +81,8 @@ export default async function MerchandisePage({ searchParams }: { searchParams: 
 
       <section className="account-empty" style={{ marginTop: "2rem" }}>
         <p className="eyebrow">Selection workflow</p>
-        <h2>Supplier product → PENREC draft → artwork → price → publish</h2>
-        <p>Selected supplier products stay in draft at £0.00 and cannot appear in the public Store until their artwork, exact variant, supplier cost and retail price have been deliberately completed.</p>
+        <h2>Supplier product → exact variant → PENREC draft → artwork → price → publish</h2>
+        <p>Printful Product IDs are now kept separate from exact Variant IDs, and Gelato Product UIDs can be inspected for attributes and GB support before anything is chosen for the Store.</p>
       </section>
     </main>
   );
