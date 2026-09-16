@@ -2,7 +2,7 @@ import "server-only";
 
 import type { CommerceProduct, FulfilmentProvider } from "@/lib/commerce";
 
-type Address = {
+export type Address = {
   name?: string | null;
   address1?: string | null;
   address2?: string | null;
@@ -14,7 +14,7 @@ type Address = {
   email?: string | null;
 };
 
-type FulfilmentItem = {
+export type FulfilmentItem = {
   id: string;
   quantity: number;
   product: CommerceProduct;
@@ -51,7 +51,7 @@ export async function createPrintfulOrder(orderId: string, address: Address, ite
   const token = required("PRINTFUL_API_TOKEN");
   const { firstName, lastName } = splitName(address.name);
 
-  const response = await fetch("https://api.printful.com/orders?confirm=1", {
+  const response = await fetch("https://api.printful.com/orders?confirm=1&update_existing=1", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -84,7 +84,11 @@ export async function createPrintfulOrder(orderId: string, address: Address, ite
   const providerOrderId = String(result.id || result.order?.id || "");
   if (!providerOrderId) throw new Error("Printful did not return an order ID.");
 
-  return { provider: "printful", providerOrderId, status: String(result.status || result.order?.status || "submitted") };
+  return {
+    provider: "printful",
+    providerOrderId,
+    status: String(result.status || result.order?.status || "submitted"),
+  };
 }
 
 export async function createGelatoOrder(orderId: string, address: Address, items: FulfilmentItem[]): Promise<FulfilmentResult> {
@@ -105,7 +109,9 @@ export async function createGelatoOrder(orderId: string, address: Address, items
       items: items.map((item) => ({
         itemReferenceId: item.id,
         productUid: item.product.provider_product_id,
-        fileUrl: item.product.digital_file || item.product.image || undefined,
+        files: item.product.digital_file || item.product.image
+          ? [{ type: "default", url: item.product.digital_file || item.product.image }]
+          : undefined,
         quantity: item.quantity,
       })),
       shippingAddress: {
@@ -127,7 +133,11 @@ export async function createGelatoOrder(orderId: string, address: Address, items
   const providerOrderId = String(body.id || body.orderId || body.order?.id || "");
   if (!providerOrderId) throw new Error("Gelato did not return an order ID.");
 
-  return { provider: "gelato", providerOrderId, status: String(body.status || body.order?.status || "created") };
+  return {
+    provider: "gelato",
+    providerOrderId,
+    status: String(body.fulfillmentStatus || body.status || body.order?.fulfillmentStatus || "created"),
+  };
 }
 
 export async function createProviderOrder(
