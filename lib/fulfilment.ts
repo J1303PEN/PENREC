@@ -12,9 +12,12 @@ export type Address = {
   name?: string | null;
   address1?: string | null;
   address2?: string | null;
+  line1?: string | null;
+  line2?: string | null;
   city?: string | null;
   state?: string | null;
   postcode?: string | null;
+  postal_code?: string | null;
   country?: string | null;
   phone?: string | null;
   email?: string | null;
@@ -43,6 +46,15 @@ function splitName(name: string | null | undefined) {
   return { firstName: parts.shift() || "PENREC", lastName: parts.join(" ") || "Customer" };
 }
 
+function normaliseAddress(address: Address): Address {
+  return {
+    ...address,
+    address1: address.address1 || address.line1 || null,
+    address2: address.address2 || address.line2 || null,
+    postcode: address.postcode || address.postal_code || null,
+  };
+}
+
 async function providerResponse(response: Response, provider: string) {
   const text = await response.text();
   let body: unknown = null;
@@ -53,7 +65,8 @@ async function providerResponse(response: Response, provider: string) {
   return body as Record<string, any>;
 }
 
-export async function createPrintfulOrder(orderId: string, address: Address, items: FulfilmentItem[]): Promise<FulfilmentResult> {
+export async function createPrintfulOrder(orderId: string, rawAddress: Address, items: FulfilmentItem[]): Promise<FulfilmentResult> {
+  const address = normaliseAddress(rawAddress);
   const token = required("PRINTFUL_API_TOKEN");
   const { firstName, lastName } = splitName(address.name);
 
@@ -97,7 +110,8 @@ export async function createPrintfulOrder(orderId: string, address: Address, ite
   };
 }
 
-export async function createGelatoOrder(orderId: string, address: Address, items: FulfilmentItem[]): Promise<FulfilmentResult> {
+export async function createGelatoOrder(orderId: string, rawAddress: Address, items: FulfilmentItem[]): Promise<FulfilmentResult> {
+  const address = normaliseAddress(rawAddress);
   const apiKey = required("GELATO_API_KEY");
   const { firstName, lastName } = splitName(address.name);
 
