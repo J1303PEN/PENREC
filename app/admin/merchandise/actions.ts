@@ -6,6 +6,7 @@ import { requireAdmin } from "@/lib/auth";
 import { createProduct, getAdminProducts, updateProduct, type FulfilmentProvider } from "@/lib/commerce";
 
 const text = (data: FormData, name: string) => String(data.get(name) || "").trim();
+const FIFTH_MAIN_CAP_ARTWORK = "/images/merch/fifth-and-main/fifth-main-embroidery-front.svg";
 
 function classify(category: string) {
   const value = category.toLowerCase();
@@ -189,16 +190,41 @@ export async function buildFifthMainFlexfitCap() {
 
   const existing = await getAdminProducts();
   let createdCount = 0;
+  let updatedCount = 0;
 
   for (const variant of variants) {
     const variantId = String(variant.id || "");
     if (!variantId) continue;
-    if (existing.some((product) => product.provider === "printful" && product.provider_variant_id === variantId)) continue;
 
     const supplierPrice = Number.parseFloat(String(variant.price || ""));
     const supplierCurrency = String(variant.currency || "").toUpperCase();
     const supplierCostPence = Number.isFinite(supplierPrice) && supplierCurrency === "GBP" ? Math.round(supplierPrice * 100) : null;
     const size = String(variant.size || "");
+    const matched = existing.find((product) => product.provider === "printful" && product.provider_variant_id === variantId);
+
+    if (matched) {
+      await updateProduct(matched.id, {
+        artist_slug: "fifth-and-main",
+        artwork_file: FIFTH_MAIN_CAP_ARTWORK,
+        supplier_cost_pence: supplierCostPence ?? matched.supplier_cost_pence,
+        provider_metadata: {
+          ...(matched.provider_metadata || {}),
+          supplier_name: parent.title || "Closed-Back Structured Cap | Flexfit 6277",
+          supplier_color: "Black",
+          supplier_size: size,
+          supplier_currency: supplierCurrency || null,
+          supplier_list_price: Number.isFinite(supplierPrice) ? supplierPrice : null,
+          embroidery_placement: "front",
+          artwork_source: FIFTH_MAIN_CAP_ARTWORK,
+          artwork_basis: "/images/covers/fifth-and-main-here-we-are.png",
+          embroidery_threads: ["ivory", "champagne-gold"],
+        },
+        shipping_note: "Printful made-to-order embroidered cap. Exact black Flexfit 6277 variant and Fifth & Main front embroidery artwork are mapped; retail pricing remains to be approved before publication.",
+        status: "draft",
+      });
+      updatedCount += 1;
+      continue;
+    }
 
     await createProduct({
       slug: `fifth-and-main-flexfit-6277-black-${size.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
@@ -214,7 +240,7 @@ export async function buildFifthMainFlexfitCap() {
       provider: "printful",
       provider_product_id: String(parent.id),
       provider_variant_id: variantId,
-      artwork_file: null,
+      artwork_file: FIFTH_MAIN_CAP_ARTWORK,
       supplier_cost_pence: supplierCostPence,
       provider_metadata: {
         supplier_name: parent.title || "Closed-Back Structured Cap | Flexfit 6277",
@@ -223,8 +249,9 @@ export async function buildFifthMainFlexfitCap() {
         supplier_currency: supplierCurrency || null,
         supplier_list_price: Number.isFinite(supplierPrice) ? supplierPrice : null,
         embroidery_placement: "front",
-        artwork_source: "/images/covers/fifth-and-main-here-we-are.png",
-        artwork_instruction: "Extract the established Fifth & Main wordmark from the Here We Are cover and prepare it as embroidery-safe artwork before publication.",
+        artwork_source: FIFTH_MAIN_CAP_ARTWORK,
+        artwork_basis: "/images/covers/fifth-and-main-here-we-are.png",
+        embroidery_threads: ["ivory", "champagne-gold"],
       },
       sku: `FAM-6277-BLK-${size.replace("/", "")}`,
       barcode: null,
@@ -233,7 +260,7 @@ export async function buildFifthMainFlexfitCap() {
       digital_file: null,
       preorder_at: null,
       available_at: null,
-      shipping_note: "Printful made-to-order embroidered cap. Draft only until the Fifth & Main wordmark is converted to embroidery-safe artwork and retail pricing is approved.",
+      shipping_note: "Printful made-to-order embroidered cap. Exact black Flexfit 6277 variant and Fifth & Main front embroidery artwork are mapped; retail pricing remains to be approved before publication.",
       status: "draft",
     });
     createdCount += 1;
@@ -241,5 +268,5 @@ export async function buildFifthMainFlexfitCap() {
 
   revalidatePath("/admin/products");
   revalidatePath("/admin/merchandise");
-  redirect(`/admin/products?created=${createdCount || 1}`);
+  redirect(`/admin/products?created=${createdCount}&updated=${updatedCount}`);
 }
