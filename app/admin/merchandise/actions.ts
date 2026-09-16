@@ -55,6 +55,10 @@ export async function selectSupplierProduct(data: FormData) {
     currency: "GBP",
     provider,
     provider_product_id: providerProductId,
+    provider_variant_id: null,
+    artwork_file: null,
+    supplier_cost_pence: null,
+    provider_metadata: {},
     sku: null,
     barcode: null,
     stock_quantity: null,
@@ -62,7 +66,7 @@ export async function selectSupplierProduct(data: FormData) {
     digital_file: null,
     preorder_at: null,
     available_at: null,
-    shipping_note: `Supplier selection from ${provider}. Complete artwork, variant, cost and retail price mapping before publishing.`,
+    shipping_note: `Supplier selection from ${provider}. Complete artwork, exact variant, supplier cost and retail price before publishing.`,
     status: "draft",
   });
 
