@@ -84,15 +84,23 @@ export async function processChargeRefund(charge: Stripe.Charge) {
   const order = orders[0];
   if (!order) throw new Error("PENREC order for refunded payment could not be found.");
 
+  const fullyRefunded = charge.amount_refunded >= charge.amount;
   await adminRest("orders", `id=eq.${encodeURIComponent(order.id)}`, {
     method: "PATCH",
-    body: JSON.stringify({ status: "refunded", payment_status: "refunded", fulfilment_status: "cancelled", updated_at: new Date().toISOString() }),
+    body: JSON.stringify({
+      status: fullyRefunded ? "refunded" : order.status,
+      payment_status: fullyRefunded ? "refunded" : "partially_refunded",
+      ...(fullyRefunded ? { fulfilment_status: "cancelled" } : {}),
+      updated_at: new Date().toISOString(),
+    }),
   });
 
-  await adminRest("digital_entitlements", `order_id=eq.${encodeURIComponent(order.id)}&status=eq.active`, {
-    method: "PATCH",
-    body: JSON.stringify({ status: "revoked", revoked_at: new Date().toISOString() }),
-  });
+  if (fullyRefunded) {
+    await adminRest("digital_entitlements", `order_id=eq.${encodeURIComponent(order.id)}&status=eq.active`, {
+      method: "PATCH",
+      body: JSON.stringify({ status: "revoked", revoked_at: new Date().toISOString() }),
+    });
+  }
 }
 
 export async function createPendingOrderForItems(
@@ -142,6 +150,10 @@ export async function createPendingOrderForItems(
         format: product.format,
         provider: product.provider,
         provider_product_id: product.provider_product_id,
+        provider_variant_id: product.provider_variant_id,
+        artwork_file: product.artwork_file,
+        supplier_cost_pence: product.supplier_cost_pence,
+        provider_metadata: product.provider_metadata || {},
         sku: product.sku,
         quantity,
         unit_price_pence: product.price_pence,
