@@ -14,6 +14,28 @@ export type ProviderCatalogueResult = {
   note: string;
 };
 
+export type ProviderVariant = {
+  id: string;
+  label: string;
+  size?: string | null;
+  color?: string | null;
+  price?: string | null;
+  currency?: string | null;
+  available?: boolean | null;
+};
+
+export type ProviderProductDetail = {
+  provider: "printful" | "gelato";
+  id: string;
+  title: string;
+  category: string;
+  image?: string | null;
+  note: string;
+  attributes: Array<{ label: string; value: string }>;
+  variants: ProviderVariant[];
+  supportedCountries?: string[];
+};
+
 const wanted = /(t-?shirt|tee|hoodie|sweatshirt|crewneck|poster|art print|tote|cap|beanie|apparel|clothing)/i;
 
 function text(value: unknown) {
@@ -22,6 +44,10 @@ function text(value: unknown) {
 
 function object(value: unknown): Record<string, unknown> {
   return value && typeof value === "object" && !Array.isArray(value) ? value as Record<string, unknown> : {};
+}
+
+function bool(value: unknown) {
+  return typeof value === "boolean" ? value : null;
 }
 
 export async function getPrintfulCatalogue(): Promise<ProviderCatalogueResult> {
@@ -106,4 +132,73 @@ export async function getGelatoCatalogue(): Promise<ProviderCatalogueResult> {
   } catch (error) {
     return { provider: "gelato", configured: true, items: [], note: error instanceof Error ? error.message : "Gelato catalogue could not be loaded." };
   }
+}
+
+export async function getProviderProductDetail(provider: "printful" | "gelato", id: string): Promise<ProviderProductDetail> {
+  if (provider === "printful") {
+    const token = process.env.PRINTFUL_API_TOKEN?.trim();
+    if (!token) throw new Error("Printful is not configured in this deployment.");
+    const response = await fetch(`https://api.printful.com/products/${encodeURIComponent(id)}`, {
+      headers: { Authorization: `Bearer ${token}`, "X-PF-Language": "en_GB" },
+      cache: "no-store",
+    });
+    if (!response.ok) throw new Error(`Printful returned ${response.status}`);
+    const payload = object(await response.json());
+    const result = object(payload.result);
+    const product = object(result.product);
+    const rows = Array.isArray(result.variants) ? result.variants : [];
+    const variants = rows.map((value) => {
+      const variant = object(value);
+      return {
+        id: String(variant.id ?? ""),
+        label: text(variant.name) || [text(variant.color), text(variant.size)].filter(Boolean).join(" / ") || `Variant ${String(variant.id ?? "")}`,
+        size: text(variant.size) || null,
+        color: text(variant.color) || null,
+        price: text(variant.price) || null,
+        currency: text(variant.currency) || text(product.currency) || null,
+        available: bool(variant.in_stock),
+      } satisfies ProviderVariant;
+    }).filter((variant) => variant.id);
+
+    return {
+      provider,
+      id,
+      title: text(product.title) || "Printful product",
+      category: text(product.type_name) || text(product.type) || "Merchandise",
+      image: text(product.image) || null,
+      note: `${variants.length} exact Printful catalogue variants returned. Use a Variant ID for fulfilment, not the parent Product ID.`,
+      attributes: [
+        { label: "Brand", value: text(product.brand) },
+        { label: "Model", value: text(product.model) },
+        { label: "Product ID", value: id },
+      ].filter((item) => item.value),
+      variants,
+    };
+  }
+
+  const apiKey = process.env.GELATO_API_KEY?.trim();
+  if (!apiKey) throw new Error("Gelato is not configured in this deployment.");
+  const response = await fetch(`https://product.gelatoapis.com/v3/products/${encodeURIComponent(id)}`, {
+    headers: { "X-API-KEY": apiKey },
+    cache: "no-store",
+  });
+  if (!response.ok) throw new Error(`Gelato returned ${response.status}`);
+  const product = object(await response.json());
+  const attrs = object(product.attributes);
+  const supportedCountries = Array.isArray(product.supportedCountries) ? product.supportedCountries.map(String) : [];
+  const attributes = Object.entries(attrs).map(([label, value]) => ({ label, value: String(value) }));
+  const weight = object(product.weight);
+  if (weight.value != null) attributes.push({ label: "Weight", value: `${String(weight.value)} ${text(weight.measureUnit)}`.trim() });
+  attributes.push({ label: "Product UID", value: id });
+
+  return {
+    provider,
+    id,
+    title: text(attrs.ProductName) || text(attrs.Name) || "Gelato product",
+    category: text(attrs.ProductType) || "Gelato merchandise",
+    note: supportedCountries.includes("GB") ? "This Gelato product reports support for GB fulfilment." : "Check GB fulfilment before publishing this Gelato product.",
+    attributes,
+    variants: [{ id, label: id }],
+    supportedCountries,
+  };
 }
