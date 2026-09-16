@@ -40,6 +40,11 @@ export async function startCheckout(formData: FormData) {
 
   const user = await getUser();
   const digital = isDigitalProduct(product.product_type, product.format);
+
+  if (digital && !user) {
+    redirect(`/login?next=${encodeURIComponent("/store")}`);
+  }
+
   const stripe = getStripe();
 
   const order = await createPendingOrder(
