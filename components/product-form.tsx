@@ -20,6 +20,14 @@ function money(value?: number | null) {
 
 export function ProductForm({ product, releases = [], action }: Props) {
   const margin = product?.supplier_cost_pence != null ? product.price_pence - product.supplier_cost_pence : null;
+  const marginPercent = product && margin != null && product.price_pence > 0 ? Math.round((margin / product.price_pence) * 100) : null;
+  const physicalMerch = !!product && !`${product.product_type} ${product.format || ""}`.toLowerCase().match(/digital|download/);
+  const supplierMapped = !!product?.provider_product_id && (product?.provider !== "printful" || !!product?.provider_variant_id);
+  const artworkReady = !physicalMerch || !!product?.artwork_file;
+  const costReady = !physicalMerch || product?.supplier_cost_pence != null;
+  const priceReady = !physicalMerch || (product?.supplier_cost_pence != null && product.price_pence > product.supplier_cost_pence);
+  const launchReady = !physicalMerch || (supplierMapped && artworkReady && costReady && priceReady);
+
   return <form action={action} className="catalogue-editor__form commerce-product-form">
     {product && <input type="hidden" name="id" value={product.id}/>} 
 
@@ -66,7 +74,26 @@ export function ProductForm({ product, releases = [], action }: Props) {
         <label>Exact provider variant ID<input name="provider_variant_id" defaultValue={product?.provider_variant_id || ""} placeholder="Exact Printful size/colour Variant ID; Gelato variant UID if applicable"/><small>Required before a Printful physical product can be fulfilment-ready.</small></label>
         <label className="span-2">Shipping / delivery note<textarea name="shipping_note" rows={3} defaultValue={product?.shipping_note || ""} placeholder="Manufactured on demand and shipped separately."/></label>
       </div>
-      {product && <div className="account-summary" style={{ marginTop: "24px" }}><article><strong>{(product.price_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Retail</span></article><article><strong>{product.supplier_cost_pence == null ? "—" : (product.supplier_cost_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Supplier base cost</span></article><article><strong>{margin == null ? "—" : (margin / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Gross headroom before fees / shipping / tax</span></article></div>}
+
+      {product && <>
+        <div className="account-summary" style={{ marginTop: "24px" }}>
+          <article><strong>{(product.price_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Retail</span></article>
+          <article><strong>{product.supplier_cost_pence == null ? "—" : (product.supplier_cost_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Supplier base cost</span></article>
+          <article><strong>{margin == null ? "—" : `${(margin / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}${marginPercent == null ? "" : ` · ${marginPercent}%`}`}</strong><span>Gross headroom before fees / shipping / tax</span></article>
+        </div>
+
+        {physicalMerch && <div className="account-empty" style={{ marginTop: "24px", padding: "28px" }}>
+          <p className="eyebrow">Launch readiness</p>
+          <h2>{launchReady ? "Ready for final publication check" : "Draft still needs work"}</h2>
+          <p>{launchReady ? "Supplier mapping, artwork, supplier cost and retail price are all present. Review the customer mockup and description before publishing." : "PENREC will keep this item out of the public Store until the missing launch requirements are completed."}</p>
+          <div className="admin-metrics admin-metrics--four" style={{ marginTop: "20px" }}>
+            <article><strong>{supplierMapped ? "Yes" : "No"}</strong><span>Exact supplier mapping</span></article>
+            <article><strong>{artworkReady ? "Yes" : "No"}</strong><span>Print artwork</span></article>
+            <article><strong>{costReady ? "Yes" : "No"}</strong><span>Supplier cost</span></article>
+            <article><strong>{priceReady ? "Yes" : "No"}</strong><span>Retail above cost</span></article>
+          </div>
+        </div>}
+      </>}
     </section>
 
     <div className="catalogue-editor__actions">
