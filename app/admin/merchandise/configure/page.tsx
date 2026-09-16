@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { requireAdmin } from "@/lib/auth";
 import { getProviderProductDetail } from "@/lib/provider-catalog";
+import { selectSupplierVariant } from "@/app/admin/merchandise/actions";
 
 export const metadata = { title: "Configure merchandise | PENREC Studio" };
 
@@ -47,8 +48,8 @@ export default async function ConfigureMerchandisePage({ searchParams }: { searc
 
       <section className="account-empty" style={{ marginTop: "2rem" }}>
         <p className="eyebrow">Exact fulfilment mapping</p>
-        <h2>{detail.provider === "printful" ? "Choose the exact Printful Variant ID" : "Gelato Product UID"}</h2>
-        <p>{detail.provider === "printful" ? "Printful orders must use the exact catalogue Variant ID for the chosen size and colour. The parent Product ID is only for browsing." : "Gelato identifies the exact printable product configuration by Product UID. GB support is shown above where returned by Gelato."}</p>
+        <h2>{detail.provider === "printful" ? "Choose the exact Printful Variant ID" : "Choose this Gelato Product UID"}</h2>
+        <p>{detail.provider === "printful" ? "Each size and colour has its own catalogue Variant ID. Select the one PENREC will actually sell; it is stored separately from the parent product." : "Gelato identifies the exact printable configuration by Product UID. Select it into a PENREC draft before artwork and retail pricing are added."}</p>
         <div className="admin-grid" style={{ marginTop: "1.25rem" }}>
           {detail.variants.slice(0, 60).map((variant) => <article key={variant.id}>
             <span>{variant.available === false ? "Supplier reports unavailable" : "Supplier variant"}</span>
@@ -56,14 +57,27 @@ export default async function ConfigureMerchandisePage({ searchParams }: { searc
             <p>{[variant.color, variant.size].filter(Boolean).join(" · ") || "Exact supplier configuration"}</p>
             {variant.price ? <p><strong>{variant.price} {variant.currency || ""}</strong></p> : null}
             <p><small>Variant / Product UID: {variant.id}</small></p>
+            <form action={selectSupplierVariant} style={{ marginTop: "1rem" }}>
+              <input type="hidden" name="provider" value={detail.provider} />
+              <input type="hidden" name="provider_product_id" value={detail.id} />
+              <input type="hidden" name="provider_variant_id" value={variant.id} />
+              <input type="hidden" name="title" value={detail.title} />
+              <input type="hidden" name="category" value={detail.category} />
+              <input type="hidden" name="image" value={detail.image || ""} />
+              <input type="hidden" name="size" value={variant.size || ""} />
+              <input type="hidden" name="color" value={variant.color || ""} />
+              <input type="hidden" name="supplier_price" value={variant.price || ""} />
+              <input type="hidden" name="supplier_currency" value={variant.currency || ""} />
+              <button className="button button--gold" type="submit" disabled={variant.available === false}>{variant.available === false ? "Unavailable" : "Use this configuration"}</button>
+            </form>
           </article>)}
         </div>
       </section>
 
       <section className="account-empty" style={{ marginTop: "2rem" }}>
-        <p className="eyebrow">Next</p>
-        <h2>Artwork comes before publication</h2>
-        <p>This view deliberately does not place an order. The next merchandising pass connects a PENREC print file and customer-facing mockup to the exact supplier configuration before retail pricing or Store publication is enabled.</p>
+        <p className="eyebrow">Publication lock</p>
+        <h2>Variant first. Artwork and price second.</h2>
+        <p>Choosing a supplier configuration creates or updates a PENREC draft only. Physical merchandise cannot be published until print artwork, supplier base cost and a retail price above that base cost are also present.</p>
       </section>
     </main>
   );
