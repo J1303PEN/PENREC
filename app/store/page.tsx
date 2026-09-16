@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getPublishedProducts, type CommerceProduct } from "@/lib/commerce";
 import { artists } from "@/data/catalog";
+import { startCheckout } from "@/app/store/actions";
 
 export const metadata = { title: "Shop | PENREC Music Group", description: "Shop PENREC music, physical formats, merchandise and limited editions." };
 
@@ -12,16 +13,36 @@ function availability(product: CommerceProduct) {
   return `${product.stock_quantity} available`;
 }
 
-export default async function StorePage() {
+export default async function StorePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+
+  const { error } = await searchParams;
   const products = await getPublishedProducts();
   return <main id="content" className="store-page shell inside">
     <header className="store-hero"><p className="eyebrow">PENREC Shop</p><h1>Music made tangible.</h1><p>Physical editions, digital releases and artist merchandise—fulfilled on demand under the PENREC name.</p></header>
+
+    {error && (
+      <section className="store-checkout-error" role="alert">
+        <strong>Checkout couldn't be started.</strong>
+        <p>{error}</p>
+      </section>
+    )}
     {products.length === 0 ? <section className="store-empty"><p className="eyebrow">Commerce foundation ready</p><h2>The shop is being curated.</h2><p>Products published from PENREC Studio will appear here automatically.</p></section> : <section className="store-grid">{products.map((product: CommerceProduct) => {
       const artist = artists.find(item => item.slug === product.artist_slug);
       const state = availability(product);
       return <article key={product.id} className="store-product">
         <div className="store-product__image">{product.image ? <Image src={product.image} alt={product.title} fill sizes="(max-width: 760px) 100vw, 33vw"/> : <span>PENREC</span>}</div>
-        <div className="store-product__body"><p>{artist?.name || "PENREC"} · {product.format || product.product_type}</p><h2>{product.title}</h2>{product.description && <span>{product.description}</span>}<small className="store-product__availability">{state}</small><footer><strong>{(product.price_pence/100).toLocaleString("en-GB", {style:"currency",currency:product.currency})}</strong><button type="button" disabled>{state === "Sold out" ? "Unavailable" : "Checkout coming next"}</button></footer>{product.shipping_note && <small>{product.shipping_note}</small>}</div>
+        <div className="store-product__body"><p>{artist?.name || "PENREC"} · {product.format || product.product_type}</p><h2>{product.title}</h2>{product.description && <span>{product.description}</span>}<small className="store-product__availability">{state}</small><footer><strong>{(product.price_pence/100).toLocaleString("en-GB", {style:"currency",currency:product.currency})}</strong>{state === "Sold out" ? (
+  <button type="button" disabled>Unavailable</button>
+) : (
+  <form action={startCheckout}>
+    <input type="hidden" name="product_id" value={product.id} />
+    <button type="submit">Buy now</button>
+  </form>
+)}</footer>{product.shipping_note && <small>{product.shipping_note}</small>}</div>
       </article>;
     })}</section>}
   </main>;

@@ -2,6 +2,19 @@ import { getAccessToken, restRequest, restSelect } from "@/lib/penrec-auth";
 
 export type WishlistItem = { id: string; release_slug: string; created_at: string };
 export type LibraryItem = { id: string; release_slug: string; format: string; acquired_at: string };
+export type DigitalLibraryItem = {
+  id: string;
+  release_id: string | null;
+  digital_file: string;
+  status: string;
+  created_at: string;
+  release: {
+    slug: string;
+    title: string;
+    artwork: string | null;
+  } | null;
+};
+
 export type Order = { id: string; order_number: string; status: string; total_pence: number; currency: string; created_at: string };
 export type Preferences = { user_id: string; release_alerts: boolean; order_updates: boolean; newsletter: boolean };
 
@@ -15,6 +28,18 @@ export async function getLibrary() {
   if (!token) return [];
   return restSelect<LibraryItem[]>("library_items", "select=id,release_slug,format,acquired_at&order=acquired_at.desc", token);
 }
+export async function getDigitalLibrary() {
+  const token = await getAccessToken();
+
+  if (!token) return [];
+
+  return restSelect<DigitalLibraryItem[]>(
+    "digital_entitlements",
+    "select=id,release_id,digital_file,status,created_at,release:penrec_releases(slug,title,artwork)&status=eq.active&order=created_at.desc",
+    token
+  );
+}
+
 export async function getOrders() {
   const token = await getAccessToken();
   if (!token) return [];

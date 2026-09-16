@@ -82,3 +82,24 @@ export async function deleteProduct(id: string) {
     method: "DELETE",
   }, await token());
 }
+
+export async function getPublishedProduct(id: string): Promise<CommerceProduct | null> {
+  const config = publicConfig();
+  if (!config) return null;
+
+  const response = await fetch(
+    `${config.url}/rest/v1/commerce_products?select=*&id=eq.${encodeURIComponent(id)}&status=eq.published&limit=1`,
+    {
+      headers: {
+        apikey: config.key,
+        Authorization: `Bearer ${config.key}`,
+      },
+      cache: "no-store",
+    }
+  );
+
+  if (!response.ok) return null;
+
+  const rows = (await response.json()) as CommerceProduct[];
+  return rows[0] || null;
+}
