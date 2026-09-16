@@ -8,6 +8,7 @@ import "./player-2-2b.css";
 import "./catalogue-2-3.css";
 import "./studio-2-5a.css";
 import "./accounts-3-1.css";
+import "./account-dashboard.css";
 import "./catalogue-expansion.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
