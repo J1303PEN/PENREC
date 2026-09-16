@@ -4,7 +4,8 @@ import type { FulfilmentProvider } from "@/lib/commerce";
 
 type FulfilmentProduct = {
   provider_product_id: string | null;
-  digital_file: string | null;
+  provider_variant_id: string | null;
+  artwork_file: string | null;
   image?: string | null;
 };
 
@@ -70,6 +71,11 @@ export async function createPrintfulOrder(orderId: string, rawAddress: Address, 
   const token = required("PRINTFUL_API_TOKEN");
   const { firstName, lastName } = splitName(address.name);
 
+  for (const item of items) {
+    if (!item.product.provider_variant_id) throw new Error("Printful item is missing an exact Variant ID.");
+    if (!item.product.artwork_file) throw new Error("Printful item is missing print artwork.");
+  }
+
   const response = await fetch("https://api.printful.com/orders?confirm=1&update_existing=1", {
     method: "POST",
     headers: {
@@ -92,8 +98,9 @@ export async function createPrintfulOrder(orderId: string, rawAddress: Address, 
         email: address.email || undefined,
       },
       items: items.map((item) => ({
-        sync_variant_id: Number(item.product.provider_product_id),
+        variant_id: Number(item.product.provider_variant_id),
         quantity: item.quantity,
+        files: [{ type: "default", url: item.product.artwork_file }],
       })),
     }),
   });
@@ -115,6 +122,11 @@ export async function createGelatoOrder(orderId: string, rawAddress: Address, it
   const apiKey = required("GELATO_API_KEY");
   const { firstName, lastName } = splitName(address.name);
 
+  for (const item of items) {
+    if (!item.product.provider_product_id) throw new Error("Gelato item is missing a Product UID.");
+    if (!item.product.artwork_file) throw new Error("Gelato item is missing print artwork.");
+  }
+
   const response = await fetch("https://order.gelatoapis.com/v4/orders", {
     method: "POST",
     headers: {
@@ -129,9 +141,7 @@ export async function createGelatoOrder(orderId: string, rawAddress: Address, it
       items: items.map((item) => ({
         itemReferenceId: item.id,
         productUid: item.product.provider_product_id,
-        files: item.product.digital_file
-          ? [{ type: "default", url: item.product.digital_file }]
-          : undefined,
+        files: [{ type: "default", url: item.product.artwork_file }],
         quantity: item.quantity,
       })),
       shippingAddress: {
