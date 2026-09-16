@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { getStripe, getStripeWebhookSecret } from "@/lib/stripe";
 import { fulfilCheckoutSession, failCheckoutSession, processChargeRefund, stripeEventProcessed, recordStripeEvent } from "@/lib/stripe-commerce";
+import { fulfilPhysicalOrder } from "@/lib/physical-fulfilment";
 
 export const runtime = "nodejs";
 
@@ -38,11 +39,14 @@ export async function POST(request: NextRequest) {
 
     switch (event.type) {
       case "checkout.session.completed":
-      case "checkout.session.async_payment_succeeded":
-        await fulfilCheckoutSession(
-          event.data.object as Stripe.Checkout.Session
-        );
+      case "checkout.session.async_payment_succeeded": {
+        const session = event.data.object as Stripe.Checkout.Session;
+        await fulfilCheckoutSession(session);
+        if (session.payment_status === "paid" && session.metadata?.order_id) {
+          await fulfilPhysicalOrder(session.metadata.order_id);
+        }
         break;
+      }
 
       case "checkout.session.async_payment_failed":
         await failCheckoutSession(
