@@ -17,6 +17,10 @@ export type CommerceProduct = {
   currency: string;
   provider: FulfilmentProvider;
   provider_product_id: string | null;
+  provider_variant_id: string | null;
+  artwork_file: string | null;
+  supplier_cost_pence: number | null;
+  provider_metadata: Record<string, unknown>;
   sku: string | null;
   barcode: string | null;
   stock_quantity: number | null;
