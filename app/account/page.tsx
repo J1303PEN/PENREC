@@ -1,25 +1,44 @@
 import Link from "next/link";
-import { logout } from "@/app/auth/actions";
+import { AccountDashboardShell } from "@/components/account-dashboard-shell";
 import { getOwnProfile, requireUser } from "@/lib/auth";
 import { getLibrary, getOrders, getWishlist } from "@/lib/account";
 
 export const metadata = { title: "My Account | PENREC" };
+
 export default async function AccountPage() {
   const { user } = await requireUser();
-  const [profile, library, orders, wishlist] = await Promise.all([getOwnProfile(user.id), getLibrary(), getOrders(), getWishlist()]);
+  const [profile, library, orders, wishlist] = await Promise.all([
+    getOwnProfile(user.id),
+    getLibrary(),
+    getOrders(),
+    getWishlist(),
+  ]);
   const isTeam = ["staff", "admin", "super_admin"].includes(profile?.role || "");
   const name = profile?.display_name || user.user_metadata?.display_name || user.email?.split("@")[0];
-  return <main id="content" className="account-page shell inside">
-    <header className="account-hero"><div><p className="eyebrow">PENREC account</p><h1>Hello, {name}</h1><p>Your personal PENREC space for music, orders, saved releases and account settings.</p></div><form action={logout}><button className="button button--outline" type="submit">Sign out</button></form></header>
-    <section className="account-summary" aria-label="Account summary"><article><strong>{library.length}</strong><span>Music items</span></article><article><strong>{orders.length}</strong><span>Orders</span></article><article><strong>{wishlist.length}</strong><span>Wishlist</span></article></section>
-    <section className="account-grid">
-      <Link className="account-card" href="/account/music"><span>01</span><h2>My Music</h2><p>Open your digital library and downloads.</p><b>{library.length} item{library.length === 1 ? "" : "s"} →</b></Link>
-      <Link className="account-card" href="/account/orders"><span>02</span><h2>Orders</h2><p>View order history, totals and status.</p><b>{orders.length} order{orders.length === 1 ? "" : "s"} →</b></Link>
-      <Link className="account-card" href="/account/wishlist"><span>03</span><h2>Wishlist</h2><p>Save PENREC releases and return to them later.</p><b>{wishlist.length} saved →</b></Link>
-      <Link className="account-card" href="/account/profile"><span>04</span><h2>Profile</h2><p>Update your display name and see account details.</p><b>Manage profile →</b></Link>
-      <Link className="account-card" href="/account/settings"><span>05</span><h2>Notifications</h2><p>Choose which PENREC updates you receive.</p><b>Manage preferences →</b></Link>
-      <Link className="account-card" href="/forgot-password"><span>06</span><h2>Security</h2><p>Use the secure password recovery flow.</p><b>Reset password →</b></Link>
-      {isTeam && <Link className="account-card account-card--gold" href="/admin"><span>07</span><h2>PENREC Studio</h2><p>Your account has team access.</p><b>Open admin dashboard →</b></Link>}
-    </section>
-  </main>;
+
+  return (
+    <AccountDashboardShell active="overview" name={name}>
+      <header className="account-hub__section-head">
+        <div>
+          <p className="eyebrow">Overview</p>
+          <h2>Welcome back{name ? `, ${name}` : ""}.</h2>
+          <p>Everything connected to your PENREC account lives here.</p>
+        </div>
+      </header>
+
+      <section className="account-hub__stats" aria-label="Account summary">
+        <article><strong>{library.length}</strong><span>Music items</span></article>
+        <article><strong>{orders.length}</strong><span>Orders</span></article>
+        <article><strong>{wishlist.length}</strong><span>Wishlist</span></article>
+      </section>
+
+      <section className="account-hub__tiles">
+        <Link href="/account/music"><span>My Music</span><h3>Your digital collection</h3><p>{library.length ? `${library.length} release${library.length === 1 ? "" : "s"} ready.` : "Digital releases will appear here once your first purchase is available."}</p><b>Open My Music →</b></Link>
+        <Link href="/account/orders"><span>Orders</span><h3>Purchases and fulfilment</h3><p>See order totals, status and delivery progress in one place.</p><b>View orders →</b></Link>
+        <Link href="/account/wishlist"><span>Wishlist</span><h3>Saved for later</h3><p>Keep releases and products close without adding them to your basket.</p><b>View wishlist →</b></Link>
+        <Link href="/account/profile"><span>Profile</span><h3>Your account details</h3><p>Manage your display name and account information.</p><b>Manage profile →</b></Link>
+        {isTeam && <Link className="account-hub__tile-gold" href="/admin"><span>PENREC Studio</span><h3>Team control room</h3><p>Your account has Studio access.</p><b>Open Studio →</b></Link>}
+      </section>
+    </AccountDashboardShell>
+  );
 }
