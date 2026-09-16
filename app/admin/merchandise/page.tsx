@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { requireAdmin } from "@/lib/auth";
 import { getGelatoCatalogue, getPrintfulCatalogue, type ProviderCatalogueResult } from "@/lib/provider-catalog";
-import { selectSupplierProduct } from "@/app/admin/merchandise/actions";
+import { buildFifthMainFlexfitCap, selectSupplierProduct } from "@/app/admin/merchandise/actions";
 
 export const metadata = { title: "Merchandise | PENREC Studio" };
 
@@ -69,6 +69,16 @@ export default async function MerchandisePage({ searchParams }: { searchParams: 
 
       {state.error ? <p className="form-alert form-alert--error">{state.error}</p> : null}
 
+      <section className="account-empty" style={{ marginTop: "2rem", borderColor: "rgba(201,169,106,.45)" }}>
+        <p className="eyebrow">Priority build · Fifth & Main</p>
+        <h2>Closed-Back Structured Cap · Flexfit 6277</h2>
+        <p>This uses Printful product 140 directly, selects the live black S/M and L/XL variants returned by Printful, records their exact Variant IDs and supplier pricing, and creates Fifth & Main draft products in Studio. No generated product is used.</p>
+        <p><small>Front embroidery · black cap · artwork source: Fifth & Main “Here We Are” brand mark. The products remain Draft until the logo is prepared as embroidery-safe artwork and retail pricing is approved.</small></p>
+        <form action={buildFifthMainFlexfitCap} style={{ marginTop: "1rem" }}>
+          <button className="button button--gold" type="submit" disabled={!printful.configured}>Build real Fifth & Main cap drafts</button>
+        </form>
+      </section>
+
       <section className="admin-metrics admin-metrics--four">
         <article><strong>{printful.items.length}</strong><span>Printful matches</span></article>
         <article><strong>{gelato.items.length}</strong><span>Gelato variants</span></article>
@@ -82,7 +92,7 @@ export default async function MerchandisePage({ searchParams }: { searchParams: 
       <section className="account-empty" style={{ marginTop: "2rem" }}>
         <p className="eyebrow">Selection workflow</p>
         <h2>Supplier product → exact variant → PENREC draft → artwork → price → publish</h2>
-        <p>Printful Product IDs are now kept separate from exact Variant IDs, and Gelato Product UIDs can be inspected for attributes and GB support before anything is chosen for the Store.</p>
+        <p>Printful Product IDs are kept separate from exact Variant IDs, and Gelato Product UIDs can be inspected for attributes and GB support before anything is chosen for the Store.</p>
       </section>
     </main>
   );
