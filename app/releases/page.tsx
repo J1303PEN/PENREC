@@ -11,18 +11,15 @@ import { christieWalker } from "@/data/christie-walker";
 import { saturdayBest } from "@/data/saturday-best";
 import { getCatalogueReleaseArtists } from "@/data/releases";
 
-const catalogueNumber = (catalogue: string) => Number(catalogue.replace(/\D/g, "")) || 0;
+const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 
-export default async function ReleasesPage() {
-  const catalogueArtists = [...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker];
-  const catalogueReleases = [
-    ...getCatalogueReleaseArtists(catalogueArtists),
-    { ...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}` },
-  ];
-  const latestReleases = [...catalogueReleases]
-    .sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue))
-    .slice(0, 6);
-  const trackCount = catalogueReleases.reduce((sum, release) => sum + release.tracks.length, 0);
-
-  return <main id="content" className="inside listing-page catalogue-page"><div className="shell"><p className="eyebrow">PENREC catalogue</p><h1>Music</h1><div className="catalogue-intro"><p className="listing-page__intro">The PENREC collection and every new release published through PENREC Studio.</p><dl><div><dt>PENREC artists</dt><dd>{catalogueArtists.length}</dd></div><div><dt>New releases</dt><dd>{latestReleases.length}</dd></div><div><dt>Catalogue tracks</dt><dd>{trackCount}</dd></div></dl></div><section className="catalogue17-public"><div className="catalogue17-heading"><div><p className="eyebrow">Latest from PENREC</p><h2>New catalogue</h2></div></div><div className="release-grid">{latestReleases.map((release) => <ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release} />)}</div></section><CatalogueBrowser /><div className="catalogue-search-link"><span>Looking for a particular song?</span><Link className="text-link" href="/search">Search the catalogue ↗</Link></div></div></main>;
+export default async function ReleasesPage(){
+ const catalogueArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker];
+ const catalogueReleases=[...getCatalogueReleaseArtists(catalogueArtists),{...saturdayBest,releaseHref:`/releases/${saturdayBest.slug}`}];
+ const latestReleases=[...catalogueReleases].sort((a,b)=>catalogueNumber(b.catalogue)-catalogueNumber(a.catalogue)).slice(0,8);
+ return <main id="content" className="music-page">
+  <section className="music-page__masthead"><p className="music-page__eyebrow">PENREC catalogue</p><h1>Music.</h1><p>Albums and releases from across PENREC, with the artwork, sequence and music kept together.</p></section>
+  <section className="music-page__latest"><header className="music-page__heading"><div><p className="music-page__eyebrow">Latest from PENREC</p><h2>New releases.</h2></div><p>The newest additions to the PENREC catalogue.</p></header><div className="release-grid">{latestReleases.map(release=><ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release}/>)}</div></section>
+  <section className="music-page__catalogue"><header className="music-page__heading"><div><p className="music-page__eyebrow">Browse</p><h2>The catalogue.</h2></div><Link className="text-link" href="/search">Search for a song →</Link></header><CatalogueBrowser/></section>
+ </main>;
 }
