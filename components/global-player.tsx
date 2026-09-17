@@ -88,7 +88,7 @@ export function GlobalPlayer() {
           <button type="button" onClick={toggleMute} aria-label={muted ? "Unmute" : "Mute"}>{muted ? "Muted" : "Volume"}</button>
           <input type="range" min="0" max="1" step="0.01" value={muted ? 0 : volume} onChange={(event) => setVolume(Number(event.currentTarget.value))} aria-label="Volume" aria-valuetext={`${Math.round((muted ? 0 : volume) * 100)} percent`} />
         </div>
-        <button className="global-player__queue" type="button" onClick={toggleQueue} aria-expanded={queueOpen} aria-controls="penrec-queue">Queue <span>{upcomingCount}</span></button>
+        <button className="global-player__queue" type="button" onClick={toggleQueue} aria-expanded={queueOpen} aria-controls="penrec-queue">Queue{upcomingCount > 0 && <span>{upcomingCount}</span>}</button>
       </aside>
     </>
   );
