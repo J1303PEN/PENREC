@@ -20,20 +20,21 @@ const releases = getCatalogueReleaseArtists([...artists, theVerelles, theParkers
 const catalogueNumber = (catalogue: string) => Number(catalogue.replace(/\D/g, "")) || 0;
 const playableArtists = allArtists.filter(artist => artist.tracks?.some(track => track.audio));
 
-function randomPicks(count = 4, previous: string[] = []) {
+function randomPicks(count = 8, previous: string[] = []) {
   const fresh = playableArtists.filter(artist => !previous.includes(artist.slug));
   const pool = fresh.length >= count ? fresh : playableArtists;
-  return [...pool].sort(() => Math.random() - .5).slice(0, count);
+  return [...pool].sort(() => Math.random() - .5).slice(0, Math.min(count, pool.length));
 }
 
 export function HomepageContent() {
   const releaseRail = useRef<HTMLDivElement>(null);
   const artistRail = useRef<HTMLDivElement>(null);
+  const listenRail = useRef<HTMLDivElement>(null);
   const newest = useMemo(() => [...releases].sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue)), []);
-  const heroArtists = allArtists.filter(a => a.hero || a.profile).slice(0, 5);
-  const [listenPicks, setListenPicks] = useState(() => playableArtists.slice(0, 4));
+  const heroArtists = allArtists.filter(a => a.hero || a.profile).slice(0, 7);
+  const [listenPicks, setListenPicks] = useState(() => playableArtists.slice(0, 8));
 
-  const shuffleListen = () => setListenPicks(current => randomPicks(4, current.map(artist => artist.slug)));
+  const shuffleListen = () => setListenPicks(current => randomPicks(8, current.map(artist => artist.slug)));
 
   const move = (ref: React.RefObject<HTMLDivElement | null>, direction: number) => {
     const node = ref.current;
@@ -41,9 +42,7 @@ export function HomepageContent() {
     node.scrollBy({ left: direction * Math.max(280, node.clientWidth * .72), behavior: "smooth" });
   };
 
-  useEffect(() => {
-    setListenPicks(randomPicks());
-  }, []);
+  useEffect(() => { setListenPicks(randomPicks()); }, []);
 
   useEffect(() => {
     const node = artistRail.current;
@@ -58,19 +57,10 @@ export function HomepageContent() {
   return <main id="content" className={styles.page}>
     <span className={styles.devMark}>NEW PENREC</span>
 
-    <section className={styles.hero}>
-      <div className={styles.heroCopy}>
-        <h1 className={styles.neon}>PENREC</h1>
-        <p className={styles.brandLine}>MUSIC &amp; PUBLISHING</p>
-        <div className={styles.actions}>
-          <Link className={styles.action} href="#new-music">New music</Link>
-          <Link className={`${styles.action} ${styles.actionAlt}`} href="#artists">Artists</Link>
-        </div>
-      </div>
-      <div className={styles.collage} aria-label="PENREC artists">
+    <section className={styles.hero} aria-label="PENREC artists">
+      <div className={styles.collage}>
         {heroArtists.map((artist, index) => <Link href={`/artists/${artist.slug}`} className={`${styles.collageCard} ${styles[`collage${index + 1}`]}`} key={artist.slug} aria-label={`View ${artist.name}`}>
-          <Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 2} sizes="(max-width:700px) 42vw, 22vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} />
-          <span>{artist.name}</span>
+          <Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 3} sizes="(max-width:700px) 46vw, 18vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} />
         </Link>)}
       </div>
     </section>
@@ -94,8 +84,8 @@ export function HomepageContent() {
     </section>
 
     <section className={`${styles.section} ${styles.listen}`} id="listen">
-      <header className={styles.sectionHead}><h2>Listen.</h2><div className={styles.headTools}><Link href="/releases">All music →</Link><button onClick={shuffleListen} aria-label="Shuffle listening picks">↻</button></div></header>
-      <div className={styles.listenGrid}>{listenPicks.map(artist => <AudioPlayer key={artist.slug} artist={artist} compact />)}</div>
+      <header className={styles.sectionHead}><h2>Listen.</h2><div className={styles.headTools}><Link href="/releases">All music →</Link><button onClick={shuffleListen} aria-label="Shuffle listening picks">↻</button><button onClick={() => move(listenRail, -1)} aria-label="Previous listening picks">←</button><button onClick={() => move(listenRail, 1)} aria-label="Next listening picks">→</button></div></header>
+      <div className={styles.listenRail} ref={listenRail}>{listenPicks.map(artist => <div className={styles.listenCard} key={artist.slug}><AudioPlayer artist={artist} compact /></div>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.books}`} id="books">
