@@ -34,7 +34,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
         const stateLabel = readiness(product);
         const margin = product.supplier_cost_pence == null ? null : product.price_pence - product.supplier_cost_pence;
         return <article key={product.id}>
-          <div className="commerce-admin-list__image">{product.image ? <Image src={product.image} alt="" fill sizes="140px"/> : <span>No image</span>}</div>
+          <div className="commerce-admin-list__image">{product.image ? <Image src={product.image} alt="" fill sizes="140px" unoptimized/> : <span>No image</span>}</div>
           <div>
             <p>{product.product_type} · {product.format || "standard"}</p>
             <h2>{product.title}</h2>
