@@ -17,6 +17,10 @@ export type CommerceProduct = {
   currency: string;
   provider: FulfilmentProvider;
   provider_product_id: string | null;
+  provider_variant_id: string | null;
+  artwork_file: string | null;
+  supplier_cost_pence: number | null;
+  provider_metadata: Record<string, unknown>;
   sku: string | null;
   barcode: string | null;
   stock_quantity: number | null;
@@ -81,4 +85,25 @@ export async function deleteProduct(id: string) {
   return restRequest<CommerceProduct[]>(`commerce_products?id=eq.${encodeURIComponent(id)}`, {
     method: "DELETE",
   }, await token());
+}
+
+export async function getPublishedProduct(id: string): Promise<CommerceProduct | null> {
+  const config = publicConfig();
+  if (!config) return null;
+
+  const response = await fetch(
+    `${config.url}/rest/v1/commerce_products?select=*&id=eq.${encodeURIComponent(id)}&status=eq.published&limit=1`,
+    {
+      headers: {
+        apikey: config.key,
+        Authorization: `Bearer ${config.key}`,
+      },
+      cache: "no-store",
+    }
+  );
+
+  if (!response.ok) return null;
+
+  const rows = (await response.json()) as CommerceProduct[];
+  return rows[0] || null;
 }

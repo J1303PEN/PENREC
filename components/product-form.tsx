@@ -14,7 +14,20 @@ function localDateTime(value?: string | null) {
   return value ? value.slice(0, 16) : "";
 }
 
+function money(value?: number | null) {
+  return value === null || value === undefined ? "" : (value / 100).toFixed(2);
+}
+
 export function ProductForm({ product, releases = [], action }: Props) {
+  const margin = product?.supplier_cost_pence != null ? product.price_pence - product.supplier_cost_pence : null;
+  const marginPercent = product && margin != null && product.price_pence > 0 ? Math.round((margin / product.price_pence) * 100) : null;
+  const physicalMerch = !!product && !`${product.product_type} ${product.format || ""}`.toLowerCase().match(/digital|download/);
+  const supplierMapped = !!product?.provider_product_id && (product?.provider !== "printful" || !!product?.provider_variant_id);
+  const artworkReady = !physicalMerch || !!product?.artwork_file;
+  const costReady = !physicalMerch || product?.supplier_cost_pence != null;
+  const priceReady = !physicalMerch || (product?.supplier_cost_pence != null && product.price_pence > product.supplier_cost_pence);
+  const launchReady = !physicalMerch || (supplierMapped && artworkReady && costReady && priceReady);
+
   return <form action={action} className="catalogue-editor__form commerce-product-form">
     {product && <input type="hidden" name="id" value={product.id}/>} 
 
@@ -39,8 +52,9 @@ export function ProductForm({ product, releases = [], action }: Props) {
       <p className="eyebrow">Step 02</p>
       <h2>Media and delivery</h2>
       <div className="catalogue-editor__grid">
-        <label className="span-2">Product image path<input name="image" defaultValue={product?.image || ""} placeholder="/images/covers/example.jpg"/></label>
-        <label className="span-2">Digital file path<input name="digital_file" defaultValue={product?.digital_file || ""} placeholder="Optional secure download reference"/></label>
+        <label className="span-2">Store image / mockup<input name="image" defaultValue={product?.image || ""} placeholder="Customer-facing product mockup URL or path"/></label>
+        <label className="span-2">Physical print artwork<input name="artwork_file" defaultValue={product?.artwork_file || ""} placeholder="Print-ready artwork URL used by Printful / Gelato"/><small>Physical merchandise only. This stays separate from customer digital downloads.</small></label>
+        <label className="span-2">Digital customer download<input name="digital_file" defaultValue={product?.digital_file || ""} placeholder="Private digital package reference only"/></label>
         <label>Available from<input name="available_at" type="datetime-local" defaultValue={localDateTime(product?.available_at)}/></label>
         <label>Pre-order opens<input name="preorder_at" type="datetime-local" defaultValue={localDateTime(product?.preorder_at)}/></label>
       </div>
@@ -50,19 +64,41 @@ export function ProductForm({ product, releases = [], action }: Props) {
       <p className="eyebrow">Step 03</p>
       <h2>Price and fulfilment</h2>
       <div className="catalogue-editor__grid">
-        <label>Price<input name="price" type="number" min="0" step="0.01" required defaultValue={product ? (product.price_pence / 100).toFixed(2) : "0.00"}/></label>
+        <label>Retail price<input name="price" type="number" min="0" step="0.01" required defaultValue={product ? (product.price_pence / 100).toFixed(2) : "0.00"}/></label>
+        <label>Supplier base cost<input name="supplier_cost" type="number" min="0" step="0.01" defaultValue={money(product?.supplier_cost_pence)} placeholder="Optional until supplier quote is known"/></label>
         <label>Currency<input name="currency" maxLength={3} defaultValue={product?.currency || "GBP"}/></label>
         <label>Stock quantity<input name="stock_quantity" type="number" min="0" step="1" defaultValue={product?.stock_quantity ?? ""} placeholder="Leave blank for on-demand"/></label>
         <label>Weight (grams)<input name="weight_grams" type="number" min="0" step="1" defaultValue={product?.weight_grams ?? ""} placeholder="Optional"/></label>
         <label>Provider<select name="provider" defaultValue={product?.provider || "penrec"}><option value="penrec">PENREC / digital</option><option value="kunaki">Kunaki</option><option value="elasticstage">ElasticStage</option><option value="printful">Printful</option><option value="printify">Printify</option><option value="gelato">Gelato</option><option value="other">Other</option></select></label>
-        <label>Provider product ID<input name="provider_product_id" defaultValue={product?.provider_product_id || ""} placeholder="Supplier SKU or product ID"/></label>
+        <label>Provider parent product ID<input name="provider_product_id" defaultValue={product?.provider_product_id || ""} placeholder="Printful Product ID / Gelato Product UID"/></label>
+        <label>Exact provider variant ID<input name="provider_variant_id" defaultValue={product?.provider_variant_id || ""} placeholder="Exact Printful size/colour Variant ID; Gelato variant UID if applicable"/><small>Required before a Printful physical product can be fulfilment-ready.</small></label>
         <label className="span-2">Shipping / delivery note<textarea name="shipping_note" rows={3} defaultValue={product?.shipping_note || ""} placeholder="Manufactured on demand and shipped separately."/></label>
       </div>
+
+      {product && <>
+        <div className="account-summary" style={{ marginTop: "24px" }}>
+          <article><strong>{(product.price_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Retail</span></article>
+          <article><strong>{product.supplier_cost_pence == null ? "—" : (product.supplier_cost_pence / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}</strong><span>Supplier base cost</span></article>
+          <article><strong>{margin == null ? "—" : `${(margin / 100).toLocaleString("en-GB", { style: "currency", currency: product.currency })}${marginPercent == null ? "" : ` · ${marginPercent}%`}`}</strong><span>Gross headroom before fees / shipping / tax</span></article>
+        </div>
+
+        {physicalMerch && <div className="account-empty" style={{ marginTop: "24px", padding: "28px" }}>
+          <p className="eyebrow">Launch readiness</p>
+          <h2>{launchReady ? "Ready for final publication check" : "Draft still needs work"}</h2>
+          <p>{launchReady ? "Supplier mapping, artwork, supplier cost and retail price are all present. Review the customer mockup and description before publishing." : "PENREC will keep this item out of the public Store until the missing launch requirements are completed."}</p>
+          <div className="admin-metrics admin-metrics--four" style={{ marginTop: "20px" }}>
+            <article><strong>{supplierMapped ? "Yes" : "No"}</strong><span>Exact supplier mapping</span></article>
+            <article><strong>{artworkReady ? "Yes" : "No"}</strong><span>Print artwork</span></article>
+            <article><strong>{costReady ? "Yes" : "No"}</strong><span>Supplier cost</span></article>
+            <article><strong>{priceReady ? "Yes" : "No"}</strong><span>Retail above cost</span></article>
+          </div>
+        </div>}
+      </>}
     </section>
 
     <div className="catalogue-editor__actions">
       <button className="button button--gold" type="submit">{product ? "Save product" : "Create product"}</button>
-      <p className="form-help">ISRC is managed at track level and remains optional. Products can be created without one.</p>
+      <p className="form-help">Physical products should stay Draft until exact supplier variant, print artwork, cost and retail price are complete.</p>
     </div>
   </form>;
 }

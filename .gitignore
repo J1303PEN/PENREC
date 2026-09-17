@@ -23,3 +23,6 @@ out/
 npm-debug.log*
 # Audio is hosted in Cloudflare R2
 public/audio/*.mp3
+
+# Local Cloudflare Wrangler data
+.wrangler/

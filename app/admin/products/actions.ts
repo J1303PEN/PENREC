@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
-import { createProduct, deleteProduct, updateProduct, type FulfilmentProvider, type ProductStatus } from "@/lib/commerce";
+import { createProduct, deleteProduct, getAdminProduct, updateProduct, type FulfilmentProvider, type ProductStatus } from "@/lib/commerce";
 
 const text = (data: FormData, name: string) => String(data.get(name) || "").trim();
 const validStatuses: ProductStatus[] = ["draft", "published", "archived"];
@@ -17,6 +17,14 @@ function optionalInteger(data: FormData, name: string) {
   return value;
 }
 
+function optionalMoney(data: FormData, name: string) {
+  const raw = text(data, name);
+  if (!raw) return null;
+  const value = Number.parseFloat(raw);
+  if (!Number.isFinite(value) || value < 0) throw new Error(`${name.replaceAll("_", " ")} must be zero or greater.`);
+  return Math.round(value * 100);
+}
+
 function optionalDate(data: FormData, name: string) {
   const raw = text(data, name);
   if (!raw) return null;
@@ -25,7 +33,7 @@ function optionalDate(data: FormData, name: string) {
   return value.toISOString();
 }
 
-function payload(data: FormData) {
+function payload(data: FormData, providerMetadata: Record<string, unknown> = {}) {
   const price = Number.parseFloat(text(data, "price"));
   const status = text(data, "status") as ProductStatus;
   const provider = text(data, "provider") as FulfilmentProvider;
@@ -36,19 +44,40 @@ function payload(data: FormData) {
   if (!validStatuses.includes(status)) throw new Error("Choose a valid product status.");
   if (!validProviders.includes(provider)) throw new Error("Choose a valid fulfilment provider.");
 
+  const productType = text(data, "product_type") || "music";
+  const format = text(data, "format") || null;
+  const physical = !`${productType} ${format || ""}`.toLowerCase().match(/digital|download/);
+  const providerProductId = text(data, "provider_product_id") || null;
+  const providerVariantId = text(data, "provider_variant_id") || null;
+  const artworkFile = text(data, "artwork_file") || null;
+  const pricePence = Math.round(price * 100);
+  const supplierCostPence = optionalMoney(data, "supplier_cost");
+
+  if (status === "published" && physical && ["printful", "gelato"].includes(provider)) {
+    if (!providerProductId) throw new Error("Choose the supplier product before publishing physical merchandise.");
+    if (provider === "printful" && !providerVariantId) throw new Error("Choose the exact Printful variant before publishing.");
+    if (!artworkFile) throw new Error("Add the physical print artwork before publishing.");
+    if (supplierCostPence === null) throw new Error("Add the supplier base cost before publishing.");
+    if (pricePence <= supplierCostPence) throw new Error("Retail price must be above the supplier base cost before publishing.");
+  }
+
   return {
     slug,
     title,
     artist_slug: text(data, "artist_slug") || null,
     release_id: text(data, "release_id") || null,
-    product_type: text(data, "product_type") || "music",
-    format: text(data, "format") || null,
+    product_type: productType,
+    format,
     description: text(data, "description") || null,
     image: text(data, "image") || null,
-    price_pence: Math.round(price * 100),
+    price_pence: pricePence,
     currency: (text(data, "currency") || "GBP").toUpperCase(),
     provider,
-    provider_product_id: text(data, "provider_product_id") || null,
+    provider_product_id: providerProductId,
+    provider_variant_id: providerVariantId,
+    artwork_file: artworkFile,
+    supplier_cost_pence: supplierCostPence,
+    provider_metadata: providerMetadata,
     sku: text(data, "sku") || null,
     barcode: text(data, "barcode") || null,
     stock_quantity: optionalInteger(data, "stock_quantity"),
@@ -78,7 +107,9 @@ export async function updateCommerceProduct(data: FormData) {
   const id = text(data, "id");
   if (!id) redirect("/admin/products?error=Missing+product+ID");
   try {
-    await updateProduct(id, payload(data));
+    const current = await getAdminProduct(id);
+    if (!current) throw new Error("Product could not be found.");
+    await updateProduct(id, payload(data, current.provider_metadata || {}));
   } catch (error) {
     redirect(`/admin/products/${id}?error=${encodeURIComponent(error instanceof Error ? error.message : "Unable to update product.")}`);
   }
