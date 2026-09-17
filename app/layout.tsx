@@ -10,6 +10,7 @@ import "./studio-2-5a.css";
 import "./accounts-3-1.css";
 import "./catalogue-expansion.css";
 import "./artist-pages.css";
+import "./music-pages.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { GlobalPlayer } from "@/components/global-player";
