@@ -1,6 +1,65 @@
 "use client";
-import Image from "next/image"; import Link from "next/link"; import { useEffect,useMemo,useState } from "react"; import { ArtistCard } from "@/components/artist-card"; import { ReleaseCard } from "@/components/release-card"; import { LatestNews } from "@/components/latest-news"; import { AudioPlayer } from "@/components/audio-player"; import { artists } from "@/data/catalog"; import { theVerelles } from "@/data/verelles"; import { theParkers } from "@/data/parkers"; import { maison45 } from "@/data/maison-45"; import { localArrangement } from "@/data/local-arrangement"; import { directMotion } from "@/data/direct-motion"; import { christieWalker } from "@/data/christie-walker"; import { saturdayBest } from "@/data/saturday-best"; import { getCatalogueReleaseArtists } from "@/data/releases"; import { ANNOUNCEMENT_KEY,Announcement,defaultAnnouncement,defaultHomepage,HomepageConfig,readHomepageConfig,readStored } from "@/data/studio";
+import Image from "next/image";
+import Link from "next/link";
+import { useMemo } from "react";
+import { ArtistCard } from "@/components/artist-card";
+import { ReleaseCard } from "@/components/release-card";
+import { AudioPlayer } from "@/components/audio-player";
+import { artists } from "@/data/catalog";
+import { theVerelles } from "@/data/verelles";
+import { theParkers } from "@/data/parkers";
+import { maison45 } from "@/data/maison-45";
+import { localArrangement } from "@/data/local-arrangement";
+import { directMotion } from "@/data/direct-motion";
+import { christieWalker } from "@/data/christie-walker";
+import { saturdayBest } from "@/data/saturday-best";
+import { getCatalogueReleaseArtists } from "@/data/releases";
+
 const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker,saturdayBest];
-const catalogueReleases=getCatalogueReleaseArtists([...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker]);
+const releases=getCatalogueReleaseArtists([...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker]);
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
-export function HomepageContent(){const[config,setConfig]=useState<HomepageConfig>(defaultHomepage);const[announcement,setAnnouncement]=useState<Announcement>(defaultAnnouncement);const[randomFeaturedSlug,setRandomFeaturedSlug]=useState("");useEffect(()=>{const load=()=>{setConfig(readHomepageConfig());setAnnouncement(readStored(ANNOUNCEMENT_KEY,defaultAnnouncement));};load();const randomArtist=allArtists[Math.floor(Math.random()*allArtists.length)];setRandomFeaturedSlug(randomArtist?.slug||defaultHomepage.featuredRelease);window.addEventListener("storage",load);window.addEventListener("penrec-studio-update",load as EventListener);return()=>{window.removeEventListener("storage",load);window.removeEventListener("penrec-studio-update",load as EventListener);};},[]);const featured=useMemo(()=>allArtists.find(a=>a.slug===(randomFeaturedSlug||config.featuredRelease))||allArtists[0],[config.featuredRelease,randomFeaturedSlug]);const newestReleases=useMemo(()=>[...catalogueReleases].sort((a,b)=>catalogueNumber(b.catalogue)-catalogueNumber(a.catalogue)).slice(0,6),[]);const heroImage=config.heroMode==="release"?featured.cover:config.heroImage;const heroTitle=config.heroMode==="release"?featured.album:config.heroHeadline;const heroArtist=config.heroMode==="release"?featured.name:config.heroEyebrow;const visible=(id:HomepageConfig["sections"][number])=>!config.hiddenSections.includes(id);const sections:Record<string,React.ReactNode>={artists:<section className="section shell" id="artists"><header className="section-title"><div><p className="eyebrow">PENREC roster</p><h2>Distinctive artists.<br/><em>One creative home.</em></h2></div><p>Explore the artists shaping PENREC, each with a world of their own.</p></header><div className="artist-grid">{allArtists.map((artist,index)=><ArtistCard key={artist.slug} artist={artist} index={index}/>)}</div></section>,statement:<section className="statement-panel"><div className="shell statement-panel__inner"><p className="eyebrow">Independent. Artist first.</p><blockquote>Extraordinary music deserves space, care and a lasting presence.</blockquote></div></section>,releases:<section className="section shell" id="releases"><header className="section-title section-title--releases"><div><p className="eyebrow">The album collection</p><h2>Latest releases</h2></div><Link className="text-link" href="/releases">Explore all music ↗</Link></header><div className="release-grid">{newestReleases.map(release=><ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release}/>)}</div></section>,news:<LatestNews/>,player:<section className="player-preview" id="listen"><div className="shell"><header className="section-title section-title--listening"><div><p className="eyebrow">Listen now</p><h2>The PENREC<br/><em>collection.</em></h2></div><p>Hear every track from PENREC’s album collection. Your music keeps playing while you explore the artists and their releases.</p></header><div className="launch-listening-grid">{allArtists.map(artist=><AudioPlayer key={artist.slug} artist={artist} compact/>)}</div></div></section>};return <main id="content">{announcement.enabled&&announcement.message&&<Link className="penrec-announcement" href={announcement.href||"#"}><span>{announcement.label}</span>{announcement.message}</Link>}<section className="hero"><Image className="hero__image" src={heroImage||featured.cover} alt="" fill priority sizes="100vw" unoptimized={(heroImage||"").startsWith("data:")}/><div className="hero__veil"/><div className="shell hero__content"><p className="eyebrow">{heroArtist}</p><h1>{heroTitle}<br/><em>{config.heroMode==="release"?featured.descriptor:config.heroEmphasis}</em></h1><p className="hero__strapline">{config.heroStrapline}</p><div className="hero__actions"><Link className="button button--gold" href={config.heroButtonHref||"#releases"}>{config.heroButtonText}</Link><Link className="button button--outline" href="#artists">Explore artists</Link></div></div><div className="hero__release"><span>Featured release</span><b>{featured.album}</b><small>{featured.name}</small></div></section>{config.sections.filter(visible).map(id=><div key={id}>{sections[id]}</div>)}</main>}
+
+export function HomepageContent(){
+ const latest=useMemo(()=>[...releases].sort((a,b)=>catalogueNumber(b.catalogue)-catalogueNumber(a.catalogue)).slice(0,8),[]);
+ const hero=latest[0]||allArtists[0];
+ const featuredArtists=allArtists.slice(0,6);
+ return <main id="content" className="new-penrec-home">
+   <section className="np-hero">
+     <div className="np-hero__colour np-hero__colour--pink"/><div className="np-hero__colour np-hero__colour--yellow"/>
+     <div className="shell np-hero__grid">
+       <div className="np-hero__copy">
+         <div className="np-neon" aria-label="PENREC">PENREC</div>
+         <h1>Music, books<br/>and everything<br/><em>we make.</em></h1>
+         <div className="np-hero__actions"><Link className="np-button np-button--dark" href="#music">Listen</Link><Link className="np-button np-button--pink" href="#discover">Explore PENREC</Link></div>
+       </div>
+       <Link href={`/releases/${hero.slug}`} className="np-hero__art">
+         <Image src={hero.cover} alt={`${hero.name} — ${hero.album}`} fill priority sizes="(max-width: 800px) 90vw, 48vw"/>
+         <div className="np-hero__label"><span>{hero.catalogue}</span><b>{hero.album}</b><small>{hero.name}</small></div>
+       </Link>
+     </div>
+   </section>
+
+   <section className="np-marquee" aria-label="PENREC creative areas"><div>NEW MUSIC · ARTISTS · BOOKS · DISCOVER · LISTEN · READ · NEW MUSIC · ARTISTS · BOOKS · DISCOVER ·</div></section>
+
+   <section className="shell np-section" id="music">
+     <header className="np-heading"><div><span>Music</span><h2>Latest from<br/>PENREC.</h2></div><Link href="/releases">All music →</Link></header>
+     <div className="release-grid np-release-grid">{latest.map(release=><ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release}/>)}</div>
+   </section>
+
+   <section className="np-colour-block np-colour-block--yellow" id="discover">
+     <div className="shell"><header className="np-heading"><div><span>Discover</span><h2>Find someone<br/>new.</h2></div><Link href="/artists">All artists →</Link></header>
+       <div className="artist-grid np-artist-grid">{featuredArtists.map((artist,index)=><ArtistCard key={artist.slug} artist={artist} index={index}/>)}</div>
+     </div>
+   </section>
+
+   <section className="np-books">
+     <div className="shell np-books__grid"><div><span className="np-kicker">Books</span><h2>More than<br/>music.</h2><p>Books and stories from PENREC are coming into the same creative home.</p><Link className="np-button np-button--dark" href="/books">Explore books</Link></div><div className="np-books__type" aria-hidden="true">READ</div></div>
+   </section>
+
+   <section className="np-listen">
+     <div className="shell"><header className="np-heading np-heading--light"><div><span>Listen</span><h2>Press play.</h2></div><p>Choose an artist and keep listening while you explore PENREC.</p></header>
+       <div className="launch-listening-grid np-listening-grid">{featuredArtists.slice(0,4).map(artist=><AudioPlayer key={artist.slug} artist={artist} compact/>)}</div>
+     </div>
+   </section>
+ </main>;
+}
