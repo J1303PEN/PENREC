@@ -58,7 +58,7 @@ export function HomepageContent() {
 
     <section className={`${styles.section} ${styles.releases}`} id="new-music">
       <header className={styles.sectionHead}><h2>New music.<span className={styles.sectionRule} /></h2><div className={styles.headTools}><button onClick={() => move(releaseRail, -1)} aria-label="Previous releases">←</button><button onClick={() => move(releaseRail, 1)} aria-label="Next releases">→</button></div></header>
-      <div className={styles.releaseRail} ref={releaseRail}>{newest.map(release => <Link className={styles.release} href={`/artists/${release.slug}`} key={`${release.slug}-${release.catalogue}`}><div className={styles.cover}><Image src={release.cover} alt={`${release.name} — ${release.album}`} fill sizes="(max-width:600px) 52vw, 16vw" /><div className={styles.releaseOverlay}><h3>{release.album}</h3><p>{release.name}</p><span className={styles.cardRule} /></div></div><div className={styles.releaseMeta}><small>{release.catalogue} · {release.year}</small></div></Link>)}</div>
+      <div className={styles.releaseRail} ref={releaseRail}>{newest.map(release => <Link className={styles.release} href={`/artists/${release.slug}`} key={`${release.slug}-${release.catalogue}`}><div className={styles.cover}><Image src={release.cover} alt={`${release.name} — ${release.album}`} fill sizes="(max-width:600px) 52vw, 16vw" /></div><div className={styles.releaseMeta}><h3>{release.album}</h3><p>{release.name}</p><small>{release.catalogue} · {release.year}</small><span className={styles.cardRule} /></div></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.artists}`} id="artists">
