@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AudioPlayer } from "@/components/audio-player";
 import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
@@ -18,18 +18,32 @@ import styles from "./new-homepage.module.css";
 const allArtists = [...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker, saturdayBest];
 const releases = getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker]);
 const catalogueNumber = (catalogue: string) => Number(catalogue.replace(/\D/g, "")) || 0;
+const playableArtists = allArtists.filter(artist => artist.tracks?.some(track => track.audio));
+
+function randomPicks(count = 4, previous: string[] = []) {
+  const fresh = playableArtists.filter(artist => !previous.includes(artist.slug));
+  const pool = fresh.length >= count ? fresh : playableArtists;
+  return [...pool].sort(() => Math.random() - .5).slice(0, count);
+}
 
 export function HomepageContent() {
   const releaseRail = useRef<HTMLDivElement>(null);
   const artistRail = useRef<HTMLDivElement>(null);
   const newest = useMemo(() => [...releases].sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue)), []);
   const heroArtists = allArtists.filter(a => a.hero || a.profile).slice(0, 5);
+  const [listenPicks, setListenPicks] = useState(() => playableArtists.slice(0, 4));
+
+  const shuffleListen = () => setListenPicks(current => randomPicks(4, current.map(artist => artist.slug)));
 
   const move = (ref: React.RefObject<HTMLDivElement | null>, direction: number) => {
     const node = ref.current;
     if (!node) return;
     node.scrollBy({ left: direction * Math.max(280, node.clientWidth * .72), behavior: "smooth" });
   };
+
+  useEffect(() => {
+    setListenPicks(randomPicks());
+  }, []);
 
   useEffect(() => {
     const node = artistRail.current;
@@ -80,8 +94,8 @@ export function HomepageContent() {
     </section>
 
     <section className={`${styles.section} ${styles.listen}`} id="listen">
-      <header className={styles.sectionHead}><h2>Listen.</h2><Link href="/releases">All music →</Link></header>
-      <div className={styles.listenGrid}>{allArtists.slice(0, 4).map(artist => <AudioPlayer key={artist.slug} artist={artist} compact />)}</div>
+      <header className={styles.sectionHead}><h2>Listen.</h2><div className={styles.headTools}><Link href="/releases">All music →</Link><button onClick={shuffleListen} aria-label="Shuffle listening picks">↻</button></div></header>
+      <div className={styles.listenGrid}>{listenPicks.map(artist => <AudioPlayer key={artist.slug} artist={artist} compact />)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.books}`} id="books">
