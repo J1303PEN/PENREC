@@ -30,33 +30,26 @@ export function HomepageContent() {
   const newest = useMemo(() => [...releases].sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue)).slice(0, 6), []);
   const visibleArtists = allArtists.slice(0, 10);
 
-  const surpriseMe = () => {
-    const pool = allArtists.filter(a => a.slug !== featured.slug);
-    const choice = pool[Math.floor(Math.random() * pool.length)] || allArtists[0];
-    window.location.href = `/artists/${choice.slug}`;
-  };
-
   return <main id="content" className={styles.page}>
     <span className={styles.devMark}>NEW PENREC · MAIN FOUNDATION</span>
 
     <section className={styles.hero}>
       <div>
         <h1 className={styles.neon}>PENREC</h1>
-        <p className={styles.intro}>Music, artists, books and whatever we create next.</p>
         <div className={styles.actions}>
-          <Link className={styles.action} href="#new-music">Explore PENREC</Link>
-          <Link className={`${styles.action} ${styles.actionAlt}`} href="#listen">Listen</Link>
+          <Link className={styles.action} href="#new-music">New music</Link>
+          <Link className={`${styles.action} ${styles.actionAlt}`} href="#artists">Artists</Link>
         </div>
       </div>
       <div className={styles.heroArt}>
-        <Link href={`/artists/${featured.slug}`} className={styles.heroPhoto} aria-label={`Discover ${featured.name}`}>
+        <Link href={`/artists/${featured.slug}`} className={styles.heroPhoto} aria-label={`View ${featured.name}`}>
           <Image src={featured.hero || featured.profile} alt={featured.name} fill priority sizes="(max-width: 900px) 90vw, 45vw" style={{objectPosition: featured.heroPosition || "center"}} />
         </Link>
         <div className={styles.sticker}>{featured.name}<br />{featured.album}</div>
       </div>
     </section>
 
-    <div className={styles.marquee} aria-hidden="true"><span>MUSIC · ARTISTS · RELEASES · BOOKS · DISCOVER · PENREC · MUSIC · ARTISTS · RELEASES · BOOKS · DISCOVER · PENREC ·</span></div>
+    <div className={styles.marquee} aria-hidden="true"><span>PENREC · MUSIC · ARTISTS · RELEASES · BOOKS · PENREC · MUSIC · ARTISTS · RELEASES · BOOKS ·</span></div>
 
     <section className={`${styles.section} ${styles.releases}`} id="new-music">
       <header className={styles.sectionHead}><h2>New music.</h2><Link href="/releases">All releases →</Link></header>
@@ -74,15 +67,11 @@ export function HomepageContent() {
       </Link>)}</div>
     </section>
 
-    <section className={`${styles.section} ${styles.discover}`} id="discover">
-      <h2>Find something you didn’t come for.</h2><div><p>Jump somewhere unexpected in PENREC.</p><button className={styles.discoverButton} type="button" onClick={surpriseMe}>Surprise me →</button></div>
-    </section>
-
     <section className={`${styles.section} ${styles.listen}`} id="listen">
-      <header className={styles.sectionHead}><h2>Listen.</h2><Link href="/releases">Explore all music →</Link></header>
+      <header className={styles.sectionHead}><h2>Listen.</h2><Link href="/releases">All music →</Link></header>
       <div className={styles.listenGrid}>{allArtists.slice(0, 6).map(artist => <AudioPlayer key={artist.slug} artist={artist} compact />)}</div>
     </section>
 
-    <section className={`${styles.section} ${styles.books}`} id="books"><div className={styles.booksBox}><h2>Books.</h2><p>PENREC is more than music. Explore the stories, characters and books created here.</p><Link href="/books">Explore books →</Link></div></section>
+    <section className={`${styles.section} ${styles.books}`} id="books"><div className={styles.booksBox}><h2>Books.</h2><Link href="/books">Explore books →</Link></div></section>
   </main>;
 }
