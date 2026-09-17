@@ -19,10 +19,11 @@ const allArtists = [...artists, theVerelles, theParkers, maison45, localArrangem
 const releases = getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker]);
 const catalogueNumber = (catalogue: string) => Number(catalogue.replace(/\D/g, "")) || 0;
 const playableArtists = allArtists.filter(artist => artist.tracks?.some(track => track.audio));
+const showcaseArtists = allArtists.filter(artist => artist.hero || artist.profile);
 
-function randomPicks(count = 16, previous: string[] = []) {
-  const fresh = playableArtists.filter(artist => !previous.includes(artist.slug));
-  const pool = fresh.length >= count ? fresh : playableArtists;
+function randomPicks<T extends { slug: string }>(items: T[], count: number, previous: string[] = []) {
+  const fresh = items.filter(item => !previous.includes(item.slug));
+  const pool = fresh.length >= count ? fresh : items;
   return [...pool].sort(() => Math.random() - .5).slice(0, Math.min(count, pool.length));
 }
 
@@ -31,16 +32,19 @@ export function HomepageContent() {
   const artistRail = useRef<HTMLDivElement>(null);
   const listenRail = useRef<HTMLDivElement>(null);
   const newest = useMemo(() => [...releases].sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue)), []);
-  const heroArtists = allArtists.filter(a => a.hero || a.profile).slice(0, 7);
+  const [heroArtists, setHeroArtists] = useState(() => showcaseArtists.slice(0, 5));
   const [listenPicks, setListenPicks] = useState(() => playableArtists.slice(0, 16));
-  const shuffleListen = () => setListenPicks(current => randomPicks(16, current.map(artist => artist.slug)));
+  const shuffleListen = () => setListenPicks(current => randomPicks(playableArtists, 16, current.map(artist => artist.slug)));
   const move = (ref: React.RefObject<HTMLDivElement | null>, direction: number) => {
     const node = ref.current;
     if (!node) return;
     node.scrollBy({ left: direction * Math.max(280, node.clientWidth * .72), behavior: "smooth" });
   };
 
-  useEffect(() => { setListenPicks(randomPicks()); }, []);
+  useEffect(() => {
+    setHeroArtists(randomPicks(showcaseArtists, 5));
+    setListenPicks(randomPicks(playableArtists, 16));
+  }, []);
   useEffect(() => {
     const node = artistRail.current;
     if (!node || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -52,8 +56,8 @@ export function HomepageContent() {
   }, []);
 
   return <main id="content" className={styles.page}>
-    <section className={styles.hero} aria-label="PENREC artists">
-      <div className={styles.collage}>{heroArtists.map((artist, index) => <Link href={`/artists/${artist.slug}`} className={`${styles.collageCard} ${styles[`collage${index + 1}`]}`} key={artist.slug} aria-label={`View ${artist.name}`}><Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 3} sizes="(max-width:700px) 46vw, 18vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} /></Link>)}</div>
+    <section className={styles.hero} aria-label="PENREC artist showcase">
+      <div className={styles.collage}>{heroArtists.map((artist, index) => <Link href={`/artists/${artist.slug}`} className={`${styles.collageCard} ${styles[`collage${index + 1}`]}`} key={artist.slug} aria-label={`View ${artist.name}`}><Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 2} sizes="(max-width:700px) 48vw, 24vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} /></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.releases}`} id="new-music">
@@ -71,8 +75,6 @@ export function HomepageContent() {
       <div className={styles.listenRail} ref={listenRail}>{listenPicks.map(artist => <div className={styles.listenCard} key={artist.slug}><AudioPlayer artist={artist} compact /></div>)}</div>
     </section>
 
-    <section className={`${styles.section} ${styles.books}`} id="books">
-      <div className={styles.booksBox}><div><p className={styles.eyebrow}>PENREC PUBLISHING</p><h2>Books.<span className={styles.sectionRule} /></h2><p>In development.</p></div></div>
-    </section>
+    <section className={`${styles.section} ${styles.books}`} id="books"><div className={styles.booksBox}><div><p className={styles.eyebrow}>PENREC PUBLISHING</p><h2>Books.<span className={styles.sectionRule} /></h2><p>In development.</p></div></div></section>
   </main>;
 }
