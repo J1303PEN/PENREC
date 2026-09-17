@@ -33,9 +33,7 @@ export function HomepageContent() {
   const newest = useMemo(() => [...releases].sort((a, b) => catalogueNumber(b.catalogue) - catalogueNumber(a.catalogue)), []);
   const heroArtists = allArtists.filter(a => a.hero || a.profile).slice(0, 7);
   const [listenPicks, setListenPicks] = useState(() => playableArtists.slice(0, 8));
-
   const shuffleListen = () => setListenPicks(current => randomPicks(8, current.map(artist => artist.slug)));
-
   const move = (ref: React.RefObject<HTMLDivElement | null>, direction: number) => {
     const node = ref.current;
     if (!node) return;
@@ -43,7 +41,6 @@ export function HomepageContent() {
   };
 
   useEffect(() => { setListenPicks(randomPicks()); }, []);
-
   useEffect(() => {
     const node = artistRail.current;
     if (!node || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -56,40 +53,28 @@ export function HomepageContent() {
 
   return <main id="content" className={styles.page}>
     <span className={styles.devMark}>NEW PENREC</span>
-
     <section className={styles.hero} aria-label="PENREC artists">
-      <div className={styles.collage}>
-        {heroArtists.map((artist, index) => <Link href={`/artists/${artist.slug}`} className={`${styles.collageCard} ${styles[`collage${index + 1}`]}`} key={artist.slug} aria-label={`View ${artist.name}`}>
-          <Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 3} sizes="(max-width:700px) 46vw, 18vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} />
-        </Link>)}
-      </div>
+      <div className={styles.collage}>{heroArtists.map((artist, index) => <Link href={`/artists/${artist.slug}`} className={`${styles.collageCard} ${styles[`collage${index + 1}`]}`} key={artist.slug} aria-label={`View ${artist.name}`}><Image src={artist.hero || artist.profile} alt={artist.name} fill priority={index < 3} sizes="(max-width:700px) 46vw, 18vw" style={{objectPosition: artist.heroPosition || artist.profilePosition || "center"}} /></Link>)}</div>
     </section>
-
     <div className={styles.marquee} aria-hidden="true"><span>PENREC · MUSIC · ARTISTS · RELEASES · PUBLISHING · PENREC · MUSIC · ARTISTS · RELEASES · PUBLISHING ·</span></div>
 
     <section className={`${styles.section} ${styles.releases}`} id="new-music">
-      <header className={styles.sectionHead}><h2>New music.</h2><div className={styles.headTools}><Link href="/releases">All releases →</Link><button onClick={() => move(releaseRail, -1)} aria-label="Previous releases">←</button><button onClick={() => move(releaseRail, 1)} aria-label="Next releases">→</button></div></header>
-      <div className={styles.releaseRail} ref={releaseRail}>{newest.map(release => <Link className={styles.release} href={`/artists/${release.slug}`} key={`${release.slug}-${release.catalogue}`}>
-        <div className={styles.cover}><Image src={release.cover} alt={`${release.name} — ${release.album}`} fill sizes="(max-width:600px) 52vw, 16vw" /></div>
-        <div className={styles.releaseMeta}><h3>{release.album}</h3><p>{release.name}</p><small>{release.catalogue} · {release.year}</small></div>
-      </Link>)}</div>
+      <header className={styles.sectionHead}><h2>New music.</h2><div className={styles.headTools}><button onClick={() => move(releaseRail, -1)} aria-label="Previous releases">←</button><button onClick={() => move(releaseRail, 1)} aria-label="Next releases">→</button></div></header>
+      <div className={styles.releaseRail} ref={releaseRail}>{newest.map(release => <Link className={styles.release} href={`/artists/${release.slug}`} key={`${release.slug}-${release.catalogue}`}><div className={styles.cover}><Image src={release.cover} alt={`${release.name} — ${release.album}`} fill sizes="(max-width:600px) 52vw, 16vw" /></div><div className={styles.releaseMeta}><h3>{release.album}</h3><p>{release.name}</p><small>{release.catalogue} · {release.year}</small></div></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.artists}`} id="artists">
-      <header className={styles.sectionHead}><h2>Artists.</h2><div className={styles.headTools}><Link href="/artists">All artists →</Link><button onClick={() => move(artistRail, -1)} aria-label="Previous artists">←</button><button onClick={() => move(artistRail, 1)} aria-label="Next artists">→</button></div></header>
-      <div className={styles.artistRail} ref={artistRail}>{allArtists.map(artist => <Link className={styles.artist} href={`/artists/${artist.slug}`} key={artist.slug}>
-        <Image src={artist.profile || artist.hero} alt={artist.name} fill sizes="(max-width:600px) 70vw, 23vw" style={{objectPosition: artist.profilePosition || "center"}} />
-        <span className={styles.artistName}>{artist.name}</span>
-      </Link>)}</div>
+      <header className={styles.sectionHead}><h2>Artists.</h2><div className={styles.headTools}><button onClick={() => move(artistRail, -1)} aria-label="Previous artists">←</button><button onClick={() => move(artistRail, 1)} aria-label="Next artists">→</button></div></header>
+      <div className={styles.artistRail} ref={artistRail}>{allArtists.map(artist => <Link className={styles.artist} href={`/artists/${artist.slug}`} key={artist.slug}><Image src={artist.profile || artist.hero} alt={artist.name} fill sizes="(max-width:600px) 70vw, 23vw" style={{objectPosition: artist.profilePosition || "center"}} /><span className={styles.artistName}>{artist.name}</span></Link>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.listen}`} id="listen">
-      <header className={styles.sectionHead}><h2>Listen.</h2><div className={styles.headTools}><Link href="/releases">All music →</Link><button onClick={shuffleListen} aria-label="Shuffle listening picks">↻</button><button onClick={() => move(listenRail, -1)} aria-label="Previous listening picks">←</button><button onClick={() => move(listenRail, 1)} aria-label="Next listening picks">→</button></div></header>
+      <header className={styles.sectionHead}><h2>Listen.</h2><div className={styles.headTools}><button onClick={shuffleListen} aria-label="Shuffle listening picks">↻</button><button onClick={() => move(listenRail, -1)} aria-label="Previous listening picks">←</button><button onClick={() => move(listenRail, 1)} aria-label="Next listening picks">→</button></div></header>
       <div className={styles.listenRail} ref={listenRail}>{listenPicks.map(artist => <div className={styles.listenCard} key={artist.slug}><AudioPlayer artist={artist} compact /></div>)}</div>
     </section>
 
     <section className={`${styles.section} ${styles.books}`} id="books">
-      <div className={styles.booksBox}><div><p className={styles.eyebrow}>PENREC PUBLISHING</p><h2>Books.</h2><p>In development.</p></div><Link href="/books">See what’s being created →</Link></div>
+      <div className={styles.booksBox}><div><p className={styles.eyebrow}>PENREC PUBLISHING</p><h2>Books.</h2><p>In development.</p></div></div>
     </section>
   </main>;
 }
