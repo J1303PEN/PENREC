@@ -9,14 +9,15 @@ import "./catalogue-2-3.css";
 import "./studio-2-5a.css";
 import "./accounts-3-1.css";
 import "./catalogue-expansion.css";
+import "./artist-pages.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { GlobalPlayer } from "@/components/global-player";
 import { PlayerProvider } from "@/components/player-context";
 
 export const metadata: Metadata = {
-  title: "PENREC Music Group",
-  description: "Music without boundaries. Discover Soreya, Midnight Avenue, Marco Verturi, The Ashfords, Vierklang, Sophie Beaulieu, Elias Rowan, Shelley Dante, Luca Moretti, Khadijah Brown, Harper Lane, Ethan Blake, FEVER5, Gabriel Laurent, UP4IT!, Fifth & Main, Callia, The Glamour Katz, Northbound and Nikos Andros.",
+  title: "PENREC Music & Publishing",
+  description: "PENREC Music & Publishing — artists, music, books and creative work.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
