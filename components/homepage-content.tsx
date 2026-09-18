@@ -12,18 +12,17 @@ import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 import { saturdayBest } from "@/data/saturday-best";
-import { completeCatalogueReleases } from "@/data/releases";
+import type { CatalogueRelease } from "@/data/releases";
 import { BULLETINS_KEY, Bulletin, isBulletinLive, readStored, starterBulletins } from "@/data/studio";
 import styles from "./new-homepage.module.css";
 
 const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker,saturdayBest];
-const releases=completeCatalogueReleases;
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 const playableArtists=allArtists.filter(artist=>artist.tracks?.some(track=>track.audio));
 const showcaseArtists=allArtists.filter(artist=>artist.hero||artist.profile);
 function randomPicks<T extends {slug:string}>(items:T[],count:number,previous:string[]=[]){const fresh=items.filter(item=>!previous.includes(item.slug));const pool=fresh.length>=count?fresh:items;return [...pool].sort(()=>Math.random()-.5).slice(0,Math.min(count,pool.length));}
 
-export function HomepageContent(){
+export function HomepageContent({releases}:{releases:CatalogueRelease[]}){
  const releaseRail=useRef<HTMLDivElement>(null),artistRail=useRef<HTMLDivElement>(null),listenRail=useRef<HTMLDivElement>(null);
  const newest=useMemo(()=>[...releases].sort((a,b)=>catalogueNumber(b.catalogue)-catalogueNumber(a.catalogue)),[]);
  const [heroArtists,setHeroArtists]=useState(()=>showcaseArtists.slice(0,5));
