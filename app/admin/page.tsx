@@ -22,11 +22,11 @@ export default async function AdminPage() {
   ];
 
   return <main id="content" className="studio-new">
-    <header className="account-hero">
-      <div><p className="eyebrow">PENREC Studio</p><h1>Control room</h1><p>Signed in as {profile?.display_name || "PENREC team"} · {role.replaceAll("_", " ")}</p></div>
+    <header className="studio-new__hero">
+      <div><p className="studio-new__eyebrow">PENREC Studio</p><h1>Control room</h1><p>Signed in as {profile?.display_name || "PENREC team"} · {role.replaceAll("_", " ")}</p></div>
       <Link className="button button--outline" href="/account">My account</Link>
     </header>
-    <section className="admin-metrics admin-metrics--four">
+    <section className="studio-new__metrics">
       <article><strong>{artists.length}</strong><span>Artists</span></article>
       <article><strong>{trackCount}</strong><span>Tracks</span></article>
       <article><strong>{profiles.length}</strong><span>Accounts</span></article>
