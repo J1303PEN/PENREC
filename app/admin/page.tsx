@@ -21,7 +21,7 @@ export default async function AdminPage() {
     ["Reports", "Operational overview and release reporting", "/admin/reports"],
   ];
 
-  return <main id="content" className="admin-page shell inside">
+  return <main id="content" className="studio-new">
     <header className="account-hero">
       <div><p className="eyebrow">PENREC Studio</p><h1>Control room</h1><p>Signed in as {profile?.display_name || "PENREC team"} · {role.replaceAll("_", " ")}</p></div>
       <Link className="button button--outline" href="/account">My account</Link>
