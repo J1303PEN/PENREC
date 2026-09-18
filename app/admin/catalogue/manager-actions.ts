@@ -2,7 +2,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
-import { createManagedArtist, createManagedRelease, createManagedTrack, deleteManagedTrack, updateManagedArtist, updateManagedRelease, updateManagedTrack, upsertManagedArtist, upsertManagedRelease, upsertManagedTrack, type CatalogueStatus, type ReleaseType } from "@/lib/catalogue-manager";
+import { createManagedArtist, createManagedRelease, createManagedTrack, deleteManagedTrack, updateManagedArtist, updateManagedRelease, updateManagedTrack, upsertManagedArtist, upsertManagedRelease, upsertManagedTrack, upsertManagedTracks, type CatalogueStatus, type ReleaseType } from "@/lib/catalogue-manager";
 import { currentCatalogueArtists } from "@/data/current-catalogue";
 import { getArtistReleases } from "@/data/releases";
 const text=(d:FormData,n:string)=>String(d.get(n)||"").trim();
@@ -21,7 +21,7 @@ export async function syncCurrentCatalogue(){await requireAdmin();try{
       const releaseSlug=`${artist.slug}-${release.catalogue.toLowerCase()}`;
       const releaseRows=await upsertManagedRelease({artist_id:managedArtist.id,title:release.album,slug:releaseSlug,release_type:"album",catalogue_number:release.catalogue||null,release_date:release.year?`${release.year}-01-01`:null,description:null,artwork:release.cover||null,price_pence:0,currency:"GBP",status:"published",publish_at:null});
       const managedRelease=releaseRows[0]; if(!managedRelease) throw new Error(`Unable to sync ${release.album}`);
-      for(let i=0;i<release.tracks.length;i++){const track=release.tracks[i];await upsertManagedTrack({release_id:managedRelease.id,track_number:i+1,title:track.title,duration:track.duration||null,isrc:null,lyrics:null,credits:null,preview_audio:track.audio||null,master_audio:null});}
+      await upsertManagedTracks(release.tracks.map((track,i)=>({release_id:managedRelease.id,track_number:i+1,title:track.title,duration:track.duration||null,isrc:null,lyrics:null,credits:null,preview_audio:track.audio||null,master_audio:null})));
     }
   }
 }catch(e){redirect(`/admin/catalogue?error=${encodeURIComponent(e instanceof Error?e.message:"Unable to sync catalogue")}`)}
