@@ -55,3 +55,18 @@
  .launch-listening-grid{grid-template-columns:1fr}
  .launch-listening-grid .audio-player:last-child{grid-column:auto}
 }
+
+
+/* Current PENREC queue presentation */
+.queue-panel{background:#ecedea!important;color:#151515!important;border:3px solid #151515!important;box-shadow:10px 10px 0 #ff1493!important}
+.queue-panel__header{background:#55dfe6!important;border-bottom:3px solid #151515!important}
+.queue-panel__header span,.queue-list__select small{color:#9d005b!important;font-weight:900!important}
+.queue-panel__header h2{color:#151515!important;font:900 34px/.9 Arial,sans-serif!important;letter-spacing:-.04em}
+.queue-panel__header-actions button,.queue-panel__header-actions .queue-panel__close{color:#151515!important;font-weight:900!important}
+.queue-list{background:#ecedea!important}
+.queue-list__item{border-bottom:2px solid rgba(21,21,21,.16)!important}
+.queue-list__item--current{background:#ffd83d!important}
+.queue-list__select{color:#151515!important}
+.queue-list__select b{color:#151515!important;font:800 14px/1.15 Arial,sans-serif!important}
+.queue-list__select em,.queue-list__select time{color:#555!important}
+.queue-list__remove{color:#151515!important;font-weight:900!important}
