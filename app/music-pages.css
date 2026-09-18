@@ -41,3 +41,15 @@
 .release-new .track-list__row>button:hover,.release-new .track-list__current>button{background:#151515;color:#ffd83d}
 .release-new .track-list__row>small{grid-column:4;font:800 9px/1 Arial,sans-serif;text-transform:uppercase}
 @media(max-width:620px){.release-new .track-list__row{grid-template-columns:34px minmax(0,1fr) 48px 38px;gap:8px}.release-new .track-list__row>b{font-size:14px}.release-new .track-list__row>button{width:34px;height:34px}}
+
+
+/* Final track-list control alignment: override legacy gold player rules */
+.release-new .track-list--interactive .track-list__row{display:grid!important;grid-template-columns:46px minmax(0,720px) 64px 42px!important;column-gap:16px!important;width:min(100%,900px)!important}
+.release-new .track-list--interactive .track-list__row>span{grid-column:1!important}
+.release-new .track-list--interactive .track-list__row>b{grid-column:2!important}
+.release-new .track-list--interactive .track-list__row>time{grid-column:3!important;justify-self:end!important}
+.release-new .track-list--interactive .track-list__row>button{grid-column:4!important;justify-self:end!important;width:36px!important;height:36px!important;border:2px solid #151515!important;background:#151515!important;color:#ffd83d!important;border-radius:50%!important;font-size:13px!important}
+.release-new .track-list--interactive .track-list__row>button:hover,.release-new .track-list--interactive .track-list__current>button{background:#ff1493!important;color:#fff!important;border-color:#151515!important}
+.release-new .track-list__current{background:rgba(255,255,255,.28)!important}
+.release-new .track-list__current b{color:#151515!important}
+@media(max-width:620px){.release-new .track-list--interactive .track-list__row{grid-template-columns:30px minmax(0,1fr) 46px 34px!important;column-gap:7px!important}.release-new .track-list--interactive .track-list__row>button{width:32px!important;height:32px!important}}
