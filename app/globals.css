@@ -98,3 +98,28 @@
 .account-new .account-card>span{font-size:9px;font-weight:900;letter-spacing:.12em}.account-new .account-card h2{margin:30px 0 10px;font:900 36px/.95 Arial,sans-serif;letter-spacing:-.04em}.account-new .account-card p{margin:0;font-size:13px;font-weight:600}.account-new .account-card b{margin-top:auto;padding-top:20px;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
 .account-new .account-card--studio{background:#151515;color:#fff;box-shadow-color:var(--penrec-pink)}.account-new .account-card--studio h2{color:var(--penrec-pink)}
 @media(max-width:700px){.account-new{padding:125px 16px 100px}.account-new .account-hero{grid-template-columns:1fr}.account-new .account-hero h1{font-size:56px}.account-new .account-hero form{justify-self:start}.account-new .account-summary strong{font-size:32px}.account-new .account-summary article{padding:14px 12px}.account-new .account-grid{grid-template-columns:1fr;gap:12px;margin-top:32px}.account-new .account-card{min-height:165px;padding:18px}.account-new .account-card h2{margin-top:22px;font-size:32px}}
+
+
+/* My PENREC linked areas */
+.account-new--section{display:block}
+.account-new--section>.account-back{display:inline-block;margin-bottom:30px;padding:8px 10px;background:var(--penrec-cyan);border:2px solid #151515;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.account-new--section>header{padding:26px 0 30px;border-bottom:5px solid #151515}
+.account-new--section>header .eyebrow{margin:0 0 8px;color:#a40061;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.account-new--section>header h1{margin:0;font:900 clamp(54px,8vw,94px)/.82 Arial,sans-serif;letter-spacing:-.06em}
+.account-new--section>header>p:last-child{max-width:680px;margin:20px 0 0;font-size:15px;font-weight:600;line-height:1.5}
+.account-new--section .account-empty,.account-new--section .account-form,.account-new--section .preferences-form,.account-new--section .security-panel,.account-new--section .wishlist-add,.account-new--section .orders-table{margin-top:30px;padding:24px;background:#fff;border:3px solid #151515;box-shadow:6px 6px 0 var(--penrec-cyan)}
+.account-new--section .account-empty h2,.account-new--section .security-panel h2{margin:0 0 10px;font:900 30px/1 Arial,sans-serif}
+.account-new--section .button{border:3px solid #151515;border-radius:0;background:var(--penrec-yellow);color:#151515;box-shadow:4px 4px 0 #151515}
+.account-new--section .account-form,.account-new--section .preferences-form{display:grid;gap:18px}
+.account-new--section .account-form label,.account-new--section .wishlist-add label{display:grid;gap:8px;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.account-new--section .account-form input,.account-new--section .wishlist-add select{min-height:50px;padding:12px;border:2px solid #151515;border-radius:0;background:var(--penrec-paper);color:#151515;font:600 14px Arial,sans-serif}
+.account-new--section .preferences-form label{display:flex;gap:14px;align-items:flex-start;padding:15px;border:2px solid #151515;background:var(--penrec-paper)}
+.account-new--section .preferences-form strong{display:block;font:900 16px/1.2 Arial,sans-serif}.account-new--section .preferences-form small{display:block;margin-top:5px;line-height:1.4}
+.account-new--section .account-list,.account-new--section .wishlist-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.account-new--section .account-list article,.account-new--section .wishlist-grid article{padding:14px;background:#fff;border:3px solid #151515;box-shadow:5px 5px 0 var(--penrec-orange)}
+.account-new--section .account-list article{display:flex;gap:15px;align-items:center}.account-new--section .account-list img{width:82px;height:82px;object-fit:cover}
+.account-new--section .wishlist-grid img{width:100%;height:auto;border:2px solid #151515}
+.account-new--section .wishlist-grid article>div{padding:14px 2px 2px}.account-new--section .wishlist-grid h2{font:900 25px/1 Arial,sans-serif}
+.account-new--section .orders-row{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:12px;padding:13px;border-bottom:2px solid #151515}.account-new--section .orders-head{background:var(--penrec-yellow);font-size:9px;font-weight:900;text-transform:uppercase}
+.account-new--section .form-alert{margin:24px 0 0;padding:13px;border:2px solid #151515}.account-new--section .form-alert--success{background:#d9f4df}.account-new--section .form-alert--error{background:#ffd9d9}
+@media(max-width:700px){.account-new--section>.account-back{margin-bottom:20px}.account-new--section>header h1{font-size:56px}.account-new--section .account-list,.account-new--section .wishlist-grid{grid-template-columns:1fr}.account-new--section .orders-table{padding:12px;overflow-x:auto}.account-new--section .orders-row{min-width:560px}.account-new--section .account-empty,.account-new--section .account-form,.account-new--section .preferences-form,.account-new--section .security-panel,.account-new--section .wishlist-add{padding:18px}}
