@@ -152,3 +152,12 @@
 .penrec-wordmark small span,.penrec-wordmark small b{font:900 11px/1 Arial,sans-serif!important;letter-spacing:.04em!important;color:#151515!important;text-shadow:none!important}
 .penrec-wordmark small span:last-child{text-align:right}.penrec-wordmark small b{text-align:center}
 @media(max-width:760px){.penrec-wordmark small{gap:5px!important}.penrec-wordmark small span,.penrec-wordmark small b{font-size:8px!important}}
+
+
+/* Media overview — new PENREC colour grammar (no legacy gold) */
+.studio-new .media-ops-grid article > span,
+.studio-new .media-ops-grid article > strong{color:#151515!important}
+.studio-new .media-ops-grid article:nth-child(4n+1){box-shadow:8px 8px 0 var(--penrec-cyan)}
+.studio-new .media-ops-grid article:nth-child(4n+2){box-shadow:8px 8px 0 var(--penrec-yellow)}
+.studio-new .media-ops-grid article:nth-child(4n+3){box-shadow:8px 8px 0 var(--penrec-orange)}
+.studio-new .media-ops-grid article:nth-child(4n){box-shadow:8px 8px 0 var(--penrec-pink)}
