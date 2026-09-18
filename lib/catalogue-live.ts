@@ -6,6 +6,7 @@ import { maison45 } from "@/data/maison-45";
 import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
+import { doorAtMidnight } from "@/data/door-at-midnight";
 
 type CatalogueOverride = {
   slug: string;
@@ -68,7 +69,7 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
 }
 
 function baseArtist(slug: string) {
-  return getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined);
+  return getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined) ?? (slug === doorAtMidnight.slug ? doorAtMidnight : undefined);
 }
 
 export async function getResolvedArtist(slug: string) {
