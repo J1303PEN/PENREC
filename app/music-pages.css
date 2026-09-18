@@ -64,3 +64,12 @@
 .release-new__other .release-card__meta{display:flex;justify-content:space-between;gap:15px;padding:14px 2px 0}
 .release-new__other .release-card__meta h3{margin:0;font:900 20px/1 Arial,sans-serif}.release-new__other .release-card__meta p{margin:7px 0 0;font:600 14px/1.2 Arial,sans-serif}.release-new__other .release-card__meta>span{font:900 10px/1 Arial,sans-serif;letter-spacing:.08em}
 @media(max-width:760px){.release-new__other .release-grid--catalogue{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.release-new__other .release-card__meta{display:block}.release-new__other .release-card__meta>span{display:block;margin-top:8px}}
+
+/* Release player actions: current PENREC colour grammar */
+.release-new .audio-player__actions{display:flex;align-items:center;gap:12px}
+.release-new .audio-player__primary,.release-new .audio-player__secondary{min-height:48px;border:2px solid #151515!important;border-radius:0!important;padding:0 20px!important;font:900 11px/1 Arial,sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important;cursor:pointer}
+.release-new .audio-player__primary{background:#ffd83d!important;color:#151515!important}
+.release-new .audio-player__primary:hover{background:#ff1493!important;color:#fff!important}
+.release-new .audio-player__secondary{background:#151515!important;color:#fff!important;min-width:118px}
+.release-new .audio-player__secondary:hover{background:#ff1493!important;color:#fff!important}
+@media(max-width:620px){.release-new .audio-player__actions{width:100%;flex-wrap:wrap}.release-new .audio-player__primary,.release-new .audio-player__secondary{flex:1 1 auto;min-width:118px}}
