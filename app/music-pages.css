@@ -53,3 +53,14 @@
 .release-new .track-list__current{background:rgba(255,255,255,.28)!important}
 .release-new .track-list__current b{color:#151515!important}
 @media(max-width:620px){.release-new .track-list--interactive .track-list__row{grid-template-columns:30px minmax(0,1fr) 46px 34px!important;column-gap:7px!important}.release-new .track-list--interactive .track-list__row>button{width:32px!important;height:32px!important}}
+
+/* Release-page "More releases" cards: contain fill images inside their own square cards */
+.release-new__other .release-grid--catalogue{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 20px}
+.release-new__other .release-card{min-width:0}
+.release-new__other .release-card>a{display:block;color:inherit;text-decoration:none}
+.release-new__other .release-card__cover{position:relative;aspect-ratio:1;overflow:hidden;background:#fff;border:3px solid #151515;box-shadow:7px 7px 0 #ff1493}
+.release-new__other .release-card__cover img{object-fit:cover}
+.release-new__other .release-card__hover{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:rgba(21,21,21,.9);color:#fff;font:900 10px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em}
+.release-new__other .release-card__meta{display:flex;justify-content:space-between;gap:15px;padding:14px 2px 0}
+.release-new__other .release-card__meta h3{margin:0;font:900 20px/1 Arial,sans-serif}.release-new__other .release-card__meta p{margin:7px 0 0;font:600 14px/1.2 Arial,sans-serif}.release-new__other .release-card__meta>span{font:900 10px/1 Arial,sans-serif;letter-spacing:.08em}
+@media(max-width:760px){.release-new__other .release-grid--catalogue{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.release-new__other .release-card__meta{display:block}.release-new__other .release-card__meta>span{display:block;margin-top:8px}}
