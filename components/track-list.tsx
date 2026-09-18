@@ -7,12 +7,12 @@ export function TrackList({ artist }: { artist: Artist }) {
   const { currentItem, playing, playTrack } = usePlayer();
 
   return (
-    <ol className="track-list track-list--interactive">
+    <div className="track-list track-list--interactive">
       {artist.tracks.map((track, index) => {
         const available = Boolean(track.audio);
         const isCurrent = currentItem.artistSlug === artist.slug && currentItem.trackNumber === index + 1;
         return (
-          <li key={track.title} className={isCurrent ? "track-list__current" : undefined}>
+          <div key={track.title} className={isCurrent ? "track-list__row track-list__current" : "track-list__row"}>
             <span>{String(index + 1).padStart(2, "0")}</span>
             <b>{track.title}</b>
             <time>{track.duration}</time>
@@ -21,9 +21,9 @@ export function TrackList({ artist }: { artist: Artist }) {
                 {isCurrent && playing ? "Ⅱ" : "▶"}
               </button>
             ) : <small>Album track</small>}
-          </li>
+          </div>
         );
       })}
-    </ol>
+    </div>
   );
 }
