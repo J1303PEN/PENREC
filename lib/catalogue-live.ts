@@ -59,7 +59,7 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
     year: row.year || base.year,
     catalogue: row.catalogue || base.catalogue,
     cover: row.cover || base.cover,
-    hero: row.hero && row.hero !== row.cover ? row.hero : base.hero,
+    // Artist identity imagery is authoritative here. Release artwork must never override a public artist hero.\n    hero: base.hero,
     profile: row.profile || base.profile,
     heroPosition: row.hero_position || base.heroPosition,
     profilePosition: row.profile_position || base.profilePosition,
