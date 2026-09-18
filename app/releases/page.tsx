@@ -14,6 +14,6 @@ export default async function ReleasesPage(){
  return <main id="content" className="music-page">
   <section className="music-page__masthead"><p className="music-page__eyebrow">PENREC catalogue</p><h1>Music.</h1><p>Albums and releases from across PENREC, with the artwork, sequence and music kept together.</p></section>
   <section className="music-page__latest"><header className="music-page__heading"><div><p className="music-page__eyebrow">Latest from PENREC</p><h2>New releases.</h2></div><p>The newest additions to the PENREC catalogue.</p></header><div className="release-grid">{latestReleases.map(release=><ReleaseCard key={`${release.slug}-${release.catalogue}`} release={release}/>)}</div></section>
-  <section className="music-page__catalogue"><header className="music-page__heading"><div><p className="music-page__eyebrow">Browse</p><h2>The catalogue.</h2></div><Link className="text-link" href="/search">Search for a song →</Link></header><CatalogueBrowser/></section>
+  <section className="music-page__catalogue"><header className="music-page__heading"><div><p className="music-page__eyebrow">Browse</p><h2>The catalogue.</h2></div><Link className="text-link" href="/search">Search for a song →</Link></header><CatalogueBrowser catalogueArtists={catalogueReleases}/></section>
  </main>;
 }
