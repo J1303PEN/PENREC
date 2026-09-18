@@ -9,6 +9,12 @@ import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 import { getResolvedArtist } from "@/lib/catalogue-live";
+
+const lockedArtistHeroes:Record<string,string>={
+ "fifth-and-main":"/images/artists/fifth-and-main/fifth-and-main-hero.png",
+ "vierklang":"/images/artists/vierklang/vierklang-hero.jpg",
+ "shelley-dante":"/images/artists/shelley-dante/shelley-dante-hero.jpg",
+};
 import { AudioPlayer } from "@/components/audio-player";
 import { ArtistGallery } from "@/components/artist-gallery";
 import { ReleaseCard } from "@/components/release-card";
@@ -20,12 +26,13 @@ export default async function ArtistPage({params}:{params:Promise<{slug:string}>
  const {slug}=await params;
  const a=await getResolvedArtist(slug);
  if(!a)notFound();
+ const artistHero=lockedArtistHeroes[slug] ?? a.hero;
  const releases=getArtistReleases(a);
  const latestRelease=releases[releases.length-1];
  const latest=asReleaseArtist(a,latestRelease);
  return <main id="content" className="artist-page">
   <section className="artist-page__hero">
-   <Image key={a.hero} src={`${a.hero}?artistHero=2`} alt={`${a.name} portrait`} fill priority unoptimized sizes="100vw" style={{objectPosition:a.heroPosition ?? "50% 50%"}}/>
+   <Image key={artistHero} src={artistHero} alt={`${a.name} portrait`} fill priority unoptimized sizes="100vw" style={{objectPosition:a.heroPosition ?? "50% 50%"}}/>
    <div className="artist-page__identity">
     <p className="artist-page__kicker">PENREC artist{a.location?` · ${a.location}`:""}</p>
     <h1>{a.name}</h1>
