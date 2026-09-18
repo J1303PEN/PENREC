@@ -6,7 +6,7 @@ import type { CatalogueRelease } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
 
-export function CatalogueBrowser({catalogueArtists}:{catalogueArtists:CatalogueRelease[]}) {
+export function CatalogueBrowser({catalogueArtists}:{catalogueArtists:ReadonlyArray<CatalogueRelease>}) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
   const [sort, setSort] = useState<"catalogue" | "artist" | "title">("catalogue");
   const releases = useMemo(() => {
