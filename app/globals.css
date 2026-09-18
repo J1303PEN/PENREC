@@ -195,3 +195,24 @@
 .studio-new .account-hero h1{margin:0;font:900 clamp(54px,8vw,112px)/.78 Arial,sans-serif;letter-spacing:-.07em}
 .studio-new .account-hero p{max-width:650px;margin:22px 0 0;color:#555;font:600 16px/1.45 Arial,sans-serif}
 @media(max-width:800px){.studio-new .admin-metrics{grid-template-columns:1fr 1fr}.studio-new .admin-metrics article{border-right:3px solid #151515;border-bottom:3px solid #151515}.studio-new .admin-metrics article:nth-child(2n){border-right:0}.studio-new .admin-metrics article:nth-last-child(-n+2){border-bottom:0}.studio-new .admin-metrics strong{font-size:34px}.studio-new .account-hero{display:block}.studio-new .account-hero>.button{margin-top:24px}}
+
+
+/* Catalogue editors and legacy Studio workspace inherit the current PENREC language */
+.catalogue-editor{background:var(--penrec-paper);color:#151515}
+.catalogue-editor .catalogue-editor__form{margin-top:30px}
+.catalogue-editor .catalogue-editor__form section{padding:28px;background:#fff;border:3px solid #151515;box-shadow:7px 7px 0 var(--penrec-cyan);margin-bottom:22px}
+.catalogue-editor .catalogue-editor__form section:nth-of-type(2){box-shadow-color:var(--penrec-orange)}
+.catalogue-editor .catalogue-editor__form h2{margin:0 0 24px;font:900 34px/.95 Arial,sans-serif;color:#151515}
+.catalogue-editor .catalogue-editor__form label{color:#151515;font-weight:900}
+.catalogue-editor .catalogue-editor__form input,.catalogue-editor .catalogue-editor__form select,.catalogue-editor .catalogue-editor__form textarea{background:var(--penrec-paper);color:#151515;border:2px solid #151515;border-radius:0}
+.catalogue-editor .catalogue-editor__actions .button,.catalogue-editor .button--gold{background:var(--penrec-cyan);color:#151515;border:3px solid #151515;box-shadow:4px 4px 0 #151515}
+.studio-new .studio-heading{border-bottom:5px solid #151515}
+.studio-new .studio-heading h1{color:#151515}
+.studio-new .studio-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid #151515;background:#151515}
+.studio-new .studio-stats article{background:#fff;border:0;border-right:3px solid #151515;border-bottom:3px solid #151515}
+.studio-new .studio-stats article:nth-child(2),.studio-new .studio-stats article:nth-child(5){background:var(--penrec-cyan)}
+.studio-new .studio-stats article:nth-child(3),.studio-new .studio-stats article:nth-child(6){background:var(--penrec-yellow)}
+.studio-new .studio-stats strong,.studio-new .studio-stats span{color:#151515}
+.studio-new .button--gold{background:var(--penrec-yellow);color:#151515;border:3px solid #151515;box-shadow:4px 4px 0 #151515}
+.studio-new .studio-tabs .is-active{color:#151515;border-color:var(--penrec-pink)}
+@media(max-width:800px){.studio-new .studio-stats{grid-template-columns:1fr 1fr}.catalogue-editor .catalogue-editor__form section{padding:18px}}
