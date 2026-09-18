@@ -78,3 +78,11 @@
 .global-player__timeline input::-moz-range-progress,.global-player__volume input::-moz-range-progress{background:#ff1493!important}
 .global-player__timeline input::-moz-range-track,.global-player__volume input::-moz-range-track{background:#fff!important}
 .global-player__timeline input::-moz-range-thumb,.global-player__volume input::-moz-range-thumb{background:#ff1493!important;border:0!important}
+
+/* Make PENREC slider state and handles clearly visible in WebKit/Safari */
+.global-player input[type="range"]{-webkit-appearance:none!important;appearance:none!important;height:8px!important;border-radius:0!important;background:linear-gradient(to right,#ff1493 0%,#ff1493 var(--range-progress,0%),#fff var(--range-progress,0%),#fff 100%)!important;outline:1px solid rgba(21,21,21,.22)!important}
+.global-player input[type="range"]::-webkit-slider-runnable-track{-webkit-appearance:none!important;height:8px!important;background:transparent!important;border:0!important}
+.global-player input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none!important;appearance:none!important;width:18px!important;height:18px!important;margin-top:-5px!important;border-radius:50%!important;background:#ff1493!important;border:3px solid #151515!important;box-shadow:none!important}
+.global-player input[type="range"]::-moz-range-track{height:8px!important;background:#fff!important;border:1px solid rgba(21,21,21,.22)!important}
+.global-player input[type="range"]::-moz-range-progress{height:8px!important;background:#ff1493!important}
+.global-player input[type="range"]::-moz-range-thumb{width:14px!important;height:14px!important;border-radius:50%!important;background:#ff1493!important;border:3px solid #151515!important}
