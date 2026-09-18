@@ -18,7 +18,7 @@ export async function getOwnProfile(userId: string) {
 }
 
 export async function requireAdmin() {
-  const { user } = await requireUser();
+  const { user } = await requireUser("/admin");
   const profile = await getOwnProfile(user.id);
   const role = profile?.role;
   if (!role || !["staff", "admin", "super_admin"].includes(role)) redirect("/unauthorised");
