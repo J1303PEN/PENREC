@@ -5,6 +5,8 @@ import {
 } from "react";
 import { artists, type Artist, type Track } from "@/data/catalog";
 
+type PlayableRelease = Pick<Artist, "name" | "slug" | "album" | "cover" | "catalogue"> & { tracks: Track[] };
+
 const R2_AUDIO_ORIGIN = "https://audio.penrec.co.uk";
 function r2AudioUrl(audio: string) {
   if (audio.startsWith("/audio/")) return `${R2_AUDIO_ORIGIN}/${audio.slice("/audio/".length)}`;
@@ -12,9 +14,9 @@ function r2AudioUrl(audio: string) {
 }
 
 export type QueueItem = { id:string; artistSlug:string; artistName:string; album:string; cover:string; catalogue:string; trackNumber:number; title:string; durationLabel:string; audio:string; };
-type PlayerContextValue = { currentItem:QueueItem; queue:QueueItem[]; currentIndex:number; playing:boolean; currentTime:number; duration:number; progress:number; volume:number; muted:boolean; queueOpen:boolean; playableTracksFor:(artist:Artist)=>QueueItem[]; playArtist:(artist:Artist)=>void; playAlbum:(artist:Artist)=>void; queueAlbum:(artist:Artist)=>void; playTrack:(artist:Artist,track:Track,trackIndex:number)=>void; toggle:()=>Promise<void>; next:()=>void; previous:()=>void; seek:(percent:number)=>void; setVolume:(value:number)=>void; toggleMute:()=>void; jumpTo:(index:number)=>void; removeFromQueue:(index:number)=>void; clearUpcoming:()=>void; toggleQueue:()=>void; closeQueue:()=>void; };
+type PlayerContextValue = { currentItem:QueueItem; queue:QueueItem[]; currentIndex:number; playing:boolean; currentTime:number; duration:number; progress:number; volume:number; muted:boolean; queueOpen:boolean; playableTracksFor:(artist:PlayableRelease)=>QueueItem[]; playArtist:(artist:PlayableRelease)=>void; playAlbum:(artist:PlayableRelease)=>void; queueAlbum:(artist:PlayableRelease)=>void; playTrack:(artist:Artist,track:Track,trackIndex:number)=>void; toggle:()=>Promise<void>; next:()=>void; previous:()=>void; seek:(percent:number)=>void; setVolume:(value:number)=>void; toggleMute:()=>void; jumpTo:(index:number)=>void; removeFromQueue:(index:number)=>void; clearUpcoming:()=>void; toggleQueue:()=>void; closeQueue:()=>void; };
 const PlayerContext=createContext<PlayerContextValue|null>(null);
-function queueItemsForArtist(artist:Artist):QueueItem[]{return artist.tracks.flatMap((track,index)=>track.audio?[{id:`${artist.slug}-${index}-${track.audio}`,artistSlug:artist.slug,artistName:artist.name,album:artist.album,cover:artist.cover,catalogue:artist.catalogue,trackNumber:index+1,title:track.title,durationLabel:track.duration,audio:r2AudioUrl(track.audio)}]:[]);}
+function queueItemsForArtist(artist:PlayableRelease):QueueItem[]{return artist.tracks.flatMap((track,index)=>track.audio?[{id:`${artist.slug}-${index}-${track.audio}`,artistSlug:artist.slug,artistName:artist.name,album:artist.album,cover:artist.cover,catalogue:artist.catalogue,trackNumber:index+1,title:track.title,durationLabel:track.duration,audio:r2AudioUrl(track.audio)}]:[]);}
 const playableCatalogue=artists.flatMap(queueItemsForArtist);
 const launchQueue=playableCatalogue.length>0?[playableCatalogue[0]]:[];
 
@@ -24,10 +26,10 @@ export function PlayerProvider({children}:{children:ReactNode}){
  const replaceQueue=useCallback((items:QueueItem[],startIndex=0)=>{if(items.length===0)return; shouldAutoplayRef.current=true; setQueue(items); setCurrentIndex(Math.min(Math.max(startIndex,0),items.length-1));},[]);
  const next=useCallback(()=>{if(currentIndex<queue.length-1)selectIndex(currentIndex+1,true); else setPlaying(false);},[currentIndex,queue.length,selectIndex]);
  const previous=useCallback(()=>{const audio=audioRef.current;if(audio&&audio.currentTime>3){audio.currentTime=0;setCurrentTime(0);return;}if(currentIndex>0)selectIndex(currentIndex-1,true);},[currentIndex,selectIndex]);
- const playableTracksFor=useCallback((artist:Artist)=>queueItemsForArtist(artist),[]);
- const playAlbum=useCallback((artist:Artist)=>replaceQueue(queueItemsForArtist(artist)),[replaceQueue]);
- const playArtist=useCallback((artist:Artist)=>{const items=queueItemsForArtist(artist);const isSameItem=items[0]?.id===currentItem?.id;if(isSameItem){const audio=audioRef.current;if(!audio)return;if(audio.paused)void audio.play().catch(()=>setPlaying(false));else audio.pause();return;}replaceQueue(items);},[currentItem?.id,replaceQueue]);
- const queueAlbum=useCallback((artist:Artist)=>{const items=queueItemsForArtist(artist);if(items.length===0)return;setQueue(existing=>{const known=new Set(existing.map(item=>item.id));return [...existing,...items.filter(item=>!known.has(item.id))];});setQueueOpen(true);},[]);
+ const playableTracksFor=useCallback((artist:PlayableRelease)=>queueItemsForArtist(artist),[]);
+ const playAlbum=useCallback((artist:PlayableRelease)=>replaceQueue(queueItemsForArtist(artist)),[replaceQueue]);
+ const playArtist=useCallback((artist:PlayableRelease)=>{const items=queueItemsForArtist(artist);const isSameItem=items[0]?.id===currentItem?.id;if(isSameItem){const audio=audioRef.current;if(!audio)return;if(audio.paused)void audio.play().catch(()=>setPlaying(false));else audio.pause();return;}replaceQueue(items);},[currentItem?.id,replaceQueue]);
+ const queueAlbum=useCallback((artist:PlayableRelease)=>{const items=queueItemsForArtist(artist);if(items.length===0)return;setQueue(existing=>{const known=new Set(existing.map(item=>item.id));return [...existing,...items.filter(item=>!known.has(item.id))];});setQueueOpen(true);},[]);
  const playTrack=useCallback((artist:Artist,track:Track,trackIndex:number)=>{if(!track.audio)return;const items=queueItemsForArtist(artist);const index=items.findIndex(item=>item.trackNumber===trackIndex+1);replaceQueue(items,Math.max(index,0));},[replaceQueue]);
  const toggle=useCallback(async()=>{const audio=audioRef.current;if(!audio)return;try{if(audio.paused)await audio.play();else audio.pause();}catch{setPlaying(false);}},[]);
  const seek=useCallback((percent:number)=>{const audio=audioRef.current;if(!audio||!Number.isFinite(audio.duration))return;const safePercent=Math.min(100,Math.max(0,percent));audio.currentTime=(safePercent/100)*audio.duration;setCurrentTime(audio.currentTime);},[]);
