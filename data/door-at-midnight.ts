@@ -3,14 +3,14 @@ import type { Artist } from "@/data/catalog";
 const audioBase = "https://audio.penrec.co.uk/pnr033";
 
 export const doorAtMidnight: Artist = {
-  name: "The Door at Midnight",
+  name: "Original Soundtrack",
   slug: "the-door-at-midnight",
-  album: "The Door at Midnight — Original Soundtrack",
+  album: "The Door at Midnight",
   cover: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
   hero: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
   profile: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
   gallery: [`${audioBase}/the_door_at_midnight_front_cover.jpg`],
-  descriptor: "Original soundtrack · 17 songs · companion to Darren Penman’s fantasy novel",
+  descriptor: "17 songs · companion to Darren Penman’s fantasy novel",
   location: "United Kingdom",
   bio: [
     "The Door at Midnight — Original Soundtrack is the musical companion to Darren Penman’s fantasy novel, translating its strange doorways, shifting worlds and emotional journey into seventeen original songs.",
