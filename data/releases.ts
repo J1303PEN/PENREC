@@ -6,6 +6,7 @@ import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 import { saturdayBest } from "@/data/saturday-best";
+import { doorAtMidnight } from "@/data/door-at-midnight";
 
 export type ReleaseData = {
   album: string;
@@ -221,6 +222,7 @@ export const completeCatalogueArtists: Artist[] = [
   localArrangement,
   directMotion,
   christieWalker,
+  doorAtMidnight,
 ];
 
 export const completeCatalogueReleases: CatalogueRelease[] = [
