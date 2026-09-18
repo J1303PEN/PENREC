@@ -4,9 +4,9 @@ import { getAccessToken, getUser, restSelect } from "@/lib/penrec-auth";
 export type PenrecRole = "customer" | "staff" | "admin" | "super_admin";
 export type Profile = { id: string; display_name: string | null; role: PenrecRole; created_at: string };
 
-export async function requireUser() {
+export async function requireUser(next = "/account") {
   const user = await getUser();
-  if (!user) redirect("/login?next=/account");
+  if (!user) redirect(`/login?next=${encodeURIComponent(next)}`);
   return { user };
 }
 
