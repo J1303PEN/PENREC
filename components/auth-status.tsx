@@ -11,6 +11,6 @@ export function AuthStatus() {
       .then((data) => setSignedIn(Boolean(data.authenticated)))
       .catch(() => setSignedIn(false));
   }, []);
-  if (signedIn === null) return <span className="nav-account nav-account--loading">Account</span>;
-  return <Link className="nav-account" href={signedIn ? "/account" : "/login"}>{signedIn ? "My Account" : "Sign in"}</Link>;
+  if (signedIn === null) return <span className="nav-account nav-account--loading">My PENREC</span>;
+  return <Link className="nav-account" href={signedIn ? "/account" : "/login"}>{signedIn ? "My PENREC" : "Sign in"}</Link>;
 }
