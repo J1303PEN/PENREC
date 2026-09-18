@@ -9,7 +9,7 @@ import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 import { doorAtMidnight } from "@/data/door-at-midnight";
-import { getResolvedArtist } from "@/lib/catalogue-live";
+import { getPublicCatalogueReleases, getResolvedArtist } from "@/lib/catalogue-live";
 import { AudioPlayer } from "@/components/audio-player";
 import { TrackList } from "@/components/track-list";
 import { ReleaseCard } from "@/components/release-card";
@@ -22,7 +22,10 @@ export default async function ReleasePage({params,searchParams}:{params:Promise<
  const {release}=await searchParams;
  const a=await getResolvedArtist(slug);
  if(!a)notFound();
- const selected=getReleaseArtist(a,release);
+ const baseSelected=getReleaseArtist(a,release);
+ const publicCatalogue=await getPublicCatalogueReleases();
+ const expectedHref=getReleaseHref(a,baseSelected);
+ const selected=publicCatalogue.find(item=>item.releaseHref===expectedHref) ?? baseSelected;
  const releases=getArtistReleases(a);
  const playable=selected.tracks.filter(track=>track.audio).length;
  return <main id="content" className="release-new">
