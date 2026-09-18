@@ -3,6 +3,9 @@ import { CatalogueBrowser } from "@/components/catalogue-browser";
 import { ReleaseCard } from "@/components/release-card";
 import { getPublicCatalogueReleases } from "@/lib/catalogue-live";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 
 export default async function ReleasesPage(){
