@@ -21,3 +21,11 @@
 .music-page .catalogue-count{margin:18px 0 26px;font:800 10px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:#666}
 @media(max-width:1100px){.music-page__catalogue .release-grid--catalogue{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.music-page__catalogue .release-grid--catalogue{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.music-page .catalogue-toolbar{align-items:flex-start;flex-direction:column}.music-page .release-card__meta{display:block}.music-page .release-card__meta>span{display:block;margin-top:8px}.music-page .release-card__hover{transform:none;padding:8px 10px}}
+
+
+/* Music latest releases: compact horizontal rail matching homepage browsing */
+.music-page__latest .release-grid{display:grid!important;grid-auto-flow:column!important;grid-auto-columns:minmax(210px,260px)!important;grid-template-columns:none!important;gap:22px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x proximity;padding:0 0 18px!important;scrollbar-width:thin}
+.music-page__latest .release-card{width:auto!important;min-width:0!important;scroll-snap-align:start}
+.music-page__latest .release-card__cover{position:relative!important;width:100%!important;aspect-ratio:1/1!important;height:auto!important;min-height:0!important;overflow:hidden!important}
+.music-page__latest .release-card__cover img{object-fit:cover!important}
+@media(max-width:760px){.music-page__latest .release-grid{grid-auto-columns:72vw!important;gap:16px!important}}
