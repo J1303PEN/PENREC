@@ -216,3 +216,24 @@
 .studio-new .button--gold{background:var(--penrec-yellow);color:#151515;border:3px solid #151515;box-shadow:4px 4px 0 #151515}
 .studio-new .studio-tabs .is-active{color:#151515;border-color:var(--penrec-pink)}
 @media(max-width:800px){.studio-new .studio-stats{grid-template-columns:1fr 1fr}.catalogue-editor .catalogue-editor__form section{padding:18px}}
+
+
+/* Public artist directory */
+.artists-index{background:var(--penrec-paper);color:#151515;min-height:100vh}
+.artists-index__hero{background:var(--penrec-cyan);border-bottom:5px solid #151515;padding:72px 0 62px}
+.artists-index__hero p{margin:0 0 12px;font:900 13px/1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em}
+.artists-index__hero h1{margin:0;font:900 clamp(72px,10vw,150px)/.82 Arial,sans-serif;letter-spacing:-.07em}
+.artists-index__roster{padding:48px 0 90px}
+.artists-index__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.artists-index__card{display:block;color:#151515;text-decoration:none;background:#fff;border:3px solid #151515;box-shadow:7px 7px 0 var(--penrec-pink);transition:transform .15s ease,box-shadow .15s ease}
+.artists-index__card:nth-child(3n+2){box-shadow-color:var(--penrec-yellow)}
+.artists-index__card:nth-child(3n){box-shadow-color:var(--penrec-orange)}
+.artists-index__card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--penrec-pink)}
+.artists-index__image{position:relative;aspect-ratio:1/1;border-bottom:3px solid #151515;overflow:hidden;background:#ddd}
+.artists-index__image img{object-fit:cover}
+.artists-index__copy{padding:18px}
+.artists-index__copy span{font:900 11px/1 Arial,sans-serif;letter-spacing:.15em}
+.artists-index__copy h2{margin:8px 0 8px;font:900 26px/.95 Arial,sans-serif;letter-spacing:-.03em}
+.artists-index__copy p{margin:0;font:600 14px/1.35 Arial,sans-serif}
+@media(max-width:1000px){.artists-index__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.artists-index__hero{padding:46px 0 38px}.artists-index__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.artists-index__roster{padding:28px 0 70px}.artists-index__copy{padding:12px}.artists-index__copy h2{font-size:20px}.artists-index__copy p{font-size:12px}.artists-index__card{box-shadow:4px 4px 0 var(--penrec-pink)}}
