@@ -255,3 +255,11 @@
 .penrec-search .catalogue-search label{color:#151515}.penrec-search .catalogue-search__field{background:#fff;border:3px solid #151515;box-shadow:7px 7px 0 #49d3dc}
 .penrec-search .catalogue-search__field input{color:#151515;background:#fff}.penrec-search .catalogue-search__field span{color:#ed2e8b}.penrec-search .catalogue-search__hint{color:#555}
 @media(max-width:700px){.penrec-about__hero,.penrec-search>header{padding:46px 0}.penrec-about__grid{grid-template-columns:1fr;gap:25px}.penrec-about__story,.penrec-about__founder{padding:55px 0}.penrec-search>section{padding:35px 0 80px}}
+
+
+/* Keep the full PENREC Music & Publishing lockup inside the header */
+.site-header__inner{height:118px;padding-bottom:16px}
+.penrec-wordmark{position:relative;padding-bottom:20px}
+.penrec-wordmark small{top:auto!important;bottom:0!important;left:0!important;width:100%!important;color:#fff!important}
+.penrec-wordmark small span,.penrec-wordmark small b{color:#fff!important}
+@media(max-width:760px){.site-header__inner{height:96px;padding-bottom:12px}.penrec-wordmark{padding-bottom:16px}.nav{top:96px}}
