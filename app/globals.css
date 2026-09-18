@@ -61,3 +61,22 @@
 .studio-new__list article>a{padding:8px 10px;background:#151515;color:#fff;font-size:9px;font-weight:900;text-transform:uppercase}
 .studio-new .form-help{margin-top:60px;font-size:10px;font-weight:900;text-transform:uppercase}
 @media(max-width:800px){.studio-new{padding:128px 16px 100px}.studio-new__hero{display:block;padding-top:18px}.studio-new__hero h1{font-size:62px}.studio-new .catalogue17-actions{margin-top:26px}.studio-new__metrics{grid-template-columns:1fr 1fr}.studio-new__metrics article:nth-child(2){border-right:0}.studio-new__metrics article:nth-child(-n+2){border-bottom:3px solid #151515}.studio-new__metrics strong{font-size:34px}.studio-new__list{grid-template-columns:1fr}.studio-new__list article{grid-template-columns:62px minmax(0,1fr)}.studio-new__list img,.studio-new__placeholder{width:62px;height:62px}.studio-new__list article>a{grid-column:2;justify-self:start}.studio-new__heading h2{font-size:34px}}
+
+
+/* New PENREC account / sign-in language */
+.auth-page{min-height:100vh;padding:150px 20px 120px;background:var(--penrec-paper);color:#151515;display:grid;place-items:start center}
+.auth-card{width:min(100%,760px);padding:36px;background:#fff;border:4px solid #151515;box-shadow:9px 9px 0 var(--penrec-cyan)}
+.auth-card>.eyebrow{display:inline-block;margin:0 0 18px;padding:7px 10px;background:var(--penrec-pink);color:#151515;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.auth-card h1{margin:0;font:900 clamp(58px,9vw,94px)/.8 Arial,sans-serif;letter-spacing:-.065em}
+.auth-card__intro{max-width:590px;margin:26px 0 34px;font-size:15px;font-weight:600;line-height:1.55}
+.auth-form{display:grid;gap:18px}
+.auth-form label{display:grid;gap:8px;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.auth-form input{height:52px;padding:12px 14px;border:2px solid #151515;border-radius:0;background:var(--penrec-paper);color:#151515;font:600 15px Arial,sans-serif;outline:none}
+.auth-form input:focus{box-shadow:4px 4px 0 var(--penrec-yellow)}
+.auth-form__row{display:flex;justify-content:flex-end;margin-top:-6px}
+.auth-form__row a,.auth-card__footer a,.auth-card__home{font-size:10px;font-weight:900;text-transform:uppercase;border-bottom:2px solid var(--penrec-pink)}
+.auth-form>.button{min-height:52px;border:3px solid #151515;border-radius:0;background:var(--penrec-yellow);color:#151515;box-shadow:5px 5px 0 #151515;font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.auth-card__footer{margin-top:34px;padding-top:22px;border-top:3px solid #151515}
+.auth-card__footer p{margin:0;font-size:13px}
+.auth-card__home{display:inline-block;margin-top:28px}
+@media(max-width:620px){.auth-page{padding:125px 16px 105px}.auth-card{padding:25px 20px;box-shadow:6px 6px 0 var(--penrec-cyan)}.auth-card h1{font-size:62px}.auth-card__intro{margin:22px 0 28px}}
