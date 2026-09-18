@@ -80,3 +80,21 @@
 .auth-card__footer p{margin:0;font-size:13px}
 .auth-card__home{display:inline-block;margin-top:28px}
 @media(max-width:620px){.auth-page{padding:125px 16px 105px}.auth-card{padding:25px 20px;box-shadow:6px 6px 0 var(--penrec-cyan)}.auth-card h1{font-size:62px}.auth-card__intro{margin:22px 0 28px}}
+
+
+/* New My PENREC account */
+.account-new{min-height:100vh;width:100%;padding:150px max(20px,calc((100vw - 1280px)/2)) 110px;background:var(--penrec-paper);color:#151515}
+.account-new .account-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;padding:34px 0 30px;border-bottom:5px solid #151515}
+.account-new .account-hero .eyebrow{margin:0 0 10px;font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#a40061}
+.account-new .account-hero h1{margin:0;font:900 clamp(52px,7vw,94px)/.84 Arial,sans-serif;letter-spacing:-.06em;overflow-wrap:anywhere}
+.account-new .account-hero p{max-width:680px;margin:20px 0 0;font-size:15px;font-weight:600;line-height:1.5}
+.account-new .account-hero .button{border:3px solid #151515;border-radius:0;background:var(--penrec-yellow);color:#151515;box-shadow:4px 4px 0 #151515}
+.account-new .account-summary{display:grid;grid-template-columns:repeat(3,1fr);border:3px solid #151515;border-top:0}
+.account-new .account-summary article{padding:18px 22px;background:#fff;border-right:3px solid #151515}.account-new .account-summary article:nth-child(2){background:var(--penrec-cyan)}.account-new .account-summary article:nth-child(3){background:var(--penrec-orange);border-right:0}
+.account-new .account-summary strong{display:block;font:900 40px/1 Arial,sans-serif}.account-new .account-summary span{font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.account-new .account-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:42px}
+.account-new .account-card{min-height:210px;padding:22px;display:flex;flex-direction:column;background:#fff;color:#151515;border:3px solid #151515;box-shadow:6px 6px 0 var(--penrec-cyan)}
+.account-new .account-card:nth-child(2n){box-shadow-color:var(--penrec-yellow)}.account-new .account-card:nth-child(3n){box-shadow-color:var(--penrec-orange)}
+.account-new .account-card>span{font-size:9px;font-weight:900;letter-spacing:.12em}.account-new .account-card h2{margin:30px 0 10px;font:900 36px/.95 Arial,sans-serif;letter-spacing:-.04em}.account-new .account-card p{margin:0;font-size:13px;font-weight:600}.account-new .account-card b{margin-top:auto;padding-top:20px;font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.account-new .account-card--studio{background:#151515;color:#fff;box-shadow-color:var(--penrec-pink)}.account-new .account-card--studio h2{color:var(--penrec-pink)}
+@media(max-width:700px){.account-new{padding:125px 16px 100px}.account-new .account-hero{grid-template-columns:1fr}.account-new .account-hero h1{font-size:56px}.account-new .account-hero form{justify-self:start}.account-new .account-summary strong{font-size:32px}.account-new .account-summary article{padding:14px 12px}.account-new .account-grid{grid-template-columns:1fr;gap:12px;margin-top:32px}.account-new .account-card{min-height:165px;padding:18px}.account-new .account-card h2{margin-top:22px;font-size:32px}}
