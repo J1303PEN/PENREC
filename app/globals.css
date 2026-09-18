@@ -178,3 +178,20 @@
 .studio-new.catalogue-editor .catalogue-editor__actions{display:flex;justify-content:flex-end;padding:8px 7px 7px 0}
 .studio-new.catalogue-editor .catalogue-editor__actions .button{min-height:48px;padding:10px 20px}
 @media(max-width:700px){.studio-new.catalogue-editor .catalogue-editor__form>section{padding:18px}.studio-new.catalogue-editor .catalogue-editor__grid{grid-template-columns:1fr}.studio-new.catalogue-editor .catalogue-editor__grid .span-2{grid-column:auto}.studio-new.catalogue-editor .catalogue-editor__actions .button{width:100%}}
+
+
+/* PENREC Studio shared metrics — remove legacy black/gold cards */
+.studio-new .admin-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:34px 0 52px;border:3px solid #151515;background:#151515}
+.studio-new .admin-metrics article{padding:22px 20px;background:#fff;border:0;border-right:3px solid #151515}
+.studio-new .admin-metrics article:nth-child(4n+2){background:var(--penrec-cyan)}
+.studio-new .admin-metrics article:nth-child(4n+3){background:var(--penrec-yellow)}
+.studio-new .admin-metrics article:nth-child(4n+4){background:var(--penrec-orange);border-right:0}
+.studio-new .admin-metrics strong{display:block;font:900 42px/1 Arial,sans-serif;color:#151515}
+.studio-new .admin-metrics span{display:block;margin-top:7px;color:#151515;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.studio-new>.eyebrow{margin:0 0 10px;color:#a40061;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.studio-new>.eyebrow+h1{margin:0;padding-bottom:28px;border-bottom:5px solid #151515;font:900 clamp(54px,8vw,112px)/.78 Arial,sans-serif;letter-spacing:-.07em}
+.studio-new .account-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:40px;padding:34px 0 30px;border-bottom:5px solid #151515}
+.studio-new .account-hero .eyebrow{margin:0 0 8px;color:#a40061;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.studio-new .account-hero h1{margin:0;font:900 clamp(54px,8vw,112px)/.78 Arial,sans-serif;letter-spacing:-.07em}
+.studio-new .account-hero p{max-width:650px;margin:22px 0 0;color:#555;font:600 16px/1.45 Arial,sans-serif}
+@media(max-width:800px){.studio-new .admin-metrics{grid-template-columns:1fr 1fr}.studio-new .admin-metrics article{border-right:3px solid #151515;border-bottom:3px solid #151515}.studio-new .admin-metrics article:nth-child(2n){border-right:0}.studio-new .admin-metrics article:nth-last-child(-n+2){border-bottom:0}.studio-new .admin-metrics strong{font-size:34px}.studio-new .account-hero{display:block}.studio-new .account-hero>.button{margin-top:24px}}
