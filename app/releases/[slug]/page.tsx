@@ -15,6 +15,9 @@ import { TrackList } from "@/components/track-list";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseArtist, getReleaseHref } from "@/data/releases";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
 
 export default async function ReleasePage({params,searchParams}:{params:Promise<{slug:string}>,searchParams:Promise<{release?:string}>}){
