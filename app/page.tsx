@@ -1,2 +1,6 @@
 import { HomepageContent } from "@/components/homepage-content";
-export default function HomePage() { return <HomepageContent />; }
+import { getPublicCatalogueReleases } from "@/lib/catalogue-live";
+export default async function HomePage() {
+  const releases=await getPublicCatalogueReleases();
+  return <HomepageContent releases={releases}/>;
+}
