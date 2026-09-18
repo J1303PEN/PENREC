@@ -2,21 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { ReleaseCard } from "@/components/release-card";
-import { artists } from "@/data/catalog";
-import { theVerelles } from "@/data/verelles";
-import { theParkers } from "@/data/parkers";
-import { maison45 } from "@/data/maison-45";
-import { localArrangement } from "@/data/local-arrangement";
-import { directMotion } from "@/data/direct-motion";
-import { christieWalker } from "@/data/christie-walker";
-import { saturdayBest } from "@/data/saturday-best";
-import { getCatalogueReleaseArtists } from "@/data/releases";
+import { completeCatalogueReleases } from "@/data/releases";
 
 const filters = ["All", "United Kingdom", "Italy", "Germany", "Canada", "International"] as const;
-const catalogueArtists = [
-  ...getCatalogueReleaseArtists([...artists, theVerelles, theParkers, maison45, localArrangement, directMotion, christieWalker]),
-  {...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}`},
-];
+const catalogueArtists = completeCatalogueReleases;
 
 export function CatalogueBrowser() {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
