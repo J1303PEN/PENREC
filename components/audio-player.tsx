@@ -3,7 +3,7 @@
 import Image from "next/image";
 import type { Artist, Track } from "@/data/catalog";
 
-type PlayableRelease = Pick<Artist, "name" | "slug" | "album" | "cover" | "preview"> & { tracks: Track[] };
+type PlayableRelease = Pick<Artist, "name" | "slug" | "album" | "cover" | "catalogue" | "preview"> & { tracks: Track[] };
 import { usePlayer } from "@/components/player-context";
 
 export function AudioPlayer({ artist, compact = false }: { artist: PlayableRelease; compact?: boolean }) {
