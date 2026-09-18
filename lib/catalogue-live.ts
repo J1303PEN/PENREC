@@ -116,8 +116,11 @@ export async function getPublicCatalogueReleases(): Promise<CatalogueRelease[]> 
   const managed=await getPublicManagedReleases().catch(()=>[]);
   if(!managed.length) return completeCatalogueReleases;
   const byCatalogue=new Map(managed.filter(r=>r.catalogue_number).map(r=>[r.catalogue_number!.toUpperCase(),r]));
+  const bySeedSlug=new Map(managed.map(r=>[r.slug,r]));
   return Promise.all(completeCatalogueReleases.map(async base=>{
-    const row=byCatalogue.get(base.catalogue.toUpperCase());
+    // The seeded Studio slug is a stable bridge even if an editor changes the catalogue number.
+    const seedSlug=`${base.slug}-${base.catalogue.toLowerCase()}`;
+    const row=bySeedSlug.get(seedSlug) || byCatalogue.get(base.catalogue.toUpperCase());
     if(!row) return base;
     const managedTracks=await getPublicManagedTracks(row.id).catch(()=>[]);
     return {
