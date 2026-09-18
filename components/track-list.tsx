@@ -1,9 +1,11 @@
 "use client";
 
-import type { Artist } from "@/data/catalog";
+import type { Artist, Track } from "@/data/catalog";
+
+type TrackListRelease = Pick<Artist, "name" | "slug" | "album" | "cover" | "catalogue"> & { tracks: Track[] };
 import { usePlayer } from "@/components/player-context";
 
-export function TrackList({ artist }: { artist: Artist }) {
+export function TrackList({ artist }: { artist: TrackListRelease }) {
   const { currentItem, playing, playTrack } = usePlayer();
 
   return (
