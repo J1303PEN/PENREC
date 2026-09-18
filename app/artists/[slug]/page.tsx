@@ -25,7 +25,7 @@ export default async function ArtistPage({params}:{params:Promise<{slug:string}>
  const latest=asReleaseArtist(a,latestRelease);
  return <main id="content" className="artist-page">
   <section className="artist-page__hero">
-   <Image src={a.hero} alt={`${a.name} portrait`} fill priority sizes="100vw" style={{objectPosition:a.heroPosition ?? "50% 50%"}}/>
+   <Image key={a.hero} src={`${a.hero}?artistHero=2`} alt={`${a.name} portrait`} fill priority unoptimized sizes="100vw" style={{objectPosition:a.heroPosition ?? "50% 50%"}}/>
    <div className="artist-page__identity">
     <p className="artist-page__kicker">PENREC artist{a.location?` · ${a.location}`:""}</p>
     <h1>{a.name}</h1>
