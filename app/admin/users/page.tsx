@@ -10,7 +10,7 @@ export default async function UsersPage() {
   const { role } = await requireAdmin();
   const profiles = await getAdminProfiles();
   const canEdit = ["admin", "super_admin"].includes(role);
-  return <main id="content" className="admin-page shell inside">
+  return <main id="content" className="studio-new">
     <p className="eyebrow">PENREC Studio / Customers</p>
     <h1>Account directory</h1>
     <p className="admin-intro">Review customer accounts and assign access levels. Super-admin access can only be granted by another super-admin.</p>
