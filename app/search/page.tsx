@@ -1,5 +1,2 @@
 import { CatalogueSearch } from "@/components/catalogue-search";
-
-export default function SearchPage() {
-  return <main id="content" className="inside catalogue-search-page"><div className="shell"><p className="eyebrow">Explore PENREC</p><h1>Search</h1><p className="listing-page__intro">Find an artist, album, track or catalogue number across the PENREC collection.</p><CatalogueSearch /></div></main>;
-}
+export default function SearchPage(){return <main id="content" className="penrec-search"><header><div className="shell"><p>Find it on PENREC</p><h1>Search.</h1><p>Artists, releases, tracks and catalogue numbers.</p></div></header><section><div className="shell"><CatalogueSearch /></div></section></main>;}
