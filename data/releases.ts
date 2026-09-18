@@ -1,4 +1,11 @@
-import type { Artist, Track } from "@/data/catalog";
+import { artists, type Artist, type Track } from "@/data/catalog";
+import { theVerelles } from "@/data/verelles";
+import { theParkers } from "@/data/parkers";
+import { maison45 } from "@/data/maison-45";
+import { localArrangement } from "@/data/local-arrangement";
+import { directMotion } from "@/data/direct-motion";
+import { christieWalker } from "@/data/christie-walker";
+import { saturdayBest } from "@/data/saturday-best";
 
 export type ReleaseData = {
   album: string;
@@ -203,3 +210,24 @@ export function getCatalogueReleaseArtists(artists: Artist[]): CatalogueRelease[
     })),
   );
 }
+
+
+export const completeCatalogueArtists: Artist[] = [
+  ...artists,
+  theVerelles,
+  theParkers,
+  maison45,
+  localArrangement,
+  directMotion,
+  christieWalker,
+];
+
+export const completeCatalogueReleases: CatalogueRelease[] = [
+  ...getCatalogueReleaseArtists(completeCatalogueArtists),
+  { ...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}` },
+];
+
+export const completeCatalogueTrackCount = completeCatalogueReleases.reduce(
+  (sum, release) => sum + release.tracks.length,
+  0,
+);
