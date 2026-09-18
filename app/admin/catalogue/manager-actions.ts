@@ -15,7 +15,7 @@ export async function removeTrack(d:FormData){await requireAdmin();const id=text
 
 export async function syncCurrentCatalogue(){await requireAdmin();try{
   for(const artist of currentCatalogueArtists){
-    const artistRows=await upsertManagedArtist({name:artist.name,slug:artist.slug,biography:artist.bio||null,image:artist.profile||artist.hero||null,website:null,spotify:null,apple_music:null,instagram:null,status:"published"});
+    const artistRows=await upsertManagedArtist({name:artist.name,slug:artist.slug,biography:artist.bio||null,image:Array.isArray(artist.profile)?artist.profile[0]||null:artist.profile||artist.hero||null,website:null,spotify:null,apple_music:null,instagram:null,status:"published"});
     const managedArtist=artistRows[0]; if(!managedArtist) throw new Error(`Unable to sync ${artist.name}`);
     for(const release of getArtistReleases(artist)){
       const releaseSlug=`${artist.slug}-${release.catalogue.toLowerCase()}`;
