@@ -37,5 +37,15 @@ export async function createManagedTrack(payload: Omit<ManagedTrack,"id"|"create
 export async function updateManagedTrack(id:string,payload:Partial<Omit<ManagedTrack,"id"|"created_at">>) { return restRequest<ManagedTrack[]>(`penrec_tracks?id=eq.${encodeURIComponent(id)}`, {method:"PATCH",body:JSON.stringify({...payload,updated_at:new Date().toISOString()})}, await token()); }
 export async function deleteManagedTrack(id:string) { return restRequest<ManagedTrack[]>(`penrec_tracks?id=eq.${encodeURIComponent(id)}`, {method:"DELETE"}, await token()); }
 
+export async function upsertManagedArtist(payload: Omit<ManagedArtist,"id"|"created_at"|"updated_at">) {
+  return restRequest<ManagedArtist[]>("penrec_artists?on_conflict=slug", {method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({...payload,updated_at:new Date().toISOString()})}, await token());
+}
+export async function upsertManagedRelease(payload: Omit<ManagedRelease,"id"|"created_at"|"updated_at"|"artist">) {
+  return restRequest<ManagedRelease[]>("penrec_releases?on_conflict=catalogue_number", {method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({...payload,updated_at:new Date().toISOString()})}, await token());
+}
+export async function upsertManagedTrack(payload: Omit<ManagedTrack,"id"|"created_at"|"updated_at">) {
+  return restRequest<ManagedTrack[]>("penrec_tracks?on_conflict=release_id,track_number", {method:"POST",headers:{Prefer:"resolution=merge-duplicates,return=representation"},body:JSON.stringify({...payload,updated_at:new Date().toISOString()})}, await token());
+}
+
 function publicConfig(){ const url=process.env.NEXT_PUBLIC_SUPABASE_URL?.trim(); const key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim(); if(!url||!key||url.includes("YOUR-PROJECT")||key.includes("YOUR_SUPABASE")) return null; return {url:url.replace(/\/$/,""),key}; }
 export async function getPublicManagedReleases(): Promise<ManagedRelease[]> { const c=publicConfig(); if(!c) return [] as ManagedRelease[]; const response=await fetch(`${c.url}/rest/v1/penrec_releases?select=*,artist:penrec_artists(name,slug)&status=eq.published&order=release_date.desc.nullslast,updated_at.desc`,{headers:{apikey:c.key,Authorization:`Bearer ${c.key}`},cache:"no-store"}); if(!response.ok) return [] as ManagedRelease[]; return (await response.json()) as ManagedRelease[]; }
