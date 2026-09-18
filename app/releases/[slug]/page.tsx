@@ -8,13 +8,14 @@ import { maison45 } from "@/data/maison-45";
 import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
+import { doorAtMidnight } from "@/data/door-at-midnight";
 import { getResolvedArtist } from "@/lib/catalogue-live";
 import { AudioPlayer } from "@/components/audio-player";
 import { TrackList } from "@/components/track-list";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseArtist, getReleaseHref } from "@/data/releases";
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
 
 export default async function ReleasePage({params,searchParams}:{params:Promise<{slug:string}>,searchParams:Promise<{release?:string}>}){
  const {slug}=await params;
