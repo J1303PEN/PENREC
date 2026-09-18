@@ -17,7 +17,7 @@ export type ReleaseData = {
   releaseCredit?: string;
 };
 
-export type ReleaseArtist = Artist & { releaseCredit?: string };
+export type ReleaseArtist = Omit<Artist, "hero" | "profile" | "gallery" | "heroPosition" | "profilePosition"> & { releaseCredit?: string };
 
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   "the-glamour-katz": [
@@ -173,8 +173,9 @@ export function getArtistReleases(artist: Artist): ReleaseData[] {
 }
 
 export function asReleaseArtist(artist: Artist, release: ReleaseData): ReleaseArtist {
+  const { hero: _hero, profile: _profile, gallery: _gallery, heroPosition: _heroPosition, profilePosition: _profilePosition, ...artistWithoutIdentityImages } = artist;
   return {
-    ...artist,
+    ...artistWithoutIdentityImages,
     album: release.album,
     cover: release.cover,
     year: release.year,
