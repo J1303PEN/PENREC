@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/auth";
 import { getAdminOrders, getAdminProfiles } from "@/lib/admin";
-import { artists } from "@/data/catalog";
+import { getManagedArtists, getManagedReleases, getReleaseTracks } from "@/lib/catalogue-manager";
 
 export const metadata = { title: "Admin | PENREC Studio" };
 
 export default async function AdminPage() {
   const { profile, role } = await requireAdmin();
-  const [profiles, orders] = await Promise.all([getAdminProfiles(), getAdminOrders()]);
+  const [profiles, orders, managedArtists, managedReleases] = await Promise.all([getAdminProfiles(), getAdminOrders(), getManagedArtists(), getManagedReleases()]);
   const pending = orders.filter((order) => ["pending", "paid", "processing"].includes(order.status)).length;
-  const trackCount = artists.reduce((total, artist) => total + artist.tracks.length, 0);
+  const managedTracks = await Promise.all(managedReleases.map((release) => getReleaseTracks(release.id)));
+  const trackCount = managedTracks.reduce((total, tracks) => total + tracks.length, 0);
 
   const modules = [
-    ["Catalogue", `${artists.length} artists · ${trackCount} tracks`, "/admin/catalogue"],
+    ["Catalogue", `${managedArtists.length} artists · ${managedReleases.length} releases · ${trackCount} tracks`, "/admin/catalogue"],
     ["Media", "Artwork, photography and audio inventory", "/admin/media"],
     ["Products", "Music formats, merchandise and fulfilment routing", "/admin/products"],
     ["Studio Workspace", "Publishing, releases, journal and imports", "/studio"],
@@ -27,7 +28,7 @@ export default async function AdminPage() {
       <Link className="button button--outline" href="/account">My account</Link>
     </header>
     <section className="studio-new__metrics">
-      <article><strong>{artists.length}</strong><span>Artists</span></article>
+      <article><strong>{managedArtists.length}</strong><span>Artists</span></article>
       <article><strong>{trackCount}</strong><span>Tracks</span></article>
       <article><strong>{profiles.length}</strong><span>Accounts</span></article>
       <article><strong>{pending}</strong><span>Need attention</span></article>
