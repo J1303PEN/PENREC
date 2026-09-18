@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import styles from "../legal.module.css";
 
-export const metadata: Metadata = { title: "Cookie Policy | PENREC Music Group", description: "How PENREC Music Group uses cookies and browser storage." };
+export const metadata: Metadata = { title: "Cookie Policy | PENREC Music & Publishing", description: "How PENREC Music & Publishing uses cookies and browser storage." };
 
 export default function CookiesPage(){return <main id="content" className={styles.page}>
   <header className={`shell ${styles.hero}`}><p className="eyebrow">Legal / Last updated 4 August 2026</p><h1>Cookie <em>policy.</em></h1><p>A clear explanation of the cookies and browser-storage technologies used by the PENREC website.</p></header>
