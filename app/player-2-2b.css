@@ -70,3 +70,11 @@
 .queue-list__select b{color:#151515!important;font:800 14px/1.15 Arial,sans-serif!important}
 .queue-list__select em,.queue-list__select time{color:#555!important}
 .queue-list__remove{color:#151515!important;font-weight:900!important}
+
+/* Current PENREC player controls — no legacy gold */
+.global-player__timeline input,.global-player__volume input{accent-color:#ff1493!important}
+.global-player__timeline input::-webkit-slider-runnable-track,.global-player__volume input::-webkit-slider-runnable-track{background:#fff!important}
+.global-player__timeline input::-webkit-slider-thumb,.global-player__volume input::-webkit-slider-thumb{background:#ff1493!important}
+.global-player__timeline input::-moz-range-progress,.global-player__volume input::-moz-range-progress{background:#ff1493!important}
+.global-player__timeline input::-moz-range-track,.global-player__volume input::-moz-range-track{background:#fff!important}
+.global-player__timeline input::-moz-range-thumb,.global-player__volume input::-moz-range-thumb{background:#ff1493!important;border:0!important}
