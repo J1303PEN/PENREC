@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { CatalogueBrowser } from "@/components/catalogue-browser";
 import { ReleaseCard } from "@/components/release-card";
-import { completeCatalogueReleases } from "@/data/releases";
+import { getPublicCatalogueReleases } from "@/lib/catalogue-live";
 
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 
 export default async function ReleasesPage(){
- const catalogueReleases=completeCatalogueReleases;
+ const catalogueReleases=await getPublicCatalogueReleases();
  const latestReleases=[...catalogueReleases].sort((a,b)=>catalogueNumber(b.catalogue)-catalogueNumber(a.catalogue)).slice(0,8);
  return <main id="content" className="music-page">
   <section className="music-page__masthead"><p className="music-page__eyebrow">PENREC catalogue</p><h1>Music.</h1><p>Albums and releases from across PENREC, with the artwork, sequence and music kept together.</p></section>
