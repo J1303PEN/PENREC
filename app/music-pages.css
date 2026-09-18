@@ -29,3 +29,15 @@
 .music-page__latest .release-card__cover{position:relative!important;width:100%!important;aspect-ratio:1/1!important;height:auto!important;min-height:0!important;overflow:hidden!important}
 .music-page__latest .release-card__cover img{object-fit:cover!important}
 @media(max-width:760px){.music-page__latest .release-grid{grid-auto-columns:72vw!important;gap:16px!important}}
+
+
+/* Release track list: one number, clean aligned rows, compact play controls */
+.release-new .track-list{max-width:980px;margin:0;padding:0;border-top:3px solid #151515}
+.release-new .track-list__row{display:grid;grid-template-columns:52px minmax(0,1fr) 64px 44px;gap:14px;align-items:center;min-height:58px;padding:8px 0;border-bottom:2px solid rgba(21,21,21,.22)}
+.release-new .track-list__row>span{font:900 13px/1 Arial,sans-serif;letter-spacing:.06em}
+.release-new .track-list__row>b{font:800 18px/1.15 Arial,sans-serif}
+.release-new .track-list__row>time{text-align:right;font:700 13px/1 Arial,sans-serif;font-variant-numeric:tabular-nums}
+.release-new .track-list__row>button{width:38px;height:38px;padding:0;border:2px solid #151515;background:transparent;color:#151515;display:grid;place-items:center;cursor:pointer}
+.release-new .track-list__row>button:hover,.release-new .track-list__current>button{background:#151515;color:#ffd83d}
+.release-new .track-list__row>small{grid-column:4;font:800 9px/1 Arial,sans-serif;text-transform:uppercase}
+@media(max-width:620px){.release-new .track-list__row{grid-template-columns:34px minmax(0,1fr) 48px 38px;gap:8px}.release-new .track-list__row>b{font-size:14px}.release-new .track-list__row>button{width:34px;height:34px}}
