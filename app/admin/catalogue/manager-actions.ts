@@ -3,8 +3,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth";
 import { createManagedArtist, createManagedRelease, createManagedTrack, deleteManagedTrack, updateManagedArtist, updateManagedRelease, updateManagedTrack, upsertManagedArtist, upsertManagedRelease, upsertManagedTrack, upsertManagedTracks, type CatalogueStatus, type ReleaseType } from "@/lib/catalogue-manager";
-import { currentCatalogueArtists } from "@/data/current-catalogue";
-import { getArtistReleases } from "@/data/releases";
+import { completeCatalogueArtists, completeCatalogueReleases } from "@/data/releases";
 const text=(d:FormData,n:string)=>String(d.get(n)||"").trim();
 const nullable=(d:FormData,n:string)=>text(d,n)||null;
 const slugify=(v:string)=>v.toLowerCase().trim().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
@@ -14,15 +13,22 @@ export async function saveTrack(d:FormData){await requireAdmin();const id=text(d
 export async function removeTrack(d:FormData){await requireAdmin();const id=text(d,"id"),releaseId=text(d,"release_id");if(id)await deleteManagedTrack(id);revalidatePath(`/admin/catalogue/releases/${releaseId}`);redirect(`/admin/catalogue/releases/${releaseId}?saved=removed`);}
 
 export async function syncCurrentCatalogue(){await requireAdmin();try{
-  for(const artist of currentCatalogueArtists){
+  const artistIds=new Map<string,string>();
+  for(const artist of completeCatalogueArtists){
     const artistRows=await upsertManagedArtist({name:artist.name,slug:artist.slug,biography:Array.isArray(artist.bio)?artist.bio.join("\n\n"):artist.bio||null,image:artist.profile||artist.hero||null,website:null,spotify:null,apple_music:null,instagram:null,status:"published"});
     const managedArtist=artistRows[0]; if(!managedArtist) throw new Error(`Unable to sync ${artist.name}`);
-    for(const release of getArtistReleases(artist)){
-      const releaseSlug=`${artist.slug}-${release.catalogue.toLowerCase()}`;
-      const releaseRows=await upsertManagedRelease({artist_id:managedArtist.id,title:release.album,slug:releaseSlug,release_type:"album",catalogue_number:release.catalogue||null,release_date:release.year?`${release.year}-01-01`:null,description:null,artwork:release.cover||null,price_pence:0,currency:"GBP",status:"published",publish_at:null});
-      const managedRelease=releaseRows[0]; if(!managedRelease) throw new Error(`Unable to sync ${release.album}`);
-      await upsertManagedTracks(release.tracks.map((track,i)=>({release_id:managedRelease.id,track_number:i+1,title:track.title,duration:track.duration||null,isrc:null,lyrics:null,credits:null,preview_audio:track.audio||null,master_audio:null})));
+    artistIds.set(artist.slug,managedArtist.id);
+  }
+  for(const release of completeCatalogueReleases){
+    let artistId=artistIds.get(release.slug);
+    if(!artistId){
+      const artistRows=await upsertManagedArtist({name:release.name,slug:release.slug,biography:Array.isArray(release.bio)?release.bio.join("\n\n"):release.bio||null,image:release.cover||null,website:null,spotify:null,apple_music:null,instagram:null,status:"published"});
+      const managedArtist=artistRows[0]; if(!managedArtist) throw new Error(`Unable to sync ${release.name}`);
+      artistId=managedArtist.id; artistIds.set(release.slug,artistId);
     }
+    const releaseRows=await upsertManagedRelease({artist_id:artistId,title:release.album,slug:`${release.slug}-${release.catalogue.toLowerCase()}`,release_type:release.catalogue==="PNR033"?"soundtrack":"album",catalogue_number:release.catalogue||null,release_date:release.year?`${release.year}-01-01`:null,description:Array.isArray(release.bio)?release.bio.join("\n\n"):null,artwork:release.cover||null,price_pence:0,currency:"GBP",status:"published",publish_at:null});
+    const managedRelease=releaseRows[0]; if(!managedRelease) throw new Error(`Unable to sync ${release.album}`);
+    await upsertManagedTracks(release.tracks.map((track,i)=>({release_id:managedRelease.id,track_number:i+1,title:track.title,duration:track.duration||null,isrc:null,lyrics:null,credits:null,preview_audio:track.audio||null,master_audio:null})));
   }
 }catch(e){redirect(`/admin/catalogue?error=${encodeURIComponent(e instanceof Error?e.message:"Unable to sync catalogue")}`)}
 revalidatePath("/admin/catalogue");redirect("/admin/catalogue?saved=sync");}
