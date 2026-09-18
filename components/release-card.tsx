@@ -1,8 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Artist } from "@/data/catalog";
+type ReleaseCardData = {
+  name: string;
+  slug: string;
+  album: string;
+  cover: string;
+  year: string;
+  releaseHref?: string;
+  releaseCredit?: string;
+};
 
-export function ReleaseCard({ release }: { release: Artist & { releaseHref?: string; releaseCredit?: string } }) {
+export function ReleaseCard({ release }: { release: ReleaseCardData }) {
   const href = release.releaseHref ?? `/releases/${release.slug}`;
   const credit = release.releaseCredit ?? release.name;
   return (
