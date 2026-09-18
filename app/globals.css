@@ -270,3 +270,9 @@
 .penrec-wordmark small span,.penrec-wordmark small b{font:900 16px/.9 Arial,sans-serif!important;letter-spacing:.015em!important;color:#fff!important}
 .penrec-wordmark small span:first-child{text-align:left}.penrec-wordmark small span:last-child{text-align:right}.penrec-wordmark small b{flex:1;text-align:center}
 @media(max-width:760px){.penrec-wordmark small span,.penrec-wordmark small b{font-size:11px!important}}
+
+
+/* Lock subtitle directly to the PENREC word width */
+.penrec-wordmark{display:inline-grid!important;grid-template-columns:max-content!important;width:max-content!important}
+.penrec-wordmark>strong{grid-column:1;width:100%!important}
+.penrec-wordmark>small{grid-column:1;width:100%!important;box-sizing:border-box!important;left:0!important;right:0!important}
