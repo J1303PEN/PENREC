@@ -4,6 +4,7 @@ import { ReleaseCard } from "@/components/release-card";
 import { getPublicCatalogueReleases } from "@/lib/catalogue-live";
 
 export const dynamic = "force-dynamic";
+// PENREC catalogue pages intentionally bypass static revalidation so Studio edits appear immediately.
 export const revalidate = 0;
 
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
