@@ -12,9 +12,9 @@ import { christieWalker } from "@/data/christie-walker";
 import { getResolvedArtist } from "@/lib/catalogue-live";
 
 const lockedArtistHeroes:Record<string,string>={
- "fifth-and-main":"/images/artists/fifth-and-main/fifth-and-main-hero.png",
- "vierklang":"/images/artists/vierklang/vierklang-hero.jpg",
- "shelley-dante":"/images/artists/shelley-dante/shelley-dante-hero.jpg",
+ "fifth-and-main":"/images/artists/fifth-and-main/fifth-and-main-hero.webp",
+ "vierklang":"/images/artists/vierklang/vierklang-hero.webp",
+ "shelley-dante":"/images/artists/shelley-dante/shelley-dante-hero.webp",
 };
 import { AudioPlayer } from "@/components/audio-player";
 import { ArtistGallery } from "@/components/artist-gallery";

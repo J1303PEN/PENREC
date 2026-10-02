@@ -106,7 +106,7 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   "the-glamour-katz": [
     {
       album: "Make Him Mine",
-      cover: "/images/covers/the-glamour-katz-make-him-mine.jpg",
+      cover: "/images/covers/the-glamour-katz-make-him-mine.webp",
       year: "2026",
       catalogue: "PNR023",
       preview: "https://audio.penrec.co.uk/01_make_him_mine.mp3",
@@ -135,7 +135,7 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   "fifth-and-main": [
     {
       album: "Christmas",
-      cover: "/images/covers/fifth-and-main-christmas.jpg",
+      cover: "/images/covers/fifth-and-main-christmas.webp",
       year: "2026",
       catalogue: "PNR022",
       preview: "https://audio.penrec.co.uk/01_christmas_starts_tonight.mp3",

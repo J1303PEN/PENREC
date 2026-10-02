@@ -44,10 +44,10 @@ function albumTracks(items: [string, string][], preview: string, artistSlug: str
 
 export const artists: Artist[] = [
   {
-    name: "Soreya", slug: "soreya", album: "I Like Who I Am", cover: "/images/covers/soreya-i-like-who-i-am.jpg",
-    hero: "/images/artists/soreya/soreya-hero.jpg", profile: "/images/artists/soreya/soreya-profile.jpg",
+    name: "Soreya", slug: "soreya", album: "I Like Who I Am", cover: "/images/covers/soreya-i-like-who-i-am.webp",
+    hero: "/images/artists/soreya/soreya-hero.webp", profile: "/images/artists/soreya/soreya-profile.webp",
     heroPosition: "50% 18%", profilePosition: "50% 22%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/soreya/soreya-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/soreya/soreya-gallery-${n}.webp`),
     descriptor: "Modern soul · self-belief · cinematic pop", location: "United Kingdom",
     bio: ["Soreya makes emotionally direct pop with a soulful centre: music about finding your footing, choosing yourself and moving forward without losing tenderness.", "Her debut PENREC collection, I Like Who I Am, unfolds as a complete statement of self-belief. Across seventeen songs, intimate verses open into widescreen choruses and a voice that always keeps the human detail close."],
     quote: "The strongest voice is the one you finally recognise as your own.", year: "2026", catalogue: "PNR001",
@@ -55,10 +55,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["I Won't Stand Still","3:49"],["Leave It Where It Belongs","4:40"],["This Is Where I Stand","4:04"],["When You Can't Believe","4:14"],["I'm Finally Breathing","3:54"],["You Make It Easy","4:04"],["Not This Time","4:05"],["This Feels Like Home","3:53"],["I Trust Myself","4:05"],["Some People Stay","4:34"],["I Should Have Said It","3:37"],["I'm Looking Forward","4:33"],["I'd Tell Her This","3:42"],["I Like Who I Am","3:45"],["Days Like These","4:29"],["I Forgive Myself","3:45"],["Keep a Little Hope","3:49"]], "/audio/soreya-i-wont-stand-still.mp3", "soreya")
   },
   {
-    name: "Midnight Avenue", slug: "midnight-avenue", album: "The Night Is Ours", cover: "/images/covers/midnight-avenue-the-night-is-ours.jpg",
-    hero: "/images/artists/midnight-avenue/midnight-avenue-hero.jpg", profile: "/images/artists/midnight-avenue/midnight-avenue-profile.jpg",
+    name: "Midnight Avenue", slug: "midnight-avenue", album: "The Night Is Ours", cover: "/images/covers/midnight-avenue-the-night-is-ours.webp",
+    hero: "/images/artists/midnight-avenue/midnight-avenue-hero.webp", profile: "/images/artists/midnight-avenue/midnight-avenue-profile.webp",
     heroPosition: "50% 28%", profilePosition: "50% 40%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/midnight-avenue/midnight-avenue-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/midnight-avenue/midnight-avenue-gallery-${n}.webp`),
     descriptor: "Night-drive pop · glamour · atmosphere", location: "International",
     bio: ["Midnight Avenue live where city light meets open road: polished pop, after-dark romance and the possibility that the best part of the night has not happened yet.", "The Night Is Ours travels through Havana, Marbella and Barcelona without losing its emotional compass. It is cinematic escapism built from melodies designed to stay long after sunrise."],
     quote: "Some songs belong to a place. These belong to the night.", year: "2026", catalogue: "PNR002",
@@ -66,10 +66,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Midnight Avenue","4:27"],["Caribbean Moonlight","4:38"],["Fire in Havana","4:03"],["One Night in Marbella","4:28"],["Barcelona Blue","4:18"],["Lady Roulette","4:04"],["Raise Your Glass","3:45"],["Crystal Eyes","5:10"],["Turn Up the Night","3:40"],["Play That Song Again","3:28"],["Stay Until Sunrise","3:50"],["Last Train Home","3:33"],["Behind the Mask","3:20"],["By Chance","4:05"],["If You Come Back Tonight","4:37"],["Don't Say Goodbye","4:00"],["One More Memory","4:00"],["When Tomorrow Comes","4:00"]], "/audio/midnight-avenue.mp3", "midnight-avenue")
   },
   {
-    name: "Marco Verturi", slug: "marco-verturi", album: "Ogni Giorni Conta", cover: "/images/covers/marco-verturi-ogni-giorni-conta.jpg",
-    hero: "/images/artists/marco-verturi/marco-verturi-hero.jpg", profile: "/images/artists/marco-verturi/marc-verturi-profile.jpg",
+    name: "Marco Verturi", slug: "marco-verturi", album: "Ogni Giorni Conta", cover: "/images/covers/marco-verturi-ogni-giorni-conta.webp",
+    hero: "/images/artists/marco-verturi/marco-verturi-hero.webp", profile: "/images/artists/marco-verturi/marc-verturi-profile.webp",
     heroPosition: "50% 16%", profilePosition: "50% 22%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/marco-verturi/marco-verturi-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/marco-verturi/marco-verturi-gallery-${n}.webp`),
     descriptor: "Italian pop · warmth · timeless songwriting", location: "Italy",
     bio: ["Marco Verturi brings warmth, clarity and classic melodic instinct to contemporary Italian pop. His songs notice the small decisions that quietly change a life.", "Ogni Giorni Conta is a record about time, second chances and choosing to be present. Its arrangements are elegant rather than excessive, leaving room for language, melody and character."],
     quote: "Every day counts, especially the ordinary ones.", year: "2026", catalogue: "PNR003",
@@ -77,10 +77,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Finché C'è Domani","2:59"],["Ci Sei Ancora","3:18"],["Più Lontano Di Così","3:25"],["Il Tempo Di Guardare","3:04"],["Perdonare Me","3:01"],["Oltre La Prossima Curva","3:05"],["Quello Che Non Vedi","3:20"],["Vale Di Più","3:26"],["Questa Volta Scelgo Me","3:09"],["L'Uomo Che Divento","3:16"],["Prima Delle Otto","3:03"],["Il Rumore Che Manca","3:18"],["Il Più Fortunato","3:44"],["Le Vite Degli Altri","2:58"],["La Promessa Più Vera","2:56"],["Abbastanza Così","3:13"],["Un'Altra Occasione","3:05"],["Questa È La Mia Vita","3:04"]], "/audio/marco-finche-ce-domani.mp3", "marco-verturi")
   },
   {
-    name: "The Ashfords", slug: "the-ashfords", album: "The Way We Feel", cover: "/images/covers/the-ashfords-the-way-we-feel.jpg",
-    hero: "/images/artists/the-ashfords/the-ashfords-hero.jpg", profile: "/images/artists/the-ashfords/the-ashfords-profile.jpg",
+    name: "The Ashfords", slug: "the-ashfords", album: "The Way We Feel", cover: "/images/covers/the-ashfords-the-way-we-feel.webp",
+    hero: "/images/artists/the-ashfords/the-ashfords-hero.webp", profile: "/images/artists/the-ashfords/the-ashfords-profile.webp",
     heroPosition: "50% 8%", profilePosition: "50% 24%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/the-ashfords/the-ashfords-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/the-ashfords/the-ashfords-gallery-${n}.webp`),
     descriptor: "Soulful pop · harmony · classic romance", location: "United Kingdom",
     bio: ["The Ashfords pair close harmony with an instinct for timeless love songs. Their sound feels familiar in the best possible way, while the emotional detail remains firmly in the present.", "The Way We Feel is generous, melodic and unguarded: sixteen songs about commitment, anticipation, memory and the quiet relief of finding your way back to someone."],
     quote: "Harmony is not just how voices meet. It is how people do.", year: "2026", catalogue: "PNR004",
@@ -88,10 +88,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["You Never Had to Ask","4:23"],["I Can't Wait Another Day","4:13"],["Every Time You Smile","4:24"],["If You Still Want My Love","4:25"],["Love's Got Other Plans","4:30"],["Take Me Back To Your Heart","4:38"],["Nothing Feels Better Than This","4:27"],["It Was You All Along","4:18"],["She's Looking My Way","4:17"],["Best Part of Loving You","4:38"],["Worth the Wait","4:43"],["The Way We Feel","4:39"],["Just Like the First Time","4:31"],["Every Day with You","4:10"],["All We Need Is Tonight","4:19"],["We'll Always Find Our Way","4:30"]], "/audio/ashfords-you-never-had-to-ask.mp3", "the-ashfords")
   },
   {
-    name: "Vierklang", slug: "vierklang", album: "Das Leben wartet", cover: "/images/covers/vierklang-das-leben-wartet.jpg",
-    hero: "/images/artists/vierklang/vierklang-hero.jpg", profile: "/images/artists/vierklang/vierklang-profile.jpg",
+    name: "Vierklang", slug: "vierklang", album: "Das Leben wartet", cover: "/images/covers/vierklang-das-leben-wartet.webp",
+    hero: "/images/artists/vierklang/vierklang-hero.webp", profile: "/images/artists/vierklang/vierklang-profile.webp",
     heroPosition: "50% 18%", profilePosition: "50% 28%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/vierklang/vierklang-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/vierklang/vierklang-gallery-${n}.webp`),
     descriptor: "German pop · optimism · rich vocal colour", location: "Germany",
     bio: ["Vierklang turn four distinct voices into one uplifting whole. Their music is grounded in friendship, gratitude and the courage to begin again.", "Das Leben wartet moves between intimate reflection and communal choruses. The album's optimism is earned rather than decorative: it looks backward honestly, then chooses tomorrow."],
     quote: "Life is waiting — not somewhere else, but in the next step.", year: "2026", catalogue: "PNR005",
@@ -99,10 +99,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Heute fängt das Leben an","3:30"],["Manchmal reicht ein Augenblick","3:25"],["Mit dir wird alles leicht","3:19"],["Hier schlägt mein Herz noch immer","3:38"],["Irgendwann warst du mein Zuhause","3:37"],["Diese Nacht gehört uns zwei","3:25"],["Ohne dich fehlt einfach etwas","3:14"],["Danke, dass du da gewesen bist","4:19"],["Trau dich einfach loszugehen","3:37"],["Es ist nie zu spät für morgen","4:20"],["Das Glück war immer hier","3:30"],["Du hast an mich geglaubt","3:48"],["Solang wir zusammen geh'n","3:25"],["Mit jedem Jahr ein bisschen mehr","3:23"],["Auf uns und jeden neuen Morgen","3:32"]], "/audio/vierklang-heute-fangt-das-leben-an.mp3", "vierklang")
   },
   {
-    name: "Sophie Beaulieu", slug: "sophie-beaulieu", album: "Choisir La Vie", cover: "/images/covers/sophie-beaulieu-choisir-la-vie.jpg",
-    hero: "/images/artists/sophie-beaulieu/sophie-beaulieu-hero.jpg", profile: "/images/artists/sophie-beaulieu/sophie-beaulieu-profile.jpg",
+    name: "Sophie Beaulieu", slug: "sophie-beaulieu", album: "Choisir La Vie", cover: "/images/covers/sophie-beaulieu-choisir-la-vie.webp",
+    hero: "/images/artists/sophie-beaulieu/sophie-beaulieu-hero.webp", profile: "/images/artists/sophie-beaulieu/sophie-beaulieu-profile.webp",
     heroPosition: "50% 28%", profilePosition: "50% 30%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-${n}.webp`),
     descriptor: "Classical crossover · cinematic storytelling · symphonic pop", location: "Canada",
     bio: [
       "Some voices fill a room. Others stop time.",
@@ -118,10 +118,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Je choisis la vie","3:38"],["Plus Haut Que La Peur","3:31"],["Si Tu Me Voyais","3:48"],["Plus Jamais À Genoux","3:12"],["Jusqu'Au Dernier Souffle","3:57"],["Quand Tout S'Éteint","3:35"],["Je N'Attends Plus Demain","3:05"],["Ce Que Je Laisse Derrière","3:39"],["Tu Es Arrivé Sans Bruit","3:22"],["J'Apprends À Y Croire","3:42"],["Je Tiendrai La Lumière","3:05"],["Je N'Ai Plus Peur D'Aimer","4:19"],["Merci À Celle Que J'Étais","3:50"],["Si Mon Histoire Peut T'Aider","3:15"],["Tout Commence Ici","3:44"]], "/audio/sophie-beaulieu-je-choisis-la-vie.mp3", "sophie-beaulieu")
   },
   {
-    name: "Elias Rowan", slug: "elias-rowan", album: "The Lives We Passed", cover: "/images/covers/elias-rowan-the-lives-we-passed.jpg",
-    hero: "/images/artists/elias-rowan/elias-rowan-hero.jpg", profile: "/images/artists/elias-rowan/elias-rowan-profile.jpg",
+    name: "Elias Rowan", slug: "elias-rowan", album: "The Lives We Passed", cover: "/images/covers/elias-rowan-the-lives-we-passed.webp",
+    hero: "/images/artists/elias-rowan/elias-rowan-hero.webp", profile: "/images/artists/elias-rowan/elias-rowan-profile.webp",
     heroPosition: "50% 42%", profilePosition: "50% 32%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/elias-rowan/elias-rowan-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/elias-rowan/elias-rowan-gallery-${n}.webp`),
     descriptor: "British singer-songwriter · timeless storytelling · cinematic warmth", location: "United Kingdom",
     bio: [
       "Some voices don't need to shout to be heard.",
@@ -138,10 +138,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["The Book I Never Came For","3:49"],["The Road I've Never Travelled","3:56"],["I Should Have Told You Long Ago","3:30"],["Every Tuesday","5:20"],["Love Learns New Voices","3:38"],["Before Closing Time","5:23"],["The Last Projectionist","4:44"],["Seven Minutes Fast","4:20"],["The Empty Place Beside Him","5:21"],["The Christmas Lantern","4:54"],["The Wednesday Club","4:03"],["The Piano Nobody Wanted","4:21"],["Every Thursday","4:49"],["The Glove Maker","4:49"],["The Boy Who Always Waved","5:09"],["The Table by the Window","4:50"]], "/audio/elias-rowan-the-book-i-never-came-for.mp3", "elias-rowan")
   },
   {
-    name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.jpg",
-    hero: "/images/artists/shelley-dante/shelley-dante-hero.jpg", profile: "/images/artists/shelley-dante/shelley-dante-profile.jpg",
+    name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.webp",
+    hero: "/images/artists/shelley-dante/shelley-dante-hero.webp", profile: "/images/artists/shelley-dante/shelley-dante-profile.webp",
     heroPosition: "24% 36%", profilePosition: "24% 28%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.jpg`),
+    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.webp`),
     descriptor: "Dance-pop · disco glamour · emotional power", location: "International",
     bio: [
       "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.",
@@ -156,10 +156,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Night Dancing","3:30"],["Love in the Shadows","3:43"],["Brick by Brick","3:50"],["On the Train","3:48"],["My Biggest Mistake","3:10"],["Macho Man","3:28"],["One Man Only","4:26"],["Something New","2:30"],["You Were Made to Break My Heart","3:55"],["Your Picture Next to Mine","3:40"],["The Penman Express","3:33"],["Make a Move","2:53"],["Next Door Heartbreak","3:17"],["Tomorrow Comes","4:29"],["Fool No More","3:45"]], "/audio/shelley-dante-night-dancing.mp3", "shelley-dante")
   },
   {
-    name: "Luca Moretti", slug: "luca-moretti", album: "Donde Empieza Todo", cover: "/images/covers/luca-moretti-donde-empieza-todo.jpg",
-    hero: "/images/artists/luca-moretti/luca-moretti-hero.jpg", profile: "/images/artists/luca-moretti/luca-moretti-profile.jpg",
+    name: "Luca Moretti", slug: "luca-moretti", album: "Donde Empieza Todo", cover: "/images/covers/luca-moretti-donde-empieza-todo.webp",
+    hero: "/images/artists/luca-moretti/luca-moretti-hero.webp", profile: "/images/artists/luca-moretti/luca-moretti-profile.webp",
     heroPosition: "58% 22%", profilePosition: "50% 18%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/luca-moretti/luca-moretti-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/luca-moretti/luca-moretti-gallery-${n}.webp`),
     descriptor: "Spanish pop · Mediterranean passion · romantic storytelling", location: "Spain",
     bio: [
       "Some voices capture a moment. Luca Moretti makes it impossible to forget.",
@@ -176,10 +176,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Desde Que Llegaste","3:17"],["Antes De Verte","3:14"],["Cuando Callas Tú","3:35"],["Tus Pequeñas Costumbres","3:09"],["No Somos Iguales","2:57"],["Aquella Fotografía","3:18"],["Se Nos Hizo Tarde","3:10"],["Donde Empieza La Calma","3:22"],["Como Soy","3:02"],["Sin Darte Cuenta","3:09"],["Una Silla Más","4:20"],["Las Cosas Nuestras","2:54"],["Termino Tus Historias","3:10"],["Solo Con Mirarte","3:07"],["Lo Mejor No Ha Pasado","2:42"],["La Última Luz","3:23"]], "/audio/luca-moretti-desde-que-llegaste.mp3", "luca-moretti")
   },
   {
-    name: "Khadijah Brown", slug: "khadijah-brown", album: "Grace", cover: "/images/covers/khadijah-brown-grace.jpg",
-    hero: "/images/artists/khadijah-brown/khadijah-brown-hero.jpg", profile: "/images/artists/khadijah-brown/khadijah-brown-profile.jpg",
+    name: "Khadijah Brown", slug: "khadijah-brown", album: "Grace", cover: "/images/covers/khadijah-brown-grace.webp",
+    hero: "/images/artists/khadijah-brown/khadijah-brown-hero.webp", profile: "/images/artists/khadijah-brown/khadijah-brown-profile.webp",
     heroPosition: "50% 18%", profilePosition: "45% 22%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/khadijah-brown/khadijah-brown-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/khadijah-brown/khadijah-brown-gallery-${n}.webp`),
     descriptor: "Contemporary soul · gospel warmth · quiet strength", location: "International",
     bio: [
       "Some voices demand attention. Khadijah Brown’s earns something deeper: belief.",
@@ -196,10 +196,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Love Don't Wait Forever","3:35"],["Easy Like the Morning Breeze","3:44"],["I'm Not Carrying Your Worry","3:26"],["There's No Place Like Coming Home","3:47"],["Dance With Me Till Morning Light","3:48"],["Right Here on This Little Street","3:43"],["Some Hearts Change with the Seasons","4:23"],["Mama Said Love Will Find You","3:43"],["I Let the Hurt Drift Away","4:24"],["Every Sunrise Tells Me Something","3:59"],["Take Your Time","3:24"],["I Found My Smile Again","4:02"],["Friends Like You Are Hard to Find","4:13"],["Counting Every Blessing","3:59"],["Walk Into Tomorrow Smiling","3:55"]], "/audio/khadijah-brown-love-dont-wait-forever.mp3", "khadijah-brown")
   },
   {
-    name: "Harper Lane", slug: "harper-lane", album: "Wide Open", cover: "/images/covers/harper-lane-wide-open.jpg",
-    hero: "/images/artists/harper-lane/harper-lane-hero.jpg", profile: "/images/artists/harper-lane/harper-lane-profile.jpg",
+    name: "Harper Lane", slug: "harper-lane", album: "Wide Open", cover: "/images/covers/harper-lane-wide-open.webp",
+    hero: "/images/artists/harper-lane/harper-lane-hero.webp", profile: "/images/artists/harper-lane/harper-lane-profile.webp",
     heroPosition: "50% 30%", profilePosition: "50% 24%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/harper-lane/harper-lane-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/harper-lane/harper-lane-gallery-${n}.webp`),
     descriptor: "Contemporary country · heartfelt pop · honest storytelling", location: "United Kingdom",
     bio: [
       "Some artists chase the spotlight. Harper Lane simply tells the truth.",
@@ -215,10 +215,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Wide Open","3:47"],["When You Look At Me","4:10"],["Say You'll Stay","3:48"],["If I Don't Tell You Now","3:45"],["My Heart Knows Better","3:58"],["Good Kind of Gone","4:40"],["Right Here, Right Now","3:55"],["Find Me Again","3:58"],["Better With You","4:13"],["Whatever Comes Next","3:41"],["This Is The Life","4:13"],["You Don't Know Me Yet","3:28"],["Five More Minutes","3:59"],["You Change The Weather","4:00"],["Nothing Changed","3:45"],["That's More Like It","4:00"]], "/audio/harper-lane-wide-open.mp3", "harper-lane")
   },
   {
-    name: "Ethan Blake", slug: "ethan-blake", album: "I'd Choose You Again", cover: "/images/covers/ethan-blake-id-choose-you-again.jpg",
-    hero: "/images/artists/ethan-blake/ethan-blake-hero.jpg", profile: "/images/artists/ethan-blake/ethan-blake-profile.jpg",
+    name: "Ethan Blake", slug: "ethan-blake", album: "I'd Choose You Again", cover: "/images/covers/ethan-blake-id-choose-you-again.webp",
+    hero: "/images/artists/ethan-blake/ethan-blake-hero.webp", profile: "/images/artists/ethan-blake/ethan-blake-profile.webp",
     heroPosition: "50% 35%", profilePosition: "50% 24%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/ethan-blake/ethan-blake-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/ethan-blake/ethan-blake-gallery-${n}.webp`),
     descriptor: "British rock-pop · raw emotion · timeless songwriting", location: "United Kingdom",
     bio: [
       "Some artists sing about heartbreak. Ethan Blake sounds as though he has lived through every word.",
@@ -233,10 +233,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Until You Find Your Feet","3:38"],["Lean on Me Tonight","4:02"],["No Matter Where You Are","3:58"],["I'll Wait as Long as It Takes","4:15"],["If You Turn Around","4:23"],["Still My First Call","3:59"],["One More Minute","3:30"],["You Were Already There","3:59"],["You Said, \"Trust Me\"","3:50"],["I Never Said It Enough","3:58"],["It's Been Too Long","4:11"],["I Knew Right Then","4:13"],["I'd Choose You Again","4:17"],["We Didn't Even Notice","3:33"],["Before You Ask","3:40"],["It Was Always You","4:43"]], "/audio/ethan-blake-until-you-find-your-feet.mp3", "ethan-blake")
   },
   {
-    name: "FEVER5", slug: "fever5", album: "Bridge to Your Heart", cover: "/images/covers/fever5-bridge-to-your-heart.jpg",
-    hero: "/images/artists/fever5/fever5-hero.jpg", profile: "/images/artists/fever5/fever5-profile.jpg",
+    name: "FEVER5", slug: "fever5", album: "Bridge to Your Heart", cover: "/images/covers/fever5-bridge-to-your-heart.webp",
+    hero: "/images/artists/fever5/fever5-hero.webp", profile: "/images/artists/fever5/fever5-profile.webp",
     heroPosition: "50% 35%", profilePosition: "50% 30%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/fever5/fever5-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/fever5/fever5-gallery-${n}.webp`),
     descriptor: "Hi-NRG dance-pop · five-part harmony · pure pop happiness", location: "United Kingdom",
     bio: [
       "Some groups are formed through auditions. Others come together by chance. FEVER5 were family long before they ever stepped onto a stage.",
@@ -253,10 +253,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Fever Five","2:43"],["Dance Floor Train","3:13"],["Bridge to Your Heart","3:33"],["Christopher Street","4:01"],["Making Out on a Saturday Night","3:13"],["All About You","3:45"],["Never Too Late","4:04"],["Love It Loud","4:03"],["Wink Wink","3:13"],["Camp It Up It's Friday","3:06"],["Running on Empty","3:16"],["Touch Me Like That","2:53"]], "/audio/fever5-fever-five.mp3", "fever5")
   },
   {
-    name: "Gabriel Laurent", slug: "gabriel-laurent", album: "L'essentiel", cover: "/images/covers/gabriel-laurent-lessentiel.jpg",
-    hero: "/images/artists/gabriel-laurent/gabriel-laurent-hero.jpg", profile: "/images/artists/gabriel-laurent/gabriel-laurent-profile.jpg",
+    name: "Gabriel Laurent", slug: "gabriel-laurent", album: "L'essentiel", cover: "/images/covers/gabriel-laurent-lessentiel.webp",
+    hero: "/images/artists/gabriel-laurent/gabriel-laurent-hero.webp", profile: "/images/artists/gabriel-laurent/gabriel-laurent-profile.webp",
     heroPosition: "50% 30%", profilePosition: "50% 24%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/gabriel-laurent/gabriel-laurent-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/gabriel-laurent/gabriel-laurent-gallery-${n}.webp`),
     descriptor: "French pop · elegant chanson · cinematic orchestration", location: "France",
     bio: [
       "Some artists chase perfection. Gabriel Laurent chases feeling.",
@@ -272,10 +272,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Tout commence ici","3:18"],["On ne revient pas","3:24"],["Le monde attend","2:45"],["Prends le temps","3:35"],["Tout nous appelle","3:38"],["Les choses simples","3:14"],["Allons plus loin","3:35"],["Rien ne s'efface","4:32"],["Aujourd'hui suffit","3:48"],["À notre façon","3:05"],["Un peu plus loin","3:28"],["Je garde tout","3:02"],["Encore un jour","3:47"],["Ceux qui restent","3:30"],["C'est aujourd'hui","3:34"],["Je n'oublie rien","2:52"],["Tout était là","3:05"]], "/audio/gabriel-laurent-tout-commence-ici.mp3", "gabriel-laurent")
   },
   {
-    name: "UP4IT!", slug: "up4it", album: "Together as 1", cover: "/images/covers/up4it-together-as-1.jpg",
-    hero: "/images/artists/up4it/up4it-hero.jpg", profile: "/images/artists/up4it/up4it-profile.jpg",
+    name: "UP4IT!", slug: "up4it", album: "Together as 1", cover: "/images/covers/up4it-together-as-1.webp",
+    hero: "/images/artists/up4it/up4it-hero.webp", profile: "/images/artists/up4it/up4it-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 25%",
-    gallery: [1,2,3,4,5,6].map(n=>`/images/artists/up4it/up4it-gallery-${n}.jpg`),
+    gallery: [1,2,3,4,5,6].map(n=>`/images/artists/up4it/up4it-gallery-${n}.webp`),
     descriptor: "Dance-pop · harmony pop · high-energy performance", location: "International",
     bio: [
       "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.",
@@ -291,10 +291,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Echoes of My Past","2:59"],["Forever","4:09"],["Turn the Page","3:18"],["If Time Could Heal a Broken Heart","3:07"],["Never Let Go","3:25"],["Bridge to Your Heart","3:36"],["Love","3:18"],["Time to Believe","3:42"],["Hometown Dreams","2:40"],["I Miss You","3:23"],["Wish You Were Here","3:27"]], "/audio/up4it-echoes-of-my-past.mp3", "up4it")
   },
   {
-    name: "Fifth & Main", slug: "fifth-and-main", album: "Here We Are", cover: "/images/covers/fifth-and-main-here-we-are.png",
-    hero: "/images/artists/fifth-and-main/fifth-and-main-hero.png", profile: "/images/artists/fifth-and-main/fifth-and-main-profile.png",
+    name: "Fifth & Main", slug: "fifth-and-main", album: "Here We Are", cover: "/images/covers/fifth-and-main-here-we-are.webp",
+    hero: "/images/artists/fifth-and-main/fifth-and-main-hero.webp", profile: "/images/artists/fifth-and-main/fifth-and-main-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 38%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/fifth-and-main/fifth-and-main-gallery-${n}.png`),
+    gallery: [1,2,3,4].map(n=>`/images/artists/fifth-and-main/fifth-and-main-gallery-${n}.webp`),
     descriptor: "Five-part harmony · contemporary pop · Scandinavian polish", location: "International",
     bio: [
       "Five voices. Five personalities. One unmistakable sound.",
@@ -313,10 +313,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["You Give It Away","3:57"],["Easy To Love","4:42"],["She Knows","3:43"],["Closer Every Time","4:23"],["More Than This","3:48"],["My Side of Goodbye","5:00"],["Right Back Here","4:13"],["Too Late To Stop","3:30"],["If You Want Me","4:02"],["Nothing Wrong with Good","4:01"],["Where I Want To Be","5:38"],["Made Up My Mind","4:02"],["Good With Me","3:39"],["Don't Make Me Wait","3:30"],["Easy With You","3:50"],["Your Move","3:49"],["Couldn't Be Better","3:40"]], "/audio/fifth-and-main-you-give-it-away.mp3", "fifth-and-main")
   },
   {
-    name: "Callia", slug: "callia", album: "Amor Eterno", cover: "/images/covers/callia-amor-eterno.jpg",
-    hero: "/images/artists/callia/callia-hero.jpg", profile: "/images/artists/callia/callia-profile.jpg",
+    name: "Callia", slug: "callia", album: "Amor Eterno", cover: "/images/covers/callia-amor-eterno.webp",
+    hero: "/images/artists/callia/callia-hero.webp", profile: "/images/artists/callia/callia-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 35%",
-    gallery: [1,2,3].map(n=>`/images/artists/callia/callia-gallery-${n}.jpg`),
+    gallery: [1,2,3].map(n=>`/images/artists/callia/callia-gallery-${n}.webp`),
     descriptor: "Spanish pop · Mediterranean romance · cinematic warmth", location: "Spain",
     bio: [
       "Some love stories fade. Others become eternal.",
@@ -330,10 +330,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Llevame de Vuelta a Malaga","3:09"],["Pico El Cielo","3:16"],["Amor Eterno","3:06"],["En Estepona","2:30"],["En las arenas doradas","3:40"],["Ramos, Ramos, mi único amor","3:05"],["Te quiero al como eres","3:04"],["En nombre del amor","3:38"],["Promesas eternas","3:28"],["Amar es como un helado","4:13"],["Cierra la puerta tras de ti","3:21"],["Fiesta","3:20"],["Entre dos amores","3:29"],["Sin ti en mi vida, no hay mas","2:47"]], "/audio/callia-llevame-de-vuelta-a-malaga.mp3", "callia")
   },
   {
-    name: "The Glamour Katz", slug: "the-glamour-katz", album: "Living for the Weekend", cover: "/images/covers/the-glamour-katz-living-for-the-weekend.png",
-    hero: "/images/artists/the-glamour-katz/the-glamour-katz-hero.png", profile: "/images/artists/the-glamour-katz/the-glamour-katz-profile.png",
+    name: "The Glamour Katz", slug: "the-glamour-katz", album: "Living for the Weekend", cover: "/images/covers/the-glamour-katz-living-for-the-weekend.webp",
+    hero: "/images/artists/the-glamour-katz/the-glamour-katz-hero.webp", profile: "/images/artists/the-glamour-katz/the-glamour-katz-profile.webp",
     heroPosition: "50% 50%", profilePosition: "50% 45%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/the-glamour-katz/the-glamour-katz-gallery-${n}.png`),
+    gallery: [1,2,3,4].map(n=>`/images/artists/the-glamour-katz/the-glamour-katz-gallery-${n}.webp`),
     descriptor: "Disco house · funk · dance-floor glamour", location: "United Kingdom",
     bio: [
       "Some dance records capture a moment. The Glamour Katz were made for the dance floor.",
@@ -351,10 +351,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["Living for the Weekend","3:42"],["Ghosts of My Past","3:53"],["Road to Loneliness","4:08"],["Scars, Hurt, Emotion","3:58"],["My Heart Is on Fire","3:25"],["My Lady Obsession","3:30"],["One Time Lover","4:00"],["Promised Land","4:03"],["Reason Is You","3:32"],["Dangerous Liaisons","2:12"],["Fight for You","3:51"],["How Did We Get Here","3:49"],["Love Lines","3:42"],["Broken and Empty","3:57"],["When the Heart Leads You Home","4:11"],["When You Brought the Angels to My Door","3:14"],["Not Now, Not Ever","3:43"],["The Crossroads of Life","4:15"],["Where Do I Run To","3:20"]], "/audio/the-glamour-katz-living-for-the-weekend.mp3", "the-glamour-katz")
   },
   {
-    name: "Northbound", slug: "northbound", album: "The Things We Keep", cover: "/images/covers/northbound-the-things-we-keep.png",
-    hero: "/images/artists/northbound/northbound-hero.png", profile: "/images/artists/northbound/northbound-profile.png",
+    name: "Northbound", slug: "northbound", album: "The Things We Keep", cover: "/images/covers/northbound-the-things-we-keep.webp",
+    hero: "/images/artists/northbound/northbound-hero.webp", profile: "/images/artists/northbound/northbound-profile.webp",
     heroPosition: "50% 42%", profilePosition: "50% 38%",
-    gallery: [1,2,3,4,5].map(n=>`/images/artists/northbound/northbound-gallery-${n}.png`),
+    gallery: [1,2,3,4,5].map(n=>`/images/artists/northbound/northbound-gallery-${n}.webp`),
     descriptor: "Alternative rock · big guitars · honest songwriting", location: "United Kingdom",
     bio: [
       "Some bands chase the destination. Northbound were always more interested in the journey.",
@@ -374,10 +374,10 @@ export const artists: Artist[] = [
     tracks: albumTracks([["You Don't Have to Save the World","3:30"],["You'll Never Know What You Gave Us","4:01"],["My Life, My Moment","4:05"],["You Believed Before I Did","3:58"],["The Things We Keep","3:59"],["I Should've Called","3:40"],["Who We Were","3:35"],["Everything You Never Said","3:49"],["Say It Out Loud","3:37"],["Not the Plan","4:03"],["You Stayed","3:34"],["The Second Time","3:45"],["More Than You Knew","3:58"],["That's the Kind of Man You Are","3:33"],["The Man I Never Knew","3:34"]], "/audio/northbound-you-dont-have-to-save-the-world.mp3", "northbound")
   },
   {
-    name: "Nikos Andros", slug: "nikos-andros", album: "Νέες Αρχές (New Beginnings)", cover: "/images/covers/nikos-andros-new-beginnings.png",
-    hero: "/images/artists/nikos-andros/nikos-andros-hero.png", profile: "/images/artists/nikos-andros/nikos-andros-profile.png",
+    name: "Nikos Andros", slug: "nikos-andros", album: "Νέες Αρχές (New Beginnings)", cover: "/images/covers/nikos-andros-new-beginnings.webp",
+    hero: "/images/artists/nikos-andros/nikos-andros-hero.webp", profile: "/images/artists/nikos-andros/nikos-andros-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 34%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/nikos-andros/nikos-andros-gallery-${n}.png`),
+    gallery: [1,2,3,4].map(n=>`/images/artists/nikos-andros/nikos-andros-gallery-${n}.webp`),
     descriptor: "Greek pop · laïko · Mediterranean warmth", location: "Greece",
     bio: [
       "Some songs are about where you've been. Nikos Andros makes music about where you're going next.",

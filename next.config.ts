@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
+import imageRedirects from "./data/image-redirects.json";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return imageRedirects;
+  },
   images: {
     remotePatterns: [
       {

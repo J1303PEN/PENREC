@@ -34,7 +34,7 @@ export const HOMEPAGE_KEY = "penrec-studio-homepage-v1";
 export const ANNOUNCEMENT_KEY = "penrec-studio-announcement-v1";
 
 export const defaultHomepage: HomepageConfig = {
-  heroMode: "release", heroImage: "/images/covers/midnight-avenue-the-night-is-ours.jpg",
+  heroMode: "release", heroImage: "/images/covers/midnight-avenue-the-night-is-ours.webp",
   heroEyebrow: "PENREC Music & Publishing", heroHeadline: "Music without", heroEmphasis: "boundaries.",
   heroStrapline: "", heroButtonText: "Discover music", heroButtonHref: "#releases",
   featuredArtist: "midnight-avenue", featuredRelease: "midnight-avenue",
@@ -46,7 +46,7 @@ export const starterBulletins: Bulletin[] = [{
   id: "penrec-music-publishing", headline: "PENREC Music & Publishing",
   summary: "Music is at the heart of PENREC, with publishing and new creative projects becoming part of what comes next.",
   body: "PENREC brings music, publishing and creative projects together in one place. Explore the catalogue, meet the artists and follow what is coming next.",
-  image: "/images/covers/midnight-avenue-the-night-is-ours.jpg", category: "PENREC News",
+  image: "/images/covers/midnight-avenue-the-night-is-ours.webp", category: "PENREC News",
   publishDate: "2026-07-25", publishTime: "12:00", status: "published",
   createdAt: "2026-07-25T12:00:00.000Z", updatedAt: "2026-07-25T12:00:00.000Z",
 }];

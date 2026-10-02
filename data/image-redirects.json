@@ -1,0 +1,822 @@
+[
+  {
+    "source": "/brand/penrec-brand-guide.jpg",
+    "destination": "/brand/penrec-brand-guide.webp",
+    "permanent": true
+  },
+  {
+    "source": "/brand/penrec-monogram.jpg",
+    "destination": "/brand/penrec-monogram.webp",
+    "permanent": true
+  },
+  {
+    "source": "/brand/penrec-primary-logo.jpg",
+    "destination": "/brand/penrec-primary-logo.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/callia/callia-gallery-1.jpg",
+    "destination": "/images/artists/callia/callia-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/callia/callia-gallery-2.jpg",
+    "destination": "/images/artists/callia/callia-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/callia/callia-gallery-3.jpg",
+    "destination": "/images/artists/callia/callia-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/callia/callia-hero.jpg",
+    "destination": "/images/artists/callia/callia-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/callia/callia-profile.jpg",
+    "destination": "/images/artists/callia/callia-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-gallery-1.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-gallery-2.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-gallery-3.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-gallery-4.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-gallery-5.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-hero.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/elias-rowan/elias-rowan-profile.jpg",
+    "destination": "/images/artists/elias-rowan/elias-rowan-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-gallery-1.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-gallery-2.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-gallery-3.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-gallery-4.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-gallery-5.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-hero.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/ethan-blake/ethan-blake-profile.jpg",
+    "destination": "/images/artists/ethan-blake/ethan-blake-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-gallery-1.jpg",
+    "destination": "/images/artists/fever5/fever5-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-gallery-2.jpg",
+    "destination": "/images/artists/fever5/fever5-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-gallery-3.jpg",
+    "destination": "/images/artists/fever5/fever5-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-gallery-4.jpg",
+    "destination": "/images/artists/fever5/fever5-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-gallery-5.jpg",
+    "destination": "/images/artists/fever5/fever5-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-hero.jpg",
+    "destination": "/images/artists/fever5/fever5-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fever5/fever5-profile.jpg",
+    "destination": "/images/artists/fever5/fever5-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-gallery-1.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-gallery-2.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-gallery-3.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-gallery-4.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-hero.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/fifth-and-main/fifth-and-main-profile.png",
+    "destination": "/images/artists/fifth-and-main/fifth-and-main-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-1.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-2.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-3.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-4.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-5.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-hero.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/gabriel-laurent/gabriel-laurent-profile.jpg",
+    "destination": "/images/artists/gabriel-laurent/gabriel-laurent-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-gallery-1.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-gallery-2.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-gallery-3.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-gallery-4.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-gallery-5.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-hero.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/harper-lane/harper-lane-profile.jpg",
+    "destination": "/images/artists/harper-lane/harper-lane-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-gallery-1.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-gallery-2.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-gallery-3.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-gallery-4.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-gallery-5.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-hero.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/khadijah-brown/khadijah-brown-profile.jpg",
+    "destination": "/images/artists/khadijah-brown/khadijah-brown-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-gallery-1.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-gallery-2.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-gallery-3.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-gallery-4.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-gallery-5.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-hero.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/luca-moretti/luca-moretti-profile.jpg",
+    "destination": "/images/artists/luca-moretti/luca-moretti-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marc-verturi-profile.jpg",
+    "destination": "/images/artists/marco-verturi/marc-verturi-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-1.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-2.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-3.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-4.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-5.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-6.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-6.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-gallery-7.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-gallery-7.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/marco-verturi/marco-verturi-hero.jpg",
+    "destination": "/images/artists/marco-verturi/marco-verturi-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-gallery-1.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-gallery-2.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-gallery-3.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-gallery-4.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-gallery-5.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-hero.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/midnight-avenue/midnight-avenue-profile.jpg",
+    "destination": "/images/artists/midnight-avenue/midnight-avenue-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-gallery-1.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-gallery-2.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-gallery-3.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-gallery-4.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-hero.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/nikos-andros/nikos-andros-profile.png",
+    "destination": "/images/artists/nikos-andros/nikos-andros-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-gallery-1.png",
+    "destination": "/images/artists/northbound/northbound-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-gallery-2.png",
+    "destination": "/images/artists/northbound/northbound-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-gallery-3.png",
+    "destination": "/images/artists/northbound/northbound-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-gallery-4.png",
+    "destination": "/images/artists/northbound/northbound-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-gallery-5.png",
+    "destination": "/images/artists/northbound/northbound-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-hero.png",
+    "destination": "/images/artists/northbound/northbound-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/northbound/northbound-profile.png",
+    "destination": "/images/artists/northbound/northbound-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-gallery-1.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-gallery-2.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-gallery-3.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-gallery-4.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-hero.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/shelley-dante/shelley-dante-profile.jpg",
+    "destination": "/images/artists/shelley-dante/shelley-dante-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-1.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-2.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-3.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-4.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-5.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-hero.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/sophie-beaulieu/sophie-beaulieu-profile.jpg",
+    "destination": "/images/artists/sophie-beaulieu/sophie-beaulieu-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-gallery-1.jpg",
+    "destination": "/images/artists/soreya/soreya-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-gallery-2.jpg",
+    "destination": "/images/artists/soreya/soreya-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-gallery-3.jpg",
+    "destination": "/images/artists/soreya/soreya-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-gallery-4.jpg",
+    "destination": "/images/artists/soreya/soreya-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-gallery-5.jpg",
+    "destination": "/images/artists/soreya/soreya-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-hero.jpg",
+    "destination": "/images/artists/soreya/soreya-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/soreya/soreya-profile.jpg",
+    "destination": "/images/artists/soreya/soreya-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-gallery-1.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-gallery-2.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-gallery-3.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-gallery-4.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-gallery-5.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-hero.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-ashfords/the-ashfords-profile.jpg",
+    "destination": "/images/artists/the-ashfords/the-ashfords-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-1.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-2.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-3.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-4.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-hero.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/the-glamour-katz/the-glamour-katz-profile.png",
+    "destination": "/images/artists/the-glamour-katz/the-glamour-katz-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-1.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-2.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-3.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-4.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-5.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-gallery-6.jpg",
+    "destination": "/images/artists/up4it/up4it-gallery-6.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-hero.jpg",
+    "destination": "/images/artists/up4it/up4it-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/up4it/up4it-profile.jpg",
+    "destination": "/images/artists/up4it/up4it-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-gallery-1.jpg",
+    "destination": "/images/artists/vierklang/vierklang-gallery-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-gallery-2.jpg",
+    "destination": "/images/artists/vierklang/vierklang-gallery-2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-gallery-3.jpg",
+    "destination": "/images/artists/vierklang/vierklang-gallery-3.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-gallery-4.jpg",
+    "destination": "/images/artists/vierklang/vierklang-gallery-4.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-gallery-5.jpg",
+    "destination": "/images/artists/vierklang/vierklang-gallery-5.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-hero.jpg",
+    "destination": "/images/artists/vierklang/vierklang-hero.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/artists/vierklang/vierklang-profile.jpg",
+    "destination": "/images/artists/vierklang/vierklang-profile.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/callia-amor-eterno.jpg",
+    "destination": "/images/covers/callia-amor-eterno.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/elias-rowan-the-lives-we-passed.jpg",
+    "destination": "/images/covers/elias-rowan-the-lives-we-passed.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/ethan-blake-id-choose-you-again.jpg",
+    "destination": "/images/covers/ethan-blake-id-choose-you-again.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/fever5-bridge-to-your-heart.jpg",
+    "destination": "/images/covers/fever5-bridge-to-your-heart.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/fifth-and-main-christmas.jpg",
+    "destination": "/images/covers/fifth-and-main-christmas.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/fifth-and-main-here-we-are.png",
+    "destination": "/images/covers/fifth-and-main-here-we-are.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/gabriel-laurent-lessentiel.jpg",
+    "destination": "/images/covers/gabriel-laurent-lessentiel.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/harper-lane-wide-open.jpg",
+    "destination": "/images/covers/harper-lane-wide-open.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/khadijah-brown-grace.jpg",
+    "destination": "/images/covers/khadijah-brown-grace.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/luca-moretti-donde-empieza-todo.jpg",
+    "destination": "/images/covers/luca-moretti-donde-empieza-todo.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/marco-verturi-ogni-giorni-conta.jpg",
+    "destination": "/images/covers/marco-verturi-ogni-giorni-conta.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/midnight-avenue-the-night-is-ours.jpg",
+    "destination": "/images/covers/midnight-avenue-the-night-is-ours.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/nikos-andros-new-beginnings.png",
+    "destination": "/images/covers/nikos-andros-new-beginnings.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/northbound-the-things-we-keep.png",
+    "destination": "/images/covers/northbound-the-things-we-keep.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/saturday-best-pnr020.jpg",
+    "destination": "/images/covers/saturday-best-pnr020.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/shelley-dante-night-dancing-source.png",
+    "destination": "/images/covers/shelley-dante-night-dancing-source.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/shelley-dante-night-dancing.jpg",
+    "destination": "/images/covers/shelley-dante-night-dancing.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/sophie-beaulieu-choisir-la-vie.jpg",
+    "destination": "/images/covers/sophie-beaulieu-choisir-la-vie.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/soreya-i-like-who-i-am.jpg",
+    "destination": "/images/covers/soreya-i-like-who-i-am.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/the-ashfords-the-way-we-feel.jpg",
+    "destination": "/images/covers/the-ashfords-the-way-we-feel.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/the-glamour-katz-living-for-the-weekend.png",
+    "destination": "/images/covers/the-glamour-katz-living-for-the-weekend.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/the-glamour-katz-make-him-mine.jpg",
+    "destination": "/images/covers/the-glamour-katz-make-him-mine.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/up4it-together-as-1.jpg",
+    "destination": "/images/covers/up4it-together-as-1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/covers/vierklang-das-leben-wartet.jpg",
+    "destination": "/images/covers/vierklang-das-leben-wartet.webp",
+    "permanent": true
+  }
+]
