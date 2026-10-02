@@ -1,3 +1,4 @@
+import { shine } from "@/data/shine";
 import { artists, type Artist, type Track } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
 import { theParkers } from "@/data/parkers";
@@ -222,6 +223,7 @@ export const completeCatalogueArtists: Artist[] = [
   localArrangement,
   directMotion,
   christieWalker,
+  shine,
   doorAtMidnight,
 ];
 

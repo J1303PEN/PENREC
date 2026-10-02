@@ -1,3 +1,4 @@
+import { shine } from "@/data/shine";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -20,7 +21,7 @@ import { ArtistGallery } from "@/components/artist-gallery";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseHref } from "@/data/releases";
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,christieWalker].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,christieWalker].map(({slug})=>({slug}))}
 
 export default async function ArtistPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;

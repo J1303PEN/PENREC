@@ -1,3 +1,4 @@
+import { shine } from "@/data/shine";
 import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
 import { theParkers } from "@/data/parkers";
@@ -15,5 +16,6 @@ export const currentCatalogueArtists = [
   localArrangement,
   directMotion,
   christieWalker,
+  shine,
   saturdayBest,
 ];
