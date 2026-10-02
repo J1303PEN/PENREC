@@ -2,7 +2,7 @@ import Image from "next/image";
 import { getPublishedProducts, type CommerceProduct } from "@/lib/commerce";
 import { artists } from "@/data/catalog";
 
-export const metadata = { title: "Shop | PENREC Music Group", description: "Shop PENREC music, physical formats, merchandise and limited editions." };
+export const metadata = { title: "Shop | PENREC Music & Publishing", description: "Shop PENREC music, physical formats, merchandise and limited editions." };
 
 function availability(product: CommerceProduct) {
   const now = Date.now();
@@ -14,9 +14,9 @@ function availability(product: CommerceProduct) {
 
 export default async function StorePage() {
   const products = await getPublishedProducts();
-  return <main id="content" className="store-page shell inside">
+  return <main id="content" className="store-page shell inside secondary-page">
     <header className="store-hero"><p className="eyebrow">PENREC Shop</p><h1>Music made tangible.</h1><p>Physical editions, digital releases and artist merchandise—fulfilled on demand under the PENREC name.</p></header>
-    {products.length === 0 ? <section className="store-empty"><p className="eyebrow">Commerce foundation ready</p><h2>The shop is being curated.</h2><p>Products published from PENREC Studio will appear here automatically.</p></section> : <section className="store-grid">{products.map((product: CommerceProduct) => {
+    {products.length === 0 ? <section className="store-empty"><p className="eyebrow">PENREC editions</p><h2>The shop is being curated.</h2><p>Explore our artists and listen to the complete catalogue while we prepare the collection.</p></section> : <section className="store-grid">{products.map((product: CommerceProduct) => {
       const artist = artists.find(item => item.slug === product.artist_slug);
       const state = availability(product);
       return <article key={product.id} className="store-product">

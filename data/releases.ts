@@ -1,4 +1,12 @@
-import type { Artist, Track } from "@/data/catalog";
+import { artists, type Artist, type Track } from "@/data/catalog";
+import { theVerelles } from "@/data/verelles";
+import { theParkers } from "@/data/parkers";
+import { maison45 } from "@/data/maison-45";
+import { localArrangement } from "@/data/local-arrangement";
+import { directMotion } from "@/data/direct-motion";
+import { christieWalker } from "@/data/christie-walker";
+import { saturdayBest } from "@/data/saturday-best";
+import { doorAtMidnight } from "@/data/door-at-midnight";
 
 export type ReleaseData = {
   album: string;
@@ -10,7 +18,7 @@ export type ReleaseData = {
   releaseCredit?: string;
 };
 
-export type ReleaseArtist = Artist & { releaseCredit?: string };
+export type ReleaseArtist = Omit<Artist, "hero" | "profile" | "gallery" | "heroPosition" | "profilePosition"> & { releaseCredit?: string };
 
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   "the-glamour-katz": [
@@ -166,8 +174,9 @@ export function getArtistReleases(artist: Artist): ReleaseData[] {
 }
 
 export function asReleaseArtist(artist: Artist, release: ReleaseData): ReleaseArtist {
+  const { hero: _hero, profile: _profile, gallery: _gallery, heroPosition: _heroPosition, profilePosition: _profilePosition, ...releaseBase } = artist;
   return {
-    ...artist,
+    ...releaseBase,
     album: release.album,
     cover: release.cover,
     year: release.year,
@@ -203,3 +212,25 @@ export function getCatalogueReleaseArtists(artists: Artist[]): CatalogueRelease[
     })),
   );
 }
+
+
+export const completeCatalogueArtists: Artist[] = [
+  ...artists,
+  theVerelles,
+  theParkers,
+  maison45,
+  localArrangement,
+  directMotion,
+  christieWalker,
+  doorAtMidnight,
+];
+
+export const completeCatalogueReleases: CatalogueRelease[] = [
+  ...getCatalogueReleaseArtists(completeCatalogueArtists),
+  { ...saturdayBest, releaseHref: `/releases/${saturdayBest.slug}` },
+];
+
+export const completeCatalogueTrackCount = completeCatalogueReleases.reduce(
+  (sum, release) => sum + release.tracks.length,
+  0,
+);

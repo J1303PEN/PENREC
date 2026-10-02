@@ -9,7 +9,7 @@ const statuses = ["pending", "paid", "processing", "shipped", "completed", "canc
 export default async function OrdersPage() {
   await requireAdmin();
   const orders = await getAdminOrders();
-  return <main id="content" className="admin-page shell inside">
+  return <main id="content" className="studio-new">
     <p className="eyebrow">PENREC Studio / Orders</p><h1>Order operations</h1>
     <p className="admin-intro">Review customer orders and move them through fulfilment.</p>
     {orders.length === 0 ? <section className="account-empty"><h2>No orders yet</h2><p>Orders will appear here once PENREC commerce begins taking payments.</p></section> :

@@ -9,7 +9,7 @@ export default async function ReportsPage() {
   const [profiles, orders] = await Promise.all([getAdminProfiles(), getAdminOrders()]);
   const revenue = orders.filter(o => !["cancelled","refunded"].includes(o.status)).reduce((sum,o)=>sum+o.total_pence,0);
   const completed = orders.filter(o=>o.status==="completed").length;
-  return <main id="content" className="admin-page shell inside">
+  return <main id="content" className="studio-new">
     <p className="eyebrow">PENREC Studio / Reports</p><h1>Operational snapshot</h1>
     <section className="admin-metrics">
       <article><strong>{profiles.length}</strong><span>Registered accounts</span></article>

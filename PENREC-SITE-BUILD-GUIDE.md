@@ -4,7 +4,7 @@
 
 **Repository:** `J1303PEN/PENREC`
 **Production branch:** `main`
-**Live site:** `https://penrec.vercel.com`
+**Live site:** `https://www.penrec.co.uk`
 **Deployment:** Vercel automatically deploys pushes to `main`.
 **Media storage:** Cloudflare R2 bucket `penrec-audio`
 **Public media domain:** `https://audio.penrec.co.uk`
@@ -220,3 +220,11 @@ The supplied PNR025 package contains 16 MP3s, album cover, hero image, profile i
 - Normalise problematic filenames at ingestion so source-package naming errors do not become permanent public URLs.
 
 **This document is the canonical PENREC website build/deployment reference and should be updated whenever the architecture or proven workflow changes.**
+
+## 11. PUBLIC REDESIGN — OCTOBER 2026
+
+The developed `new-penrec-homepage` design is integrated into `main`. Public pages use the PENREC Music & Publishing identity. Shared legacy styles load before `globals.css`; `redesign-completion.css` handles the remaining shared and secondary-page styles. Keep this order so legacy account styles do not override the new design.
+
+`data/releases.ts` exports the complete 33-release catalogue. `getPublicCatalogueReleases()` overlays published Studio metadata and tracks without removing the source catalogue. Saturday Best keeps its explicit URLs and uses the shared artist/release templates. `/books` is now a real route.
+
+Validation: production build and TypeScript pass; 78 routes and 723 unique artwork/audio URLs return 200. Browser playback was verified across release-to-artist navigation. Catalogue media files remain unchanged.

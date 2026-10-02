@@ -55,3 +55,34 @@
  .launch-listening-grid{grid-template-columns:1fr}
  .launch-listening-grid .audio-player:last-child{grid-column:auto}
 }
+
+
+/* Current PENREC queue presentation */
+.queue-panel{background:#ecedea!important;color:#151515!important;border:3px solid #151515!important;box-shadow:10px 10px 0 #ff1493!important}
+.queue-panel__header{background:#55dfe6!important;border-bottom:3px solid #151515!important}
+.queue-panel__header span,.queue-list__select small{color:#9d005b!important;font-weight:900!important}
+.queue-panel__header h2{color:#151515!important;font:900 34px/.9 Arial,sans-serif!important;letter-spacing:-.04em}
+.queue-panel__header-actions button,.queue-panel__header-actions .queue-panel__close{color:#151515!important;font-weight:900!important}
+.queue-list{background:#ecedea!important}
+.queue-list__item{border-bottom:2px solid rgba(21,21,21,.16)!important}
+.queue-list__item--current{background:#ffd83d!important}
+.queue-list__select{color:#151515!important}
+.queue-list__select b{color:#151515!important;font:800 14px/1.15 Arial,sans-serif!important}
+.queue-list__select em,.queue-list__select time{color:#555!important}
+.queue-list__remove{color:#151515!important;font-weight:900!important}
+
+/* Current PENREC player controls — no legacy gold */
+.global-player__timeline input,.global-player__volume input{accent-color:#ff1493!important}
+.global-player__timeline input::-webkit-slider-runnable-track,.global-player__volume input::-webkit-slider-runnable-track{background:#fff!important}
+.global-player__timeline input::-webkit-slider-thumb,.global-player__volume input::-webkit-slider-thumb{background:#ff1493!important}
+.global-player__timeline input::-moz-range-progress,.global-player__volume input::-moz-range-progress{background:#ff1493!important}
+.global-player__timeline input::-moz-range-track,.global-player__volume input::-moz-range-track{background:#fff!important}
+.global-player__timeline input::-moz-range-thumb,.global-player__volume input::-moz-range-thumb{background:#ff1493!important;border:0!important}
+
+/* Make PENREC slider state and handles clearly visible in WebKit/Safari */
+.global-player input[type="range"]{-webkit-appearance:none!important;appearance:none!important;height:8px!important;border-radius:0!important;background:linear-gradient(to right,#ff1493 0%,#ff1493 var(--range-progress,0%),#fff var(--range-progress,0%),#fff 100%)!important;outline:1px solid rgba(21,21,21,.22)!important}
+.global-player input[type="range"]::-webkit-slider-runnable-track{-webkit-appearance:none!important;height:8px!important;background:transparent!important;border:0!important}
+.global-player input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none!important;appearance:none!important;width:18px!important;height:18px!important;margin-top:-5px!important;border-radius:50%!important;background:#ff1493!important;border:3px solid #151515!important;box-shadow:none!important}
+.global-player input[type="range"]::-moz-range-track{height:8px!important;background:#fff!important;border:1px solid rgba(21,21,21,.22)!important}
+.global-player input[type="range"]::-moz-range-progress{height:8px!important;background:#ff1493!important}
+.global-player input[type="range"]::-moz-range-thumb{width:14px!important;height:14px!important;border-radius:50%!important;background:#ff1493!important;border:3px solid #151515!important}

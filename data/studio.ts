@@ -35,18 +35,18 @@ export const ANNOUNCEMENT_KEY = "penrec-studio-announcement-v1";
 
 export const defaultHomepage: HomepageConfig = {
   heroMode: "release", heroImage: "/images/covers/midnight-avenue-the-night-is-ours.jpg",
-  heroEyebrow: "PENREC Music Group", heroHeadline: "Music without", heroEmphasis: "boundaries.",
-  heroStrapline: "Discover. Experience. Remember.", heroButtonText: "Discover music", heroButtonHref: "#releases",
+  heroEyebrow: "PENREC Music & Publishing", heroHeadline: "Music without", heroEmphasis: "boundaries.",
+  heroStrapline: "", heroButtonText: "Discover music", heroButtonHref: "#releases",
   featuredArtist: "midnight-avenue", featuredRelease: "midnight-avenue",
   sections: ["artists", "statement", "releases", "news", "player"], hiddenSections: [],
   updatedAt: "2026-07-25T12:00:00.000Z",
 };
 export const defaultAnnouncement: Announcement = { enabled: false, label: "New", message: "", href: "", scope: "homepage", updatedAt: "2026-07-25T12:00:00.000Z" };
 export const starterBulletins: Bulletin[] = [{
-  id: "welcome-to-penrec", headline: "Welcome to PENREC Music Group",
-  summary: "A new independent home for distinctive artists, complete albums and music without boundaries.",
-  body: "PENREC Music Group brings distinctive artists together under one creative home. Explore the catalogue, discover each artist's world and listen continuously through the PENREC player.",
-  image: "/images/covers/midnight-avenue-the-night-is-ours.jpg", category: "Label News",
+  id: "penrec-music-publishing", headline: "PENREC Music & Publishing",
+  summary: "Music is at the heart of PENREC, with publishing and new creative projects becoming part of what comes next.",
+  body: "PENREC brings music, publishing and creative projects together in one place. Explore the catalogue, meet the artists and follow what is coming next.",
+  image: "/images/covers/midnight-avenue-the-night-is-ours.jpg", category: "PENREC News",
   publishDate: "2026-07-25", publishTime: "12:00", status: "published",
   createdAt: "2026-07-25T12:00:00.000Z", updatedAt: "2026-07-25T12:00:00.000Z",
 }];

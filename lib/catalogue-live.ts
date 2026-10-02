@@ -6,6 +6,10 @@ import { maison45 } from "@/data/maison-45";
 import { localArrangement } from "@/data/local-arrangement";
 import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
+import { saturdayBest } from "@/data/saturday-best";
+import { doorAtMidnight } from "@/data/door-at-midnight";
+import { completeCatalogueReleases, type CatalogueRelease } from "@/data/releases";
+import { getPublicManagedReleases, getPublicManagedTracks } from "@/lib/catalogue-manager";
 
 type CatalogueOverride = {
   slug: string;
@@ -59,7 +63,8 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
     year: row.year || base.year,
     catalogue: row.catalogue || base.catalogue,
     cover: row.cover || base.cover,
-    hero: row.hero || base.hero,
+    // Artist identity imagery is authoritative here. Release artwork must never override a public artist hero.
+    hero: base.hero,
     profile: row.profile || base.profile,
     heroPosition: row.hero_position || base.heroPosition,
     profilePosition: row.profile_position || base.profilePosition,
@@ -68,7 +73,7 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
 }
 
 function baseArtist(slug: string) {
-  return getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined);
+  return getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined) ?? (slug === saturdayBest.slug ? saturdayBest : undefined) ?? (slug === doorAtMidnight.slug ? doorAtMidnight : undefined);
 }
 
 export async function getResolvedArtist(slug: string) {
@@ -107,4 +112,28 @@ export async function saveCatalogueOverride(slug: string, payload: Omit<Catalogu
     },
     token,
   );
+}
+
+export async function getPublicCatalogueReleases(): Promise<CatalogueRelease[]> {
+  const managed=await getPublicManagedReleases().catch(()=>[]);
+  if(!managed.length) return completeCatalogueReleases;
+  const byCatalogue=new Map(managed.filter(r=>r.catalogue_number).map(r=>[r.catalogue_number!.toUpperCase(),r]));
+  const bySeedSlug=new Map(managed.map(r=>[r.slug,r]));
+  return Promise.all(completeCatalogueReleases.map(async base=>{
+    // The seeded Studio slug is a stable bridge even if an editor changes the catalogue number.
+    const seedSlug=`${base.slug}-${base.catalogue.toLowerCase()}`;
+    const row=bySeedSlug.get(seedSlug) || byCatalogue.get(base.catalogue.toUpperCase());
+    if(!row) return base;
+    const managedTracks=await getPublicManagedTracks(row.id).catch(()=>[]);
+    return {
+      ...base,
+      name: row.artist?.name || base.name,
+      album: row.title || base.album,
+      catalogue: row.catalogue_number || base.catalogue,
+      cover: row.artwork || base.cover,
+      year: row.release_date?.slice(0,4) || base.year,
+      tracks: managedTracks.length ? managedTracks.map(t=>({title:t.title,duration:t.duration||"",audio:t.preview_audio||t.master_audio||undefined})) : base.tracks,
+      preview: managedTracks.find(t=>t.preview_audio||t.master_audio)?.preview_audio || managedTracks.find(t=>t.preview_audio||t.master_audio)?.master_audio || base.preview,
+    };
+  }));
 }

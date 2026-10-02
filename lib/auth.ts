@@ -4,9 +4,9 @@ import { getAccessToken, getUser, restSelect } from "@/lib/penrec-auth";
 export type PenrecRole = "customer" | "staff" | "admin" | "super_admin";
 export type Profile = { id: string; display_name: string | null; role: PenrecRole; created_at: string };
 
-export async function requireUser() {
+export async function requireUser(next = "/account") {
   const user = await getUser();
-  if (!user) redirect("/login?next=/account");
+  if (!user) redirect(`/login?next=${encodeURIComponent(next)}`);
   return { user };
 }
 
@@ -18,7 +18,7 @@ export async function getOwnProfile(userId: string) {
 }
 
 export async function requireAdmin() {
-  const { user } = await requireUser();
+  const { user } = await requireUser("/admin");
   const profile = await getOwnProfile(user.id);
   const role = profile?.role;
   if (!role || !["staff", "admin", "super_admin"].includes(role)) redirect("/unauthorised");
