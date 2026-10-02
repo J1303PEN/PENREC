@@ -50,7 +50,7 @@ export default async function ReleasePage({params,searchParams}:{params:Promise<
   <section className="release-new__tracks">
    <p className="music-page__eyebrow">Album sequence</p><h2>Track listing.</h2>
    <TrackList artist={selected}/>
-   <div className="release-new__about"><span>About this release</span><p>{a.bio[1] ?? a.bio[0]}</p></div>
+   <div className="release-new__about"><span>About this release</span><p>{selected.description ?? a.bio[1] ?? a.bio[0]}</p></div>
   </section>
 
   {releases.length>1&&<section className="release-new__other">
