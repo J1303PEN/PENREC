@@ -3,7 +3,7 @@ import type { Artist } from "@/data/catalog";
 export const tobiasTangleAndFriends: Artist = {
   "name": "Tobias Tangle & Friends",
   "slug": "tobias-tangle-and-friends",
-  "album": "Tobias Tangle & Friends Adventures 1",
+  "album": "Tobias Tangle & Friends Adventures",
   "cover": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
   "hero": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
   "profile": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
@@ -13,9 +13,9 @@ export const tobiasTangleAndFriends: Artist = {
   "bio": [
     "Tobias Tangle & Friends brings the world of Darren Penman’s Tobias Tangle book series into music. Written by Penman, the stories follow Tobias and his friends through a world where clocks have minds of their own, ordinary places conceal extraordinary possibilities, and curiosity is often the first step towards an impossible adventure.",
     "The series begins with Tobias Tangle and the Clock That Lost Tuesday, introducing the town of Hushcombe and four friends: Tobias Tangle, Mina Morrow, Wilf Wainscot and Pru Puddlefoot. Curiosity, nerve, careful planning and joyful chaos give each friend a different part to play. Their companionship is as important to the stories as the mysteries they encounter.",
-    "Those books provide the creative foundation for Tobias Tangle & Friends Adventures 1. The fourteen-song sequence echoes their world through titles such as The Attic Keeps Everything, Monday Again, The Station at Eleven Fifty-Nine and What Pru Had Done. Clocks, stations, hidden spaces and the question of what tomorrow might bring connect the album to the atmosphere of the stories.",
+    "Those books provide the creative foundation for Tobias Tangle & Friends Adventures. The fourteen-song sequence echoes their world through titles such as The Attic Keeps Everything, Monday Again, The Station at Eleven Fifty-Nine and What Pru Had Done. Clocks, stations, hidden spaces and the question of what tomorrow might bring connect the album to the atmosphere of the stories.",
     "Opening with Follow the Needle and closing with The River Remembers, the album offers another way to enter that world: through songs, rather than the printed page. Its illustrated artwork carries the same sense of discovery, showing the friends together among clocks, railway platforms and winding paths.",
-    "With music and lyrics by Darren Penman, the project connects his work as an author and songwriter. Released on PENREC as PNR043, Adventures 1 is a musical companion to the Tobias Tangle series, shaped by its characters, friendships and spirit of adventure."
+    "With music and lyrics by Darren Penman, the project connects his work as an author and songwriter. Released on PENREC as PNR043, Adventures is a musical companion to the Tobias Tangle series, shaped by its characters, friendships and spirit of adventure."
   ],
   "quote": "",
   "year": "2026",
