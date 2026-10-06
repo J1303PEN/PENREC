@@ -1,3 +1,4 @@
+import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
 import { francesMartine } from "@/data/frances-martine";
 import { shine } from "@/data/shine";
@@ -21,7 +22,7 @@ import { asReleaseArtist, getArtistReleases, getReleaseArtist, getReleaseHref } 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
 
 export default async function ReleasePage({params,searchParams}:{params:Promise<{slug:string}>,searchParams:Promise<{release?:string}>}){
  const {slug}=await params;

@@ -1,3 +1,4 @@
+import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
 import { francesMartine } from "@/data/frances-martine";
 import { shine } from "@/data/shine";
@@ -76,7 +77,7 @@ function merge(base: Artist, row?: CatalogueOverride | null): Artist {
 }
 
 function baseArtist(slug: string) {
-  return (slug === hyx.slug ? hyx : undefined) ?? (slug === francesMartine.slug ? francesMartine : undefined) ?? (slug === shine.slug ? shine : undefined) ?? getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined) ?? (slug === saturdayBest.slug ? saturdayBest : undefined) ?? (slug === doorAtMidnight.slug ? doorAtMidnight : undefined);
+  return (slug === reno.slug ? reno : undefined) ?? (slug === hyx.slug ? hyx : undefined) ?? (slug === francesMartine.slug ? francesMartine : undefined) ?? (slug === shine.slug ? shine : undefined) ?? getArtist(slug) ?? (slug === theVerelles.slug ? theVerelles : undefined) ?? (slug === theParkers.slug ? theParkers : undefined) ?? (slug === maison45.slug ? maison45 : undefined) ?? (slug === localArrangement.slug ? localArrangement : undefined) ?? (slug === directMotion.slug ? directMotion : undefined) ?? (slug === christieWalker.slug ? christieWalker : undefined) ?? (slug === saturdayBest.slug ? saturdayBest : undefined) ?? (slug === doorAtMidnight.slug ? doorAtMidnight : undefined);
 }
 
 export async function getResolvedArtist(slug: string) {
