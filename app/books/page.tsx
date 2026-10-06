@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publishingBooks } from "@/data/books";
 import styles from "./books.module.css";
 
 export const metadata = {
   title: "Books | PENREC Music & Publishing",
-  description: "Discover Tobias Tangle Adventures: The Clock That Lost Tuesday by Darren Penman, and stories in development at PENREC Publishing.",
+  description: "Discover illustrated Tobias Tangle Adventures by Darren Penman, with page-turning readers and PDF downloads.",
 };
-
-const bookPdf = "/books/tobias-tangle/the-clock-that-lost-tuesday.pdf";
 
 export default function BooksPage() {
   return (
@@ -19,31 +18,29 @@ export default function BooksPage() {
           <p className="penrec-about__lead">Stories to discover. Worlds to explore.</p>
         </div>
       </header>
-      <section className="penrec-about__story" aria-labelledby="tobias-title">
-        <div className="shell penrec-about__grid">
-          <div>
-            <Image
-              className={styles.cover}
-              src="/books/tobias-tangle/cover.png"
-              alt="Cover of Tobias Tangle Adventures: The Clock That Lost Tuesday by Darren Penman"
-              width={1443}
-              height={2048}
-              sizes="(max-width: 700px) 90vw, 40vw"
-            />
-          </div>
-          <div>
-            <p className="penrec-kicker">Tobias Tangle Adventures · Book 1</p>
-            <h2 id="tobias-title">Tobias Tangle Adventures: The Clock That Lost Tuesday</h2>
-            <p>By Darren Penman</p>
-            <p>When every clock in Hushcombe begins repeating Monday, Tobias Tangle follows a mysterious brass compass to the town’s abandoned railway station. Beneath Platform Two, a missing day is trapped inside an enormous clock — and Tobias and his friends have only six seconds to put it back.</p>
-            <p>Premium A5 illustrated edition · 48 pages</p>
-            <div className={styles.actions}>
-              <a href={bookPdf} target="_blank" rel="noopener noreferrer">Read the book (PDF) ↗</a>
-              <a href={bookPdf} download="01_Tobias_Tangle_and_the_Clock_That_Lost_Tuesday_Premium_A5_Print.pdf">Download the PDF</a>
+      {publishingBooks.map(book => (
+        <section key={book.slug} className="penrec-about__story" aria-labelledby={`${book.slug}-title`}>
+          <div className="shell penrec-about__grid">
+            <div>
+              <Image className={styles.cover} src={book.cover}
+                alt={`Cover of Tobias Tangle Adventures: ${book.title} by Darren Penman`}
+                width={book.number === 1 ? 1443 : 1240} height={book.number === 1 ? 2048 : 1759}
+                sizes="(max-width: 700px) 90vw, 40vw" />
+            </div>
+            <div>
+              <p className="penrec-kicker">Tobias Tangle Adventures · Book {book.number}</p>
+              <h2 id={`${book.slug}-title`}>Tobias Tangle Adventures: {book.title}</h2>
+              <p>By Darren Penman</p>
+              <p>{book.description}</p>
+              <p>Premium A5 illustrated edition · {book.pages} pages</p>
+              <div className={styles.actions}>
+                <Link href={`/books/${book.slug}`}>Read the book →</Link>
+                <a href={book.pdf} download={book.downloadName}>Download the PDF</a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
       <section className="penrec-about__story" aria-labelledby="door-title">
         <div className="shell penrec-about__grid">
           <div><p className="penrec-kicker">Music &amp; imagination</p><h2 id="door-title">The Door at Midnight.</h2></div>
