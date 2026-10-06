@@ -1,6 +1,7 @@
 import { headers } from "next/headers";
 import { AuthCard } from "@/components/auth-card";
 import { requestPasswordReset } from "@/app/auth/actions";
+import { publicOrigin } from "@/lib/site-url";
 
 export const metadata = { title: "Reset password | PENREC" };
 
@@ -11,7 +12,7 @@ export default async function ForgotPasswordPage({
 }) {
   const params = await searchParams;
   const headerList = await headers();
-  const origin = headerList.get("origin") || process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const origin = publicOrigin(headerList);
 
   return (
     <AuthCard eyebrow="Account recovery" title="Reset your password" intro="Enter your email and we'll send you a secure reset link.">
