@@ -6,6 +6,7 @@ export const francesMartine: Artist = {
   "album": "No Hard Feelings",
   "cover": "https://audio.penrec.co.uk/frances-martine/cover.jpg",
   "hero": "https://audio.penrec.co.uk/frances-martine/hero.jpg",
+  "heroPosition": "50% 16%",
   "profile": "https://audio.penrec.co.uk/frances-martine/profile.jpg",
   "gallery": [
     "https://audio.penrec.co.uk/frances-martine/gallery-001.jpg",
