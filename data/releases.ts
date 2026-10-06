@@ -25,6 +25,86 @@ export type ReleaseData = {
 export type ReleaseArtist = Omit<Artist, "hero" | "profile" | "gallery" | "heroPosition" | "profilePosition"> & { releaseCredit?: string; description?: string };
 
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
+  "maison-45": [{
+  "album": "Sans façon",
+  "cover": "https://audio.penrec.co.uk/maison-45/sans-facon-cover.jpg",
+  "year": "2026",
+  "catalogue": "PNR038",
+  "releaseCredit": "Léonie Vautrin vs. Maison 45",
+  "preview": "https://audio.penrec.co.uk/01_passe_la_moi.mp3",
+  "tracks": [
+    {
+      "title": "Passe-la-moi",
+      "duration": "3:50",
+      "audio": "https://audio.penrec.co.uk/01_passe_la_moi.mp3"
+    },
+    {
+      "title": "Je n'ai rien promis",
+      "duration": "4:14",
+      "audio": "https://audio.penrec.co.uk/02_je_nai_rien_promis.mp3"
+    },
+    {
+      "title": "Pas devant tout le monde",
+      "duration": "4:02",
+      "audio": "https://audio.penrec.co.uk/03_pas_devant_tout_le_monde.mp3"
+    },
+    {
+      "title": "Ce n'est pas à vendre",
+      "duration": "2:52",
+      "audio": "https://audio.penrec.co.uk/04_ce_nest_pas_a_vendre.mp3"
+    },
+    {
+      "title": "Vous dansez très mal",
+      "duration": "3:42",
+      "audio": "https://audio.penrec.co.uk/05_vous_dansez_tres_mal.mp3"
+    },
+    {
+      "title": "Je garde mes rides",
+      "duration": "4:05",
+      "audio": "https://audio.penrec.co.uk/06_je_garde_mes_rides.mp3"
+    },
+    {
+      "title": "Tu as pensé au pain",
+      "duration": "4:10",
+      "audio": "https://audio.penrec.co.uk/07_tu_as_pense_au_pain.mp3"
+    },
+    {
+      "title": "J'ai vendu la bague",
+      "duration": "4:09",
+      "audio": "https://audio.penrec.co.uk/08_jai_vendu_la_bague.mp3"
+    },
+    {
+      "title": "Mon visage n'est pas pour vous",
+      "duration": "4:17",
+      "audio": "https://audio.penrec.co.uk/09_mon_visage_nest_pas_pour_vous.mp3"
+    },
+    {
+      "title": "Deux heures en moins",
+      "duration": "4:34",
+      "audio": "https://audio.penrec.co.uk/10_deux_heures_en_moins.mp3"
+    },
+    {
+      "title": "Elle m'appelle Madame",
+      "duration": "3:52",
+      "audio": "https://audio.penrec.co.uk/11_elle_mappelle_madame.mp3"
+    },
+    {
+      "title": "Apportez le dessert",
+      "duration": "3:40",
+      "audio": "https://audio.penrec.co.uk/12_apportez_le_dessert.mp3"
+    },
+    {
+      "title": "Sans façon",
+      "duration": "5:02",
+      "audio": "https://audio.penrec.co.uk/13_sans_facon.mp3"
+    },
+    {
+      "title": "Je garde le chien",
+      "duration": "4:25",
+      "audio": "https://audio.penrec.co.uk/14_je_garde_le_chien.mp3"
+    }
+  ]
+}],
   "marco-verturi": [{
   "album": "Dove Mi Porta Il Cuore",
   "cover": "https://audio.penrec.co.uk/marco-verturi/dove-mi-porta-il-cuore-cover.png",
