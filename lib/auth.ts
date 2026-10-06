@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { getAccessToken, getUser, restSelect } from "@/lib/penrec-auth";
+import { ensureCurrentCatalogue } from "@/lib/catalogue-sync";
 
 export type PenrecRole = "customer" | "staff" | "admin" | "super_admin";
 export type Profile = { id: string; display_name: string | null; role: PenrecRole; created_at: string };
@@ -22,5 +23,7 @@ export async function requireAdmin() {
   const profile = await getOwnProfile(user.id);
   const role = profile?.role;
   if (!role || !["staff", "admin", "super_admin"].includes(role)) redirect("/unauthorised");
-  return { user, profile, role, accessToken: await getAccessToken() };
+  const accessToken = await getAccessToken();
+  if (accessToken) await ensureCurrentCatalogue(accessToken);
+  return { user, profile, role, accessToken };
 }
