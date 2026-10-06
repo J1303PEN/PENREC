@@ -15,11 +15,19 @@ export const ensureCurrentCatalogue = cache(async (accessToken: string) => {
   let artists = await restSelect<ManagedArtist[]>("penrec_artists", "select=*", accessToken);
   const missingArtists = completeCatalogueArtists.filter(a => !artists.some(row => row.slug === a.slug));
   if (missingArtists.length) {
-    await insert("penrec_artists", "slug", missingArtists.map(a => ({
+    const inserted = await insert<ManagedArtist>("penrec_artists", "slug", missingArtists.map(a => ({
       name: a.name, slug: a.slug, biography: a.bio.join("\n\n"),
       image: a.profile || a.hero || null, status: "published",
     })));
-    artists = await restSelect<ManagedArtist[]>("penrec_artists", "select=*", accessToken);
+    artists = [...artists, ...inserted];
+    // Repeating the original GET can return its memoised pre-insert result during
+    // this render. Use returned rows, and a distinct query for concurrent inserts.
+    const unresolved = missingArtists.filter(a => !artists.some(row => row.slug === a.slug));
+    if (unresolved.length) {
+      const rows = await restSelect<ManagedArtist[]>("penrec_artists",
+        `select=*&slug=in.(${unresolved.map(a => encodeURIComponent(a.slug)).join(",")})`, accessToken);
+      artists = [...artists, ...rows];
+    }
   }
   const releases = await restSelect<ManagedRelease[]>("penrec_releases", "select=*", accessToken);
   for (const release of completeCatalogueReleases) {
