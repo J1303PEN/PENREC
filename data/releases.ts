@@ -264,6 +264,90 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
         { title: "You Mistook My Patience", duration: "4:44", audio: "https://audio.penrec.co.uk/15_you_mistook_my_patience.mp3" },
       ],
     },
+{
+  "album": "Look at Us Now",
+  "cover": "https://audio.penrec.co.uk/fifth-and-main/look-at-us-now-cover.jpg",
+  "year": "2026",
+  "catalogue": "PNR041",
+  "preview": "https://audio.penrec.co.uk/01_you_never_asked_me.mp3",
+  "tracks": [
+    {
+      "title": "You Never Asked Me",
+      "duration": "4:03",
+      "audio": "https://audio.penrec.co.uk/01_you_never_asked_me.mp3"
+    },
+    {
+      "title": "Not the Same as Missing Me",
+      "duration": "5:25",
+      "audio": "https://audio.penrec.co.uk/02_not_the_same_as_missing_me.mp3"
+    },
+    {
+      "title": "Say It Again",
+      "duration": "3:47",
+      "audio": "https://audio.penrec.co.uk/03_say_it_again.mp3"
+    },
+    {
+      "title": "We Never Finish a Fight",
+      "duration": "3:54",
+      "audio": "https://audio.penrec.co.uk/04_we_never_finish_a_fight.mp3"
+    },
+    {
+      "title": "I Should Have Asked You To Stay",
+      "duration": "5:51",
+      "audio": "https://audio.penrec.co.uk/05_i_should_have_asked_you_to_stay.mp3"
+    },
+    {
+      "title": "Everybody Gets a Version",
+      "duration": "4:12",
+      "audio": "https://audio.penrec.co.uk/06_everybody_gets_a_version.mp3"
+    },
+    {
+      "title": "I'm Glad Your Cancelled",
+      "duration": "4:18",
+      "audio": "https://audio.penrec.co.uk/07_im_glad_your_cancelled.mp3"
+    },
+    {
+      "title": "I'm In",
+      "duration": "3:45",
+      "audio": "https://audio.penrec.co.uk/08_im_in.mp3"
+    },
+    {
+      "title": "Love Me Like You Mean It",
+      "duration": "3:52",
+      "audio": "https://audio.penrec.co.uk/09_love_me_like_you_mean_it.mp3"
+    },
+    {
+      "title": "Don't Make Them Right About You",
+      "duration": "3:53",
+      "audio": "https://audio.penrec.co.uk/10_dont_make_them_right_about_you.mp3"
+    },
+    {
+      "title": "Go On Then",
+      "duration": "3:23",
+      "audio": "https://audio.penrec.co.uk/11_go_on_then.mp3"
+    },
+    {
+      "title": "One of Us Has to Say It",
+      "duration": "4:23",
+      "audio": "https://audio.penrec.co.uk/12_one_of_us_has_to_say_it.mp3"
+    },
+    {
+      "title": "You Don't Have to Be Strong With Me",
+      "duration": "4:49",
+      "audio": "https://audio.penrec.co.uk/13_you_dont_have_to_be_strong_with_me.mp3"
+    },
+    {
+      "title": "Tell Me The Worst",
+      "duration": "3:52",
+      "audio": "https://audio.penrec.co.uk/14_tell_me_the_worst.mp3"
+    },
+    {
+      "title": "Take the Compliment",
+      "duration": "3:48",
+      "audio": "https://audio.penrec.co.uk/15_take_the_compliment.mp3"
+    }
+  ]
+},
   ],
   "vierklang": [
     {
