@@ -1,3 +1,5 @@
+import { hyx } from "@/data/hyx";
+import { francesMartine } from "@/data/frances-martine";
 import { shine } from "@/data/shine";
 import { artists } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
@@ -17,5 +19,7 @@ export const currentCatalogueArtists = [
   directMotion,
   christieWalker,
   shine,
+  francesMartine,
+  hyx,
   saturdayBest,
 ];

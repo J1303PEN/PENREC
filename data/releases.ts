@@ -1,3 +1,5 @@
+import { hyx } from "@/data/hyx";
+import { francesMartine } from "@/data/frances-martine";
 import { shine } from "@/data/shine";
 import { artists, type Artist, type Track } from "@/data/catalog";
 import { theVerelles } from "@/data/verelles";
@@ -306,6 +308,8 @@ export const completeCatalogueArtists: Artist[] = [
   directMotion,
   christieWalker,
   shine,
+  francesMartine,
+  hyx,
   doorAtMidnight,
 ];
 
