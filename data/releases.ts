@@ -195,6 +195,85 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   ]
 }],
   "marco-verturi": [{
+  "album": "Dove Mi Porta Il Cuore",
+  "cover": "https://audio.penrec.co.uk/marco-verturi/dove-mi-porta-il-cuore-cover.png",
+  "year": "2026",
+  "catalogue": "PNR035",
+  "preview": "https://audio.penrec.co.uk/01_dove_mi_porta_il_cuore.mp3",
+  "tracks": [
+    {
+      "title": "Dove Mi Porta Il Cuore",
+      "duration": "3:23",
+      "audio": "https://audio.penrec.co.uk/01_dove_mi_porta_il_cuore.mp3"
+    },
+    {
+      "title": "Un Giorno Migliore",
+      "duration": "3:31",
+      "audio": "https://audio.penrec.co.uk/02_un_giorno_migliore.mp3"
+    },
+    {
+      "title": "Tutto Può Cambiare",
+      "duration": "3:30",
+      "audio": "https://audio.penrec.co.uk/03_tutto_puo_cambiare.mp3"
+    },
+    {
+      "title": "La Strada Davanti",
+      "duration": "3:43",
+      "audio": "https://audio.penrec.co.uk/04_la_strada_davanti.mp3"
+    },
+    {
+      "title": "Voglio Vivere Così",
+      "duration": "3:34",
+      "audio": "https://audio.penrec.co.uk/05_voglio_vivere_cosi.mp3"
+    },
+    {
+      "title": "Quando sei con me",
+      "duration": "3:35",
+      "audio": "https://audio.penrec.co.uk/06_quando_sei_con_me.mp3"
+    },
+    {
+      "title": "Sotto Questo Sole",
+      "duration": "3:39",
+      "audio": "https://audio.penrec.co.uk/07_sotto_questo_sole.mp3"
+    },
+    {
+      "title": "Non è mai troppo tardi",
+      "duration": "3:27",
+      "audio": "https://audio.penrec.co.uk/08_non_e_mai_troppo_tardi.mp3"
+    },
+    {
+      "title": "Il Meglio Deve Venire",
+      "duration": "3:47",
+      "audio": "https://audio.penrec.co.uk/09_il_meglio_deve_venire.mp3"
+    },
+    {
+      "title": "Portami Via",
+      "duration": "3:19",
+      "audio": "https://audio.penrec.co.uk/10_portami_via.mp3"
+    },
+    {
+      "title": "Questa Vita Mia",
+      "duration": "3:42",
+      "audio": "https://audio.penrec.co.uk/11_questa_vita_mia.mp3"
+    },
+    {
+      "title": "Finché Ci Sei Tu",
+      "duration": "3:16",
+      "audio": "https://audio.penrec.co.uk/12_finche_ci_sei_tu.mp3"
+    },
+    {
+      "title": "Un Passo In Più",
+      "duration": "3:19",
+      "audio": "https://audio.penrec.co.uk/13_un_passo_in_piu.mp3"
+    },
+    {
+      "title": "Da Qui Ricomincio",
+      "duration": "3:53",
+      "audio": "https://audio.penrec.co.uk/14_da_qui_ricomincio.mp3"
+    }
+  ],
+  "description": "Dove Mi Porta Il Cuore is a fourteen-track album by Marco Verturi, released on PENREC in 2026. The sequence opens with the title track and closes with Da Qui Ricomincio."
+}, {
   "album": "Tutto Da Vivere",
   "cover": "https://audio.penrec.co.uk/marco-verturi/tutto-da-vivere-cover.jpg?v=pnr045",
   "year": "2026",
@@ -278,85 +357,6 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
     }
   ],
   "description": "Marco Verturi’s third PENREC album brings together fifteen Italian-language songs, opening with Tutto Da Vivere and closing with A Modo Mio. Its titles explore evenings out, summer, spontaneity and finding a way forward on your own terms."
-}, {
-  "album": "Dove Mi Porta Il Cuore",
-  "cover": "https://audio.penrec.co.uk/marco-verturi/dove-mi-porta-il-cuore-cover.png",
-  "year": "2026",
-  "catalogue": "PNR035",
-  "preview": "https://audio.penrec.co.uk/01_dove_mi_porta_il_cuore.mp3",
-  "tracks": [
-    {
-      "title": "Dove Mi Porta Il Cuore",
-      "duration": "3:23",
-      "audio": "https://audio.penrec.co.uk/01_dove_mi_porta_il_cuore.mp3"
-    },
-    {
-      "title": "Un Giorno Migliore",
-      "duration": "3:31",
-      "audio": "https://audio.penrec.co.uk/02_un_giorno_migliore.mp3"
-    },
-    {
-      "title": "Tutto Può Cambiare",
-      "duration": "3:30",
-      "audio": "https://audio.penrec.co.uk/03_tutto_puo_cambiare.mp3"
-    },
-    {
-      "title": "La Strada Davanti",
-      "duration": "3:43",
-      "audio": "https://audio.penrec.co.uk/04_la_strada_davanti.mp3"
-    },
-    {
-      "title": "Voglio Vivere Così",
-      "duration": "3:34",
-      "audio": "https://audio.penrec.co.uk/05_voglio_vivere_cosi.mp3"
-    },
-    {
-      "title": "Quando sei con me",
-      "duration": "3:35",
-      "audio": "https://audio.penrec.co.uk/06_quando_sei_con_me.mp3"
-    },
-    {
-      "title": "Sotto Questo Sole",
-      "duration": "3:39",
-      "audio": "https://audio.penrec.co.uk/07_sotto_questo_sole.mp3"
-    },
-    {
-      "title": "Non è mai troppo tardi",
-      "duration": "3:27",
-      "audio": "https://audio.penrec.co.uk/08_non_e_mai_troppo_tardi.mp3"
-    },
-    {
-      "title": "Il Meglio Deve Venire",
-      "duration": "3:47",
-      "audio": "https://audio.penrec.co.uk/09_il_meglio_deve_venire.mp3"
-    },
-    {
-      "title": "Portami Via",
-      "duration": "3:19",
-      "audio": "https://audio.penrec.co.uk/10_portami_via.mp3"
-    },
-    {
-      "title": "Questa Vita Mia",
-      "duration": "3:42",
-      "audio": "https://audio.penrec.co.uk/11_questa_vita_mia.mp3"
-    },
-    {
-      "title": "Finché Ci Sei Tu",
-      "duration": "3:16",
-      "audio": "https://audio.penrec.co.uk/12_finche_ci_sei_tu.mp3"
-    },
-    {
-      "title": "Un Passo In Più",
-      "duration": "3:19",
-      "audio": "https://audio.penrec.co.uk/13_un_passo_in_piu.mp3"
-    },
-    {
-      "title": "Da Qui Ricomincio",
-      "duration": "3:53",
-      "audio": "https://audio.penrec.co.uk/14_da_qui_ricomincio.mp3"
-    }
-  ],
-  "description": "Dove Mi Porta Il Cuore is a fourteen-track album by Marco Verturi, released on PENREC in 2026. The sequence opens with the title track and closes with Da Qui Ricomincio."
 }],
   "the-glamour-katz": [
     {
