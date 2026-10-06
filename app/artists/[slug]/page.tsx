@@ -1,3 +1,4 @@
+import { northArray } from "@/data/north-array";
 import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
@@ -26,7 +27,7 @@ import { ArtistGallery } from "@/components/artist-gallery";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseHref } from "@/data/releases";
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,christieWalker].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,christieWalker].map(({slug})=>({slug}))}
 
 export default async function ArtistPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;

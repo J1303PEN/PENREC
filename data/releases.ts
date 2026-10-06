@@ -1,3 +1,4 @@
+import { northArray } from "@/data/north-array";
 import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
@@ -565,6 +566,7 @@ export const completeCatalogueArtists: Artist[] = [
   reno,
   judeVarlow,
   tobiasTangleAndFriends,
+  northArray,
   doorAtMidnight,
 ];
 
