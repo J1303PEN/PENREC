@@ -195,6 +195,90 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   ]
 }],
   "marco-verturi": [{
+  "album": "Tutto Da Vivere",
+  "cover": "https://audio.penrec.co.uk/marco-verturi/tutto-da-vivere-cover.jpg?v=pnr045",
+  "year": "2026",
+  "catalogue": "PNR045",
+  "preview": "https://audio.penrec.co.uk/01_tutto_da_vivere.mp3?v=pnr045",
+  "tracks": [
+    {
+      "title": "Tutto Da Vivere",
+      "duration": "3:44",
+      "audio": "https://audio.penrec.co.uk/01_tutto_da_vivere.mp3?v=pnr045"
+    },
+    {
+      "title": "Questa Sera Usciamo",
+      "duration": "3:36",
+      "audio": "https://audio.penrec.co.uk/02_questa_sera_usciamo.mp3?v=pnr045"
+    },
+    {
+      "title": "Dimmelo Adesso",
+      "duration": "3:14",
+      "audio": "https://audio.penrec.co.uk/03_dimmelo_adesso.mp3?v=pnr045"
+    },
+    {
+      "title": "Un'Altra Estate",
+      "duration": "3:08",
+      "audio": "https://audio.penrec.co.uk/04_unaltra_estate.mp3?v=pnr045"
+    },
+    {
+      "title": "Come Viene Viene",
+      "duration": "2:50",
+      "audio": "https://audio.penrec.co.uk/05_come_viene_viene.mp3?v=pnr045"
+    },
+    {
+      "title": "Solo Per Un Po'",
+      "duration": "3:48",
+      "audio": "https://audio.penrec.co.uk/06_solo_per_un_po.mp3?v=pnr045"
+    },
+    {
+      "title": "La Parte Migliore",
+      "duration": "3:25",
+      "audio": "https://audio.penrec.co.uk/07_la_parte_migliore.mp3?v=pnr045"
+    },
+    {
+      "title": "Fuori Programma",
+      "duration": "3:28",
+      "audio": "https://audio.penrec.co.uk/08_fuori_programma.mp3?v=pnr045"
+    },
+    {
+      "title": "Non Ci Penso Più",
+      "duration": "2:57",
+      "audio": "https://audio.penrec.co.uk/09_non_ci_penso_piu.mp3?v=pnr045"
+    },
+    {
+      "title": "Stasera Tocca A Noi",
+      "duration": "3:37",
+      "audio": "https://audio.penrec.co.uk/10_stasera_tocca_a_noi.mp3?v=pnr045"
+    },
+    {
+      "title": "Quello Che Volevo",
+      "duration": "3:50",
+      "audio": "https://audio.penrec.co.uk/11_quello_che_volevo.mp3?v=pnr045"
+    },
+    {
+      "title": "Ci Vediamo Là",
+      "duration": "3:53",
+      "audio": "https://audio.penrec.co.uk/12_ci_vediamo_la.mp3?v=pnr045"
+    },
+    {
+      "title": "Vale La Pena",
+      "duration": "3:41",
+      "audio": "https://audio.penrec.co.uk/13_vale_la_pena.mp3?v=pnr045"
+    },
+    {
+      "title": "E Domani Si Vedrà",
+      "duration": "4:18",
+      "audio": "https://audio.penrec.co.uk/14_e_domani_si_vedra.mp3?v=pnr045"
+    },
+    {
+      "title": "A Modo Mio",
+      "duration": "4:04",
+      "audio": "https://audio.penrec.co.uk/15_a_modo_mio.mp3?v=pnr045"
+    }
+  ],
+  "description": "Marco Verturi’s third PENREC album brings together fifteen Italian-language songs, opening with Tutto Da Vivere and closing with A Modo Mio. Its titles explore evenings out, summer, spontaneity and finding a way forward on your own terms."
+}, {
   "album": "Dove Mi Porta Il Cuore",
   "cover": "https://audio.penrec.co.uk/marco-verturi/dove-mi-porta-il-cuore-cover.png",
   "year": "2026",
