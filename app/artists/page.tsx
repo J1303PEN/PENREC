@@ -1,3 +1,4 @@
+import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
 import { francesMartine } from "@/data/frances-martine";
@@ -14,7 +15,7 @@ import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 
 export default function ArtistsPage(){
-  const roster=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,christieWalker,saturdayBest];
+  const roster=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,christieWalker,saturdayBest];
   return <main id="content" className="artists-index">
     <header className="artists-index__hero">
       <div className="shell">

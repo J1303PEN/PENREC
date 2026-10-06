@@ -1,3 +1,4 @@
+import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
 import { francesMartine } from "@/data/frances-martine";
@@ -24,7 +25,7 @@ import { ArtistGallery } from "@/components/artist-gallery";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseHref } from "@/data/releases";
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,christieWalker].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,christieWalker].map(({slug})=>({slug}))}
 
 export default async function ArtistPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;
