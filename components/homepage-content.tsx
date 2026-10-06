@@ -1,5 +1,6 @@
 "use client";
 
+import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
@@ -23,7 +24,7 @@ import type { CatalogueRelease } from "@/data/releases";
 import { BULLETINS_KEY, Bulletin, isBulletinLive, readStored, starterBulletins } from "@/data/studio";
 import styles from "./new-homepage.module.css";
 
-const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,christieWalker,saturdayBest];
+const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,christieWalker,saturdayBest];
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 const playableArtists=allArtists.filter(artist=>artist.tracks?.some(track=>track.audio));
 const showcaseArtists=allArtists.filter(artist=>artist.hero||artist.profile);

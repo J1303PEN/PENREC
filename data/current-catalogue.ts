@@ -1,3 +1,4 @@
+import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
 import { reno } from "@/data/reno";
 import { hyx } from "@/data/hyx";
@@ -25,5 +26,6 @@ export const currentCatalogueArtists = [
   hyx,
   reno,
   judeVarlow,
+  tobiasTangleAndFriends,
   saturdayBest,
 ];
