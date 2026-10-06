@@ -14,7 +14,7 @@ export const publishingBooks: PublishingBook[] = [
     number: 1,
     slug: "tobias-tangle",
     title: "The Clock That Lost Tuesday",
-    pages: 48,
+    pages: 46,
     cover: "/books/tobias-tangle/cover.png",
     pdf: "/books/tobias-tangle/the-clock-that-lost-tuesday.pdf",
     downloadName: "01_Tobias_Tangle_and_the_Clock_That_Lost_Tuesday_Premium_A5_Print.pdf",

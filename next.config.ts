@@ -4,7 +4,14 @@ import imageRedirects from "./data/image-redirects.json";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   async redirects() {
-    return imageRedirects;
+    return [
+      {
+        source: "/books/tobias-tangle/the-clock-that-lost-tuesday.pdf",
+        destination: "https://audio.penrec.co.uk/books/tobias-tangle/the-clock-that-lost-tuesday-v2.pdf",
+        permanent: true,
+      },
+      ...imageRedirects,
+    ];
   },
   images: {
     remotePatterns: [
