@@ -1,3 +1,4 @@
+import { privateCaller } from "@/data/private-caller";
 import { northArray } from "@/data/north-array";
 import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
@@ -651,6 +652,7 @@ export const completeCatalogueArtists: Artist[] = [
   judeVarlow,
   tobiasTangleAndFriends,
   northArray,
+  privateCaller,
   doorAtMidnight,
 ];
 

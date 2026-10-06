@@ -1,3 +1,4 @@
+import { privateCaller } from "@/data/private-caller";
 import { northArray } from "@/data/north-array";
 import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { judeVarlow } from "@/data/jude-varlow";
@@ -29,5 +30,6 @@ export const currentCatalogueArtists = [
   judeVarlow,
   tobiasTangleAndFriends,
   northArray,
+  privateCaller,
   saturdayBest,
 ];
