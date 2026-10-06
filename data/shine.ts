@@ -17,7 +17,7 @@ export const shine: Artist = {
   "descriptor": "Disco soul",
   "location": "",
   "bio": [
-    "Shine presents When a Moment Lasts a Lifetime, a fourteen-track disco soul album on PENREC.",
+    "Shine presents disco soul on PENREC, with When a Moment Lasts a Lifetime followed by the fifteen-track Soul in My Heart.",
     "From Take My Hand to The Grand Finale, the album includes Take a Chance, Sunshine in Your Eyes and the title track. Music and lyrics by Darren Penman."
   ],
   "quote": "",

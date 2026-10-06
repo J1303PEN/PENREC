@@ -27,6 +27,91 @@ export type ReleaseData = {
 export type ReleaseArtist = Omit<Artist, "hero" | "profile" | "gallery" | "heroPosition" | "profilePosition"> & { releaseCredit?: string; description?: string };
 
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
+  "shine": [{
+  "album": "Soul in My Heart",
+  "cover": "https://audio.penrec.co.uk/shine/soul-in-my-heart-cover.jpg?v=pnr042",
+  "year": "2026",
+  "catalogue": "PNR042",
+  "preview": "https://audio.penrec.co.uk/01_love_of_a_lifetime.mp3?v=pnr042",
+  "tracks": [
+    {
+      "title": "Love of a Lifetime",
+      "duration": "5:22",
+      "audio": "https://audio.penrec.co.uk/01_love_of_a_lifetime.mp3?v=pnr042"
+    },
+    {
+      "title": "The Time for Us is Right Now",
+      "duration": "4:53",
+      "audio": "https://audio.penrec.co.uk/02_the_time_for_us_is_right_now.mp3?v=pnr042"
+    },
+    {
+      "title": "Philadelphia City Limits",
+      "duration": "4:19",
+      "audio": "https://audio.penrec.co.uk/03_philadelphia_city_limits.mp3?v=pnr042"
+    },
+    {
+      "title": "Studio 54",
+      "duration": "4:43",
+      "audio": "https://audio.penrec.co.uk/04_studio_54.mp3?v=pnr042"
+    },
+    {
+      "title": "With Friends Like These",
+      "duration": "4:42",
+      "audio": "https://audio.penrec.co.uk/05_with_friends_like_these.mp3?v=pnr042"
+    },
+    {
+      "title": "New Shores",
+      "duration": "5:01",
+      "audio": "https://audio.penrec.co.uk/06_new_shores.mp3?v=pnr042"
+    },
+    {
+      "title": "A Life Worth Living",
+      "duration": "4:39",
+      "audio": "https://audio.penrec.co.uk/07_a_life_worth_living.mp3?v=pnr042"
+    },
+    {
+      "title": "Family",
+      "duration": "4:50",
+      "audio": "https://audio.penrec.co.uk/08_family.mp3?v=pnr042"
+    },
+    {
+      "title": "You Bring Best Out of Me",
+      "duration": "4:08",
+      "audio": "https://audio.penrec.co.uk/09_you_bring_best_out_of_me.mp3?v=pnr042"
+    },
+    {
+      "title": "Distance is Not a Barrier to Love",
+      "duration": "5:04",
+      "audio": "https://audio.penrec.co.uk/10_distance_is_not_a_barrier_to_love.mp3?v=pnr042"
+    },
+    {
+      "title": "Up on this Stage",
+      "duration": "5:18",
+      "audio": "https://audio.penrec.co.uk/11_up_on_this_stage.mp3?v=pnr042"
+    },
+    {
+      "title": "Soul in My Heart",
+      "duration": "5:02",
+      "audio": "https://audio.penrec.co.uk/12_soul_in_my_heart.mp3?v=pnr042"
+    },
+    {
+      "title": "Bright Lights",
+      "duration": "4:37",
+      "audio": "https://audio.penrec.co.uk/13_bright_lights.mp3?v=pnr042"
+    },
+    {
+      "title": "Just Before You Go",
+      "duration": "4:48",
+      "audio": "https://audio.penrec.co.uk/14_just_before_you_go.mp3?v=pnr042"
+    },
+    {
+      "title": "My Final Wish",
+      "duration": "4:53",
+      "audio": "https://audio.penrec.co.uk/15_my_final_wish.mp3?v=pnr042"
+    }
+  ],
+  "description": "Soul in My Heart is SHINE’s second release on PENREC. Its fifteen-track sequence opens with Love of a Lifetime and closes with My Final Wish."
+}],
   "maison-45": [{
   "album": "Sans façon",
   "cover": "https://audio.penrec.co.uk/maison-45/sans-facon-cover.jpg",
