@@ -1,3 +1,4 @@
+import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
 import { northArray } from "@/data/north-array";
@@ -27,7 +28,7 @@ import { asReleaseArtist, getArtistReleases, getReleaseArtist, getReleaseHref } 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,christieWalker,doorAtMidnight].map(({slug})=>({slug}))}
 
 export default async function ReleasePage({params,searchParams}:{params:Promise<{slug:string}>,searchParams:Promise<{release?:string}>}){
  const {slug}=await params;

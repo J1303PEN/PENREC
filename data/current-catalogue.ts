@@ -1,3 +1,4 @@
+import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
 import { northArray } from "@/data/north-array";
@@ -33,5 +34,6 @@ export const currentCatalogueArtists = [
   northArray,
   privateCaller,
   maravilla,
+  willBlack,
   saturdayBest,
 ];

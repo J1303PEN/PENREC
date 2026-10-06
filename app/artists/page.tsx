@@ -1,3 +1,4 @@
+import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
 import { northArray } from "@/data/north-array";
@@ -19,7 +20,7 @@ import { directMotion } from "@/data/direct-motion";
 import { christieWalker } from "@/data/christie-walker";
 
 export default function ArtistsPage(){
-  const roster=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,christieWalker,saturdayBest];
+  const roster=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,christieWalker,saturdayBest];
   return <main id="content" className="artists-index">
     <header className="artists-index__hero">
       <div className="shell">
