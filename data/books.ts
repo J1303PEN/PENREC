@@ -60,4 +60,14 @@ export const publishingBooks: PublishingBook[] = [
   "downloadName": "05_Tobias_Tangle_and_the_Midnight_Market_Premium_A5_Print.pdf",
   "description": "At midnight, a magical market takes over Hushcombe Square — and Tobias and his friends have already bought something they cannot afford. The price of admission is their way home. Unless they can settle the bill before dawn, the market will keep Hushcombe too: every shop, street and doorstep. With a basket that buys anything they want and a black-cat clerk who fixes every bargain, Tobias, Mina, Wilf and Pru must discover what happened to the Fair Bell — and prove that home is worth more than anything the market can sell."
 },
+  {
+    number: 6,
+    slug: "tobias-tangle-library-beneath-the-lake",
+    title: "The Library Beneath the Lake",
+    pages: 40,
+    cover: "/books/tobias-tangle-library-beneath-the-lake/cover.webp",
+    pdf: "/books/tobias-tangle-library-beneath-the-lake/the-library-beneath-the-lake.pdf",
+    downloadName: "06_Tobias_Tangle_and_the_Library_Beneath_the_Lake_Premium_A5_CMYK_Print.pdf",
+    description: "A library hidden beneath Mere Glass sends out four red slips. Tobias, Mina, Wilf and Pru have never borrowed its books — yet the Catalogue is already coming to collect them. To save the sinking library, they must find the missing pages of the Book of Everywhere, face a century-old secret and repair a calendar that has left the whole library one day behind. A warm, funny and beautifully illustrated adventure about curiosity, courage and returning what does not belong to you.",
+  },
 ];
