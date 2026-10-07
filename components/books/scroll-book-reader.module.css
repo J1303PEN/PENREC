@@ -1,0 +1,9 @@
+.reader { max-width: 1000px; margin: 0 auto; }
+.controls { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; padding: 18px; background: #ffe15a; border: 3px solid #151515; }
+.controls a, .controls button { background: #151515; color: white; border: 0; padding: 12px 20px; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none; }
+.controls button:disabled { opacity: .65; cursor: wait; }
+.controls select { font: inherit; padding: 8px; margin-left: 8px; }
+.pages { display: grid; gap: 32px; }
+.sheet { margin: 0; scroll-margin-top: 24px; }
+.sheet img { display: block; width: 100%; height: auto; background: white; border: 1px solid #ccc; box-shadow: 0 5px 22px #0002; }
+.sheet figcaption { text-align: center; padding: 10px; font-size: 14px; }

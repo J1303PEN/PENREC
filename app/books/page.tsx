@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { colouringBooks } from "@/data/colouring-books";
 import { publishingBooks } from "@/data/books";
 import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
 import { doorAtMidnight } from "@/data/door-at-midnight";
@@ -44,6 +45,16 @@ export default function BooksPage() {
           </div>
         </section>
       ))}
+      <section className={`penrec-about__story ${styles.magicCollection}`} aria-labelledby="tobias-colouring-title">
+        <div className="shell penrec-about__grid">
+          <div><Image className={styles.cover} src={colouringBooks[0].cover} alt="Tobias Tangle and Friends: The Big Colouring Adventure cover" width={1240} height={1754} sizes="(max-width: 700px) 90vw, 40vw" /></div>
+          <div><p className="penrec-kicker">Tobias Tangle &amp; Friends · Colouring adventures</p>
+            <h2 id="tobias-colouring-title">Make Hushcombe your own.</h2>
+            <p>{colouringBooks[0].description}</p><p>{colouringBooks[0].format} · 20 pages</p>
+            <div className={styles.actions}><Link href={`/books/${colouringBooks[0].slug}`}>Scroll, read &amp; print →</Link><a href={colouringBooks[0].pdf} download={colouringBooks[0].downloadName}>Download PDF</a></div>
+          </div>
+        </div>
+      </section>
       <section className="penrec-about__story" aria-labelledby="tobias-music-title">
         <div className="shell penrec-about__grid">
           <div>
@@ -58,6 +69,18 @@ export default function BooksPage() {
             <p>{tobiasTangleAndFriends.album} · {tobiasTangleAndFriends.catalogue}</p>
             <Link href={`/releases/${tobiasTangleAndFriends.slug}`}>Explore the music →</Link>
           </div>
+        </div>
+      </section>
+      <section className={`penrec-about__story ${styles.trainersCollection}`} aria-labelledby="trainers-title">
+        <div className="shell">
+          <p className="penrec-kicker">The retro colouring collection · By Darren Penman</p>
+          <h2 id="trainers-title">Iconic Trainers.</h2><p>Colour the pairs. Relive the memories.</p>
+          <p>Two vivid journeys through the trainers that shaped the 1980s, 1990s and 2000s. Two hundred iconic pairs, ready for your imagination.</p>
+          <div className={styles.collectionGrid}>{colouringBooks.slice(1).map(book => <article key={book.slug}>
+            <Image className={styles.landscapeCover} src={book.cover} alt={`${book.title} cover`} width={1754} height={1240} sizes="(max-width: 700px) 90vw, 45vw" />
+            <h3>{book.title}</h3><p>{book.description}</p><p>{book.format} · {book.pages} pages</p>
+            <div className={styles.actions}><Link href={`/books/${book.slug}`}>Scroll, read &amp; print →</Link><a href={book.pdf} download={book.downloadName}>Download PDF</a></div>
+          </article>)}</div>
         </div>
       </section>
       {/* Each publishing project precedes its own companion music. Add its book or script here when available. */}

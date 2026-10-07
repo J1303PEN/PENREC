@@ -18,3 +18,9 @@
     max-width: 340px;
   }
 }
+
+.magicCollection { background: radial-gradient(ellipse at top right, #ffe59977, transparent 60%), #eff8f6; }
+.trainersCollection { background: #ffe15a; }
+.collectionGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 42px; margin-top: 36px; }
+.landscapeCover { display: block; width: 100%; height: auto; border: 3px solid #151515; box-shadow: 8px 8px 0 #ef2791; }
+@media (max-width: 700px) { .collectionGrid { grid-template-columns: 1fr; } }
