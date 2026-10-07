@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { publishingBooks } from "@/data/books";
+import { tobiasTangleAndFriends } from "@/data/tobias-tangle-and-friends";
+import { doorAtMidnight } from "@/data/door-at-midnight";
+import { saturdayBest } from "@/data/saturday-best";
 import styles from "./books.module.css";
 
 export const metadata = {
@@ -41,13 +44,60 @@ export default function BooksPage() {
           </div>
         </section>
       ))}
-      <section className="penrec-about__story" aria-labelledby="door-title">
+      <section className="penrec-about__story" aria-labelledby="tobias-music-title">
         <div className="shell penrec-about__grid">
-          <div><p className="penrec-kicker">Music &amp; imagination</p><h2 id="door-title">The Door at Midnight.</h2></div>
           <div>
-            <p>Darren Penman’s fantasy novel has a musical companion: seventeen original songs that explore its characters, places and themes.</p>
-            <p>Discover the original soundtrack while the publishing collection takes shape.</p>
-            <Link href="/releases/the-door-at-midnight">Explore the soundtrack →</Link>
+            <Image className={styles.cover} src={tobiasTangleAndFriends.cover}
+              alt={`${tobiasTangleAndFriends.album} album cover`} width={1400} height={1400}
+              sizes="(max-width: 700px) 90vw, 40vw" />
+          </div>
+          <div>
+            <p className="penrec-kicker">Music &amp; imagination · Tobias Tangle Adventures</p>
+            <h2 id="tobias-music-title">Tobias Tangle &amp; Friends.</h2>
+            <p>The musical companion to Darren Penman’s Tobias Tangle books brings their characters, friendships and impossible adventures into fourteen original songs.</p>
+            <p>{tobiasTangleAndFriends.album} · {tobiasTangleAndFriends.catalogue}</p>
+            <Link href={`/releases/${tobiasTangleAndFriends.slug}`}>Explore the music →</Link>
+          </div>
+        </div>
+      </section>
+      {/* Each publishing project precedes its own companion music. Add its book or script here when available. */}
+      <section className="penrec-about__story" aria-labelledby="door-title">
+        <div className="shell">
+          <p className="penrec-kicker">A novel by Darren Penman</p>
+          <h2 id="door-title">The Door at Midnight.</h2>
+          <p>A fantasy story of strange doorways, shifting worlds and the journey home.</p>
+          <div className="penrec-about__grid">
+            <div>
+              <Image className={styles.cover} src={doorAtMidnight.cover}
+                alt="The Door at Midnight original soundtrack cover" width={1400} height={1400}
+                sizes="(max-width: 700px) 90vw, 40vw" />
+            </div>
+            <div>
+              <p className="penrec-kicker">Music &amp; imagination · The Door at Midnight</p>
+              <h3>The original soundtrack.</h3>
+              <p>Seventeen original songs explore the novel’s characters, places and themes.</p>
+              <Link href={`/releases/${doorAtMidnight.slug}`}>Explore the soundtrack →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="penrec-about__story" aria-labelledby="saturday-title">
+        <div className="shell">
+          <p className="penrec-kicker">A stage musical by Darren Penman</p>
+          <h2 id="saturday-title">Saturday Best.</h2>
+          <p>One Saturday night in a British dance hall in 1958, with music, lyrics and script by Darren Penman.</p>
+          <div className="penrec-about__grid">
+            <div>
+              <Image className={styles.cover} src={saturdayBest.cover}
+                alt="Saturday Best original cast recording cover" width={1400} height={1400}
+                sizes="(max-width: 700px) 90vw, 40vw" />
+            </div>
+            <div>
+              <p className="penrec-kicker">Music &amp; imagination · Saturday Best</p>
+              <h3>The original cast recording.</h3>
+              <p>Sixteen musical numbers follow the evening from Meet Me at the Palais to This Is Saturday Best.</p>
+              <Link href={`/releases/${saturdayBest.slug}`}>Explore the cast recording →</Link>
+            </div>
           </div>
         </div>
       </section>
