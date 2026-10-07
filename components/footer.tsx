@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { Logo } from "./logo";
 
 export function Footer() {
   return (
     <footer className="footer new-penrec-footer">
       <div className="shell footer__bottom">
-        <span className="footer-wordmark"><strong>PENREC</strong><small>MUSIC &amp; PUBLISHING</small></span>
+        <Link href="/" className="footer-logo" aria-label="PENREC Music & Publishing home"><Logo compact /></Link>
         <nav aria-label="Footer utility navigation">
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>

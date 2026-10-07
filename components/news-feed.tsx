@@ -23,7 +23,7 @@ export function NewsFeed() {
       {items.length ? items.map((item) => (
         <article className="journal-story" key={item.id}>
           <div className="journal-story__image">
-            <Image src={item.image || "/brand/penrec-brand-guide.webp"} alt="" fill sizes="(max-width: 760px) 100vw, 45vw" unoptimized={item.image.startsWith("data:")} />
+            <Image src={item.image || "/brand/penrec-music-publishing-logo.webp"} alt="" style={!item.image ? {objectFit:"contain",background:"#000"} : undefined} fill sizes="(max-width: 760px) 100vw, 45vw" unoptimized={item.image.startsWith("data:")} />
           </div>
           <div className="journal-story__copy">
             <p className="eyebrow">{item.category} · {new Date(`${item.publishDate}T12:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
