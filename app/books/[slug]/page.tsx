@@ -34,7 +34,7 @@ export default async function BookReadingPage({ params }: Props) {
         <p>By Darren Penman</p>
       </header>
       <BookReader key={book.slug} title={book.title} totalPages={book.pages}
-        assets={`/books/${book.slug}`} pdf={book.pdf} downloadName={book.downloadName} />
+        assets={book.assets ?? `/books/${book.slug}`} pdf={book.pdf} downloadName={book.downloadName} />
     </main>
   );
 }

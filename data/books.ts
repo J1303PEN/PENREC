@@ -5,6 +5,7 @@ export type PublishingBook = {
   pages: number;
   cover: string;
   pdf: string;
+  assets?: string;
   downloadName: string;
   description: string;
 };
@@ -70,4 +71,48 @@ export const publishingBooks: PublishingBook[] = [
     downloadName: "06_Tobias_Tangle_and_the_Library_Beneath_the_Lake_Premium_A5_CMYK_Print.pdf",
     description: "A library hidden beneath Mere Glass sends out four red slips. Tobias, Mina, Wilf and Pru have never borrowed its books — yet the Catalogue is already coming to collect them. To save the sinking library, they must find the missing pages of the Book of Everywhere, face a century-old secret and repair a calendar that has left the whole library one day behind. A warm, funny and beautifully illustrated adventure about curiosity, courage and returning what does not belong to you.",
   },
+{
+  "number": 7,
+  "slug": "tobias-tangle-winter-that-would-not-leave",
+  "title": "The Winter That Would Not Leave",
+  "pages": 32,
+  "cover": "https://audio.penrec.co.uk/books/tobias-tangle-winter-that-would-not-leave/cover.webp",
+  "assets": "https://audio.penrec.co.uk/books/tobias-tangle-winter-that-would-not-leave",
+  "pdf": "/books/tobias-tangle-winter-that-would-not-leave/winter-that-would-not-leave.pdf",
+  "downloadName": "07_Tobias_Tangle_and_the_Winter_That_Would_Not_Leave_Premium_A5_CMYK_Print.pdf",
+  "description": "Snow falls on Hushcombe in July, and a page from the Book of Seasons freezes everything it touches. Tobias, Mina, Wilf and Pru must discover why winter has arrived early — and find a way to put the seasons back where they belong."
+},
+{
+  "number": 8,
+  "slug": "tobias-tangle-map-of-impossible-doors",
+  "title": "The Map of Impossible Doors",
+  "pages": 36,
+  "cover": "https://audio.penrec.co.uk/books/tobias-tangle-map-of-impossible-doors/cover.webp",
+  "assets": "https://audio.penrec.co.uk/books/tobias-tangle-map-of-impossible-doors",
+  "pdf": "/books/tobias-tangle-map-of-impossible-doors/map-of-impossible-doors.pdf",
+  "downloadName": "08_Tobias_Tangle_and_the_Map_of_Impossible_Doors_Premium_A5_CMYK_Print.pdf",
+  "description": "A pantry door opens onto the roof of Hushcombe Town Hall, and a mysterious map shows eight roads ending in red doors. With street signs turning and ordinary doorways leading somewhere impossible, Tobias and his friends follow the map into a new adventure."
+},
+{
+  "number": 9,
+  "slug": "tobias-tangle-clockwork-rooks",
+  "title": "The Clockwork Rooks",
+  "pages": 32,
+  "cover": "https://audio.penrec.co.uk/books/tobias-tangle-clockwork-rooks/cover.webp",
+  "assets": "https://audio.penrec.co.uk/books/tobias-tangle-clockwork-rooks",
+  "pdf": "/books/tobias-tangle-clockwork-rooks/clockwork-rooks.pdf",
+  "downloadName": "09_Tobias_Tangle_and_the_Clockwork_Rooks_Premium_A5_CMYK_Print.pdf",
+  "description": "A little clockwork rook counts backwards from twelve, stopping Hushcombe’s clocks as it goes. Its message says the Master Route is open and the rooks are coming home. Tobias and his friends must follow the remaining black road on the Map of Impossible Doors to discover what is coming."
+},
+{
+  "number": 10,
+  "slug": "tobias-tangle-last-road-home",
+  "title": "The Last Road Home",
+  "pages": 28,
+  "cover": "https://audio.penrec.co.uk/books/tobias-tangle-last-road-home/cover.webp",
+  "assets": "https://audio.penrec.co.uk/books/tobias-tangle-last-road-home",
+  "pdf": "/books/tobias-tangle-last-road-home/last-road-home.pdf",
+  "downloadName": "10_Tobias_Tangle_and_the_Last_Road_Home_Premium_A5_CMYK_Print.pdf",
+  "description": "The Last Road carries Tobias and his friends away from Hushcombe towards the mysterious First House. Every adventure they have shared lies along the route, but the road disappears behind them. Together with Tick, the clockwork rook, they face the final journey home."
+},
 ];
