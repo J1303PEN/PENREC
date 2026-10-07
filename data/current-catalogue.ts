@@ -1,3 +1,4 @@
+import { billyPenman } from "@/data/billy-penman";
 import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
@@ -35,5 +36,6 @@ export const currentCatalogueArtists = [
   privateCaller,
   maravilla,
   willBlack,
+  billyPenman,
   saturdayBest,
 ];

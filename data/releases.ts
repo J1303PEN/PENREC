@@ -1,3 +1,4 @@
+import { billyPenman } from "@/data/billy-penman";
 import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
@@ -360,6 +361,91 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
     }
   ],
   "description": "Marco Verturi’s third PENREC album brings together fifteen Italian-language songs, opening with Tutto Da Vivere and closing with A Modo Mio. Its titles explore evenings out, summer, spontaneity and finding a way forward on your own terms."
+},
+{
+  "album": "Natale Insieme",
+  "cover": "https://audio.penrec.co.uk/marco-verturi/natale-insieme-cover.jpg?v=pnr049",
+  "year": "2026",
+  "catalogue": "PNR049",
+  "preview": "https://audio.penrec.co.uk/01_a_natale_puoi_mentire.mp3?v=pnr049",
+  "tracks": [
+    {
+      "title": "A Natale Puoi Mentire",
+      "duration": "3:47",
+      "audio": "https://audio.penrec.co.uk/01_a_natale_puoi_mentire.mp3?v=pnr049"
+    },
+    {
+      "title": "Ma Dove Sei Stato?",
+      "duration": "3:32",
+      "audio": "https://audio.penrec.co.uk/02_ma_dove_sei_stato.mp3?v=pnr049"
+    },
+    {
+      "title": "Non Dovevamo Farci Regali",
+      "duration": "3:31",
+      "audio": "https://audio.penrec.co.uk/03_non_dovevamo_farci_regali.mp3?v=pnr049"
+    },
+    {
+      "title": "Quest'Anno Facciamo Piano",
+      "duration": "3:03",
+      "audio": "https://audio.penrec.co.uk/04_questanno_facciamo_piano.mp3?v=pnr049"
+    },
+    {
+      "title": "Ti Teniamo Il Posto",
+      "duration": "3:28",
+      "audio": "https://audio.penrec.co.uk/05_ti_teniamo_il_posto.mp3?v=pnr049"
+    },
+    {
+      "title": "Quest'Anno Tocca a Noi",
+      "duration": "3:57",
+      "audio": "https://audio.penrec.co.uk/06_questanno_tocca_a_noi.mp3?v=pnr049"
+    },
+    {
+      "title": "Chi Avrei Scelto Io",
+      "duration": "3:36",
+      "audio": "https://audio.penrec.co.uk/07_chi_avrei_scelto_io.mp3?v=pnr049"
+    },
+    {
+      "title": "Ancora Mezz'Ora",
+      "duration": "3:48",
+      "audio": "https://audio.penrec.co.uk/08_ancora_mezzora.mp3?v=pnr049"
+    },
+    {
+      "title": "Adesso Basta",
+      "duration": "3:22",
+      "audio": "https://audio.penrec.co.uk/09_adesso_basta.mp3?v=pnr049"
+    },
+    {
+      "title": "Almeno Ci Sentiamo",
+      "duration": "3:29",
+      "audio": "https://audio.penrec.co.uk/10_almeno_ci_sentiamo.mp3?v=pnr049"
+    },
+    {
+      "title": "Lasciaci Fare",
+      "duration": "3:44",
+      "audio": "https://audio.penrec.co.uk/11_lasciaci_fare.mp3?v=pnr049"
+    },
+    {
+      "title": "Che Giorno È?",
+      "duration": "3:35",
+      "audio": "https://audio.penrec.co.uk/12_che_giorno_e.mp3?v=pnr049"
+    },
+    {
+      "title": "Finalmente Noi",
+      "duration": "3:48",
+      "audio": "https://audio.penrec.co.uk/13_finalmente_noi.mp3?v=pnr049"
+    },
+    {
+      "title": "Uno In Più",
+      "duration": "3:29",
+      "audio": "https://audio.penrec.co.uk/14_uno_in_piu.mp3?v=pnr049"
+    },
+    {
+      "title": "Non Lo Sapevamo",
+      "duration": "3:39",
+      "audio": "https://audio.penrec.co.uk/15_non_lo_sapevamo.mp3?v=pnr049"
+    }
+  ],
+  "description": "Natale Insieme is Marco Verturi’s fourth PENREC release: fifteen Italian-language songs gathered around Christmas, family and being together. From A Natale Puoi Mentire and Non Dovevamo Farci Regali to Ti Teniamo Il Posto and Finalmente Noi, the titles move between festive expectations, familiar conversations and the people who make a place feel like home."
 }],
   "the-glamour-katz": [
     {
@@ -657,6 +743,7 @@ export const completeCatalogueArtists: Artist[] = [
   privateCaller,
   maravilla,
   willBlack,
+  billyPenman,
   doorAtMidnight,
 ];
 

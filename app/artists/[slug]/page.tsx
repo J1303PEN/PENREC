@@ -1,3 +1,4 @@
+import { billyPenman } from "@/data/billy-penman";
 import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
 import { privateCaller } from "@/data/private-caller";
@@ -30,7 +31,7 @@ import { ArtistGallery } from "@/components/artist-gallery";
 import { ReleaseCard } from "@/components/release-card";
 import { asReleaseArtist, getArtistReleases, getReleaseHref } from "@/data/releases";
 
-export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,christieWalker].map(({slug})=>({slug}))}
+export function generateStaticParams(){return [...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,billyPenman,christieWalker].map(({slug})=>({slug}))}
 
 export default async function ArtistPage({params}:{params:Promise<{slug:string}>}){
  const {slug}=await params;

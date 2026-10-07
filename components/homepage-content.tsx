@@ -1,5 +1,6 @@
 "use client";
 
+import { billyPenman } from "@/data/billy-penman";
 import { publishingBooks } from "@/data/books";
 import { willBlack } from "@/data/will-black";
 import { maravilla } from "@/data/maravilla";
@@ -29,7 +30,7 @@ import type { CatalogueRelease } from "@/data/releases";
 import { BULLETINS_KEY, Bulletin, isBulletinLive, readStored, starterBulletins } from "@/data/studio";
 import styles from "./new-homepage.module.css";
 
-const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,christieWalker,saturdayBest];
+const allArtists=[...artists,theVerelles,theParkers,maison45,localArrangement,directMotion,shine,francesMartine,hyx,reno,judeVarlow,tobiasTangleAndFriends,northArray,privateCaller,maravilla,willBlack,billyPenman,christieWalker,saturdayBest];
 const catalogueNumber=(catalogue:string)=>Number(catalogue.replace(/\D/g,""))||0;
 const playableArtists=allArtists.filter(artist=>artist.tracks?.some(track=>track.audio));
 const showcaseArtists=allArtists.filter(artist=>artist.hero||artist.profile);
