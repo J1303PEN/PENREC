@@ -22,7 +22,7 @@
     "repository_findings": "Next.js app with public/ static assets and data/ TypeScript catalogue. No artist prompt archive, AGENTS.md, or files named for these six artists were present in the inspected recursive tree; repository code searches returned no matches for their names.",
     "limitations": [
       "This is not a complete archive of every artist developed over the last few days; that roster could not be established from available records.",
-      "Complete FOURWARD, Jubilee Gospel Choir and The Assembly prompts were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
+      "Complete FOURWARD, Jubilee Gospel Choir, The Assembly and The December Belles prompts were subsequently supplied by the user. Geordie Jack and James Whitfield complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
       "No unrelated project styles or complaint records have been imported as artist prompt evidence."
     ]
   },
@@ -141,23 +141,53 @@
     {
       "id": "the-december-belles",
       "artist": "The December Belles",
-      "status": "incomplete_awaiting_original_prompt",
-      "ready_for_generation": false,
-      "confirmed_constraints": [],
-      "original_style_prompt": null,
-      "reusable_prompt_fragment": null,
-      "vocal_definition": null,
-      "missing_details": [
-        "Original complete style prompt",
-        "Verified vocal configuration and identity",
-        "Instrumentation, arrangement, production and exclusions"
+      "status": "verified_user_supplied_prompt",
+      "ready_for_generation": true,
+      "confirmed_constraints": [
+        "Three mature female soul singers.",
+        "Distinct solo lead passages, naturally blended three-part harmonies.",
+        "Clear British diction.",
+        "Authentic 1965–1967 orchestral Motown-inspired Christmas soul ballad, warm vintage analogue studio sound."
       ],
+      "original_style_prompt": "Authentic 1965–1967 orchestral Motown-inspired Christmas soul ballad, 76 BPM, warm vintage analogue studio sound. Three mature female soul singers: expressive powerful lead soprano with rich chest voice, warm mezzo-soprano and deep velvety alto. Distinct solo lead passages, naturally blended three-part harmonies, restrained emotional phrasing, beautiful sustained notes, controlled powerful climaxes, clear British diction, intimate verse delivery. Gentle acoustic grand piano, warm melodic electric bass, soft brushed acoustic drums, delicate tambourine, lush real-sounding orchestral strings, subtle glockenspiel and restrained sleigh bells. Classic 1960s romantic Christmas record atmosphere, memorable heartfelt melody, elegant string arrangements, spacious natural vocal reverb, gradual build from intimate opening to sweeping final chorus, expressive harmony-led final refrain, complete gentle orchestral ending.",
+      "reusable_prompt_fragment": null,
+      "vocal_definition": {
+        "member_count": 3,
+        "configuration": "Three mature female soul singers",
+        "members": [
+          {
+            "member": 1,
+            "exact_definition": "expressive powerful lead soprano with rich chest voice"
+          },
+          {
+            "member": 2,
+            "exact_definition": "warm mezzo-soprano"
+          },
+          {
+            "member": 3,
+            "exact_definition": "deep velvety alto"
+          }
+        ],
+        "delivery": "Distinct solo lead passages, naturally blended three-part harmonies, restrained emotional phrasing, beautiful sustained notes, controlled powerful climaxes, clear British diction, intimate verse delivery."
+      },
+      "missing_details": [],
       "provenance": [
         {
           "source": "Current user request, 2026-10-31",
           "supports": "Artist inclusion only"
+        },
+        {
+          "source": "User-supplied The December Belles prompt, 2026-10-31",
+          "supports": "Complete verbatim Christmas soul ballad prompt, exact three female vocal definitions, instrumentation, arrangement and production"
         }
-      ]
+      ],
+      "reusable_style_prompt": "Authentic 1965–1967 orchestral Motown-inspired Christmas soul ballad, {{bpm}} BPM, warm vintage analogue studio sound. Three mature female soul singers: expressive powerful lead soprano with rich chest voice, warm mezzo-soprano and deep velvety alto. Distinct solo lead passages, naturally blended three-part harmonies, restrained emotional phrasing, beautiful sustained notes, controlled powerful climaxes, clear British diction, intimate verse delivery. Gentle acoustic grand piano, warm melodic electric bass, soft brushed acoustic drums, delicate tambourine, lush real-sounding orchestral strings, subtle glockenspiel and restrained sleigh bells. Classic 1960s romantic Christmas record atmosphere, memorable heartfelt melody, elegant string arrangements, spacious natural vocal reverb, gradual build from intimate opening to sweeping final chorus, expressive harmony-led final refrain, complete gentle orchestral ending.",
+      "tempo": {
+        "variable": true,
+        "source_prompt_bpm": 76,
+        "default_bpm": null,
+        "instruction": "76 BPM is retained in the supplied ballad prompt. For a new song, choose the appropriate tempo and replace {{bpm}} in reusable_style_prompt."
+      }
     },
     {
       "id": "the-assembly",
