@@ -22,7 +22,7 @@
     "repository_findings": "Next.js app with public/ static assets and data/ TypeScript catalogue. No artist prompt archive, AGENTS.md, or files named for these six artists were present in the inspected recursive tree; repository code searches returned no matches for their names.",
     "limitations": [
       "This is not a complete archive of every artist developed over the last few days; that roster could not be established from available records.",
-      "Complete FOURWARD and Jubilee Gospel Choir prompts were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
+      "Complete FOURWARD, Jubilee Gospel Choir and The Assembly prompts were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
       "No unrelated project styles or complaint records have been imported as artist prompt evidence."
     ]
   },
@@ -162,23 +162,58 @@
     {
       "id": "the-assembly",
       "artist": "The Assembly",
-      "status": "incomplete_awaiting_original_prompt",
-      "ready_for_generation": false,
-      "confirmed_constraints": [],
-      "original_style_prompt": null,
-      "reusable_prompt_fragment": null,
-      "vocal_definition": null,
-      "missing_details": [
-        "Original complete style prompt",
-        "Verified vocal configuration and identity",
-        "Instrumentation, arrangement, production and exclusions"
+      "status": "verified_user_supplied_prompt",
+      "ready_for_generation": true,
+      "confirmed_constraints": [
+        "Four mature British male R&B voices.",
+        "Rich natural four-part harmonies, alternating male lead verses, tight close-harmony choruses.",
+        "Restrained tasteful falsetto, clear British diction, conversational rhythmic phrasing.",
+        "No contemporary production effects."
       ],
+      "original_style_prompt": "Authentic 1998 British R&B and soul-pop, 96 BPM, sophisticated smooth mid-tempo groove, deep rounded melodic electric bass, warm Fender Rhodes chords, tight syncopated 1990s drum-machine kick and snare, crisp hi-hats, subtle clean funk guitar, tasteful string-synth accents. Four mature British male R&B voices: warm slightly husky lead tenor, smooth intimate baritone, bright soulful high tenor and deep resonant bass-baritone. Rich natural four-part harmonies, alternating male lead verses, tight close-harmony choruses, restrained tasteful falsetto, clear British diction, conversational rhythmic phrasing, strong melodic chorus hook. Relaxed romantic energy, polished late-1990s UK urban-soul production, subtle plate reverb, spacious vocal arrangement, distinct instrumental Rhodes motif, natural dynamic delivery, no contemporary production effects.",
+      "reusable_prompt_fragment": null,
+      "vocal_definition": {
+        "member_count": 4,
+        "national_identity": "British",
+        "configuration": "Four mature British male R&B voices",
+        "members": [
+          {
+            "member": 1,
+            "exact_definition": "warm slightly husky lead tenor"
+          },
+          {
+            "member": 2,
+            "exact_definition": "smooth intimate baritone"
+          },
+          {
+            "member": 3,
+            "exact_definition": "bright soulful high tenor"
+          },
+          {
+            "member": 4,
+            "exact_definition": "deep resonant bass-baritone"
+          }
+        ],
+        "delivery": "Rich natural four-part harmonies, alternating male lead verses, tight close-harmony choruses, restrained tasteful falsetto, clear British diction, conversational rhythmic phrasing, strong melodic chorus hook."
+      },
+      "missing_details": [],
       "provenance": [
         {
           "source": "Current user request, 2026-10-31",
           "supports": "Artist inclusion only"
+        },
+        {
+          "source": "User-supplied The Assembly prompt, 2026-10-31",
+          "supports": "Complete verbatim style prompt, exact four male vocal definitions, instrumentation, arrangement and production"
         }
-      ]
+      ],
+      "reusable_style_prompt": "Authentic 1998 British R&B and soul-pop, {{bpm}} BPM, sophisticated smooth mid-tempo groove, deep rounded melodic electric bass, warm Fender Rhodes chords, tight syncopated 1990s drum-machine kick and snare, crisp hi-hats, subtle clean funk guitar, tasteful string-synth accents. Four mature British male R&B voices: warm slightly husky lead tenor, smooth intimate baritone, bright soulful high tenor and deep resonant bass-baritone. Rich natural four-part harmonies, alternating male lead verses, tight close-harmony choruses, restrained tasteful falsetto, clear British diction, conversational rhythmic phrasing, strong melodic chorus hook. Relaxed romantic energy, polished late-1990s UK urban-soul production, subtle plate reverb, spacious vocal arrangement, distinct instrumental Rhodes motif, natural dynamic delivery, no contemporary production effects.",
+      "tempo": {
+        "variable": true,
+        "source_prompt_bpm": 96,
+        "default_bpm": null,
+        "instruction": "96 BPM is retained in the supplied prompt. For a new song, choose the appropriate tempo and replace {{bpm}} in reusable_style_prompt."
+      }
     },
     {
       "id": "the-jubilee-gospel-choir",
@@ -238,5 +273,10 @@
         "instruction": "108 BPM is retained in the supplied finale prompt. For a new song, choose the appropriate tempo and replace {{bpm}} in reusable_style_prompt."
       }
     }
-  ]
+  ],
+  "generation_policy": {
+    "mode": "archive_only",
+    "instruction": "Save profiles without submitting music-generation jobs. Submit only individual tracks explicitly requested by the user; do not batch-submit archived profiles or spend generation credits merely to save them.",
+    "source": "User instruction, 2026-10-31"
+  }
 }
