@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "title": "PENREC reusable artist music-generation prompt profiles",
+  "updated_on": "2026-10-31",
+  "archive_status": "partial_source_recovery_required",
+  "purpose": "Retain verified artist identity constraints and original prompts for future projects without silently reconstructing missing details.",
+  "usage": [
+    "Use original_style_prompt when recovered and verified.",
+    "All current profiles are incomplete; fragments are identity constraints, not full generation prompts.",
+    "Keep exact source wording in original_style_prompt and exact member wording in vocal_definition; record subsequent adaptations separately.",
+    "Do not infer voice configuration, genre, nationality or production from an artist's name.",
+    "Add other recently developed artists only when reliable identity/prompt sources are recovered."
+  ],
+  "provenance": {
+    "repository_inspected_at_commit": "405839ab5972bd5574d310f5485d773a4b915e56",
+    "referenced_conversation": {
+      "id": "6ae33c39-9d48-83ed-8d48-15440598919f",
+      "title": "Remember Songwriting Rules",
+      "retrieval_date": "2026-10-31",
+      "limitation": "read_thread returned five recent turns, no older cursor and no attachments; assistant outputs were chatgpt-content-reference placeholders rather than prompt text."
+    },
+    "repository_findings": "Next.js app with public/ static assets and data/ TypeScript catalogue. No artist prompt archive, AGENTS.md, or files named for these six artists were present in the inspected recursive tree; repository code searches returned no matches for their names.",
+    "limitations": [
+      "This is not a complete archive of every artist developed over the last few days; that roster could not be established from available records.",
+      "No complete original style prompts were recovered. Null fields mean unknown, not intentionally empty.",
+      "FOURWARD's exact four-member vocal definitions remain outstanding. Only member count and British identity are confirmed.",
+      "No unrelated project styles or complaint records have been imported as artist prompt evidence."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "fourward",
+      "artist": "FOURWARD",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [
+        "Exactly four members.",
+        "British vocal identity."
+      ],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": "FOURWARD: exactly four British vocal members. Preserve each member's original vocal definition once recovered.",
+      "vocal_definition": {
+        "member_count": 4,
+        "national_identity": "British",
+        "members": [
+          {
+            "member": 1,
+            "exact_definition": null
+          },
+          {
+            "member": 2,
+            "exact_definition": null
+          },
+          {
+            "member": 3,
+            "exact_definition": null
+          },
+          {
+            "member": 4,
+            "exact_definition": null
+          }
+        ],
+        "limitation": "The four individual vocal definitions are not accessible in the retrieved history. Do not invent voice types, ranges, names, accents or roles."
+      },
+      "missing_details": [
+        "Exact definition of each of the four voices",
+        "Original complete style prompt",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion and listed vocal constraints"
+        }
+      ]
+    },
+    {
+      "id": "geordie-jack",
+      "artist": "Geordie Jack",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [
+        "Solo Geordie voice."
+      ],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": "Geordie Jack: solo Geordie voice.",
+      "vocal_definition": {
+        "configuration": "solo",
+        "regional_identity": "Geordie",
+        "exact_definition": null
+      },
+      "missing_details": [
+        "Original complete style prompt",
+        "Exact timbre, range and delivery",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion and listed vocal constraints"
+        }
+      ]
+    },
+    {
+      "id": "james-whitfield",
+      "artist": "James Whitfield",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": null,
+      "vocal_definition": null,
+      "missing_details": [
+        "Original complete style prompt",
+        "Verified vocal configuration and identity",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion only"
+        }
+      ]
+    },
+    {
+      "id": "the-december-belles",
+      "artist": "The December Belles",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": null,
+      "vocal_definition": null,
+      "missing_details": [
+        "Original complete style prompt",
+        "Verified vocal configuration and identity",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion only"
+        }
+      ]
+    },
+    {
+      "id": "the-assembly",
+      "artist": "The Assembly",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": null,
+      "vocal_definition": null,
+      "missing_details": [
+        "Original complete style prompt",
+        "Verified vocal configuration and identity",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion only"
+        }
+      ]
+    },
+    {
+      "id": "the-jubilee-gospel-choir",
+      "artist": "The Jubilee Gospel Choir",
+      "status": "incomplete_awaiting_original_prompt",
+      "ready_for_generation": false,
+      "confirmed_constraints": [],
+      "original_style_prompt": null,
+      "reusable_prompt_fragment": null,
+      "vocal_definition": null,
+      "missing_details": [
+        "Original complete style prompt",
+        "Verified vocal configuration and identity",
+        "Instrumentation, arrangement, production and exclusions"
+      ],
+      "provenance": [
+        {
+          "source": "Current user request, 2026-10-31",
+          "supports": "Artist inclusion only"
+        }
+      ]
+    }
+  ]
+}
