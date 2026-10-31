@@ -6,7 +6,7 @@
   "purpose": "Retain verified artist identity constraints and original prompts for future projects without silently reconstructing missing details.",
   "usage": [
     "Use original_style_prompt when recovered and verified.",
-    "All current profiles are incomplete; fragments are identity constraints, not full generation prompts.",
+    "Profiles marked ready_for_generation contain verified user-supplied prompts; incomplete profiles contain identity constraints only. Resolve template placeholders before generation.",
     "Keep exact source wording in original_style_prompt and exact member wording in vocal_definition; record subsequent adaptations separately.",
     "Do not infer voice configuration, genre, nationality or production from an artist's name.",
     "Add other recently developed artists only when reliable identity/prompt sources are recovered."
@@ -22,8 +22,7 @@
     "repository_findings": "Next.js app with public/ static assets and data/ TypeScript catalogue. No artist prompt archive, AGENTS.md, or files named for these six artists were present in the inspected recursive tree; repository code searches returned no matches for their names.",
     "limitations": [
       "This is not a complete archive of every artist developed over the last few days; that roster could not be established from available records.",
-      "No complete original style prompts were recovered. Null fields mean unknown, not intentionally empty.",
-      "FOURWARD's exact four-member vocal definitions remain outstanding. Only member count and British identity are confirmed.",
+      "FOURWARD's complete last-song prompt and four vocal definitions were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
       "No unrelated project styles or complaint records have been imported as artist prompt evidence."
     ]
   },
@@ -31,48 +30,65 @@
     {
       "id": "fourward",
       "artist": "FOURWARD",
-      "status": "incomplete_awaiting_original_prompt",
-      "ready_for_generation": false,
+      "status": "verified_user_supplied_prompt",
+      "ready_for_generation": true,
       "confirmed_constraints": [
-        "Exactly four members.",
-        "British vocal identity."
+        "Exactly four distinct British singers.",
+        "Natural British accents and UK pronunciation throughout.",
+        "Fully sung individual melodic leads, four recognisable timbres, rich precise four-part chorus harmonies, no spoken delivery."
       ],
-      "original_style_prompt": null,
-      "reusable_prompt_fragment": "FOURWARD: exactly four British vocal members. Preserve each member's original vocal definition once recovered.",
+      "original_style_prompt": "Authentic 2000–2003 British chart dance-pop, 134 BPM, huge euphoric melodic anthem with an unforgettable soaring chorus. EXACTLY FOUR DISTINCT BRITISH SINGERS: Female 1 powerful slightly husky mezzo-soprano; Female 2 bright clear high soprano; Male 1 energetic youthful tenor; Male 2 smooth warm low baritone. Natural British accents and UK pronunciation throughout. Fully sung individual melodic leads, four recognisable timbres, rich precise four-part chorus harmonies, no spoken delivery. Driving four-on-the-floor pop drums, propulsive disco bass, soaring early-millennium synthesiser melody, bright piano chords, crisp funky guitar and handclaps. Immediate instrumental hook, energetic verses, exciting pre-chorus lift, enormous melodic chorus, vibrant instrumental break, emotional middle eight, thrilling final chorus with distinct vocal harmonies and a triumphant complete instrumental ending. Pure polished British pop.",
+      "reusable_prompt_fragment": null,
       "vocal_definition": {
         "member_count": 4,
         "national_identity": "British",
         "members": [
           {
             "member": 1,
-            "exact_definition": null
+            "label": "Female 1",
+            "exact_definition": "powerful slightly husky mezzo-soprano"
           },
           {
             "member": 2,
-            "exact_definition": null
+            "label": "Female 2",
+            "exact_definition": "bright clear high soprano"
           },
           {
             "member": 3,
-            "exact_definition": null
+            "label": "Male 1",
+            "exact_definition": "energetic youthful tenor"
           },
           {
             "member": 4,
-            "exact_definition": null
+            "label": "Male 2",
+            "exact_definition": "smooth warm low baritone"
           }
         ],
-        "limitation": "The four individual vocal definitions are not accessible in the retrieved history. Do not invent voice types, ranges, names, accents or roles."
+        "accent_and_pronunciation": "Natural British accents and UK pronunciation throughout.",
+        "delivery": "Fully sung individual melodic leads, four recognisable timbres, rich precise four-part chorus harmonies, no spoken delivery."
       },
-      "missing_details": [
-        "Exact definition of each of the four voices",
-        "Original complete style prompt",
-        "Instrumentation, arrangement, production and exclusions"
-      ],
+      "missing_details": [],
       "provenance": [
         {
           "source": "Current user request, 2026-10-31",
           "supports": "Artist inclusion and listed vocal constraints"
+        },
+        {
+          "source": "User-supplied FOURWARD prompt, 2026-10-31",
+          "supports": "Complete verbatim last-song style prompt and exact four vocal definitions"
+        },
+        {
+          "source": "User tempo clarification, 2026-10-31",
+          "supports": "BPM may change; 134 BPM was for the last song"
         }
-      ]
+      ],
+      "reusable_style_prompt": "Authentic 2000–2003 British chart dance-pop, {{bpm}} BPM, huge euphoric melodic anthem with an unforgettable soaring chorus. EXACTLY FOUR DISTINCT BRITISH SINGERS: Female 1 powerful slightly husky mezzo-soprano; Female 2 bright clear high soprano; Male 1 energetic youthful tenor; Male 2 smooth warm low baritone. Natural British accents and UK pronunciation throughout. Fully sung individual melodic leads, four recognisable timbres, rich precise four-part chorus harmonies, no spoken delivery. Driving four-on-the-floor pop drums, propulsive disco bass, soaring early-millennium synthesiser melody, bright piano chords, crisp funky guitar and handclaps. Immediate instrumental hook, energetic verses, exciting pre-chorus lift, enormous melodic chorus, vibrant instrumental break, emotional middle eight, thrilling final chorus with distinct vocal harmonies and a triumphant complete instrumental ending. Pure polished British pop.",
+      "tempo": {
+        "variable": true,
+        "last_song_bpm": 134,
+        "default_bpm": null,
+        "instruction": "Choose BPM for each new song. 134 BPM applies to the last song, not a fixed artist requirement. Replace {{bpm}} before using reusable_style_prompt."
+      }
     },
     {
       "id": "geordie-jack",
