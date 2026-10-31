@@ -22,7 +22,7 @@
     "repository_findings": "Next.js app with public/ static assets and data/ TypeScript catalogue. No artist prompt archive, AGENTS.md, or files named for these six artists were present in the inspected recursive tree; repository code searches returned no matches for their names.",
     "limitations": [
       "This is not a complete archive of every artist developed over the last few days; that roster could not be established from available records.",
-      "FOURWARD's complete last-song prompt and four vocal definitions were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
+      "Complete FOURWARD and Jubilee Gospel Choir prompts were subsequently supplied by the user. Other artists' complete prompts remain unavailable. Null fields mean unknown, not intentionally empty.",
       "No unrelated project styles or complaint records have been imported as artist prompt evidence."
     ]
   },
@@ -183,23 +183,60 @@
     {
       "id": "the-jubilee-gospel-choir",
       "artist": "The Jubilee Gospel Choir",
-      "status": "incomplete_awaiting_original_prompt",
-      "ready_for_generation": false,
-      "confirmed_constraints": [],
-      "original_style_prompt": null,
-      "reusable_prompt_fragment": null,
-      "vocal_definition": null,
-      "missing_details": [
-        "Original complete style prompt",
-        "Verified vocal configuration and identity",
-        "Instrumentation, arrangement, production and exclusions"
+      "status": "verified_user_supplied_prompt",
+      "ready_for_generation": true,
+      "confirmed_constraints": [
+        "40-voice mixed SATB gospel choir with distinct soprano alto tenor bass sections.",
+        "Rich four-part harmonies and thrilling full-ensemble climaxes.",
+        "Deep soulful male baritone begins, mature powerful female alto joins, expressive male tenor features later, choir gradually takes the lead."
       ],
+      "original_style_prompt": "Grand uplifting 1990s American gospel-soul finale, 108 BPM, powerful 40-voice mixed SATB gospel choir with distinct soprano alto tenor bass sections, rich four-part harmonies and thrilling full-ensemble climaxes. Deep soulful male baritone begins, mature powerful female alto joins, expressive male tenor features later, choir gradually takes the lead. Hammond B3 organ with Leslie speaker, rolling acoustic gospel piano, warm electric bass, real acoustic drums, tambourine, energetic handclaps and triumphant brass section. Steady uplifting gospel groove, clear memorable chorus, complete verses, sixteen-bar organ solo, emotional multi-soloist bridge, strong harmonic modulations, extended final choir refrain. Natural human vocal dynamics, commanding gospel belts, authentic ensemble interaction, warm spacious church acoustics, polished gospel recording, joyful decisive full-band ending.",
+      "reusable_prompt_fragment": null,
+      "vocal_definition": {
+        "choir_voice_count": 40,
+        "configuration": "mixed SATB gospel choir",
+        "sections": [
+          "soprano",
+          "alto",
+          "tenor",
+          "bass"
+        ],
+        "harmony": "rich four-part harmonies",
+        "soloists": [
+          {
+            "order": 1,
+            "exact_definition": "Deep soulful male baritone begins"
+          },
+          {
+            "order": 2,
+            "exact_definition": "mature powerful female alto joins"
+          },
+          {
+            "order": 3,
+            "exact_definition": "expressive male tenor features later"
+          }
+        ],
+        "progression": "choir gradually takes the lead",
+        "delivery": "Natural human vocal dynamics, commanding gospel belts, authentic ensemble interaction"
+      },
+      "missing_details": [],
       "provenance": [
         {
           "source": "Current user request, 2026-10-31",
           "supports": "Artist inclusion only"
+        },
+        {
+          "source": "User-supplied Jubilee Gospel Choir prompt, 2026-10-31",
+          "supports": "Complete verbatim gospel-soul finale prompt, choir configuration, featured soloists, instrumentation, arrangement and production"
         }
-      ]
+      ],
+      "reusable_style_prompt": "Grand uplifting 1990s American gospel-soul finale, {{bpm}} BPM, powerful 40-voice mixed SATB gospel choir with distinct soprano alto tenor bass sections, rich four-part harmonies and thrilling full-ensemble climaxes. Deep soulful male baritone begins, mature powerful female alto joins, expressive male tenor features later, choir gradually takes the lead. Hammond B3 organ with Leslie speaker, rolling acoustic gospel piano, warm electric bass, real acoustic drums, tambourine, energetic handclaps and triumphant brass section. Steady uplifting gospel groove, clear memorable chorus, complete verses, sixteen-bar organ solo, emotional multi-soloist bridge, strong harmonic modulations, extended final choir refrain. Natural human vocal dynamics, commanding gospel belts, authentic ensemble interaction, warm spacious church acoustics, polished gospel recording, joyful decisive full-band ending.",
+      "tempo": {
+        "variable": true,
+        "source_prompt_bpm": 108,
+        "default_bpm": null,
+        "instruction": "108 BPM is retained in the supplied finale prompt. For a new song, choose the appropriate tempo and replace {{bpm}} in reusable_style_prompt."
+      }
     }
   ]
 }
