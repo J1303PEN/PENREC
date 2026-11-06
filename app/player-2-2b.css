@@ -86,3 +86,26 @@
 .global-player input[type="range"]::-moz-range-track{height:8px!important;background:#fff!important;border:1px solid rgba(21,21,21,.22)!important}
 .global-player input[type="range"]::-moz-range-progress{height:8px!important;background:#ff1493!important}
 .global-player input[type="range"]::-moz-range-thumb{width:14px!important;height:14px!important;border-radius:50%!important;background:#ff1493!important;border:3px solid #151515!important}
+
+/* Keep the fixed player clear of the host badge in the bottom-right corner. */
+@media (min-width: 1121px) {
+  .global-player { padding-right: max(224px, env(safe-area-inset-right)); }
+}
+
+@media (max-width: 1120px) {
+  :root {
+    --player-bottom-clearance: calc(64px + env(safe-area-inset-bottom, 0px));
+    --fixed-player-height: 76px;
+  }
+
+  body { padding-bottom: calc(var(--fixed-player-height) + var(--player-bottom-clearance)); }
+  .global-player { bottom: var(--player-bottom-clearance); }
+  .queue-panel {
+    bottom: calc(var(--fixed-player-height) + 16px + var(--player-bottom-clearance));
+    max-height: min(650px, calc(100dvh - var(--fixed-player-height) - var(--player-bottom-clearance) - 32px));
+  }
+}
+
+@media (max-width: 600px) {
+  :root { --fixed-player-height: 112px; }
+}
