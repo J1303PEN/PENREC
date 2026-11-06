@@ -89,7 +89,7 @@
 
 /* Keep the fixed player clear of the host badge in the bottom-right corner. */
 @media (min-width: 1121px) {
-  .global-player { padding-right: max(224px, env(safe-area-inset-right)); }
+  body .global-player { padding-right: max(224px, env(safe-area-inset-right)); }
 }
 
 @media (max-width: 1120px) {
@@ -98,14 +98,10 @@
     --fixed-player-height: 76px;
   }
 
-  body { padding-bottom: calc(var(--fixed-player-height) + var(--player-bottom-clearance)); }
-  .global-player { bottom: var(--player-bottom-clearance); }
-  .queue-panel {
+  html body { padding-bottom: calc(var(--fixed-player-height) + var(--player-bottom-clearance)); }
+  body .global-player { bottom: var(--player-bottom-clearance); }
+  body .queue-panel {
     bottom: calc(var(--fixed-player-height) + 16px + var(--player-bottom-clearance));
     max-height: min(650px, calc(100dvh - var(--fixed-player-height) - var(--player-bottom-clearance) - 32px));
   }
-}
-
-@media (max-width: 600px) {
-  :root { --fixed-player-height: 112px; }
 }
