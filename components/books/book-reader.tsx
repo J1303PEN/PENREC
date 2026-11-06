@@ -122,7 +122,7 @@ export function BookReader({ title, totalPages, assets, pdf, downloadName }: Rea
           book.current?.pageFlip().turnToPage(target);
         }}>{Array.from({ length: totalPages }, (_, i) => <option key={i} value={i}>{i + 1}</option>)}</select></label>
         <button type="button" onClick={() => setZoom(!zoom)} aria-expanded={zoom}>{zoom ? "Close larger page" : "Enlarge current page"}</button>
-        <a href={pdf} download={downloadName}>Download PDF</a>
+        <a href={pdf} target="_blank" rel="noopener" download={downloadName}>Download PDF</a>
       </div>
       {zoom && <div className={styles.enlarged}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
