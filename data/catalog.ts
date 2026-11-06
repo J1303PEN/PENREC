@@ -398,6 +398,86 @@ export const artists: Artist[] = [
     quote: "Some songs are about where you've been. Nikos Andros makes music about where you're going next.", year: "2026", catalogue: "PNR020",
     preview: "https://audio.penrec.co.uk/nikos-andros-stay-here.mp3",
     tracks: albumTracks([["Μείνε Εδώ (Stay Here)","3:28"],["Γυρίζω Σπίτι (I'm Coming Home)","3:02"],["Στο Καφενείον (At KafeNeon)","3:23"],["Ο Πατέρας Μου (My Father)","3:18"],["Μια Καινούργια Μέρα (A Brand New Day)","3:19"],["Ήρθες Την Κατάλληλη Στιγμή (You Came at the Right Time)","3:54"],["Ηρεμία (Peace)","3:32"],["Οι Ίδιοι Φίλοι (The Same Friends)","3:56"],["Ας Μείνει Η Νύχτα (Let the Night Stay)","3:14"],["Σήμερα Είναι Δικό Μας (Today Belongs to Us)","3:27"],["Σε Διαλέγω Ξανά (I Choose You Again)","3:21"],["Το Κυριακάτικο Τραπέζι (The Sunday Table)","3:34"],["Όσα Έχουμε (What We Have)","3:11"],["Ο Χρόνος Ξέρει (Time Knows)","3:20"],["Αύριο Θα Γελάμε (Tomorrow We Smile)","3:29"],["Δεν Θα Άλλαζα Τίποτα (I Wouldn't Change a Thing)","3:47"],["Ό,τι Μας Ένωσε (Everything That Brought Us Together)","3:28"],["Η Ζωή Συνεχίζεται (Life Goes On)","3:30"]], "/audio/nikos-andros-stay-here.mp3", "nikos-andros")
+  },
+  {
+    "name": "Sabrina Wilde",
+    "slug": "sabrina-wilde",
+    "album": "Wild About Love",
+    "cover": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
+    "profile": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
+    "gallery": [],
+    "descriptor": "Wild About Love · 12 tracks",
+    "location": "",
+    "bio": [
+      "Wild About Love is a twelve-track album from Sabrina Wilde, released on PENREC as PNR051. It opens with “Don’t Make Me Ask You Twice” and closes with “Too Proud to Say I Miss You”."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR051",
+    "preview": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-01.mp3",
+    "tracks": [
+      {
+        "title": "Don't Make Me Ask You Twice",
+        "duration": "4:31",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-01.mp3"
+      },
+      {
+        "title": "I Thought I'd Got Over You",
+        "duration": "4:56",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-02.mp3"
+      },
+      {
+        "title": "This Time I Mean It",
+        "duration": "4:34",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-03.mp3"
+      },
+      {
+        "title": "The Night We Took a Chance",
+        "duration": "4:43",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-04.mp3"
+      },
+      {
+        "title": "I Know What You're Thinking",
+        "duration": "4:47",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-05.mp3"
+      },
+      {
+        "title": "You Can't Have It Both Ways",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-06.mp3"
+      },
+      {
+        "title": "What a Difference You Make",
+        "duration": "4:55",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-07.mp3"
+      },
+      {
+        "title": "Nothing to Prove",
+        "duration": "4:52",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-08.mp3"
+      },
+      {
+        "title": "Give Me Something I Can Feel",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-09.mp3"
+      },
+      {
+        "title": "More Than I Bargained For",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-10.mp3"
+      },
+      {
+        "title": "Take Me by Surprise",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-11.mp3"
+      },
+      {
+        "title": "Too Proud to Say I Miss You",
+        "duration": "5:30",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-12.mp3"
+      }
+    ]
   }
 ];
 

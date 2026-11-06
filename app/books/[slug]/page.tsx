@@ -5,11 +5,8 @@ import { BookReader } from "@/components/books/book-reader";
 import styles from "@/components/books/book-reader.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return publishingBooks.map(book => ({ slug: book.slug }));
-}
+// Resolve each book from the catalogue at request time on Netlify.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;

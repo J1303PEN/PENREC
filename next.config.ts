@@ -32,6 +32,9 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    // Serve existing artwork directly to avoid Vercel transformation/cache quotas.
+    // Keep next/image layout, loading behaviour, and all source URLs intact.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
