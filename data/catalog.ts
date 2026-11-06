@@ -410,11 +410,11 @@ export const artists: Artist[] = [
     "descriptor": "Wild About Love · 12 tracks",
     "location": "",
     "bio": [
-      "Wild About Love is a twelve-track album from Sabrina Wilde, released on PENREC as PNR052. It opens with “Don’t Make Me Ask You Twice” and closes with “Too Proud to Say I Miss You”."
+      "Wild About Love is a twelve-track album from Sabrina Wilde, released on PENREC as PNR051. It opens with “Don’t Make Me Ask You Twice” and closes with “Too Proud to Say I Miss You”."
     ],
     "quote": "",
     "year": "2026",
-    "catalogue": "PNR052",
+    "catalogue": "PNR051",
     "preview": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-01.mp3",
     "tracks": [
       {
