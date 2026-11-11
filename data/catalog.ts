@@ -133,7 +133,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr055-fourward-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr055-fourward-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr055-fourward-gallery.webp"
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-5.webp"
     ]
   },
   {
@@ -216,7 +220,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr056-james-whitfield-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr056-james-whitfield-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery.webp"
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-5.webp"
     ]
   },
   {
@@ -299,7 +307,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr057-geordie-jack-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr057-geordie-jack-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery.webp"
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-5.webp"
     ]
   },
   {
@@ -382,7 +394,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery.webp"
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-5.webp"
     ]
   },
   {
@@ -475,7 +491,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr061-gen7-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr061-gen7-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr061-gen7-gallery.webp"
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-5.webp"
     ]
   },
   {
@@ -568,7 +588,11 @@ export const artists: Artist[] = [
     "hero": "https://audio.penrec.co.uk/pnr062-popcorn-hero.webp",
     "profile": "https://audio.penrec.co.uk/pnr062-popcorn-profile.webp",
     "gallery": [
-      "https://audio.penrec.co.uk/pnr062-popcorn-gallery.webp"
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-5.webp"
     ]
   },
   {
