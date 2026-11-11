@@ -478,6 +478,273 @@ export const artists: Artist[] = [
         "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-12.mp3"
       }
     ]
+  },
+  {
+    "name": "The Assembly",
+    "slug": "the-assembly",
+    "album": "Between Us",
+    "cover": "https://audio.penrec.co.uk/pnr052-the-assembly-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr052-the-assembly-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr052-the-assembly-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-02.webp"
+    ],
+    "descriptor": "British R&B · close harmony · soul-pop",
+    "location": "",
+    "bio": [
+      "The Assembly is a four-voice British R&B project shaped by the sound of the late 1990s. A husky tenor, an intimate baritone, a brighter high tenor and a deep bass-baritone take turns in the lead. When the chorus arrives, the four voices lock together over warm Rhodes chords, rounded bass and crisp, syncopated drums.",
+      "Between Us follows the things people say in private and the things they put off saying at all. “Just Between the Two of Us” opens the conversation; “Tell Me Straight” asks for an answer, and “This Is Where We Belong” closes the record on a note of certainty. Between those points, the quartet makes space for flirtation, doubt and a little attitude."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR052",
+    "preview": "https://audio.penrec.co.uk/pnr052-the-assembly-01.mp3",
+    "tracks": [
+      {
+        "title": "Just Between the Two of Us",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-01.mp3"
+      },
+      {
+        "title": "No Second Guessing",
+        "duration": "4:04",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-02.mp3"
+      },
+      {
+        "title": "Don't Make Plans",
+        "duration": "3:58",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-03.mp3"
+      },
+      {
+        "title": "Give It Some Attitude",
+        "duration": "4:06",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-04.mp3"
+      },
+      {
+        "title": "All Over Again",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-05.mp3"
+      },
+      {
+        "title": "You Know What You're Doing",
+        "duration": "4:33",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-06.mp3"
+      },
+      {
+        "title": "Nothing Left to Prove",
+        "duration": "4:49",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-07.mp3"
+      },
+      {
+        "title": "Something About Tonight",
+        "duration": "4:30",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-08.mp3"
+      },
+      {
+        "title": "A Little Too Late",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-09.mp3"
+      },
+      {
+        "title": "Tell Me Straight",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-10.mp3"
+      },
+      {
+        "title": "If You Only Knew",
+        "duration": "5:00",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-11.mp3"
+      },
+      {
+        "title": "Better Than That",
+        "duration": "3:36",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-12.mp3"
+      },
+      {
+        "title": "Don't Stop Now",
+        "duration": "3:56",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-13.mp3"
+      },
+      {
+        "title": "This Is Where We Belong",
+        "duration": "4:34",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-14.mp3"
+      }
+    ]
+  },
+  {
+    "name": "The Jubilee Gospel Choir",
+    "slug": "the-jubilee-gospel-choir",
+    "album": "Raise the Roof",
+    "cover": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-02.webp"
+    ],
+    "descriptor": "Gospel-soul · call and response · full choir",
+    "location": "",
+    "bio": [
+      "The Jubilee Gospel Choir is a gospel-soul ensemble built around the conversation between soloist and choir. Baritone, alto and tenor leads trade lines with the full four-part choir, while Hammond organ, gospel piano, handclaps and brass bring the arrangements from intimate testimony to full-voice celebration.",
+      "Raise the Roof opens with the gratitude of “Ain’t That Just Like God” and makes room for welcome, fellowship and hard questions. “Room for Everybody” and “What About the Children?” turn the focus outward, while “Let the Church Say Amen” and “What a Day That Will Be” bring the whole choir together for the close."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR053",
+    "preview": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-01.mp3",
+    "tracks": [
+      {
+        "title": "Ain't That Just Like God",
+        "duration": "3:52",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-01.mp3"
+      },
+      {
+        "title": "Somebody Ought to Testify",
+        "duration": "3:37",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-02.mp3"
+      },
+      {
+        "title": "Room for Everybody",
+        "duration": "3:32",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-03.mp3"
+      },
+      {
+        "title": "Put a Little Love in It",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-04.mp3"
+      },
+      {
+        "title": "Nobody's Keeping Score",
+        "duration": "4:57",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-05.mp3"
+      },
+      {
+        "title": "When the Whole Choir Sings",
+        "duration": "3:11",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-06.mp3"
+      },
+      {
+        "title": "It's Good to Be Here",
+        "duration": "4:52",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-07.mp3"
+      },
+      {
+        "title": "I Can't Thank Him Enough",
+        "duration": "4:40",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-08.mp3"
+      },
+      {
+        "title": "Who Says We Can't?",
+        "duration": "3:50",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-09.mp3"
+      },
+      {
+        "title": "Sunday Best Won't Save You",
+        "duration": "3:34",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-10.mp3"
+      },
+      {
+        "title": "What About the Children?",
+        "duration": "5:44",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-11.mp3"
+      },
+      {
+        "title": "Let the Church Say Amen",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-12.mp3"
+      },
+      {
+        "title": "What a Day That Will Be",
+        "duration": "4:53",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-13.mp3"
+      }
+    ]
+  },
+  {
+    "name": "The December Belles",
+    "slug": "the-december-belles",
+    "album": "Christmas Looks Good On You",
+    "cover": "https://audio.penrec.co.uk/pnr054-the-december-belles-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr054-the-december-belles-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr054-the-december-belles-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-02.webp"
+    ],
+    "descriptor": "Christmas soul · vintage orchestration · three-part harmony",
+    "location": "",
+    "bio": [
+      "The December Belles is a Christmas soul trio inspired by mid-1960s orchestral soul. A strong soprano, warm mezzo and low, velvety alto trade lead lines and blend in three-part harmony. Piano, melodic bass and brushed drums leave room for the voices, with orchestral colour giving the bigger moments their glow.",
+      "Christmas Looks Good On You moves from the bustle of “The Party Starts at Eight” and “Everybody’s Coming Home” to the quiet ache of “Christmas Without Mum.” The twelve songs make space for the company we look forward to, the people we miss, and the invitation at the heart of the closer, “Kiss Me Before Christmas”."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR054",
+    "preview": "https://audio.penrec.co.uk/pnr054-the-december-belles-01.mp3",
+    "tracks": [
+      {
+        "title": "Christmas Looks Good on You",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-01.mp3"
+      },
+      {
+        "title": "Here Comes December",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-02.mp3"
+      },
+      {
+        "title": "One More Christmas With You",
+        "duration": "4:35",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-03.mp3"
+      },
+      {
+        "title": "The Party Starts at Eight",
+        "duration": "3:12",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-04.mp3"
+      },
+      {
+        "title": "Everybody's Coming Home",
+        "duration": "3:57",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-05.mp3"
+      },
+      {
+        "title": "Christmas Without Mum",
+        "duration": "5:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-06.mp3"
+      },
+      {
+        "title": "December's Got a Hold on Me",
+        "duration": "3:40",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-07.mp3"
+      },
+      {
+        "title": "Save Me the Last Dance",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-08.mp3"
+      },
+      {
+        "title": "All I Need Is Christmas",
+        "duration": "4:06",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-09.mp3"
+      },
+      {
+        "title": "Put Some Christmas On",
+        "duration": "3:44",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-10.mp3"
+      },
+      {
+        "title": "The Best Present I Ever Had",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-11.mp3"
+      },
+      {
+        "title": "Kiss Me Before Christmas",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-12.mp3"
+      }
+    ]
   }
 ];
 
