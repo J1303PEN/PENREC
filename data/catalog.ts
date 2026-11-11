@@ -44,6 +44,534 @@ function albumTracks(items: [string, string][], preview: string, artistSlug: str
 
 export const artists: Artist[] = [
   {
+    "album": "Made for Saturday",
+    "cover": "https://audio.penrec.co.uk/pnr055-fourward-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR055",
+    "preview": "https://audio.penrec.co.uk/pnr055-fourward-01.mp3",
+    "tracks": [
+      {
+        "title": "Everybody's Got a Friday Feeling",
+        "duration": "4:20",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-01.mp3"
+      },
+      {
+        "title": "Don't Keep Me Guessing",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-02.mp3"
+      },
+      {
+        "title": "Turn It Up Again",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-03.mp3"
+      },
+      {
+        "title": "You Could Be the One",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-04.mp3"
+      },
+      {
+        "title": "A Little Bit of Trouble",
+        "duration": "4:43",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-05.mp3"
+      },
+      {
+        "title": "Don't Make Me Wait All Night",
+        "duration": "3:51",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-06.mp3"
+      },
+      {
+        "title": "Made for Saturday",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-07.mp3"
+      },
+      {
+        "title": "The Way You Make Me Smile",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-08.mp3"
+      },
+      {
+        "title": "Catch Me If You Can",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-09.mp3"
+      },
+      {
+        "title": "One More Chance to Dance",
+        "duration": "5:03",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-10.mp3"
+      },
+      {
+        "title": "Tell Me What You're Thinking",
+        "duration": "4:22",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-11.mp3"
+      },
+      {
+        "title": "Here We Go Again",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-12.mp3"
+      },
+      {
+        "title": "Something Worth Celebrating",
+        "duration": "4:48",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-13.mp3"
+      },
+      {
+        "title": "This Is Our Moment",
+        "duration": "4:40",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-14.mp3"
+      }
+    ],
+    "name": "FOURWARD",
+    "slug": "fourward",
+    "descriptor": "British dance-pop · four-part harmony",
+    "location": "",
+    "bio": [
+      "FOURWARD is a British pop quartet with two female and two male leads. Each voice takes a turn at the centre of the song, then the four come together in choruses built for the dance floor. Disco bass, bright synths and clipped guitars give the group the sound of early millennium UK chart pop.",
+      "Made for Saturday follows the anticipation of a Friday night through to the celebration of “This Is Our Moment”. Better Than Ever leans further into the quartet’s playful side, with “Don’t Be So Sure” and “Absolutely Fabulous” set against the warmer lift of “The Best Is Yet to Come”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr055-fourward-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr055-fourward-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery.webp"
+    ]
+  },
+  {
+    "album": "The Years Between",
+    "cover": "https://audio.penrec.co.uk/pnr056-james-whitfield-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR056",
+    "preview": "https://audio.penrec.co.uk/pnr056-james-whitfield-01.mp3",
+    "tracks": [
+      {
+        "title": "The Years Between",
+        "duration": "4:04",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-01.mp3"
+      },
+      {
+        "title": "The Road Through Northumberland",
+        "duration": "3:52",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-02.mp3"
+      },
+      {
+        "title": "I'll Remember You That Way",
+        "duration": "4:53",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-03.mp3"
+      },
+      {
+        "title": "A Good Man's Work",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-04.mp3"
+      },
+      {
+        "title": "When the Children Were Small",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-05.mp3"
+      },
+      {
+        "title": "If I Could Have Stayed",
+        "duration": "5:33",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-06.mp3"
+      },
+      {
+        "title": "The Village by the Derwent",
+        "duration": "5:20",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-07.mp3"
+      },
+      {
+        "title": "Somewhere Beyond the Hills",
+        "duration": "5:28",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-08.mp3"
+      },
+      {
+        "title": "The Last Steel from Consett",
+        "duration": "5:20",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-09.mp3"
+      },
+      {
+        "title": "My Heart Never Left",
+        "duration": "4:41",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-10.mp3"
+      },
+      {
+        "title": "There's Fewer of Us Now",
+        "duration": "5:18",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-11.mp3"
+      },
+      {
+        "title": "The Ground Beneath My Feet",
+        "duration": "5:58",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-12.mp3"
+      }
+    ],
+    "name": "James Whitfield",
+    "slug": "james-whitfield",
+    "descriptor": "Orchestral folk-pop · North East storytelling",
+    "location": "North East England",
+    "bio": [
+      "James Whitfield’s songs take their time. A warm baritone carries the story, with acoustic guitar, piano and strings giving the details room to settle. His sound draws on British orchestral folk-pop and the landscapes and voices of North East England.",
+      "The Years Between follows the road through Northumberland and remembers a village by the Derwent. “When the Children Were Small” looks back on family life, while “The Last Steel from Consett” turns to the memory of work and the towns built around it."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr056-james-whitfield-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr056-james-whitfield-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery.webp"
+    ]
+  },
+  {
+    "album": "The Heart of the Toon",
+    "cover": "https://audio.penrec.co.uk/pnr057-geordie-jack-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR057",
+    "preview": "https://audio.penrec.co.uk/pnr057-geordie-jack-01.mp3",
+    "tracks": [
+      {
+        "title": "We're from the Banks of the Tyne",
+        "duration": "3:30",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-01.mp3"
+      },
+      {
+        "title": "Saturday Doon the Bigg Market",
+        "duration": "3:47",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-02.mp3"
+      },
+      {
+        "title": "The Lads from the Shipyard",
+        "duration": "3:53",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-03.mp3"
+      },
+      {
+        "title": "A Proper Geordie Welcome",
+        "duration": "3:13",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-04.mp3"
+      },
+      {
+        "title": "Lankie Row (Nursery Lane)",
+        "duration": "3:29",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-05.mp3"
+      },
+      {
+        "title": "Summers at Whitley Bay",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-06.mp3"
+      },
+      {
+        "title": "Scotswood Road Goes On Forever",
+        "duration": "3:51",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-07.mp3"
+      },
+      {
+        "title": "A Pint at the Beehive",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-08.mp3"
+      },
+      {
+        "title": "The View from Bill Quay",
+        "duration": "4:28",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-09.mp3"
+      },
+      {
+        "title": "Saturday at Sgt Peppers",
+        "duration": "3:41",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-10.mp3"
+      },
+      {
+        "title": "The Fog Will Clear Ower Tyneside",
+        "duration": "5:02",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-11.mp3"
+      },
+      {
+        "title": "The Streets of Newcastle",
+        "duration": "4:20",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-12.mp3"
+      }
+    ],
+    "name": "Geordie Jack",
+    "slug": "geordie-jack",
+    "descriptor": "Tyneside folk · acoustic storytelling",
+    "location": "Newcastle upon Tyne",
+    "bio": [
+      "Geordie Jack is a Tyneside folk character with a guitar, a local turn of phrase and an ear for the stories people tell over a pint. His songs move between affectionate humour and quieter recollections of the river, the shipyards and the people who worked there.",
+      "The Heart of the Toon takes in the Bigg Market, the view from Bill Quay and summers at Whitley Bay. “We’re from the Banks of the Tyne” opens with a sense of belonging that runs all the way to “The Streets of Newcastle”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr057-geordie-jack-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr057-geordie-jack-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery.webp"
+    ]
+  },
+  {
+    "album": "Nothing to Lose",
+    "cover": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR060",
+    "preview": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-01.mp3",
+    "tracks": [
+      {
+        "title": "Just the Brave",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-01.mp3"
+      },
+      {
+        "title": "A Little More Like You",
+        "duration": "3:53",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-02.mp3"
+      },
+      {
+        "title": "No Second Thoughts",
+        "duration": "4:09",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-03.mp3"
+      },
+      {
+        "title": "Everybody Knows but You",
+        "duration": "3:56",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-04.mp3"
+      },
+      {
+        "title": "Nothing to Lose",
+        "duration": "4:11",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-05.mp3"
+      },
+      {
+        "title": "Halfway to Heaven",
+        "duration": "5:28",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-06.mp3"
+      },
+      {
+        "title": "Make Your Mind Up",
+        "duration": "3:47",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-07.mp3"
+      },
+      {
+        "title": "Everybody Wants a Little More",
+        "duration": "4:27",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-08.mp3"
+      },
+      {
+        "title": "A Fine Line",
+        "duration": "4:22",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-09.mp3"
+      },
+      {
+        "title": "You Don't Have to Tell Me Twice",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-10.mp3"
+      },
+      {
+        "title": "Nothing's Gonna Spoil This",
+        "duration": "4:45",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-11.mp3"
+      },
+      {
+        "title": "That's What Friends Are For",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-12.mp3"
+      }
+    ],
+    "name": "5OnTheForth",
+    "slug": "5-on-the-forth",
+    "descriptor": "Scottish boyband pop · five voices",
+    "location": "Scotland",
+    "bio": [
+      "5OnTheForth is a five-voice Scottish pop group built around distinct leads from Glasgow, Edinburgh, Dundee, Aberdeen and Inverness. The voices trade melodies over bright guitar, piano, synths and driving drums before coming together in the chorus.",
+      "Nothing to Lose opens with “Just the Brave”. Its songs move between the uncertainty of “A Fine Line” and the confidence of “Nothing’s Gonna Spoil This”, before closing with the uncomplicated loyalty of “That’s What Friends Are For”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery.webp"
+    ]
+  },
+  {
+    "album": "This Is Just the Beginning",
+    "cover": "https://audio.penrec.co.uk/pnr061-gen7-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR061",
+    "preview": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3",
+    "tracks": [
+      {
+        "title": "Can't Stop Smiling",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3"
+      },
+      {
+        "title": "Not As Innocent As I Look",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-02.mp3"
+      },
+      {
+        "title": "Don't Tell Me It's Easy",
+        "duration": "4:59",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-03.mp3"
+      },
+      {
+        "title": "You Started Something",
+        "duration": "3:33",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-04.mp3"
+      },
+      {
+        "title": "That's Not How It Happened",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-05.mp3"
+      },
+      {
+        "title": "You're Missing the Point",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-06.mp3"
+      },
+      {
+        "title": "Don't Make a Big Thing of It",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-07.mp3"
+      },
+      {
+        "title": "The Trouble with Perfect",
+        "duration": "3:42",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-08.mp3"
+      },
+      {
+        "title": "Just Between You and Me",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-09.mp3"
+      },
+      {
+        "title": "A Bit of a Show-Off",
+        "duration": "3:48",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-10.mp3"
+      },
+      {
+        "title": "No One Else Comes Close",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-11.mp3"
+      },
+      {
+        "title": "The Last Word",
+        "duration": "4:44",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-12.mp3"
+      },
+      {
+        "title": "It's About Time",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-13.mp3"
+      },
+      {
+        "title": "This Is Just the Beginning",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-14.mp3"
+      }
+    ],
+    "name": "GEN7",
+    "slug": "gen7",
+    "descriptor": "British teen pop · seven-part vocal group",
+    "location": "England",
+    "bio": [
+      "GEN7 is a seven-member English teen pop project with four girls and three boys. Regional voices and contrasting timbres give the leads their character. Bouncy bass, bright guitar and glossy synths recall the UK teen pop of the early 2000s.",
+      "This Is Just the Beginning starts with the lift of “Can’t Stop Smiling” and gives each voice room to step forward. “Just Between You and Me” and “A Bit of a Show-Off” capture different sides of the group before the title track brings all seven together."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr061-gen7-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr061-gen7-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery.webp"
+    ]
+  },
+  {
+    "album": "What a Cheek!",
+    "cover": "https://audio.penrec.co.uk/pnr062-popcorn-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR062",
+    "preview": "https://audio.penrec.co.uk/pnr062-popcorn-01.mp3",
+    "tracks": [
+      {
+        "title": "What a Cheek!",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-01.mp3"
+      },
+      {
+        "title": "Out of Character",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-02.mp3"
+      },
+      {
+        "title": "Second Best",
+        "duration": "4:54",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-03.mp3"
+      },
+      {
+        "title": "Such a Waste of a Good Kiss",
+        "duration": "4:16",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-04.mp3"
+      },
+      {
+        "title": "Bad Influence",
+        "duration": "4:36",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-05.mp3"
+      },
+      {
+        "title": "That's My Song",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-06.mp3"
+      },
+      {
+        "title": "Too Much Information",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-07.mp3"
+      },
+      {
+        "title": "No Substitute",
+        "duration": "4:12",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-08.mp3"
+      },
+      {
+        "title": "Kiss and Tell",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-09.mp3"
+      },
+      {
+        "title": "Not Quite Us",
+        "duration": "4:23",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-10.mp3"
+      },
+      {
+        "title": "No Small Talk",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-11.mp3"
+      },
+      {
+        "title": "Make Me Famous",
+        "duration": "4:01",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-12.mp3"
+      },
+      {
+        "title": "Your Part of the Song",
+        "duration": "4:50",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-13.mp3"
+      },
+      {
+        "title": "Nothing to Declare",
+        "duration": "3:58",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-14.mp3"
+      }
+    ],
+    "name": "POP!CORN",
+    "slug": "popcorn",
+    "descriptor": "Late-90s dance-pop · four female voices",
+    "location": "",
+    "bio": [
+      "POP!CORN is a British girl group built around four distinct female voices. A husky mezzo, bright high soprano, warm alto and clear mid-range soprano share the leads. Staccato synth hooks, programmed drums and tightly stacked harmonies draw on the polished sound of late-1990s Stockholm pop.",
+      "What a Cheek! opens with the title track’s knowing grin. “Second Best” and “Bad Influence” show how quickly the mood can change, while “Your Part of the Song” makes room for a more reflective moment before the confident finale, “Nothing to Declare”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr062-popcorn-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr062-popcorn-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery.webp"
+    ]
+  },
+  {
     name: "Soreya", slug: "soreya", album: "I Like Who I Am", cover: "/images/covers/soreya-i-like-who-i-am.webp",
     hero: "/images/artists/soreya/soreya-hero.webp", profile: "/images/artists/soreya/soreya-profile.webp",
     heroPosition: "50% 18%", profilePosition: "50% 22%",

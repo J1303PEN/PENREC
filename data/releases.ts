@@ -33,6 +33,174 @@ export type ReleaseData = {
 export type ReleaseArtist = Omit<Artist, "hero" | "profile" | "gallery" | "heroPosition" | "profilePosition"> & { releaseCredit?: string; description?: string };
 
 const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
+  "maravilla": [{
+    "album": "More Than Just a Little",
+    "cover": "https://audio.penrec.co.uk/pnr058-maravilla-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR058",
+    "preview": "https://audio.penrec.co.uk/pnr058-maravilla-01.mp3",
+    "tracks": [
+      {
+        "title": "Come A Little Closer",
+        "duration": "4:16",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-01.mp3"
+      },
+      {
+        "title": "You Make It Difficult",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-02.mp3"
+      },
+      {
+        "title": "Don't Say It Yet",
+        "duration": "5:00",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-03.mp3"
+      },
+      {
+        "title": "I Like the Way You Are",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-04.mp3"
+      },
+      {
+        "title": "More Than I Expected",
+        "duration": "4:23",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-05.mp3"
+      },
+      {
+        "title": "I Know, I Know",
+        "duration": "3:51",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-06.mp3"
+      },
+      {
+        "title": "Stay a Little Longer",
+        "duration": "3:57",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-07.mp3"
+      },
+      {
+        "title": "He Said That to Me",
+        "duration": "4:44",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-08.mp3"
+      },
+      {
+        "title": "This Is Getting Better",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-09.mp3"
+      },
+      {
+        "title": "Not So Fast",
+        "duration": "4:15",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-10.mp3"
+      },
+      {
+        "title": "You Say Yes, I Say No",
+        "duration": "4:22",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-11.mp3"
+      },
+      {
+        "title": "Promise Me Less",
+        "duration": "4:49",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-12.mp3"
+      },
+      {
+        "title": "There You Go Again",
+        "duration": "4:57",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-13.mp3"
+      },
+      {
+        "title": "More Than Just a Little",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-14.mp3"
+      },
+      {
+        "title": "That's Good Enough for Me",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr058-maravilla-15.mp3"
+      }
+    ]
+  }],
+  "fourward": [{
+    "album": "Better Than Ever",
+    "cover": "https://audio.penrec.co.uk/pnr059-fourward-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR059",
+    "preview": "https://audio.penrec.co.uk/pnr059-fourward-01.mp3",
+    "tracks": [
+      {
+        "title": "Better Than Ever",
+        "duration": "3:29",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-01.mp3"
+      },
+      {
+        "title": "Can't Get Enough of That",
+        "duration": "4:05",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-02.mp3"
+      },
+      {
+        "title": "Only You Could Do That",
+        "duration": "3:57",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-03.mp3"
+      },
+      {
+        "title": "Don't Say You Didn't Know",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-04.mp3"
+      },
+      {
+        "title": "Out of the Ordinary",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-05.mp3"
+      },
+      {
+        "title": "Everything's Coming Up Roses",
+        "duration": "4:55",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-06.mp3"
+      },
+      {
+        "title": "A Different Kind of Wonderful",
+        "duration": "4:45",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-07.mp3"
+      },
+      {
+        "title": "Don't Be So Sure",
+        "duration": "3:26",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-08.mp3"
+      },
+      {
+        "title": "What a Difference You Make",
+        "duration": "3:57",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-09.mp3"
+      },
+      {
+        "title": "Absolutely Fabulous",
+        "duration": "3:40",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-10.mp3"
+      },
+      {
+        "title": "Never Saw That Coming",
+        "duration": "4:09",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-11.mp3"
+      },
+      {
+        "title": "Not Quite What You Expected",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-12.mp3"
+      },
+      {
+        "title": "Just Watch Us Go",
+        "duration": "4:27",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-13.mp3"
+      },
+      {
+        "title": "The Best Is Yet to Come",
+        "duration": "4:56",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-14.mp3"
+      },
+      {
+        "title": "Give Me That Feeling",
+        "duration": "4:12",
+        "audio": "https://audio.penrec.co.uk/pnr059-fourward-15.mp3"
+      }
+    ]
+  }],
   "shine": [{
   "album": "Soul in My Heart",
   "cover": "https://audio.penrec.co.uk/shine/soul-in-my-heart-cover.jpg?v=pnr042",

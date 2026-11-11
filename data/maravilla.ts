@@ -5,9 +5,10 @@ export const maravilla: Artist = {
   "slug": "maravilla",
   "album": "A Nuestra Manera",
   "cover": "https://audio.penrec.co.uk/maravilla/a-nuestra-manera-cover.jpg?v=pnr047",
-  "hero": "https://audio.penrec.co.uk/maravilla/hero.jpg?v=pnr047",
-  "profile": "https://audio.penrec.co.uk/maravilla/profile.jpg?v=pnr047",
+  "hero": "https://audio.penrec.co.uk/pnr058-maravilla-hero.webp",
+  "profile": "https://audio.penrec.co.uk/pnr058-maravilla-profile.webp",
   "gallery": [
+    "https://audio.penrec.co.uk/pnr058-maravilla-gallery.webp",
     "https://audio.penrec.co.uk/maravilla/gallery-01.jpg?v=pnr047",
     "https://audio.penrec.co.uk/maravilla/gallery-02.jpg?v=pnr047",
     "https://audio.penrec.co.uk/maravilla/gallery-03.jpg?v=pnr047",
@@ -19,7 +20,8 @@ export const maravilla: Artist = {
     "Maravilla is a Spanish-English disco band with a taste for glamour, sharp exchanges and nights that refuse to end quietly. Their identity brings together the exuberance of disco and the warmth of Spanish pop, with a confident international outlook and a playful sense of independence.",
     "That spirit runs through A Nuestra Manera — on our own terms. The fifteen-song debut opens with No Me Digas Cómo Bailar and moves through the teasing Qué Hombre Tan Serio, the defiant Te Queda Grande and the invitation of Baila Tú Primero. Attraction and disagreement share the same dance floor; nobody is surrendering their personality to keep the evening moving.",
     "Haz Lo Que Quieras features Javier Montes, adding a guest presence to an album built around conversation, attitude and the freedom to choose. The titles carry wit as well as feeling, from Casi Me Convences to Mañana Te Contesto, before the closing Sí, Pero No Así leaves the final word firmly with Maravilla.",
-    "Their visual world follows the same mood: sunset terraces, gold jewellery, sequins and mirrored dance floors. Released on PENREC as PNR047, A Nuestra Manera introduces a band whose disco identity is as much about self-possession and connection as it is about celebration."
+    "Their visual world follows the same mood: sunset terraces, gold jewellery, sequins and mirrored dance floors. Released on PENREC as PNR047, A Nuestra Manera introduces a band whose disco identity is as much about self-possession and connection as it is about celebration.",
+    "More Than Just a Little follows the pleasure and complications of getting closer to someone. “Come A Little Closer” makes the invitation, “Not So Fast” pulls back, and “That’s Good Enough for Me” ends the record on a note of acceptance."
   ],
   "quote": "",
   "year": "2026",
