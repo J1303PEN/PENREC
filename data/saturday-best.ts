@@ -5,9 +5,15 @@ export const saturdayBest: Artist = {
   slug: "cast-of-saturday-best",
   album: "Saturday Best",
   cover: "/images/covers/saturday-best-pnr020.webp",
-  hero: "/images/covers/saturday-best-pnr020.webp",
-  profile: "/images/covers/saturday-best-pnr020.webp",
-  gallery: ["/images/covers/saturday-best-pnr020.webp"],
+  hero: "https://audio.penrec.co.uk/artist-cast-of-saturday-best-hero.webp",
+  profile: "https://audio.penrec.co.uk/artist-cast-of-saturday-best-profile.webp",
+  gallery: [
+    "/images/covers/saturday-best-pnr020.webp",
+    "https://audio.penrec.co.uk/artist-cast-of-saturday-best-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-cast-of-saturday-best-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-cast-of-saturday-best-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-cast-of-saturday-best-gallery-5.webp"
+  ],
   descriptor: "1958 dance-hall stage musical · original songs · company cast recording",
   location: "United Kingdom",
   bio: [

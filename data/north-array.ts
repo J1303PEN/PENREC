@@ -5,9 +5,15 @@ export const northArray: Artist = {
   "slug": "north-array",
   "album": "Higher Place Than Heaven",
   "cover": "https://audio.penrec.co.uk/north-array/higher-place-than-heaven-cover.jpg?v=pnr044",
-  "hero": "https://audio.penrec.co.uk/north-array/higher-place-than-heaven-cover.jpg?v=pnr044",
-  "profile": "https://audio.penrec.co.uk/north-array/higher-place-than-heaven-cover.jpg?v=pnr044",
-  "gallery": [],
+  "hero": "https://audio.penrec.co.uk/artist-north-array-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-north-array-profile.webp",
+  "gallery": [
+    "https://audio.penrec.co.uk/artist-north-array-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-north-array-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-north-array-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-north-array-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-north-array-gallery-5.webp"
+  ],
   "descriptor": "Beyond the horizon",
   "location": "",
   "bio": [

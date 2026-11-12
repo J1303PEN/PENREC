@@ -7,9 +7,15 @@ export const doorAtMidnight: Artist = {
   slug: "the-door-at-midnight",
   album: "The Door at Midnight",
   cover: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
-  hero: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
-  profile: `${audioBase}/the_door_at_midnight_front_cover.jpg`,
-  gallery: [`${audioBase}/the_door_at_midnight_front_cover.jpg`],
+  hero: "https://audio.penrec.co.uk/artist-the-door-at-midnight-hero.webp",
+  profile: "https://audio.penrec.co.uk/artist-the-door-at-midnight-profile.webp",
+  gallery: [
+    "https://audio.penrec.co.uk/pnr033/the_door_at_midnight_front_cover.jpg",
+    "https://audio.penrec.co.uk/artist-the-door-at-midnight-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-the-door-at-midnight-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-the-door-at-midnight-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-the-door-at-midnight-gallery-5.webp"
+  ],
   descriptor: "17 songs · companion to Darren Penman’s fantasy novel",
   location: "United Kingdom",
   bio: [

@@ -95,9 +95,15 @@ export const billyPenman: Artist = {
   ],
   "name": "Billy Penman",
   "slug": "billy-penman",
-  "hero": "https://audio.penrec.co.uk/billy-penman/you-make-it-look-easy-cover.jpg?v=pnr050",
-  "profile": "https://audio.penrec.co.uk/billy-penman/you-make-it-look-easy-cover.jpg?v=pnr050",
-  "gallery": [],
+  "hero": "https://audio.penrec.co.uk/artist-billy-penman-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-billy-penman-profile.webp",
+  "gallery": [
+    "https://audio.penrec.co.uk/artist-billy-penman-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-billy-penman-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-billy-penman-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-billy-penman-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-billy-penman-gallery-5.webp"
+  ],
   "descriptor": "Warmth, wit and romantic possibilities",
   "location": "",
   "quote": "",

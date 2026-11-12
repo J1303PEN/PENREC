@@ -5,9 +5,15 @@ export const privateCaller: Artist = {
   "slug": "private-caller",
   "album": "Nothing Happened",
   "cover": "https://audio.penrec.co.uk/private-caller/nothing-happened-cover.jpg?v=pnr046",
-  "hero": "https://audio.penrec.co.uk/private-caller/nothing-happened-cover.jpg?v=pnr046",
-  "profile": "https://audio.penrec.co.uk/private-caller/nothing-happened-cover.jpg?v=pnr046",
-  "gallery": [],
+  "hero": "https://audio.penrec.co.uk/artist-private-caller-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-private-caller-profile.webp",
+  "gallery": [
+    "https://audio.penrec.co.uk/artist-private-caller-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-gallery-5.webp"
+  ],
   "descriptor": "The space between saying and meaning",
   "location": "",
   "bio": [

@@ -12,7 +12,13 @@ export const theParkers: Artist = {
   profile: `${imageBase}/profile.jpg`,
   heroPosition: "50% 35%",
   profilePosition: "50% 30%",
-  gallery: ["001", "002", "003", "004"].map((n) => `${imageBase}/gallery-${n}.jpg`),
+  gallery: [
+    "https://audio.penrec.co.uk/parkers/gallery-001.jpg",
+    "https://audio.penrec.co.uk/parkers/gallery-002.jpg",
+    "https://audio.penrec.co.uk/parkers/gallery-003.jpg",
+    "https://audio.penrec.co.uk/parkers/gallery-004.jpg",
+    "https://audio.penrec.co.uk/artist-the-parkers-gallery-5.webp"
+  ],
   descriptor: "Doo-wop · rhythm & blues · early soul · rock ’n’ roll",
   location: "United Kingdom",
   bio: [

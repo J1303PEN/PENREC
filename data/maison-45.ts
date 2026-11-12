@@ -6,9 +6,15 @@ type ArtistWithReleaseCredit = Artist & { releaseCredit?: string };
 
 export const maison45: ArtistWithReleaseCredit = {
   name: "Maison 45", slug: "maison-45", album: "Out Tonight",
-  cover: `${imageBase}/out-tonight-cover.jpg`, hero: `${imageBase}/hero.jpg`, profile: `${imageBase}/hero.jpg`,
+  cover: `${imageBase}/out-tonight-cover.jpg`, hero: `${imageBase}/hero.jpg`, profile: "https://audio.penrec.co.uk/artist-maison-45-profile.webp",
   heroPosition: "50% 50%", profilePosition: "50% 50%",
-  gallery: [`${imageBase}/lorna-may-001.jpg`, `${imageBase}/lorna-may-002.jpg`],
+  gallery: [
+    "https://audio.penrec.co.uk/maison-45/lorna-may-001.jpg",
+    "https://audio.penrec.co.uk/maison-45/lorna-may-002.jpg",
+    "https://audio.penrec.co.uk/artist-maison-45-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-maison-45-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-maison-45-gallery-5.webp"
+  ],
   descriptor: "European pop · French chanson · cinematic arrangements", location: "United Kingdom",
   bio: [
     "Maison 45 is the musical alter ego of British music producer, songwriter and creative Darren Penman — a project built around his love of sophisticated European pop, French chanson, cinematic arrangements and songs driven by melody and emotion.",

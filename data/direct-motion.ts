@@ -11,6 +11,8 @@ export const directMotion: Artist = {
     "https://audio.penrec.co.uk/direct-motion/gallery-001.jpg",
     "https://audio.penrec.co.uk/direct-motion/gallery-003.jpg",
     "https://audio.penrec.co.uk/direct-motion/gallery-004.jpg",
+    "https://audio.penrec.co.uk/artist-direct-motion-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-direct-motion-gallery-5.webp"
   ],
   descriptor: "Soul · funk · jazz · sophisticated pop",
   location: "United Kingdom",

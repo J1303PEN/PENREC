@@ -693,7 +693,13 @@ export const artists: Artist[] = [
     name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.webp",
     hero: "/images/artists/shelley-dante/shelley-dante-hero.webp", profile: "/images/artists/shelley-dante/shelley-dante-profile.webp",
     heroPosition: "24% 36%", profilePosition: "24% 28%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/shelley-dante/shelley-dante-gallery-1.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-2.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-3.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-shelley-dante-gallery-5.webp"
+    ],
     descriptor: "Dance-pop · disco glamour · emotional power", location: "International",
     bio: [
       "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.",
@@ -827,7 +833,13 @@ export const artists: Artist[] = [
     name: "UP4IT!", slug: "up4it", album: "Together as 1", cover: "/images/covers/up4it-together-as-1.webp",
     hero: "/images/artists/up4it/up4it-hero.webp", profile: "/images/artists/up4it/up4it-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 25%",
-    gallery: [1,2,3,4,5,6].map(n=>`/images/artists/up4it/up4it-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/up4it/up4it-gallery-1.webp",
+      "/images/artists/up4it/up4it-gallery-2.webp",
+      "/images/artists/up4it/up4it-gallery-3.webp",
+      "/images/artists/up4it/up4it-gallery-4.webp",
+      "/images/artists/up4it/up4it-gallery-5.webp"
+    ],
     descriptor: "Dance-pop · harmony pop · high-energy performance", location: "International",
     bio: [
       "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.",
@@ -846,7 +858,13 @@ export const artists: Artist[] = [
     name: "Fifth & Main", slug: "fifth-and-main", album: "Here We Are", cover: "/images/covers/fifth-and-main-here-we-are.webp",
     hero: "/images/artists/fifth-and-main/fifth-and-main-hero.webp", profile: "/images/artists/fifth-and-main/fifth-and-main-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 38%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/fifth-and-main/fifth-and-main-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-1.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-2.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-3.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-fifth-and-main-gallery-5.webp"
+    ],
     descriptor: "Five-part harmony · contemporary pop · Scandinavian polish", location: "International",
     bio: [
       "Five voices. Five personalities. One unmistakable sound.",
@@ -868,7 +886,13 @@ export const artists: Artist[] = [
     name: "Callia", slug: "callia", album: "Amor Eterno", cover: "/images/covers/callia-amor-eterno.webp",
     hero: "/images/artists/callia/callia-hero.webp", profile: "/images/artists/callia/callia-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 35%",
-    gallery: [1,2,3].map(n=>`/images/artists/callia/callia-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/callia/callia-gallery-1.webp",
+      "/images/artists/callia/callia-gallery-2.webp",
+      "/images/artists/callia/callia-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-callia-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-callia-gallery-5.webp"
+    ],
     descriptor: "Spanish pop · Mediterranean romance · cinematic warmth", location: "Spain",
     bio: [
       "Some love stories fade. Others become eternal.",
@@ -885,7 +909,13 @@ export const artists: Artist[] = [
     name: "The Glamour Katz", slug: "the-glamour-katz", album: "Living for the Weekend", cover: "/images/covers/the-glamour-katz-living-for-the-weekend.webp",
     hero: "/images/artists/the-glamour-katz/the-glamour-katz-hero.webp", profile: "/images/artists/the-glamour-katz/the-glamour-katz-profile.webp",
     heroPosition: "50% 50%", profilePosition: "50% 45%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/the-glamour-katz/the-glamour-katz-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-1.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-2.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-3.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-glamour-katz-gallery-5.webp"
+    ],
     descriptor: "Disco house · funk · dance-floor glamour", location: "United Kingdom",
     bio: [
       "Some dance records capture a moment. The Glamour Katz were made for the dance floor.",
@@ -929,7 +959,13 @@ export const artists: Artist[] = [
     name: "Nikos Andros", slug: "nikos-andros", album: "Νέες Αρχές (New Beginnings)", cover: "/images/covers/nikos-andros-new-beginnings.webp",
     hero: "/images/artists/nikos-andros/nikos-andros-hero.webp", profile: "/images/artists/nikos-andros/nikos-andros-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 34%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/nikos-andros/nikos-andros-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/nikos-andros/nikos-andros-gallery-1.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-2.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-3.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-nikos-andros-gallery-5.webp"
+    ],
     descriptor: "Greek pop · laïko · Mediterranean warmth", location: "Greece",
     bio: [
       "Some songs are about where you've been. Nikos Andros makes music about where you're going next.",
@@ -956,9 +992,15 @@ export const artists: Artist[] = [
     "slug": "sabrina-wilde",
     "album": "Wild About Love",
     "cover": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
-    "hero": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
-    "profile": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
-    "gallery": [],
+    "hero": "https://audio.penrec.co.uk/artist-sabrina-wilde-hero.webp",
+    "profile": "https://audio.penrec.co.uk/artist-sabrina-wilde-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-1.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-2.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-5.webp"
+    ],
     "descriptor": "Wild About Love · 12 tracks",
     "location": "",
     "bio": [
@@ -1040,7 +1082,10 @@ export const artists: Artist[] = [
     "profile": "https://audio.penrec.co.uk/pnr052-the-assembly-profile.webp",
     "gallery": [
       "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-01.webp",
-      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-02.webp"
+      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-5.webp"
     ],
     "descriptor": "British R&B · close harmony · soul-pop",
     "location": "",
@@ -1134,7 +1179,10 @@ export const artists: Artist[] = [
     "profile": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-profile.webp",
     "gallery": [
       "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-01.webp",
-      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-02.webp"
+      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-5.webp"
     ],
     "descriptor": "Gospel-soul · call and response · full choir",
     "location": "",
@@ -1223,7 +1271,10 @@ export const artists: Artist[] = [
     "profile": "https://audio.penrec.co.uk/pnr054-the-december-belles-profile.webp",
     "gallery": [
       "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-01.webp",
-      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-02.webp"
+      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-5.webp"
     ],
     "descriptor": "Christmas soul · vintage orchestration · three-part harmony",
     "location": "",

@@ -7,7 +7,13 @@ export const hyx: Artist = {
   "cover": "https://audio.penrec.co.uk/hyx/cover.jpg",
   "hero": "https://audio.penrec.co.uk/hyx/hero.jpg",
   "profile": "https://audio.penrec.co.uk/hyx/profile.jpg",
-  "gallery": [],
+  "gallery": [
+    "https://audio.penrec.co.uk/artist-hyx-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-hyx-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-hyx-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-hyx-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-hyx-gallery-5.webp"
+  ],
   "descriptor": "No Big Deal",
   "location": "",
   "bio": [

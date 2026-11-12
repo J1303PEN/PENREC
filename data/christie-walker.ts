@@ -12,6 +12,7 @@ export const christieWalker: Artist = {
     "https://audio.penrec.co.uk/christie-walker/gallery-002.jpg",
     "https://audio.penrec.co.uk/christie-walker/gallery-003.jpg",
     "https://audio.penrec.co.uk/christie-walker/gallery-004.jpg",
+    "https://audio.penrec.co.uk/artist-christie-walker-gallery-5.webp"
   ],
   descriptor: "Classic pop · orchestral soul · jazz · contemporary pop",
   location: "International",

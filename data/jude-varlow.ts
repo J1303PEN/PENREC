@@ -5,7 +5,13 @@ const imageBase = "https://audio.penrec.co.uk/jude-varlow";
 
 export const judeVarlow: Artist = {
   name: "Jude Varlow", slug: "jude-varlow", album: "All Summer",
-  cover: `${imageBase}/cover.png`, hero: `${imageBase}/cover.png`, profile: `${imageBase}/cover.png`, gallery: [],
+  cover: `${imageBase}/cover.png`, hero: "https://audio.penrec.co.uk/artist-jude-varlow-hero.webp", profile: "https://audio.penrec.co.uk/artist-jude-varlow-profile.webp", gallery: [
+    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-5.webp"
+  ],
   descriptor: "All Summer", location: "",
   bio: [
     "Jude Varlow’s All Summer is a collection of fourteen songs about the things people say, the things they assume and the moments that stay with them afterwards. Its titles trace a world of shared history, uncertain answers and conversations that do not quite end when the room goes quiet.",

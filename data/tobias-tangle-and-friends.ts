@@ -5,9 +5,15 @@ export const tobiasTangleAndFriends: Artist = {
   "slug": "tobias-tangle-and-friends",
   "album": "Tobias Tangle & Friends Adventures",
   "cover": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
-  "hero": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
-  "profile": "https://audio.penrec.co.uk/tobias-tangle-and-friends/adventures-1-cover.jpg?v=pnr043",
-  "gallery": [],
+  "hero": "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-profile.webp",
+  "gallery": [
+    "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-tobias-tangle-and-friends-gallery-5.webp"
+  ],
   "descriptor": "Songs inspired by Darren Penman’s Tobias Tangle book series",
   "location": "",
   "bio": [
