@@ -5,15 +5,16 @@ const imageBase = "https://audio.penrec.co.uk/jude-varlow";
 
 export const judeVarlow: Artist = {
   name: "Jude Varlow", slug: "jude-varlow", album: "All Summer",
-  cover: `${imageBase}/cover.png`, hero: "https://audio.penrec.co.uk/artist-jude-varlow-hero.webp", profile: "https://audio.penrec.co.uk/artist-jude-varlow-profile.webp", gallery: [
-    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-1.webp",
-    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-2.webp",
-    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-3.webp",
-    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-4.webp",
-    "https://audio.penrec.co.uk/artist-jude-varlow-gallery-5.webp"
+  cover: `${imageBase}/cover.png`, hero: "https://audio.penrec.co.uk/artist-jude-varlow-solo-hero.webp", profile: "https://audio.penrec.co.uk/artist-jude-varlow-solo-profile.webp", gallery: [
+    "https://audio.penrec.co.uk/artist-jude-varlow-solo-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-solo-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-solo-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-solo-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-jude-varlow-solo-gallery-5.webp"
   ],
-  descriptor: "All Summer", location: "",
+  descriptor: "Solo DJ · electronic dance music", location: "",
   bio: [
+    "Jude Varlow is a solo DJ. All Summer brings together fourteen tracks shaped around a DJ’s sense of pacing, from the opening “Before We Knew Too Much” to the title track that closes the record.",
     "Jude Varlow’s All Summer is a collection of fourteen songs about the things people say, the things they assume and the moments that stay with them afterwards. Its titles trace a world of shared history, uncertain answers and conversations that do not quite end when the room goes quiet.",
     "The album opens with Before We Knew Too Much and moves through No More Maybe, Take It Personally and At the Same Time. Together, those songs introduce a record concerned with timing: what happens when people arrive at the same moment with different expectations, or recognise what mattered only after it has changed.",
     "Elsewhere, Keep Me Moving, I Needed That and It Still Works offer a different kind of perspective. The sequence makes room for forward motion alongside reflection, balancing the suggestion of departure in Better Leaving with the possibility of something worth returning to.",

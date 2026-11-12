@@ -5,18 +5,19 @@ export const privateCaller: Artist = {
   "slug": "private-caller",
   "album": "Nothing Happened",
   "cover": "https://audio.penrec.co.uk/private-caller/nothing-happened-cover.jpg?v=pnr046",
-  "hero": "https://audio.penrec.co.uk/artist-private-caller-hero.webp",
-  "profile": "https://audio.penrec.co.uk/artist-private-caller-profile.webp",
+  "hero": "https://audio.penrec.co.uk/artist-private-caller-solo-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-private-caller-solo-profile.webp",
   "gallery": [
-    "https://audio.penrec.co.uk/artist-private-caller-gallery-1.webp",
-    "https://audio.penrec.co.uk/artist-private-caller-gallery-2.webp",
-    "https://audio.penrec.co.uk/artist-private-caller-gallery-3.webp",
-    "https://audio.penrec.co.uk/artist-private-caller-gallery-4.webp",
-    "https://audio.penrec.co.uk/artist-private-caller-gallery-5.webp"
+    "https://audio.penrec.co.uk/artist-private-caller-solo-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-solo-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-solo-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-solo-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-private-caller-solo-gallery-5.webp"
   ],
-  "descriptor": "The space between saying and meaning",
+  "descriptor": "Solo DJ · electronic music",
   "location": "",
   "bio": [
+    "Private Caller is a solo DJ. Nothing Happened follows the tension of conversations that linger after the line goes quiet.",
     "Private Caller introduces a world of conversations that linger after the line goes quiet. Released on PENREC, the project takes its identity from the tension between what is said, what is withheld and what someone wishes they had said differently.",
     "The debut album, Nothing Happened, gathers thirteen songs whose titles read like fragments of an unfinished exchange. I Came Anyway, I Take It Back and You Don’t Have to Answer suggest shifting intentions, boundaries and the uncertainty of reaching another person. The apparent simplicity of the album title sits against those unresolved questions.",
     "Its visual identity carries the same atmosphere: a transparent telephone receiver, lit in blue and red against black, turns an everyday object into something charged with possibility. Opening with It Passed and closing with Say It While I’m Here, Nothing Happened presents Private Caller’s first PENREC release, PNR046."

@@ -5,18 +5,19 @@ export const hyx: Artist = {
   "slug": "hyx",
   "album": "No Big Deal",
   "cover": "https://audio.penrec.co.uk/hyx/cover.jpg",
-  "hero": "https://audio.penrec.co.uk/hyx/hero.jpg",
-  "profile": "https://audio.penrec.co.uk/hyx/profile.jpg",
+  "hero": "https://audio.penrec.co.uk/artist-hyx-solo-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-hyx-solo-profile.webp",
   "gallery": [
-    "https://audio.penrec.co.uk/artist-hyx-gallery-1.webp",
-    "https://audio.penrec.co.uk/artist-hyx-gallery-2.webp",
-    "https://audio.penrec.co.uk/artist-hyx-gallery-3.webp",
-    "https://audio.penrec.co.uk/artist-hyx-gallery-4.webp",
-    "https://audio.penrec.co.uk/artist-hyx-gallery-5.webp"
+    "https://audio.penrec.co.uk/artist-hyx-solo-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-hyx-solo-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-hyx-solo-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-hyx-solo-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-hyx-solo-gallery-5.webp"
   ],
-  "descriptor": "No Big Deal",
+  "descriptor": "Solo DJ · electronic music",
   "location": "",
   "bio": [
+    "HYX is a solo DJ. No Big Deal opens with “Aperol Spritz” and closes with “Better Than Expected”, framing fourteen tracks in one continuous album sequence.",
     "HYX presents No Big Deal, a fourteen-track album on PENREC.",
     "The album opens with Aperol Spritz and closes with Better Than Expected."
   ],

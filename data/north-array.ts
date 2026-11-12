@@ -5,18 +5,19 @@ export const northArray: Artist = {
   "slug": "north-array",
   "album": "Higher Place Than Heaven",
   "cover": "https://audio.penrec.co.uk/north-array/higher-place-than-heaven-cover.jpg?v=pnr044",
-  "hero": "https://audio.penrec.co.uk/artist-north-array-hero.webp",
-  "profile": "https://audio.penrec.co.uk/artist-north-array-profile.webp",
+  "hero": "https://audio.penrec.co.uk/artist-north-array-solo-hero.webp",
+  "profile": "https://audio.penrec.co.uk/artist-north-array-solo-profile.webp",
   "gallery": [
-    "https://audio.penrec.co.uk/artist-north-array-gallery-1.webp",
-    "https://audio.penrec.co.uk/artist-north-array-gallery-2.webp",
-    "https://audio.penrec.co.uk/artist-north-array-gallery-3.webp",
-    "https://audio.penrec.co.uk/artist-north-array-gallery-4.webp",
-    "https://audio.penrec.co.uk/artist-north-array-gallery-5.webp"
+    "https://audio.penrec.co.uk/artist-north-array-solo-gallery-1.webp",
+    "https://audio.penrec.co.uk/artist-north-array-solo-gallery-2.webp",
+    "https://audio.penrec.co.uk/artist-north-array-solo-gallery-3.webp",
+    "https://audio.penrec.co.uk/artist-north-array-solo-gallery-4.webp",
+    "https://audio.penrec.co.uk/artist-north-array-solo-gallery-5.webp"
   ],
-  "descriptor": "Beyond the horizon",
+  "descriptor": "Solo DJ · electronic trance",
   "location": "",
   "bio": [
+    "North Array is a solo electronic trance DJ. Higher Place Than Heaven sets its sights on the expansive atmosphere and forward motion of trance.",
     "North Array is a PENREC project whose debut album, Higher Place Than Heaven, brings together fifteen songs under a striking celestial identity. Planets, stars, clouds and shifting horizons recur across the track titles and artwork, creating a world concerned with movement, possibility and looking beyond the familiar.",
     "The album opens with Pressure Lines and moves through When Planets Collide, Jupiter Arising and Amongst the Stars. Its wider perspective is balanced by more intimate titles such as The Spare Key and Beautiful in Every Way, placing everyday experience alongside a sense of scale and discovery.",
     "From The First Clear Day to Above the Clouds, the sequence suggests changing weather, new viewpoints and the search for a clearer horizon. The cover develops that imagery through reflected light, towering forms and a sunrise above the Earth. Released as PNR044, Higher Place Than Heaven introduces North Array to the PENREC catalogue."
