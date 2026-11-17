@@ -316,7 +316,7 @@ export const artists: Artist[] = [
   },
   {
     "album": "Nothing to Lose",
-    "cover": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-cover.jpg",
+    "cover": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-cover-v2.jpg",
     "year": "2026",
     "catalogue": "PNR060",
     "preview": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-01.mp3",
@@ -403,7 +403,7 @@ export const artists: Artist[] = [
   },
   {
     "album": "This Is Just the Beginning",
-    "cover": "https://audio.penrec.co.uk/pnr061-gen7-cover.jpg",
+    "cover": "https://audio.penrec.co.uk/pnr061-gen7-cover-v2.jpg",
     "year": "2026",
     "catalogue": "PNR061",
     "preview": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3",
@@ -500,7 +500,7 @@ export const artists: Artist[] = [
   },
   {
     "album": "What a Cheek!",
-    "cover": "https://audio.penrec.co.uk/pnr062-popcorn-cover.jpg",
+    "cover": "https://audio.penrec.co.uk/pnr062-popcorn-cover-v2.jpg",
     "year": "2026",
     "catalogue": "PNR062",
     "preview": "https://audio.penrec.co.uk/pnr062-popcorn-01.mp3",

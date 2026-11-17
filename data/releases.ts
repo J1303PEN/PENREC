@@ -119,7 +119,7 @@ const additionalReleases: Partial<Record<string, ReleaseData[]>> = {
   }],
   "fourward": [{
     "album": "Better Than Ever",
-    "cover": "https://audio.penrec.co.uk/pnr059-fourward-cover.jpg",
+    "cover": "https://audio.penrec.co.uk/pnr059-fourward-cover-v2.jpg",
     "year": "2026",
     "catalogue": "PNR059",
     "preview": "https://audio.penrec.co.uk/pnr059-fourward-01.mp3",
