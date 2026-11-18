@@ -39,7 +39,7 @@ export default function BooksPage() {
               <p>Premium A5 illustrated edition · {book.pages} pages</p>
               <div className={styles.actions}>
                 <Link href={`/books/${book.slug}`}>Read the book →</Link>
-                <a href={book.pdf} download={book.downloadName}>Download the PDF</a>
+                <a href={book.pdf} target="_blank" rel="noopener" download={book.downloadName}>Download the PDF</a>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function BooksPage() {
           <div><p className="penrec-kicker">Tobias Tangle &amp; Friends · Colouring adventures</p>
             <h2 id="tobias-colouring-title">Make Hushcombe your own.</h2>
             <p>{colouringBooks[0].description}</p><p>{colouringBooks[0].format} · 20 pages</p>
-            <div className={styles.actions}><Link href={`/books/${colouringBooks[0].slug}`}>Scroll, read &amp; print →</Link><a href={colouringBooks[0].pdf} download={colouringBooks[0].downloadName}>Download PDF</a></div>
+            <div className={styles.actions}><Link href={`/books/${colouringBooks[0].slug}`}>Scroll, read &amp; print →</Link><a href={colouringBooks[0].pdf} target="_blank" rel="noopener" download={colouringBooks[0].downloadName}>Download PDF</a></div>
           </div>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function BooksPage() {
           <div className={styles.collectionGrid}>{colouringBooks.slice(1).map(book => <article key={book.slug}>
             <Image className={styles.landscapeCover} src={book.cover} alt={`${book.title} cover`} width={1754} height={1240} sizes="(max-width: 700px) 90vw, 45vw" />
             <h3>{book.title}</h3><p>{book.description}</p><p>{book.format} · {book.pages} pages</p>
-            <div className={styles.actions}><Link href={`/books/${book.slug}`}>Scroll, read &amp; print →</Link><a href={book.pdf} download={book.downloadName}>Download PDF</a></div>
+            <div className={styles.actions}><Link href={`/books/${book.slug}`}>Scroll, read &amp; print →</Link><a href={book.pdf} target="_blank" rel="noopener" download={book.downloadName}>Download PDF</a></div>
           </article>)}</div>
         </div>
       </section>

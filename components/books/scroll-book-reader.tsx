@@ -34,7 +34,7 @@ export function ScrollBookReader({ title, pages, assets, pdf, downloadName, land
   }
   return <div className={`${styles.reader} ${landscape ? styles.landscape : ""}`}>
     <div className={styles.controls}>
-      <a href={pdf} download={downloadName}>Download PDF</a>
+      <a href={pdf} target="_blank" rel="noopener" download={downloadName}>Download PDF</a>
       <button type="button" onClick={printBook} disabled={printing}>{printing ? "Preparing pages…" : "Print"}</button>
       <label>Go to page <select defaultValue="1" onChange={event => document.getElementById(`colour-page-${event.target.value}`)?.scrollIntoView({ behavior: "auto", block: "start" })}>
         {Array.from({ length: pages }, (_, i) => <option key={i} value={i + 1}>{i + 1}</option>)}

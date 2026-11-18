@@ -44,6 +44,558 @@ function albumTracks(items: [string, string][], preview: string, artistSlug: str
 
 export const artists: Artist[] = [
   {
+    "album": "Made for Saturday",
+    "cover": "https://audio.penrec.co.uk/pnr055-fourward-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR055",
+    "preview": "https://audio.penrec.co.uk/pnr055-fourward-01.mp3",
+    "tracks": [
+      {
+        "title": "Everybody's Got a Friday Feeling",
+        "duration": "4:20",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-01.mp3"
+      },
+      {
+        "title": "Don't Keep Me Guessing",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-02.mp3"
+      },
+      {
+        "title": "Turn It Up Again",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-03.mp3"
+      },
+      {
+        "title": "You Could Be the One",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-04.mp3"
+      },
+      {
+        "title": "A Little Bit of Trouble",
+        "duration": "4:43",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-05.mp3"
+      },
+      {
+        "title": "Don't Make Me Wait All Night",
+        "duration": "3:51",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-06.mp3"
+      },
+      {
+        "title": "Made for Saturday",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-07.mp3"
+      },
+      {
+        "title": "The Way You Make Me Smile",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-08.mp3"
+      },
+      {
+        "title": "Catch Me If You Can",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-09.mp3"
+      },
+      {
+        "title": "One More Chance to Dance",
+        "duration": "5:03",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-10.mp3"
+      },
+      {
+        "title": "Tell Me What You're Thinking",
+        "duration": "4:22",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-11.mp3"
+      },
+      {
+        "title": "Here We Go Again",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-12.mp3"
+      },
+      {
+        "title": "Something Worth Celebrating",
+        "duration": "4:48",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-13.mp3"
+      },
+      {
+        "title": "This Is Our Moment",
+        "duration": "4:40",
+        "audio": "https://audio.penrec.co.uk/pnr055-fourward-14.mp3"
+      }
+    ],
+    "name": "FOURWARD",
+    "slug": "fourward",
+    "descriptor": "British dance-pop · four-part harmony",
+    "location": "",
+    "bio": [
+      "FOURWARD is a British pop quartet with two female and two male leads. Each voice takes a turn at the centre of the song, then the four come together in choruses built for the dance floor. Disco bass, bright synths and clipped guitars give the group the sound of early millennium UK chart pop.",
+      "Made for Saturday follows the anticipation of a Friday night through to the celebration of “This Is Our Moment”. Better Than Ever leans further into the quartet’s playful side, with “Don’t Be So Sure” and “Absolutely Fabulous” set against the warmer lift of “The Best Is Yet to Come”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr055-fourward-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr055-fourward-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr055-fourward-gallery-5.webp"
+    ]
+  },
+  {
+    "album": "The Years Between",
+    "cover": "https://audio.penrec.co.uk/pnr056-james-whitfield-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR056",
+    "preview": "https://audio.penrec.co.uk/pnr056-james-whitfield-01.mp3",
+    "tracks": [
+      {
+        "title": "The Years Between",
+        "duration": "4:04",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-01.mp3"
+      },
+      {
+        "title": "The Road Through Northumberland",
+        "duration": "3:52",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-02.mp3"
+      },
+      {
+        "title": "I'll Remember You That Way",
+        "duration": "4:53",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-03.mp3"
+      },
+      {
+        "title": "A Good Man's Work",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-04.mp3"
+      },
+      {
+        "title": "When the Children Were Small",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-05.mp3"
+      },
+      {
+        "title": "If I Could Have Stayed",
+        "duration": "5:33",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-06.mp3"
+      },
+      {
+        "title": "The Village by the Derwent",
+        "duration": "5:20",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-07.mp3"
+      },
+      {
+        "title": "Somewhere Beyond the Hills",
+        "duration": "5:28",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-08.mp3"
+      },
+      {
+        "title": "The Last Steel from Consett",
+        "duration": "5:20",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-09.mp3"
+      },
+      {
+        "title": "My Heart Never Left",
+        "duration": "4:41",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-10.mp3"
+      },
+      {
+        "title": "There's Fewer of Us Now",
+        "duration": "5:18",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-11.mp3"
+      },
+      {
+        "title": "The Ground Beneath My Feet",
+        "duration": "5:58",
+        "audio": "https://audio.penrec.co.uk/pnr056-james-whitfield-12.mp3"
+      }
+    ],
+    "name": "James Whitfield",
+    "slug": "james-whitfield",
+    "descriptor": "Orchestral folk-pop · North East storytelling",
+    "location": "North East England",
+    "bio": [
+      "James Whitfield’s songs take their time. A warm baritone carries the story, with acoustic guitar, piano and strings giving the details room to settle. His sound draws on British orchestral folk-pop and the landscapes and voices of North East England.",
+      "The Years Between follows the road through Northumberland and remembers a village by the Derwent. “When the Children Were Small” looks back on family life, while “The Last Steel from Consett” turns to the memory of work and the towns built around it."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr056-james-whitfield-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr056-james-whitfield-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr056-james-whitfield-gallery-5.webp"
+    ]
+  },
+  {
+    "album": "The Heart of the Toon",
+    "cover": "https://audio.penrec.co.uk/pnr057-geordie-jack-cover.jpg",
+    "year": "2026",
+    "catalogue": "PNR057",
+    "preview": "https://audio.penrec.co.uk/pnr057-geordie-jack-01.mp3",
+    "tracks": [
+      {
+        "title": "We're from the Banks of the Tyne",
+        "duration": "3:30",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-01.mp3"
+      },
+      {
+        "title": "Saturday Doon the Bigg Market",
+        "duration": "3:47",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-02.mp3"
+      },
+      {
+        "title": "The Lads from the Shipyard",
+        "duration": "3:53",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-03.mp3"
+      },
+      {
+        "title": "A Proper Geordie Welcome",
+        "duration": "3:13",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-04.mp3"
+      },
+      {
+        "title": "Lankie Row (Nursery Lane)",
+        "duration": "3:29",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-05.mp3"
+      },
+      {
+        "title": "Summers at Whitley Bay",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-06.mp3"
+      },
+      {
+        "title": "Scotswood Road Goes On Forever",
+        "duration": "3:51",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-07.mp3"
+      },
+      {
+        "title": "A Pint at the Beehive",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-08.mp3"
+      },
+      {
+        "title": "The View from Bill Quay",
+        "duration": "4:28",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-09.mp3"
+      },
+      {
+        "title": "Saturday at Sgt Peppers",
+        "duration": "3:41",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-10.mp3"
+      },
+      {
+        "title": "The Fog Will Clear Ower Tyneside",
+        "duration": "5:02",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-11.mp3"
+      },
+      {
+        "title": "The Streets of Newcastle",
+        "duration": "4:20",
+        "audio": "https://audio.penrec.co.uk/pnr057-geordie-jack-12.mp3"
+      }
+    ],
+    "name": "Geordie Jack",
+    "slug": "geordie-jack",
+    "descriptor": "Tyneside folk · acoustic storytelling",
+    "location": "Newcastle upon Tyne",
+    "bio": [
+      "Geordie Jack is a Tyneside folk character with a guitar, a local turn of phrase and an ear for the stories people tell over a pint. His songs move between affectionate humour and quieter recollections of the river, the shipyards and the people who worked there.",
+      "The Heart of the Toon takes in the Bigg Market, the view from Bill Quay and summers at Whitley Bay. “We’re from the Banks of the Tyne” opens with a sense of belonging that runs all the way to “The Streets of Newcastle”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr057-geordie-jack-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr057-geordie-jack-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr057-geordie-jack-gallery-5.webp"
+    ]
+  },
+  {
+    "album": "Nothing to Lose",
+    "cover": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-cover-v2.jpg",
+    "year": "2026",
+    "catalogue": "PNR060",
+    "preview": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-01.mp3",
+    "tracks": [
+      {
+        "title": "Just the Brave",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-01.mp3"
+      },
+      {
+        "title": "A Little More Like You",
+        "duration": "3:53",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-02.mp3"
+      },
+      {
+        "title": "No Second Thoughts",
+        "duration": "4:09",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-03.mp3"
+      },
+      {
+        "title": "Everybody Knows but You",
+        "duration": "3:56",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-04.mp3"
+      },
+      {
+        "title": "Nothing to Lose",
+        "duration": "4:11",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-05.mp3"
+      },
+      {
+        "title": "Halfway to Heaven",
+        "duration": "5:28",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-06.mp3"
+      },
+      {
+        "title": "Make Your Mind Up",
+        "duration": "3:47",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-07.mp3"
+      },
+      {
+        "title": "Everybody Wants a Little More",
+        "duration": "4:27",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-08.mp3"
+      },
+      {
+        "title": "A Fine Line",
+        "duration": "4:22",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-09.mp3"
+      },
+      {
+        "title": "You Don't Have to Tell Me Twice",
+        "duration": "4:02",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-10.mp3"
+      },
+      {
+        "title": "Nothing's Gonna Spoil This",
+        "duration": "4:45",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-11.mp3"
+      },
+      {
+        "title": "That's What Friends Are For",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-12.mp3"
+      }
+    ],
+    "name": "5OnTheForth",
+    "slug": "5-on-the-forth",
+    "descriptor": "Scottish boyband pop · five voices",
+    "location": "Scotland",
+    "bio": [
+      "5OnTheForth is a five-voice Scottish pop group built around distinct leads from Glasgow, Edinburgh, Dundee, Aberdeen and Inverness. The voices trade melodies over bright guitar, piano, synths and driving drums before coming together in the chorus.",
+      "Nothing to Lose opens with “Just the Brave”. Its songs move between the uncertainty of “A Fine Line” and the confidence of “Nothing’s Gonna Spoil This”, before closing with the uncomplicated loyalty of “That’s What Friends Are For”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr060-5-on-the-forth-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr060-5-on-the-forth-gallery-5.webp"
+    ]
+  },
+  {
+    "album": "This Is Just the Beginning",
+    "cover": "https://audio.penrec.co.uk/pnr061-gen7-cover-v2.jpg",
+    "year": "2026",
+    "catalogue": "PNR061",
+    "preview": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3",
+    "tracks": [
+      {
+        "title": "Can't Stop Smiling",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3"
+      },
+      {
+        "title": "Not As Innocent As I Look",
+        "duration": "4:26",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-02.mp3"
+      },
+      {
+        "title": "Don't Tell Me It's Easy",
+        "duration": "4:59",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-03.mp3"
+      },
+      {
+        "title": "You Started Something",
+        "duration": "3:33",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-04.mp3"
+      },
+      {
+        "title": "That's Not How It Happened",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-05.mp3"
+      },
+      {
+        "title": "You're Missing the Point",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-06.mp3"
+      },
+      {
+        "title": "Don't Make a Big Thing of It",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-07.mp3"
+      },
+      {
+        "title": "The Trouble with Perfect",
+        "duration": "3:42",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-08.mp3"
+      },
+      {
+        "title": "Just Between You and Me",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-09.mp3"
+      },
+      {
+        "title": "A Bit of a Show-Off",
+        "duration": "3:48",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-10.mp3"
+      },
+      {
+        "title": "No One Else Comes Close",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-11.mp3"
+      },
+      {
+        "title": "The Last Word",
+        "duration": "4:44",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-12.mp3"
+      },
+      {
+        "title": "It's About Time",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-13.mp3"
+      },
+      {
+        "title": "This Is Just the Beginning",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr061-gen7-14.mp3"
+      }
+    ],
+    "name": "GEN7",
+    "slug": "gen7",
+    "descriptor": "British teen pop · seven-part vocal group",
+    "location": "England",
+    "bio": [
+      "GEN7 is a seven-member English teen pop project with four girls and three boys. Regional voices and contrasting timbres give the leads their character. Bouncy bass, bright guitar and glossy synths recall the UK teen pop of the early 2000s.",
+      "This Is Just the Beginning starts with the lift of “Can’t Stop Smiling” and gives each voice room to step forward. “Just Between You and Me” and “A Bit of a Show-Off” capture different sides of the group before the title track brings all seven together."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr061-gen7-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr061-gen7-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr061-gen7-gallery-5.webp"
+    ]
+  },
+  {
+    "album": "What a Cheek!",
+    "cover": "https://audio.penrec.co.uk/pnr062-popcorn-cover-v2.jpg",
+    "year": "2026",
+    "catalogue": "PNR062",
+    "preview": "https://audio.penrec.co.uk/pnr062-popcorn-01.mp3",
+    "tracks": [
+      {
+        "title": "What a Cheek!",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-01.mp3"
+      },
+      {
+        "title": "Out of Character",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-02.mp3"
+      },
+      {
+        "title": "Second Best",
+        "duration": "4:54",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-03.mp3"
+      },
+      {
+        "title": "Such a Waste of a Good Kiss",
+        "duration": "4:16",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-04.mp3"
+      },
+      {
+        "title": "Bad Influence",
+        "duration": "4:36",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-05.mp3"
+      },
+      {
+        "title": "That's My Song",
+        "duration": "4:03",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-06.mp3"
+      },
+      {
+        "title": "Too Much Information",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-07.mp3"
+      },
+      {
+        "title": "No Substitute",
+        "duration": "4:12",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-08.mp3"
+      },
+      {
+        "title": "Kiss and Tell",
+        "duration": "4:00",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-09.mp3"
+      },
+      {
+        "title": "Not Quite Us",
+        "duration": "4:23",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-10.mp3"
+      },
+      {
+        "title": "No Small Talk",
+        "duration": "4:07",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-11.mp3"
+      },
+      {
+        "title": "Make Me Famous",
+        "duration": "4:01",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-12.mp3"
+      },
+      {
+        "title": "Your Part of the Song",
+        "duration": "4:50",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-13.mp3"
+      },
+      {
+        "title": "Nothing to Declare",
+        "duration": "3:58",
+        "audio": "https://audio.penrec.co.uk/pnr062-popcorn-14.mp3"
+      }
+    ],
+    "name": "POP!CORN",
+    "slug": "popcorn",
+    "descriptor": "Late-90s dance-pop · four female voices",
+    "location": "",
+    "bio": [
+      "POP!CORN is a British girl group built around four distinct female voices. A husky mezzo, bright high soprano, warm alto and clear mid-range soprano share the leads. Staccato synth hooks, programmed drums and tightly stacked harmonies draw on the polished sound of late-1990s Stockholm pop.",
+      "What a Cheek! opens with the title track’s knowing grin. “Second Best” and “Bad Influence” show how quickly the mood can change, while “Your Part of the Song” makes room for a more reflective moment before the confident finale, “Nothing to Declare”."
+    ],
+    "quote": "",
+    "hero": "https://audio.penrec.co.uk/pnr062-popcorn-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr062-popcorn-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-2.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-3.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-4.webp",
+      "https://audio.penrec.co.uk/pnr062-popcorn-gallery-5.webp"
+    ]
+  },
+  {
     name: "Soreya", slug: "soreya", album: "I Like Who I Am", cover: "/images/covers/soreya-i-like-who-i-am.webp",
     hero: "/images/artists/soreya/soreya-hero.webp", profile: "/images/artists/soreya/soreya-profile.webp",
     heroPosition: "50% 18%", profilePosition: "50% 22%",
@@ -141,7 +693,13 @@ export const artists: Artist[] = [
     name: "Shelley Dante", slug: "shelley-dante", album: "Night Dancing", cover: "/images/covers/shelley-dante-night-dancing.webp",
     hero: "/images/artists/shelley-dante/shelley-dante-hero.webp", profile: "/images/artists/shelley-dante/shelley-dante-profile.webp",
     heroPosition: "24% 36%", profilePosition: "24% 28%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/shelley-dante/shelley-dante-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/shelley-dante/shelley-dante-gallery-1.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-2.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-3.webp",
+      "/images/artists/shelley-dante/shelley-dante-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-shelley-dante-gallery-5.webp"
+    ],
     descriptor: "Dance-pop · disco glamour · emotional power", location: "International",
     bio: [
       "Some voices belong to the spotlight. Shelley Dante was made for the moment it comes alive.",
@@ -275,7 +833,13 @@ export const artists: Artist[] = [
     name: "UP4IT!", slug: "up4it", album: "Together as 1", cover: "/images/covers/up4it-together-as-1.webp",
     hero: "/images/artists/up4it/up4it-hero.webp", profile: "/images/artists/up4it/up4it-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 25%",
-    gallery: [1,2,3,4,5,6].map(n=>`/images/artists/up4it/up4it-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/up4it/up4it-gallery-1.webp",
+      "/images/artists/up4it/up4it-gallery-2.webp",
+      "/images/artists/up4it/up4it-gallery-3.webp",
+      "/images/artists/up4it/up4it-gallery-4.webp",
+      "/images/artists/up4it/up4it-gallery-5.webp"
+    ],
     descriptor: "Dance-pop · harmony pop · high-energy performance", location: "International",
     bio: [
       "Some friendships last a lifetime. Some dreams take years to become reality. UP4IT! is built on both.",
@@ -294,7 +858,13 @@ export const artists: Artist[] = [
     name: "Fifth & Main", slug: "fifth-and-main", album: "Here We Are", cover: "/images/covers/fifth-and-main-here-we-are.webp",
     hero: "/images/artists/fifth-and-main/fifth-and-main-hero.webp", profile: "/images/artists/fifth-and-main/fifth-and-main-profile.webp",
     heroPosition: "50% 32%", profilePosition: "50% 38%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/fifth-and-main/fifth-and-main-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-1.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-2.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-3.webp",
+      "/images/artists/fifth-and-main/fifth-and-main-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-fifth-and-main-gallery-5.webp"
+    ],
     descriptor: "Five-part harmony · contemporary pop · Scandinavian polish", location: "International",
     bio: [
       "Five voices. Five personalities. One unmistakable sound.",
@@ -316,7 +886,13 @@ export const artists: Artist[] = [
     name: "Callia", slug: "callia", album: "Amor Eterno", cover: "/images/covers/callia-amor-eterno.webp",
     hero: "/images/artists/callia/callia-hero.webp", profile: "/images/artists/callia/callia-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 35%",
-    gallery: [1,2,3].map(n=>`/images/artists/callia/callia-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/callia/callia-gallery-1.webp",
+      "/images/artists/callia/callia-gallery-2.webp",
+      "/images/artists/callia/callia-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-callia-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-callia-gallery-5.webp"
+    ],
     descriptor: "Spanish pop · Mediterranean romance · cinematic warmth", location: "Spain",
     bio: [
       "Some love stories fade. Others become eternal.",
@@ -333,7 +909,13 @@ export const artists: Artist[] = [
     name: "The Glamour Katz", slug: "the-glamour-katz", album: "Living for the Weekend", cover: "/images/covers/the-glamour-katz-living-for-the-weekend.webp",
     hero: "/images/artists/the-glamour-katz/the-glamour-katz-hero.webp", profile: "/images/artists/the-glamour-katz/the-glamour-katz-profile.webp",
     heroPosition: "50% 50%", profilePosition: "50% 45%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/the-glamour-katz/the-glamour-katz-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-1.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-2.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-3.webp",
+      "/images/artists/the-glamour-katz/the-glamour-katz-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-glamour-katz-gallery-5.webp"
+    ],
     descriptor: "Disco house · funk · dance-floor glamour", location: "United Kingdom",
     bio: [
       "Some dance records capture a moment. The Glamour Katz were made for the dance floor.",
@@ -377,7 +959,13 @@ export const artists: Artist[] = [
     name: "Nikos Andros", slug: "nikos-andros", album: "Νέες Αρχές (New Beginnings)", cover: "/images/covers/nikos-andros-new-beginnings.webp",
     hero: "/images/artists/nikos-andros/nikos-andros-hero.webp", profile: "/images/artists/nikos-andros/nikos-andros-profile.webp",
     heroPosition: "50% 38%", profilePosition: "50% 34%",
-    gallery: [1,2,3,4].map(n=>`/images/artists/nikos-andros/nikos-andros-gallery-${n}.webp`),
+    gallery: [
+      "/images/artists/nikos-andros/nikos-andros-gallery-1.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-2.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-3.webp",
+      "/images/artists/nikos-andros/nikos-andros-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-nikos-andros-gallery-5.webp"
+    ],
     descriptor: "Greek pop · laïko · Mediterranean warmth", location: "Greece",
     bio: [
       "Some songs are about where you've been. Nikos Andros makes music about where you're going next.",
@@ -398,6 +986,368 @@ export const artists: Artist[] = [
     quote: "Some songs are about where you've been. Nikos Andros makes music about where you're going next.", year: "2026", catalogue: "PNR020",
     preview: "https://audio.penrec.co.uk/nikos-andros-stay-here.mp3",
     tracks: albumTracks([["Μείνε Εδώ (Stay Here)","3:28"],["Γυρίζω Σπίτι (I'm Coming Home)","3:02"],["Στο Καφενείον (At KafeNeon)","3:23"],["Ο Πατέρας Μου (My Father)","3:18"],["Μια Καινούργια Μέρα (A Brand New Day)","3:19"],["Ήρθες Την Κατάλληλη Στιγμή (You Came at the Right Time)","3:54"],["Ηρεμία (Peace)","3:32"],["Οι Ίδιοι Φίλοι (The Same Friends)","3:56"],["Ας Μείνει Η Νύχτα (Let the Night Stay)","3:14"],["Σήμερα Είναι Δικό Μας (Today Belongs to Us)","3:27"],["Σε Διαλέγω Ξανά (I Choose You Again)","3:21"],["Το Κυριακάτικο Τραπέζι (The Sunday Table)","3:34"],["Όσα Έχουμε (What We Have)","3:11"],["Ο Χρόνος Ξέρει (Time Knows)","3:20"],["Αύριο Θα Γελάμε (Tomorrow We Smile)","3:29"],["Δεν Θα Άλλαζα Τίποτα (I Wouldn't Change a Thing)","3:47"],["Ό,τι Μας Ένωσε (Everything That Brought Us Together)","3:28"],["Η Ζωή Συνεχίζεται (Life Goes On)","3:30"]], "/audio/nikos-andros-stay-here.mp3", "nikos-andros")
+  },
+  {
+    "name": "Sabrina Wilde",
+    "slug": "sabrina-wilde",
+    "album": "Wild About Love",
+    "cover": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-wild-about-love.jpg",
+    "hero": "https://audio.penrec.co.uk/artist-sabrina-wilde-hero.webp",
+    "profile": "https://audio.penrec.co.uk/artist-sabrina-wilde-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-1.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-2.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-sabrina-wilde-gallery-5.webp"
+    ],
+    "descriptor": "Wild About Love · 12 tracks",
+    "location": "",
+    "bio": [
+      "Wild About Love is a twelve-track album from Sabrina Wilde, released on PENREC as PNR051. It opens with “Don’t Make Me Ask You Twice” and closes with “Too Proud to Say I Miss You”."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR051",
+    "preview": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-01.mp3",
+    "tracks": [
+      {
+        "title": "Don't Make Me Ask You Twice",
+        "duration": "4:31",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-01.mp3"
+      },
+      {
+        "title": "I Thought I'd Got Over You",
+        "duration": "4:56",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-02.mp3"
+      },
+      {
+        "title": "This Time I Mean It",
+        "duration": "4:34",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-03.mp3"
+      },
+      {
+        "title": "The Night We Took a Chance",
+        "duration": "4:43",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-04.mp3"
+      },
+      {
+        "title": "I Know What You're Thinking",
+        "duration": "4:47",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-05.mp3"
+      },
+      {
+        "title": "You Can't Have It Both Ways",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-06.mp3"
+      },
+      {
+        "title": "What a Difference You Make",
+        "duration": "4:55",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-07.mp3"
+      },
+      {
+        "title": "Nothing to Prove",
+        "duration": "4:52",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-08.mp3"
+      },
+      {
+        "title": "Give Me Something I Can Feel",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-09.mp3"
+      },
+      {
+        "title": "More Than I Bargained For",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-10.mp3"
+      },
+      {
+        "title": "Take Me by Surprise",
+        "duration": "4:21",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-11.mp3"
+      },
+      {
+        "title": "Too Proud to Say I Miss You",
+        "duration": "5:30",
+        "audio": "https://audio.penrec.co.uk/pnr052-sabrina-wilde-12.mp3"
+      }
+    ]
+  },
+  {
+    "name": "The Assembly",
+    "slug": "the-assembly",
+    "album": "Between Us",
+    "cover": "https://audio.penrec.co.uk/pnr052-the-assembly-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr052-the-assembly-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr052-the-assembly-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr052-the-assembly-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-assembly-gallery-5.webp"
+    ],
+    "descriptor": "British R&B · close harmony · soul-pop",
+    "location": "",
+    "bio": [
+      "The Assembly is a four-voice British R&B project shaped by the sound of the late 1990s. A husky tenor, an intimate baritone, a brighter high tenor and a deep bass-baritone take turns in the lead. When the chorus arrives, the four voices lock together over warm Rhodes chords, rounded bass and crisp, syncopated drums.",
+      "Between Us follows the things people say in private and the things they put off saying at all. “Just Between the Two of Us” opens the conversation; “Tell Me Straight” asks for an answer, and “This Is Where We Belong” closes the record on a note of certainty. Between those points, the quartet makes space for flirtation, doubt and a little attitude."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR052",
+    "preview": "https://audio.penrec.co.uk/pnr052-the-assembly-01.mp3",
+    "tracks": [
+      {
+        "title": "Just Between the Two of Us",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-01.mp3"
+      },
+      {
+        "title": "No Second Guessing",
+        "duration": "4:04",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-02.mp3"
+      },
+      {
+        "title": "Don't Make Plans",
+        "duration": "3:58",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-03.mp3"
+      },
+      {
+        "title": "Give It Some Attitude",
+        "duration": "4:06",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-04.mp3"
+      },
+      {
+        "title": "All Over Again",
+        "duration": "4:24",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-05.mp3"
+      },
+      {
+        "title": "You Know What You're Doing",
+        "duration": "4:33",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-06.mp3"
+      },
+      {
+        "title": "Nothing Left to Prove",
+        "duration": "4:49",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-07.mp3"
+      },
+      {
+        "title": "Something About Tonight",
+        "duration": "4:30",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-08.mp3"
+      },
+      {
+        "title": "A Little Too Late",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-09.mp3"
+      },
+      {
+        "title": "Tell Me Straight",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-10.mp3"
+      },
+      {
+        "title": "If You Only Knew",
+        "duration": "5:00",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-11.mp3"
+      },
+      {
+        "title": "Better Than That",
+        "duration": "3:36",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-12.mp3"
+      },
+      {
+        "title": "Don't Stop Now",
+        "duration": "3:56",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-13.mp3"
+      },
+      {
+        "title": "This Is Where We Belong",
+        "duration": "4:34",
+        "audio": "https://audio.penrec.co.uk/pnr052-the-assembly-14.mp3"
+      }
+    ]
+  },
+  {
+    "name": "The Jubilee Gospel Choir",
+    "slug": "the-jubilee-gospel-choir",
+    "album": "Raise the Roof",
+    "cover": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-jubilee-gospel-choir-gallery-5.webp"
+    ],
+    "descriptor": "Gospel-soul · call and response · full choir",
+    "location": "",
+    "bio": [
+      "The Jubilee Gospel Choir is a gospel-soul ensemble built around the conversation between soloist and choir. Baritone, alto and tenor leads trade lines with the full four-part choir, while Hammond organ, gospel piano, handclaps and brass bring the arrangements from intimate testimony to full-voice celebration.",
+      "Raise the Roof opens with the gratitude of “Ain’t That Just Like God” and makes room for welcome, fellowship and hard questions. “Room for Everybody” and “What About the Children?” turn the focus outward, while “Let the Church Say Amen” and “What a Day That Will Be” bring the whole choir together for the close."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR053",
+    "preview": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-01.mp3",
+    "tracks": [
+      {
+        "title": "Ain't That Just Like God",
+        "duration": "3:52",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-01.mp3"
+      },
+      {
+        "title": "Somebody Ought to Testify",
+        "duration": "3:37",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-02.mp3"
+      },
+      {
+        "title": "Room for Everybody",
+        "duration": "3:32",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-03.mp3"
+      },
+      {
+        "title": "Put a Little Love in It",
+        "duration": "3:54",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-04.mp3"
+      },
+      {
+        "title": "Nobody's Keeping Score",
+        "duration": "4:57",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-05.mp3"
+      },
+      {
+        "title": "When the Whole Choir Sings",
+        "duration": "3:11",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-06.mp3"
+      },
+      {
+        "title": "It's Good to Be Here",
+        "duration": "4:52",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-07.mp3"
+      },
+      {
+        "title": "I Can't Thank Him Enough",
+        "duration": "4:40",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-08.mp3"
+      },
+      {
+        "title": "Who Says We Can't?",
+        "duration": "3:50",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-09.mp3"
+      },
+      {
+        "title": "Sunday Best Won't Save You",
+        "duration": "3:34",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-10.mp3"
+      },
+      {
+        "title": "What About the Children?",
+        "duration": "5:44",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-11.mp3"
+      },
+      {
+        "title": "Let the Church Say Amen",
+        "duration": "4:17",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-12.mp3"
+      },
+      {
+        "title": "What a Day That Will Be",
+        "duration": "4:53",
+        "audio": "https://audio.penrec.co.uk/pnr053-the-jubilee-gospel-choir-13.mp3"
+      }
+    ]
+  },
+  {
+    "name": "The December Belles",
+    "slug": "the-december-belles",
+    "album": "Christmas Looks Good On You",
+    "cover": "https://audio.penrec.co.uk/pnr054-the-december-belles-cover.jpg",
+    "hero": "https://audio.penrec.co.uk/pnr054-the-december-belles-hero.webp",
+    "profile": "https://audio.penrec.co.uk/pnr054-the-december-belles-profile.webp",
+    "gallery": [
+      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-01.webp",
+      "https://audio.penrec.co.uk/pnr054-the-december-belles-gallery-02.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-3.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-4.webp",
+      "https://audio.penrec.co.uk/artist-the-december-belles-gallery-5.webp"
+    ],
+    "descriptor": "Christmas soul · vintage orchestration · three-part harmony",
+    "location": "",
+    "bio": [
+      "The December Belles is a Christmas soul trio inspired by mid-1960s orchestral soul. A strong soprano, warm mezzo and low, velvety alto trade lead lines and blend in three-part harmony. Piano, melodic bass and brushed drums leave room for the voices, with orchestral colour giving the bigger moments their glow.",
+      "Christmas Looks Good On You moves from the bustle of “The Party Starts at Eight” and “Everybody’s Coming Home” to the quiet ache of “Christmas Without Mum.” The twelve songs make space for the company we look forward to, the people we miss, and the invitation at the heart of the closer, “Kiss Me Before Christmas”."
+    ],
+    "quote": "",
+    "year": "2026",
+    "catalogue": "PNR054",
+    "preview": "https://audio.penrec.co.uk/pnr054-the-december-belles-01.mp3",
+    "tracks": [
+      {
+        "title": "Christmas Looks Good on You",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-01.mp3"
+      },
+      {
+        "title": "Here Comes December",
+        "duration": "3:39",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-02.mp3"
+      },
+      {
+        "title": "One More Christmas With You",
+        "duration": "4:35",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-03.mp3"
+      },
+      {
+        "title": "The Party Starts at Eight",
+        "duration": "3:12",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-04.mp3"
+      },
+      {
+        "title": "Everybody's Coming Home",
+        "duration": "3:57",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-05.mp3"
+      },
+      {
+        "title": "Christmas Without Mum",
+        "duration": "5:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-06.mp3"
+      },
+      {
+        "title": "December's Got a Hold on Me",
+        "duration": "3:40",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-07.mp3"
+      },
+      {
+        "title": "Save Me the Last Dance",
+        "duration": "4:38",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-08.mp3"
+      },
+      {
+        "title": "All I Need Is Christmas",
+        "duration": "4:06",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-09.mp3"
+      },
+      {
+        "title": "Put Some Christmas On",
+        "duration": "3:44",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-10.mp3"
+      },
+      {
+        "title": "The Best Present I Ever Had",
+        "duration": "4:18",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-11.mp3"
+      },
+      {
+        "title": "Kiss Me Before Christmas",
+        "duration": "4:42",
+        "audio": "https://audio.penrec.co.uk/pnr054-the-december-belles-12.mp3"
+      }
+    ]
   }
 ];
 

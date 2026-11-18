@@ -12,6 +12,7 @@ export const localArrangement: Artist = {
     "https://audio.penrec.co.uk/local-arrangement/gallery-002.jpg",
     "https://audio.penrec.co.uk/local-arrangement/gallery-003.jpg",
     "https://audio.penrec.co.uk/local-arrangement/gallery-004.jpg",
+    "https://audio.penrec.co.uk/artist-local-arrangement-gallery-5.webp"
   ],
   descriptor: "Country House Music · country storytelling · British character",
   location: "United Kingdom",

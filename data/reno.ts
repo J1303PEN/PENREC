@@ -11,7 +11,8 @@ export const reno: Artist = {
     "https://audio.penrec.co.uk/reno/gallery-001.jpg",
     "https://audio.penrec.co.uk/reno/gallery-002.jpg",
     "https://audio.penrec.co.uk/reno/gallery-003.jpg",
-    "https://audio.penrec.co.uk/reno/gallery-004.jpg"
+    "https://audio.penrec.co.uk/reno/gallery-004.jpg",
+    "https://audio.penrec.co.uk/artist-reno-gallery-5.webp"
   ],
   "descriptor": "European pop · synth-pop · cinematic melodies",
   "location": "",
