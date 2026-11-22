@@ -19,8 +19,23 @@ const PlayerContext=createContext<PlayerContextValue|null>(null);
 function queueItemsForArtist(artist:PlayableRelease):QueueItem[]{return artist.tracks.flatMap((track,index)=>track.audio?[{id:`${artist.slug}-${index}-${track.audio}`,artistSlug:artist.slug,artistName:artist.name,album:artist.album,cover:artist.cover,catalogue:artist.catalogue,trackNumber:index+1,title:track.title,durationLabel:track.duration,audio:r2AudioUrl(track.audio)}]:[]);}
 const playableCatalogue=artists.flatMap(queueItemsForArtist);
 const launchQueue=playableCatalogue.length>0?[playableCatalogue[0]]:[];
+const PLAYBACK_SESSION = "penrec_playback_session";
+type PlaybackSession = { queue: QueueItem[]; index: number; time: number; playing: boolean; muted: boolean };
+
+function readPlaybackSession(): PlaybackSession | null {
+ try {
+  const saved = JSON.parse(sessionStorage.getItem(PLAYBACK_SESSION) ?? "null") as PlaybackSession | null;
+  if (!saved || !Array.isArray(saved.queue) || !Number.isInteger(saved.index) ||
+    !saved.queue[saved.index] || !Number.isFinite(saved.time) || saved.time < 0 ||
+    typeof saved.playing !== "boolean" || typeof saved.muted !== "boolean" ||
+    saved.queue.some(item => !item || typeof item.id !== "string" || typeof item.audio !== "string")) return null;
+  return saved;
+ } catch { return null; }
+}
 
 export function PlayerProvider({children}:{children:ReactNode}){
+ const restoreRef=useRef<PlaybackSession|null>(null);
+ const [ready,setReady]=useState(false);
  const audioRef=useRef<HTMLAudioElement>(null); const shouldAutoplayRef=useRef(false); const [queue,setQueue]=useState<QueueItem[]>(launchQueue); const [currentIndex,setCurrentIndex]=useState(0); const [playing,setPlaying]=useState(false); const [currentTime,setCurrentTime]=useState(0); const [duration,setDuration]=useState(0); const [volume,setVolumeState]=useState(0.8); const [muted,setMuted]=useState(false); const [queueOpen,setQueueOpen]=useState(false); const currentItem=queue[currentIndex]??playableCatalogue[0];
  const selectIndex=useCallback((index:number,autoplay=true)=>{setQueue(existing=>{if(existing.length===0)return launchQueue; const safeIndex=Math.min(Math.max(index,0),existing.length-1); shouldAutoplayRef.current=autoplay; setCurrentIndex(safeIndex); return existing;});},[]);
  const replaceQueue=useCallback((items:QueueItem[],startIndex=0)=>{if(items.length===0)return; shouldAutoplayRef.current=true; setQueue(items); setCurrentIndex(Math.min(Math.max(startIndex,0),items.length-1));},[]);
@@ -39,7 +54,49 @@ export function PlayerProvider({children}:{children:ReactNode}){
  const removeFromQueue=useCallback((index:number)=>{setQueue(existing=>{if(existing.length<=1||index===currentIndex)return existing;const updated=existing.filter((_,itemIndex)=>itemIndex!==index);if(index<currentIndex)setCurrentIndex(value=>Math.max(0,value-1));return updated;});},[currentIndex]);
  const clearUpcoming=useCallback(()=>setQueue(existing=>existing.slice(0,currentIndex+1)),[currentIndex]);
  useEffect(()=>{const storedValue=window.localStorage.getItem("penrec_player_volume");const storedVolume=storedValue===null?Number.NaN:Number(storedValue);const initialVolume=Number.isFinite(storedVolume)&&storedVolume>=0&&storedVolume<=1?storedVolume:0.8;setVolumeState(initialVolume);if(audioRef.current)audioRef.current.volume=initialVolume;},[]);
- useEffect(()=>{const audio=audioRef.current;if(!audio||!currentItem)return;audio.load();setCurrentTime(0);setDuration(0);if(shouldAutoplayRef.current){void audio.play().catch(()=>setPlaying(false));}else setPlaying(false);},[currentItem]);
+ useEffect(()=>{
+  const saved=readPlaybackSession();
+  if(saved){restoreRef.current=saved;setQueue(saved.queue);setCurrentIndex(saved.index);setMuted(saved.muted);setCurrentTime(saved.time);}
+  setReady(true);
+ },[]);
+ useEffect(()=>{
+  const audio=audioRef.current;
+  if(!ready||!audio||!currentItem)return;
+  const save=()=>{
+   const restoring=restoreRef.current;
+   try {sessionStorage.setItem(PLAYBACK_SESSION,JSON.stringify({
+    queue,index:currentIndex,time:restoring?.time??audio.currentTime,
+    playing:restoring?.playing??(!audio.paused&&!audio.ended),muted:audio.muted
+   } satisfies PlaybackSession));} catch { /* Playback can continue without storage. */ }
+  };
+  window.addEventListener("pagehide",save);
+  return ()=>window.removeEventListener("pagehide",save);
+ },[ready,queue,currentIndex,currentItem]);
+ useEffect(()=>{
+  const audio=audioRef.current;
+  if(!ready||!audio||!currentItem)return;
+  const saved=restoreRef.current;
+  if(saved){
+   audio.muted=saved.muted;
+   const resume=()=>{
+    if(restoreRef.current!==saved)return;
+    restoreRef.current=null;
+    const end=Number.isFinite(audio.duration)?audio.duration:saved.time;
+    audio.currentTime=Math.min(saved.time,end);
+    setCurrentTime(audio.currentTime);
+    if(saved.playing)void audio.play().catch(()=>setPlaying(false));
+   };
+   if(audio.readyState>=1)resume();
+   else audio.addEventListener("loadedmetadata",resume,{once:true});
+   return ()=>audio.removeEventListener("loadedmetadata",resume);
+  }
+  audio.load();
+  setCurrentTime(0);setDuration(0);
+  const autoplay=shouldAutoplayRef.current;
+  shouldAutoplayRef.current=false;
+  if(autoplay)void audio.play().catch(()=>setPlaying(false));
+  else setPlaying(false);
+ },[ready,currentItem]);
  const value=useMemo<PlayerContextValue>(()=>({currentItem,queue,currentIndex,playing,currentTime,duration,progress:duration>0?(currentTime/duration)*100:0,volume,muted,queueOpen,playableTracksFor,playArtist,playAlbum,queueAlbum,playTrack,toggle,next,previous,seek,setVolume,toggleMute,jumpTo,removeFromQueue,clearUpcoming,toggleQueue:()=>setQueueOpen(open=>!open),closeQueue:()=>setQueueOpen(false)}),[currentItem,queue,currentIndex,playing,currentTime,duration,volume,muted,queueOpen,playableTracksFor,playArtist,playAlbum,queueAlbum,playTrack,toggle,next,previous,seek,setVolume,toggleMute,jumpTo,removeFromQueue,clearUpcoming]);
  if(!currentItem)return <>{children}</>;
  return <PlayerContext.Provider value={value}><audio ref={audioRef} src={currentItem.audio} preload="metadata" onPlay={()=>setPlaying(true)} onPause={()=>setPlaying(false)} onTimeUpdate={event=>setCurrentTime(event.currentTarget.currentTime)} onLoadedMetadata={event=>setDuration(event.currentTarget.duration||0)} onDurationChange={event=>setDuration(event.currentTarget.duration||0)} onEnded={next}/>{children}</PlayerContext.Provider>;
