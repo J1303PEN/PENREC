@@ -31,3 +31,19 @@
 .site-header__logo{flex-shrink:0}.footer-logo{display:block;justify-self:start}
 @media(max-width:760px){.site-header__inner{height:96px;padding-block:10px}.penrec-logo{width:240px}.penrec-logo--compact{width:220px}}
 @media(max-width:360px){.penrec-logo{width:210px}}
+
+
+/* PENREC transport: editorial dark treatment, original playback preserved */
+.global-player{background:#101012;color:#fff;border-top:3px solid #ff1493;box-shadow:0 -7px 28px rgba(0,0,0,.2)}
+.global-player__art{display:block;width:52px;height:52px;overflow:hidden}
+.global-player__art img{object-fit:cover}
+.global-player__track b{color:#fff}
+.global-player__track>span{color:#c5c5c5;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.global-player small{color:#ff8aca}
+.global-player button{cursor:pointer;background:#29292b;color:white;border-color:#6d6d72}
+.global-player button:hover{background:#424247}
+.global-player .global-player__play{background:#ff1493;border-color:#ff1493;color:white}
+.global-player__timeline input,.global-player__volume input{accent-color:#ff1493}
+.global-player__timeline time{color:#ddd}
+.global-player .global-player__queue{color:#151515;border-color:#ffd83d}
+@media(max-width:760px){.global-player{gap:8px}.global-player__track>span{font-size:9px}.global-player__art,.global-player__art img{width:46px;height:46px}}
