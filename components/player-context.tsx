@@ -18,6 +18,10 @@ type PlayerContextValue = { currentItem:QueueItem; queue:QueueItem[]; currentInd
 const PlayerContext=createContext<PlayerContextValue|null>(null);
 function queueItemsForArtist(artist:PlayableRelease):QueueItem[]{return artist.tracks.flatMap((track,index)=>track.audio?[{id:`${artist.slug}-${index}-${track.audio}`,artistSlug:artist.slug,artistName:artist.name,album:artist.album,cover:artist.cover,catalogue:artist.catalogue,trackNumber:index+1,title:track.title,durationLabel:track.duration,audio:r2AudioUrl(track.audio)}]:[]);}
 const playableCatalogue=artists.flatMap(queueItemsForArtist);
+export function isReleaseQueued(queue: QueueItem[], index: number, tracks: QueueItem[]) {
+ return tracks.length > 0 && tracks.every((track, offset) => queue[index + offset]?.id === track.id);
+}
+
 const launchQueue=playableCatalogue.length>0?[playableCatalogue[0]]:[];
 const PLAYBACK_SESSION = "penrec_playback_session";
 type PlaybackSession = { queue: QueueItem[]; index: number; time: number; playing: boolean; muted: boolean };
@@ -43,7 +47,22 @@ export function PlayerProvider({children}:{children:ReactNode}){
  const previous=useCallback(()=>{const audio=audioRef.current;if(audio&&audio.currentTime>3){audio.currentTime=0;setCurrentTime(0);return;}if(currentIndex>0)selectIndex(currentIndex-1,true);},[currentIndex,selectIndex]);
  const playableTracksFor=useCallback((artist:PlayableRelease)=>queueItemsForArtist(artist),[]);
  const playAlbum=useCallback((artist:PlayableRelease)=>replaceQueue(queueItemsForArtist(artist)),[replaceQueue]);
- const playArtist=useCallback((artist:PlayableRelease)=>{const items=queueItemsForArtist(artist);const isSameItem=items[0]?.id===currentItem?.id;if(isSameItem){const audio=audioRef.current;if(!audio)return;if(audio.paused)void audio.play().catch(()=>setPlaying(false));else audio.pause();return;}replaceQueue(items);},[currentItem?.id,replaceQueue]);
+ const playArtist=useCallback((artist:PlayableRelease)=>{
+  const items=queueItemsForArtist(artist);
+  if(items[0]?.id!==currentItem?.id){replaceQueue(items);return;}
+  const audio=audioRef.current;
+  if(!audio)return;
+
+  // The default preview may already be selected without the rest of its album.
+  if(!isReleaseQueued(queue,currentIndex,items)){
+   setQueue([currentItem,...items.slice(1)]);
+   setCurrentIndex(0);
+   if(audio.paused)void audio.play().catch(()=>setPlaying(false));
+   return;
+  }
+  if(audio.paused)void audio.play().catch(()=>setPlaying(false));
+  else audio.pause();
+ },[currentItem,currentIndex,queue,replaceQueue]);
  const queueAlbum=useCallback((artist:PlayableRelease)=>{const items=queueItemsForArtist(artist);if(items.length===0)return;setQueue(existing=>{const known=new Set(existing.map(item=>item.id));return [...existing,...items.filter(item=>!known.has(item.id))];});setQueueOpen(true);},[]);
  const playTrack=useCallback((artist:PlayableRelease,track:Track,trackIndex:number)=>{if(!track.audio)return;const items=queueItemsForArtist(artist);const index=items.findIndex(item=>item.trackNumber===trackIndex+1);replaceQueue(items,Math.max(index,0));},[replaceQueue]);
  const toggle=useCallback(async()=>{const audio=audioRef.current;if(!audio)return;try{if(audio.paused)await audio.play();else audio.pause();}catch{setPlaying(false);}},[]);
