@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { usePlayer } from "@/components/player-context";
 
 function formatTime(value: number) {
@@ -66,16 +67,16 @@ export function GlobalPlayer() {
       </section>
 
       <aside className="global-player" aria-label="PENREC music player">
-        <Image src={currentItem.cover} width={52} height={52} alt="" />
+        <Link href={`/artists/${currentItem.artistSlug}`} aria-label={`Explore ${currentItem.artistName}`} className="global-player__art"><Image src={currentItem.cover} width={52} height={52} alt="" /></Link>
         <div className="global-player__track">
-          <small>Now previewing · {currentItem.catalogue}</small>
+          <small>{playing ? "Now playing" : "Ready to play"} · {currentItem.catalogue}</small>
           <b>{currentItem.title}</b>
           <span>{currentItem.artistName} · {currentItem.album}</span>
         </div>
         <div className="global-player__transport">
           <div className="global-player__controls">
             <button type="button" onClick={previous} aria-label="Previous track" disabled={currentIndex === 0}>‹</button>
-            <button type="button" className="global-player__play" onClick={() => void toggle()} aria-label={playing ? "Pause" : "Play"}>{playing ? "Ⅱ" : "▶"}</button>
+            <button type="button" className="global-player__play" onClick={() => void toggle()} aria-label={playing ? "Pause music" : "Play music"} aria-pressed={playing}>{playing ? "Ⅱ" : "▶"}</button>
             <button type="button" onClick={next} aria-label="Next track" disabled={currentIndex === queue.length - 1}>›</button>
           </div>
           <div className="global-player__timeline">
