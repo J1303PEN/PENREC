@@ -404,7 +404,7 @@ export const artists: Artist[] = [
   {
     "album": "This Is Just the Beginning",
     "cover": "https://audio.penrec.co.uk/pnr061-gen7-cover-v2.jpg",
-    "year": "2026",
+    "year": "2021",
     "catalogue": "PNR061",
     "preview": "https://audio.penrec.co.uk/pnr061-gen7-01.mp3",
     "tracks": [

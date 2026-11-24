@@ -4,13 +4,13 @@ import Image from "next/image";
 import type { Artist, Track } from "@/data/catalog";
 
 type PlayableRelease = Pick<Artist, "name" | "slug" | "album" | "cover" | "catalogue" | "preview"> & { tracks: Track[] };
-import { usePlayer } from "@/components/player-context";
+import { isReleaseQueued, usePlayer } from "@/components/player-context";
 
 export function AudioPlayer({ artist, compact = false }: { artist: PlayableRelease; compact?: boolean }) {
-  const { currentItem, playing, progress, playableTracksFor, playArtist, queueAlbum } = usePlayer();
+  const { queue, currentIndex, playing, progress, playableTracksFor, playArtist, queueAlbum } = usePlayer();
   const playable = playableTracksFor(artist);
   const first = playable[0];
-  const isCurrent = first?.id === currentItem.id;
+  const isCurrent = isReleaseQueued(queue, currentIndex, playable);
   const availability = playable.length === 1 ? "1 complete track available" : `${playable.length} tracks available`;
   const action = playable.length === 1 ? "Play track" : "Play album";
 
